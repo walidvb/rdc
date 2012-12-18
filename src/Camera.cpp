@@ -7,17 +7,17 @@
 //
 
 #include "Camera.h"
-Camera::Camera():Camera_A()
+Cam::Cam():Camera_A()
 {
 }
 
-Camera::Camera(int width, int height):Camera_A(width,height)
+Cam::Cam(int width, int height):Camera_A(width,height)
 {
     frame.resize(width*height);
 }
 
 
-void Camera::init()
+void Cam::init()
 {
     frame.resize(width*height);//allocation
 
@@ -31,7 +31,7 @@ void Camera::init()
     }
 }
 
-vector<float> Camera::grabFrame()
+vector<float> Cam::grabFrame()
 {
     return frame;
 }

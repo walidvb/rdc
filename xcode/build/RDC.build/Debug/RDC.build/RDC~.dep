@@ -1,11 +1,12 @@
-ffffffffffffffffffffffffffffffff 4452684f3f76d0b327f1054c670d9c37 ffffffffffffffffffffffffffffffff 0 /Users/Gaston/dev/RDC/xcode/build/Debug/RDC.app
 ffffffffffffffffffffffffffffffff 26234700c517132334eb0f040f6a891b ffffffffffffffffffffffffffffffff 0 /Users/Gaston/dev/RDC/xcode/build/Debug/RDC.app/Contents/MacOS/RDC
 ffffffffffffffffffffffffffffffff d7b8e7074e7df2660e82372d39c95992 ffffffffffffffffffffffffffffffff 0 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDCApp.o
 ffffffffffffffffffffffffffffffff f3022233d3400a101d06fef9e640eae2 ffffffffffffffffffffffffffffffff 0 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/Camera.o
 ffffffffffffffffffffffffffffffff 5a23bb15ed4b5c8a18248d08a04b3b73 ffffffffffffffffffffffffffffffff 0 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDC.o
 ffffffffffffffffffffffffffffffff 41e7db1f9079e6418fb562c807f1a7b8 ffffffffffffffffffffffffffffffff 0 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/Camera_A.o
 ffffffffffffffffffffffffffffffff 5a7939f9d2476e107c26c692a2ad5a59 ffffffffffffffffffffffffffffffff 0 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/Tools.o
+ffffffffffffffffffffffffffffffff d42729d903f1d6f54c294ddba6d4b565 ffffffffffffffffffffffffffffffff 0 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_Cinder.o
 00000000000000000000000000000000 be620346e59f6aec8c96fbabbd273c50 ffffffffffffffffffffffffffffffff 0 /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-bgnqcdygmrottjerqpdvilbefubi/RDC_Prefix.pch.pth
 00000000000000000000000000000000 a5e803a0dc261b3232ee91d9c3d94c08 ffffffffffffffffffffffffffffffff 0 /Users/Gaston/dev/RDC/xcode/build/Debug/RDC.app/Contents/Resources/CinderApp.icns
 00000000000000000000000000000000 fd891a663d8bf67b0407da93c945a4c5 ffffffffffffffffffffffffffffffff 0 /Users/Gaston/dev/RDC/xcode/build/Debug/RDC.app/Contents/Info.plist
 00000000000000000000000000000000 fd891a663d8bf67b0407da93c945a4c5 ffffffffffffffffffffffffffffffff 0 /Users/Gaston/dev/RDC/xcode/build/Debug/RDC.app/Contents/PkgInfo
+ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 0 /Users/Gaston/dev/RDC/xcode/build/Debug/RDC.app

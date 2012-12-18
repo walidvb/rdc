@@ -10,14 +10,16 @@
 #define RDC_Renderer_Cinder_h
 
 #include "Renderer_A.h"
-#include "common.h"
-#include "cinder/app/AppBasic.h"
 
-
-class Renderer_Cinder
+class Renderer_Cinder : public Renderer_A
 {
+    
+public:
+    Renderer_Cinder();
+    Renderer_Cinder(int width, int height);
+    void drawRect(float topleft, float topright, float bottomright, float bottomleft ) const; 
+    void drawStripeVert(float xOffset, float width) const;
+    void drawStripeHorz(float yOffset, float height) const;
 
-private:
-    AppBasic* app;
-}
+};
 #endif

@@ -20,7 +20,7 @@ public:
 private:
     //Private methods
     int getLatency(); //get projector camera latency
-    vector<float> projectStructuredLights();//will call gfx->drawRect...
+    void projectStructuredLights();//will call gfx->drawRect, etc...
     
     void computeEM();
     void computeFM();

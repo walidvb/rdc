@@ -11,11 +11,11 @@
 
 #include "Camera_A.h"
 
-class Camera : public Camera_A
+class Cam : public Camera_A
 {
 public:
-    Camera();
-    Camera(int width, int height);
+    Cam();
+    Cam(int width, int height);
     void init();
     vector<float> grabFrame();
 };

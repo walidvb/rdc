@@ -6,14 +6,27 @@
 //
 //
 
-#ifndef RDC_RendererA_h
-#define RDC_RendererA_h
+#ifndef RDC_Renderer_A_h
+#define RDC_Renderer_A_h
+
+#include "common.h"
 
 class Renderer_A
 {
-protected:
-    virtual void drawRect();
+public:
+    Renderer_A();
+    Renderer_A(int width, int height);
+    virtual void drawRect( V2D topleft, V2D topright, V2D bottomright, V2D bottomleft ) const = 0;
+
+    void drawStripeVert(float xOffset, float width) const;
+    void drawStripeHorz(float yOffset, float height) const;
     
+    //Getters and Setters
+    int getWidth() const;
+    int getHeight() const;
+    
+protected:
+    int width, height;
 };
 
 #endif

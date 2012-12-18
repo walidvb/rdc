@@ -30,14 +30,17 @@ void RDC::calibrate()
 
 vector<float> RDC::compensate(const vector<float>& srcImg)
 {
+    vector<float> dstImg;
     
+    return dstImg;
 }
 
 //Private methods
-vector<float> RDC::projectStructuredLights()
+void RDC::projectStructuredLights()
 {
-    
+
 }
+
 void RDC::computeEM()
 {
     
