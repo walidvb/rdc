@@ -1,6 +1,9 @@
 dependencies: /Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp \
   /Users/Gaston/dev/RDC/xcode/../headers/Renderer_Cinder.h \
   /Users/Gaston/dev/RDC/xcode/../headers/Renderer_A.h \
+  /Users/Gaston/dev/RDC/xcode/../headers/common.h \
+  /Users/Gaston/dev/RDC/xcode/../headers/Tools.h \
+  /Users/Gaston/dev/RDC/xcode/../headers/V2D.h \
   ../../cinder/include/cinder/gl/gl.h \
   ../../cinder/include/cinder/Cinder.h \
   ../../cinder/boost/boost/cstdint.hpp \

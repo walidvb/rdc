@@ -15,6 +15,7 @@
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
 		00BAE65A0E7ED9C10018A608 /* RDCApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00BAE6590E7ED9C10018A608 /* RDCApp.cpp */; };
 		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
+		3D1889E41663BABE00CF9BFA /* pattern in Resources */ = {isa = PBXBuildFile; fileRef = 3D1889E31663BABE00CF9BFA /* pattern */; };
 		3D2CD149165CFEED0016C8C6 /* Renderer_Cinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD148165CFEED0016C8C6 /* Renderer_Cinder.cpp */; };
 		3D2CD14B165D01860016C8C6 /* Renderer_A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD14A165D01860016C8C6 /* Renderer_A.cpp */; };
 		3D2CD152165D29CC0016C8C6 /* V2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD151165D29CC0016C8C6 /* V2D.cpp */; };
@@ -42,6 +43,8 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* RDC_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDC_Prefix.pch; sourceTree = "<group>"; };
+		3D1889E31663BABE00CF9BFA /* pattern */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pattern; sourceTree = "<group>"; };
+		3D1889EA1663D4F600CF9BFA /* CamFake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CamFake.h; path = ../headers/CamFake.h; sourceTree = "<group>"; };
 		3D2CD146165CFA880016C8C6 /* Renderer_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer_A.h; path = ../headers/Renderer_A.h; sourceTree = "<group>"; };
 		3D2CD147165CFDDB0016C8C6 /* Renderer_Cinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer_Cinder.h; path = ../headers/Renderer_Cinder.h; sourceTree = "<group>"; };
 		3D2CD148165CFEED0016C8C6 /* Renderer_Cinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer_Cinder.cpp; path = ../src/Renderer_Cinder.cpp; sourceTree = "<group>"; };
@@ -153,6 +156,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3D1889E31663BABE00CF9BFA /* pattern */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				00CCAF14116A9FEE008396D5 /* CinderApp.icns */,
 			);
@@ -176,9 +180,10 @@
 				3D996EC8165BF569004B258F /* Tools.h */,
 				3D996ECB165BF75E004B258F /* Camera_A.h */,
 				3D2CD146165CFA880016C8C6 /* Renderer_A.h */,
-				3D996EBE165BE6C6004B258F /* Camera.h */,
 				3D2CD147165CFDDB0016C8C6 /* Renderer_Cinder.h */,
+				3D996EBE165BE6C6004B258F /* Camera.h */,
 				3D2CD153165D29FB0016C8C6 /* V2D.h */,
+				3D1889EA1663D4F600CF9BFA /* CamFake.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */,
+				3D1889E41663BABE00CF9BFA /* pattern in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +333,10 @@
 				CINDER_PATH = ../../cinder;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(CINDER_PATH)/boost\"",
+					/opt/local/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
@@ -345,7 +354,10 @@
 				CINDER_PATH = ../../cinder;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(CINDER_PATH)/boost\"",
+					/opt/local/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;

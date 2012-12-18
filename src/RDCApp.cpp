@@ -18,19 +18,30 @@ class RDCApp : public cinder::app::AppBasic {
 	void update();
 	void draw();
     void quit();
+    void prepareSettings(Settings *settings);
     
 private:
     Camera_A* cam;
     RDC* rdc;
     Renderer_A* gfx;
+    
+    int width, height;
 };
+
+void RDCApp::prepareSettings( Settings *settings ){
+    settings->setWindowSize( 800, 600 );
+    settings->setFrameRate( 60.0f );
+}
 
 void RDCApp::setup()
 {
+    width = getWindowWidth();
+    height = getWindowHeight();
+    
     cam = new Cam(20,10);
     cam->init();
-    gfx = new Renderer_Cinder();
-    rdc = new RDC(cam);
+    gfx = new Renderer_Cinder(width, height);
+    rdc = new RDC(cam, gfx);
     rdc->calibrate();
 }
 
@@ -46,6 +57,8 @@ void RDCApp::draw()
 {
 	// clear out the window with black
     ci::gl::clear( ci::Color( 0, 0, 0 ) );
+    rdc->calibrate();
+
 }
 
 void RDCApp::quit()
