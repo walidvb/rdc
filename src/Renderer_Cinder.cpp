@@ -32,7 +32,7 @@ Vec2f Renderer_Cinder::V2D2Vecf(V2D src) const
     return dst;
 }
 
-void drawImg(vector<float> img)
+void Renderer_Cinder::drawImg(vector<float> img) const
 {
-    
+    //TODO
 }

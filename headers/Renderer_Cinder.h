@@ -21,9 +21,10 @@ class Renderer_Cinder : public Renderer_A
 public:
     Renderer_Cinder();
     Renderer_Cinder(int& width, int& height);
-    void drawRect( V2D& topleft, V2D& bottomright) const;
-    void drawRect( float& x1, float& y1, float& x2, float& y2 ) const;
-    void drawImg(vector<float> img);
+    //void drawRect( V2D& topleft, V2D& bottomright) const;
+    virtual void drawRect( float& x1, float& y1, float& x2, float& y2 ) const;
+    virtual void drawImg(vector<float> img) const;
+
 private:
     Vec2f V2D2Vecf(V2D src) const;
     

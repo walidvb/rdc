@@ -50,6 +50,6 @@ vector<float> Cam::chan2floats(Channel32f channel)
 
 Channel32f Cam::loadFakeFrame()
 {
-    Channel32f f = Channel32f( loadImage( loadUrl( "pattern/horizontal/i1.png" ) ) );
-    return f;
+    Channel32f frame = Channel32f( loadImage( loadUrl( "pattern/horizontal/i1.png" ) ) );
+    return frame;
 }
