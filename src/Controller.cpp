@@ -12,6 +12,7 @@
 #include "SensorMediaSim.h"
 #include "RDC.h"
 
+
 Controller::~Controller()
 {
     delete sensor;
@@ -39,9 +40,10 @@ void Controller::process()
     {
         sensorMedia = new SensorMediaSim(10,10);
     }
+    
     Image frame = sensorMedia->grabFrame();
-    renderer->drawImg(frame);
+    renderer->drawImg(frame, FULL);
     frame = rdc->compensate(frame);
-    renderer->drawImg(frame);
+    renderer->drawImg(frame, FULL);
 }
 

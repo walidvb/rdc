@@ -14,6 +14,7 @@ class Renderer_A;
 class RDC;
 
 class Controller{
+    
 public:
     ~Controller();
     void init(int width, int height);

@@ -7,7 +7,7 @@
 //
 
 #include "Image.h"
-
+using namespace cv;
 
 Image::Image()
 {
@@ -30,6 +30,7 @@ Image::Image(Image const& img)
 
 int Image::index(int x, int y, int w)
 {
+    
     return y*w+x;
 }
 

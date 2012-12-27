@@ -12,7 +12,7 @@
 using namespace gl;
 
 Renderer_Cinder::Renderer_Cinder() : Renderer_A() {}
-Renderer_Cinder::Renderer_Cinder(int& w, int& h):Renderer_A(w, h) {}
+Renderer_Cinder::Renderer_Cinder(int w, int h):Renderer_A(w, h) {}
 
 void Renderer_Cinder::drawRect( float& x1, float& y1, float& x2, float& y2 ) const
 {
@@ -32,7 +32,7 @@ Vec2f Renderer_Cinder::V2D2Vecf(V2D src) const
     return dst;
 }
 
-void Renderer_Cinder::drawImg(const Image& img) const
+void Renderer_Cinder::drawImg(const Image& img, int POS) const
 {
     cout <<"=========================="<<endl;
     for (int i = 0; i < img.width; i++) {
