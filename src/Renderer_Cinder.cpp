@@ -32,7 +32,14 @@ Vec2f Renderer_Cinder::V2D2Vecf(V2D src) const
     return dst;
 }
 
-void Renderer_Cinder::drawImg(vector<float> img) const
+void Renderer_Cinder::drawImg(const Image& img) const
 {
-    //TODO
+    cout <<"=========================="<<endl;
+    for (int i = 0; i < img.width; i++) {
+        for (int j = 0; j < img.height; j++)
+        {
+            cout << img.pixelAt(i,j)<<" ";
+        }
+        cout<<endl;
+    }
 }

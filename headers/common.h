@@ -13,6 +13,7 @@
 #include <iostream>
 #include "Tools.h"
 #include "V2D.h"
+#include "Image.h"
 
 using namespace std;
 

@@ -487,13 +487,4 @@ dependencies: /Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp \
   ../../cinder/include/cinder/Timer.h \
   ../../cinder/include/cinder/Function.h \
   ../../cinder/include/cinder/app/TouchEvent.h \
-  /Users/Gaston/dev/RDC/xcode/../headers/RDC.h \
-  /Users/Gaston/dev/RDC/xcode/../headers/common.h \
-  /Users/Gaston/dev/RDC/xcode/../headers/Tools.h \
-  /Users/Gaston/dev/RDC/xcode/../headers/V2D.h \
-  /Users/Gaston/dev/RDC/xcode/../headers/Camera.h \
-  /Users/Gaston/dev/RDC/xcode/../headers/Camera_A.h \
-  ../../cinder/include/cinder/ImageIo.h \
-  ../../cinder/include/cinder/DataTarget.h \
-  /Users/Gaston/dev/RDC/xcode/../headers/Renderer_A.h \
-  /Users/Gaston/dev/RDC/xcode/../headers/Renderer_Cinder.h
+  /Users/Gaston/dev/RDC/xcode/../headers/Controller.h

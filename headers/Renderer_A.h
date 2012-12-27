@@ -21,7 +21,7 @@ public:
     Renderer_A(int width, int height);
     //virtual void drawRect( V2D& topleft, V2D& topright, V2D& bottomright, V2D& bottomleft ) const = 0;
     virtual void drawRect( float& x1, float& y1, float& x2, float& y2 ) const = 0;
-    virtual void drawImg(vector<float> img) const = 0;
+    virtual void drawImg(const Image& img) const = 0;
 
     //void drawRect( V2D& topleft, V2D& bottomright ) const;
     void drawStripeVert(float& xOffset, float& width) const;

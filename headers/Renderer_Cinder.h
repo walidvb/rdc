@@ -23,7 +23,7 @@ public:
     Renderer_Cinder(int& width, int& height);
     //void drawRect( V2D& topleft, V2D& bottomright) const;
     virtual void drawRect( float& x1, float& y1, float& x2, float& y2 ) const;
-    virtual void drawImg(vector<float> img) const;
+    virtual void drawImg(const Image& img) const;
 
 private:
     Vec2f V2D2Vecf(V2D src) const;

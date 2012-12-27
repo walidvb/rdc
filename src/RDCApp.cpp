@@ -2,12 +2,7 @@
 #define RDC_APP_h
 
 #include "cinder/app/AppBasic.h"
-
-#include "RDC.h"
-#include "Camera.h"
-#include "Camera_A.h"
-#include "Renderer_A.h"
-#include "Renderer_Cinder.h"
+#include "Controller.h"
 
 using namespace std;
 
@@ -21,10 +16,7 @@ class RDCApp : public cinder::app::AppBasic {
     void prepareSettings(Settings *settings);
     
 private:
-    Camera_A* cam;
-    RDC* rdc;
-    Renderer_A* gfx;
-    
+    Controller* controller;
     int width, height;
 };
 
@@ -38,11 +30,9 @@ void RDCApp::setup()
     width = getWindowWidth();
     height = getWindowHeight();
     
-    cam = new Cam(20,10);
-    cam->init();
-    gfx = new Renderer_Cinder(width, height);
-    rdc = new RDC(cam, gfx);
-    rdc->calibrate();
+    controller = new Controller();
+    controller->init(width, height);
+    controller->process();
 }
 
 void RDCApp::mouseDown( cinder::app::MouseEvent event )
@@ -57,15 +47,11 @@ void RDCApp::draw()
 {
 	// clear out the window with black
     ci::gl::clear( ci::Color( 0, 0, 0 ) );
-    rdc->calibrate();
-
 }
 
 void RDCApp::quit()
 {
-    delete cam;
-    delete rdc;
-    delete gfx;
+    delete controller;
 }
 
 CINDER_APP_BASIC( RDCApp, cinder::app::RendererGl )

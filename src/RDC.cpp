@@ -5,42 +5,44 @@
 //  Created by Gaston on 11/20/12.
 //
 //
-#include "Camera_A.h"
+#include "Sensor_A.h"
 #include "Renderer_A.h"
 #include "RDC.h"
-RDC::RDC(Camera_A* cam, Renderer_A* gfx) : cam(cam), gfx(gfx)
-{
-    camWidth = cam->getWidth();
-    camHeight = cam->getWidth();
-    gfxWidth = gfx->getWidth();
-    gfxHeight = gfx->getHeight();
-}
 
 //Public methods
-void RDC::calibrate()
+void RDC::calibrate(Sensor_A* cam, Renderer_A* gfx)
 {
-    vector<float> img = cam->grabFrame();
+    Image img = cam->grabFrame();
     cout << "Camera pixels:" << endl;
     for (int i = 0; i < cam->getWidth(); i++)
     {
         for (int j = 0; j < cam->getHeight(); j++)
         {
-            cout << img[ Tools::index(i, j, cam->getWidth()) ] << " ";
+            cout << img.pixelAt(i, j) << " ";
         }
         cout << endl;
     }
-    projectStructuredLights();
+    projectStructuredLights(gfx);
+    
+    //TODO compute compensation matrix
 }
 
-vector<float> RDC::compensate(const vector<float>& srcImg)
+Image RDC::compensate(const Image& srcImg)
 {
-    vector<float> dstImg;
-    
+    Image dstImg(srcImg.width, srcImg.height);
+    for (int i = 0; i < srcImg.width; i++)
+    {
+        for (int j = 0 ; j < srcImg.height; j++)
+        {
+            dstImg.pixelWrite(srcImg.pixelAt(i,j)+1, i, j);
+        }
+    }
     return dstImg;
+    //TODO compensate #1 test with dummy matrix
 }
 
 //Private methods
-void RDC::projectStructuredLights()
+void RDC::projectStructuredLights(Renderer_A* gfx)
 {
     cout << "projecting structured lights" << endl;
     float xOffset = 20.0;

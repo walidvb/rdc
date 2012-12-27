@@ -19,10 +19,13 @@
 		3D2CD149165CFEED0016C8C6 /* Renderer_Cinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD148165CFEED0016C8C6 /* Renderer_Cinder.cpp */; };
 		3D2CD14B165D01860016C8C6 /* Renderer_A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD14A165D01860016C8C6 /* Renderer_A.cpp */; };
 		3D2CD152165D29CC0016C8C6 /* V2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD151165D29CC0016C8C6 /* V2D.cpp */; };
-		3D996EC0165BE71D004B258F /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D996EBF165BE71D004B258F /* Camera.cpp */; };
+		3D3C9CDC168C5F4500EEBCAF /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C9CDB168C5F4500EEBCAF /* Image.cpp */; };
+		3D992F891684C91D008C380E /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F881684C91D008C380E /* Controller.cpp */; };
+		3D992F8D1684CA5E008C380E /* SensorSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F8C1684CA5E008C380E /* SensorSim.cpp */; };
+		3D992F901684CE2B008C380E /* SensorMediaSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F8F1684CE2B008C380E /* SensorMediaSim.cpp */; };
 		3D996EC5165BEA5A004B258F /* RDC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D996EC4165BEA5A004B258F /* RDC.cpp */; };
 		3D996ECA165BF579004B258F /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D996EC9165BF579004B258F /* Tools.cpp */; };
-		3D996ECD165BF7FA004B258F /* Camera_A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D996ECC165BF7F9004B258F /* Camera_A.cpp */; };
+		3D996ECD165BF7FA004B258F /* Sensor_A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D996ECC165BF7F9004B258F /* Sensor_A.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -44,22 +47,27 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* RDC_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDC_Prefix.pch; sourceTree = "<group>"; };
 		3D1889E31663BABE00CF9BFA /* pattern */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pattern; sourceTree = "<group>"; };
-		3D1889EA1663D4F600CF9BFA /* CamFake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CamFake.h; path = ../headers/CamFake.h; sourceTree = "<group>"; };
 		3D2CD146165CFA880016C8C6 /* Renderer_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer_A.h; path = ../headers/Renderer_A.h; sourceTree = "<group>"; };
 		3D2CD147165CFDDB0016C8C6 /* Renderer_Cinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer_Cinder.h; path = ../headers/Renderer_Cinder.h; sourceTree = "<group>"; };
 		3D2CD148165CFEED0016C8C6 /* Renderer_Cinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer_Cinder.cpp; path = ../src/Renderer_Cinder.cpp; sourceTree = "<group>"; };
 		3D2CD14A165D01860016C8C6 /* Renderer_A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer_A.cpp; path = ../src/Renderer_A.cpp; sourceTree = "<group>"; };
 		3D2CD151165D29CC0016C8C6 /* V2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = V2D.cpp; path = ../src/V2D.cpp; sourceTree = "<group>"; };
 		3D2CD153165D29FB0016C8C6 /* V2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = V2D.h; path = ../headers/V2D.h; sourceTree = "<group>"; };
+		3D3C9CDA168C5F1E00EEBCAF /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = ../headers/Image.h; sourceTree = "<group>"; };
+		3D3C9CDB168C5F4500EEBCAF /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Image.cpp; path = ../src/Image.cpp; sourceTree = "<group>"; };
+		3D992F881684C91D008C380E /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Controller.cpp; path = ../src/Controller.cpp; sourceTree = "<group>"; };
+		3D992F8B1684C929008C380E /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = ../headers/Controller.h; sourceTree = "<group>"; };
+		3D992F8C1684CA5E008C380E /* SensorSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SensorSim.cpp; sourceTree = "<group>"; };
+		3D992F8E1684CE1C008C380E /* SensorMediaSim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorMediaSim.h; path = ../headers/SensorMediaSim.h; sourceTree = "<group>"; };
+		3D992F8F1684CE2B008C380E /* SensorMediaSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SensorMediaSim.cpp; path = ../src/SensorMediaSim.cpp; sourceTree = "<group>"; };
 		3D996EBC165BE0D3004B258F /* RDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDC.h; path = ../headers/RDC.h; sourceTree = "<group>"; };
 		3D996EBD165BE215004B258F /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common.h; path = ../headers/common.h; sourceTree = "<group>"; };
-		3D996EBE165BE6C6004B258F /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = ../headers/Camera.h; sourceTree = "<group>"; };
-		3D996EBF165BE71D004B258F /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = ../src/Camera.cpp; sourceTree = "<group>"; };
+		3D996EBE165BE6C6004B258F /* SensorSim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorSim.h; path = ../headers/SensorSim.h; sourceTree = "<group>"; };
 		3D996EC4165BEA5A004B258F /* RDC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RDC.cpp; path = ../src/RDC.cpp; sourceTree = "<group>"; };
 		3D996EC8165BF569004B258F /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tools.h; path = ../headers/Tools.h; sourceTree = "<group>"; };
 		3D996EC9165BF579004B258F /* Tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Tools.cpp; path = ../src/Tools.cpp; sourceTree = "<group>"; };
-		3D996ECB165BF75E004B258F /* Camera_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera_A.h; path = ../headers/Camera_A.h; sourceTree = "<group>"; };
-		3D996ECC165BF7F9004B258F /* Camera_A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera_A.cpp; path = ../src/Camera_A.cpp; sourceTree = "<group>"; };
+		3D996ECB165BF75E004B258F /* Sensor_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sensor_A.h; path = ../headers/Sensor_A.h; sourceTree = "<group>"; };
+		3D996ECC165BF7F9004B258F /* Sensor_A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sensor_A.cpp; path = ../src/Sensor_A.cpp; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -178,12 +186,14 @@
 				3D996EBC165BE0D3004B258F /* RDC.h */,
 				3D996EBD165BE215004B258F /* common.h */,
 				3D996EC8165BF569004B258F /* Tools.h */,
-				3D996ECB165BF75E004B258F /* Camera_A.h */,
+				3D996ECB165BF75E004B258F /* Sensor_A.h */,
 				3D2CD146165CFA880016C8C6 /* Renderer_A.h */,
 				3D2CD147165CFDDB0016C8C6 /* Renderer_Cinder.h */,
-				3D996EBE165BE6C6004B258F /* Camera.h */,
+				3D996EBE165BE6C6004B258F /* SensorSim.h */,
 				3D2CD153165D29FB0016C8C6 /* V2D.h */,
-				3D1889EA1663D4F600CF9BFA /* CamFake.h */,
+				3D992F8B1684C929008C380E /* Controller.h */,
+				3D992F8E1684CE1C008C380E /* SensorMediaSim.h */,
+				3D3C9CDA168C5F1E00EEBCAF /* Image.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -191,13 +201,16 @@
 		3D996EC2165BE74A004B258F /* src */ = {
 			isa = PBXGroup;
 			children = (
-				3D996EBF165BE71D004B258F /* Camera.cpp */,
+				3D992F8C1684CA5E008C380E /* SensorSim.cpp */,
 				3D996EC4165BEA5A004B258F /* RDC.cpp */,
 				3D996EC9165BF579004B258F /* Tools.cpp */,
-				3D996ECC165BF7F9004B258F /* Camera_A.cpp */,
+				3D996ECC165BF7F9004B258F /* Sensor_A.cpp */,
 				3D2CD148165CFEED0016C8C6 /* Renderer_Cinder.cpp */,
 				3D2CD14A165D01860016C8C6 /* Renderer_A.cpp */,
 				3D2CD151165D29CC0016C8C6 /* V2D.cpp */,
+				3D992F881684C91D008C380E /* Controller.cpp */,
+				3D992F8F1684CE2B008C380E /* SensorMediaSim.cpp */,
+				3D3C9CDB168C5F4500EEBCAF /* Image.cpp */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -262,13 +275,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				00BAE65A0E7ED9C10018A608 /* RDCApp.cpp in Sources */,
-				3D996EC0165BE71D004B258F /* Camera.cpp in Sources */,
 				3D996EC5165BEA5A004B258F /* RDC.cpp in Sources */,
 				3D996ECA165BF579004B258F /* Tools.cpp in Sources */,
-				3D996ECD165BF7FA004B258F /* Camera_A.cpp in Sources */,
+				3D996ECD165BF7FA004B258F /* Sensor_A.cpp in Sources */,
 				3D2CD149165CFEED0016C8C6 /* Renderer_Cinder.cpp in Sources */,
 				3D2CD14B165D01860016C8C6 /* Renderer_A.cpp in Sources */,
 				3D2CD152165D29CC0016C8C6 /* V2D.cpp in Sources */,
+				3D992F891684C91D008C380E /* Controller.cpp in Sources */,
+				3D992F8D1684CA5E008C380E /* SensorSim.cpp in Sources */,
+				3D992F901684CE2B008C380E /* SensorMediaSim.cpp in Sources */,
+				3D3C9CDC168C5F4500EEBCAF /* Image.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
