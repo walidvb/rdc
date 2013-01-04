@@ -16,7 +16,7 @@ Renderer_A::Renderer_A(int w, int h): width(w), height(h) {}
 
 
 //PATTERNS
-void Renderer_A::drawStripeVert(float& xOffset, float& width_) const
+void Renderer_A::drawStripeVert(float xOffset, float width_) const
 {
     float y1 = Y_ZERO;
     float x2 = xOffset + width_;
@@ -24,7 +24,7 @@ void Renderer_A::drawStripeVert(float& xOffset, float& width_) const
     drawRect( xOffset, y1, x2 , y2 );
 }
 
-void Renderer_A::drawStripeHorz(float& yOffset, float& height_) const
+void Renderer_A::drawStripeHorz(float yOffset, float height_) const
 {
     float x1 = X_ZERO;
     float x2 = (float)this->width;

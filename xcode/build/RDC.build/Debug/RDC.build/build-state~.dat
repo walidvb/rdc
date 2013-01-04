@@ -1,0 +1,497 @@
+TRDC
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Info.plist Info.plist
+cCpResource pattern ./build/Debug/RDC.app/Contents/Resources/pattern
+cCpResource CinderApp.icns ./build/Debug/RDC.app/Contents/Resources/CinderApp.icns
+cProcessPCH++ /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch.pth RDC_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDC.o /Users/Gaston/dev/RDC/xcode/../src/RDC.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDCApp.o /Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Sensor_A.o /Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_A.o /Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_Cinder.o /Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/V2D.o /Users/Gaston/dev/RDC/xcode/../src/V2D.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Controller.o /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Tools.o /Users/Gaston/dev/RDC/xcode/../src/Tools.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorSim.o /Users/Gaston/dev/RDC/xcode/SensorSim.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorMediaSim.o /Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Image.o /Users/Gaston/dev/RDC/xcode/../src/Image.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/MacOS/RDC normal i386
+cTouch /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+c000000005095337800000000000000AA
+t1351955320
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate
+c000000005028817A00000000000024F0
+t1344831866
+s9456
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c00000000505B1C960000000000024D90
+t1348148374
+s150928
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AudioUnit.framework/AudioUnit
+c00000000505B1C9600000000000060B4
+t1348148374
+s24756
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c000000005028817B00000000000001E5
+t1344831867
+s485
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+c000000005028817B000000000000E920
+t1344831867
+s59680
+
+N/System/Library/Frameworks/Carbon.framework/Carbon
+c000000005011D86200000000000069F0
+t1343346786
+s27120
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000005011D8620000000000006730
+t1343346786
+s26416
+
+N/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+c00000000505A4F0E0000000000081CB0
+t1348095758
+s531632
+
+N/System/Library/Frameworks/OpenGL.framework/OpenGL
+c00000000505A4F13000000000002DAF0
+t1348095763
+s187120
+
+N/System/Library/Frameworks/QTKit.framework/QTKit
+c0000000050592BA800000000004A2D90
+t1348021160
+s4861328
+
+N/System/Library/Frameworks/QuickTime.framework/QuickTime
+c00000000505A4F130000000000322E20
+t1348095763
+s3288608
+
+N/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp
+c0000000050DC70020000000000000368
+t1356623874
+s872
+
+N/Users/Gaston/dev/RDC/xcode/../src/Image.cpp
+c0000000050DC6396000000000000028A
+t1356620694
+s650
+
+N/Users/Gaston/dev/RDC/xcode/../src/RDC.cpp
+c0000000050DC40EA0000000000000493
+t1356611818
+s1171
+
+N/Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp
+c0000000050D4A0260000000000000400
+t1356111910
+s1024
+
+N/Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp
+c0000000050DC506C000000000000033E
+t1356615788
+s830
+
+N/Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp
+c0000000050DC50800000000000000382
+t1356615808
+s898
+
+N/Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp
+c0000000050DC605C0000000000000292
+t1356619868
+s658
+
+N/Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp
+c0000000050DC3D4100000000000001A9
+t1356610881
+s425
+
+N/Users/Gaston/dev/RDC/xcode/../src/Tools.cpp
+c0000000050ABBE460000000000000095
+t1353432646
+s149
+
+N/Users/Gaston/dev/RDC/xcode/../src/V2D.cpp
+c0000000050AD014000000000000008F4
+t1353515328
+s2292
+
+N/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Info.plist
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/MacOS/RDC
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources/CinderApp.icns
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources/pattern
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Controller.o
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Image.o
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDC.LinkFileList
+c0000000050E6D5FE00000000000003FF
+t1357305342
+s1023
+
+N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDC.o
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDCApp.o
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_A.o
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_Cinder.o
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorMediaSim.o
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorSim.o
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Sensor_A.o
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Tools.o
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/V2D.o
+t2
+s0
+
+N/Users/Gaston/dev/RDC/xcode/CinderApp.icns
+c0000000050ABA7F0000000000001BEB5
+t1353426928
+s114357
+
+N/Users/Gaston/dev/RDC/xcode/RDC_Prefix.pch
+c0000000050ABA7F00000000000000093
+t1353426928
+s147
+i<Cocoa/Cocoa.h>
+
+N/Users/Gaston/dev/RDC/xcode/SensorSim.cpp
+c0000000050DC40A300000000000003EF
+t1356611747
+s1007
+
+N/Users/Gaston/dev/RDC/xcode/pattern
+c0000000050B37CB600000000000000AA
+t1353940150
+s170
+
+N/var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch.pth
+t2
+s0
+
+NInfo.plist
+c0000000050ABA7F00000000000000349
+t1353426928
+s841
+
+CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp
+r0
+
+CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/Image.cpp
+r0
+
+CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/RDC.cpp
+r0
+
+CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp
+r0
+
+CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp
+r0
+
+CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp
+r0
+
+CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp
+r0
+
+CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp
+r0
+
+CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/Tools.cpp
+r0
+
+CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/V2D.cpp
+r0
+
+CBuild AST from /Users/Gaston/dev/RDC/xcode/SensorSim.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesfc8f887e0d97b641^a795aa7e0d97b641^---0#1#0#--18"Check dependencies36"795A6362-D16E-418C-BB87-B95FB2116658-
+
+CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Controller.o /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s378998143.064582
+e378998145.713352
+r1
+xCompileC
+x./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Controller.o
+x/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp:18:5: warning: delete called on 'Sensor_A' that is abstract but has non-virtual destructor [-Wdelete-non-virtual-dtor]
+o    delete sensor;
+o    ^
+o/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp:19:5: warning: delete called on 'Renderer_A' that is abstract but has non-virtual destructor [-Wdelete-non-virtual-dtor]
+o    delete renderer;
+o    ^
+o/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp:21:5: warning: delete called on 'Sensor_A' that is abstract but has non-virtual destructor [-Wdelete-non-virtual-dtor]
+o    delete sensorMedia;
+o    ^
+o3 warnings generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Compile /Users/Gaston/dev/RDC/xcode/../src/Controller.cppa8c5107f0d97b641^b69db6810d97b641^-613"/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp:18:5: warning: delete called on 'Sensor_A' that is abstract but has non-virtual destructor [-Wdelete-non-virtual-dtor]    delete sensor;    ^/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp:19:5: warning: delete called on 'Renderer_A' that is abstract but has non-virtual destructor [-Wdelete-non-virtual-dtor]    delete renderer;    ^/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp:21:5: warning: delete called on 'Sensor_A' that is abstract but has non-virtual destructor [-Wdelete-non-virtual-dtor]    delete sensorMedia;    ^3 warnings generated.3(36%IDEClangDiagnosticActivityLogMessage2@75"Delete called on 'Sensor_A' that is abstract but has non-virtual destructor-378998145#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@56"file://localhost/Users/Gaston/dev/RDC/src/Controller.cpp0000000000000000^17#4#17#4#230#0#14"Semantic Issue--2@77"Delete called on 'Renderer_A' that is abstract but has non-virtual destructor-378998145#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@56"file://localhost/Users/Gaston/dev/RDC/src/Controller.cpp0000000000000000^18#4#18#4#249#0#14"Semantic Issue--2@75"Delete called on 'Sensor_A' that is abstract but has non-virtual destructor-378998145#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@56"file://localhost/Users/Gaston/dev/RDC/src/Controller.cpp0000000000000000^20#4#20#4#286#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@65"file://localhost/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp0000000000000000^2338"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Controller.o ../src/Controller.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Controller.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Controller.dia -c /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Controller.o36"726F42F1-ED51-4573-8EEA-396E3CEF9F96-
+
+CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Image.o /Users/Gaston/dev/RDC/xcode/../src/Image.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s378998144.398270
+e378998145.369667
+r1
+xCompileC
+x./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Image.o
+x/Users/Gaston/dev/RDC/xcode/../src/Image.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection52"Compile /Users/Gaston/dev/RDC/xcode/../src/Image.cpp8c1466800d97b641^f9a15e810d97b641^---0#0#0#-19%DVTDocumentLocation2@60"file://localhost/Users/Gaston/dev/RDC/xcode/../src/Image.cpp0000000000000000^2308"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Image.o ../src/Image.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Image.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Image.dia -c /Users/Gaston/dev/RDC/xcode/../src/Image.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Image.o36"72780034-BBB3-49CD-BEDC-91C5598ED291-
+
+CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDC.o /Users/Gaston/dev/RDC/xcode/../src/RDC.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s378998143.064364
+e378998144.396959
+r1
+xCompileC
+x./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDC.o
+x/Users/Gaston/dev/RDC/xcode/../src/RDC.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Compile /Users/Gaston/dev/RDC/xcode/../src/RDC.cpp34bd107f0d97b641^45a165800d97b641^---0#0#0#-19%DVTDocumentLocation2@58"file://localhost/Users/Gaston/dev/RDC/xcode/../src/RDC.cpp0000000000000000^2296"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDC.o ../src/RDC.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDC.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDC.dia -c /Users/Gaston/dev/RDC/xcode/../src/RDC.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDC.o36"8BA420CF-49A9-4254-BF71-B61A2DED9F6D-
+
+CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDCApp.o /Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s378998143.064372
+e378998149.632850
+r1
+xCompileC
+x./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDCApp.o
+x/Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Compile /Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp9dbc107f0d97b641^1d03a2850d97b641^---0#0#0#-19%DVTDocumentLocation2@61"file://localhost/Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp0000000000000000^2314"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDCApp.o ../src/RDCApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDCApp.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDCApp.dia -c /Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDCApp.o36"8831DC06-8845-4DE9-9E79-6913DB666000-
+
+CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_A.o /Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s378998143.064533
+e378998144.397136
+r1
+xCompileC
+x./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_A.o
+x/Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Compile /Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp1ec6107f0d97b641^08ab65800d97b641^---0#0#0#-19%DVTDocumentLocation2@65"file://localhost/Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp0000000000000000^2338"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_A.o ../src/Renderer_A.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_A.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_A.dia -c /Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_A.o36"6B7E67D9-9996-47F7-8B3E-4770F5ABEB56-
+
+CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_Cinder.o /Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s378998143.064537
+e378998145.675188
+r1
+xCompileC
+x./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_Cinder.o
+x/Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp51be107f0d97b641^c6ddac810d97b641^---0#0#0#-19%DVTDocumentLocation2@70"file://localhost/Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp0000000000000000^2368"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_Cinder.o ../src/Renderer_Cinder.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_Cinder.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_Cinder.dia -c /Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_Cinder.o36"B10B57AD-B387-4AFA-90C3-E04CCE938351-
+
+CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorMediaSim.o /Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s378998143.775109
+e378998144.783816
+r1
+xCompileC
+x./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorMediaSim.o
+x/Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Compile /Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp228dc67f0d97b641^1f0e56810d97b641^---0#0#0#-19%DVTDocumentLocation2@69"file://localhost/Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp0000000000000000^2362"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorMediaSim.o ../src/SensorMediaSim.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorMediaSim.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorMediaSim.dia -c /Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorMediaSim.o36"77E1074B-8363-4DD6-88EA-CE9F720914EC-
+
+CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorSim.o /Users/Gaston/dev/RDC/xcode/SensorSim.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s378998143.460000
+e378998145.675186
+r1
+xCompileC
+x./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorSim.o
+x/Users/Gaston/dev/RDC/xcode/SensorSim.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection49"Compile /Users/Gaston/dev/RDC/xcode/SensorSim.cpp90d9757f0d97b641^94d9ac810d97b641^---0#0#0#-19%DVTDocumentLocation2@57"file://localhost/Users/Gaston/dev/RDC/xcode/SensorSim.cpp0000000000000000^2318"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorSim.o SensorSim.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorSim.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorSim.dia -c /Users/Gaston/dev/RDC/xcode/SensorSim.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorSim.o36"95C6E82B-CBAB-48EB-8D72-86EC94444F73-
+
+CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Sensor_A.o /Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s378998143.064524
+e378998144.462566
+r1
+xCompileC
+x./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Sensor_A.o
+x/Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Compile /Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp90bf107f0d97b641^37177b800d97b641^---0#0#0#-19%DVTDocumentLocation2@63"file://localhost/Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp0000000000000000^2326"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Sensor_A.o ../src/Sensor_A.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Sensor_A.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Sensor_A.dia -c /Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Sensor_A.o36"13254653-F1A2-47DD-8F6A-5D01A4BB5F0A-
+
+CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Tools.o /Users/Gaston/dev/RDC/xcode/../src/Tools.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s378998143.064626
+e378998143.458686
+r1
+xCompileC
+x./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Tools.o
+x/Users/Gaston/dev/RDC/xcode/../src/Tools.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection52"Compile /Users/Gaston/dev/RDC/xcode/../src/Tools.cppb5c6107f0d97b641^836c757f0d97b641^---0#0#0#-19%DVTDocumentLocation2@60"file://localhost/Users/Gaston/dev/RDC/xcode/../src/Tools.cpp0000000000000000^2308"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Tools.o ../src/Tools.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Tools.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Tools.dia -c /Users/Gaston/dev/RDC/xcode/../src/Tools.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/Tools.o36"8137C2FA-2AEB-4E1C-86B2-721A47C72C93-
+
+CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/V2D.o /Users/Gaston/dev/RDC/xcode/../src/V2D.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s378998143.064558
+e378998143.773547
+r1
+xCompileC
+x./build/RDC.build/Debug/RDC.build/Objects-normal/i386/V2D.o
+x/Users/Gaston/dev/RDC/xcode/../src/V2D.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Compile /Users/Gaston/dev/RDC/xcode/../src/V2D.cpp50c2107f0d97b641^4f07c67f0d97b641^---0#0#0#-19%DVTDocumentLocation2@58"file://localhost/Users/Gaston/dev/RDC/xcode/../src/V2D.cpp0000000000000000^2296"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/i386/V2D.o ../src/V2D.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/V2D.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/V2D.dia -c /Users/Gaston/dev/RDC/xcode/../src/V2D.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/V2D.o36"4AAA6BF8-5D95-4D43-AE9A-843E226C663C-
+
+CCpResource CinderApp.icns ./build/Debug/RDC.app/Contents/Resources/CinderApp.icns
+s378998142.744198
+e378998142.792657
+r1
+xCpResource
+xCinderApp.icns
+x./build/Debug/RDC.app/Contents/Resources/CinderApp.icns
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Copy ./build/Debug/RDC.app/Contents/Resources/CinderApp.icnsd49abe7e0d97b641^31eeca7e0d97b641^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources/CinderApp.icns000000000080d041^341"CpResource CinderApp.icns ./build/Debug/RDC.app/Contents/Resources/CinderApp.icns    cd /Users/Gaston/dev/RDC/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Gaston/dev/RDC/xcode/CinderApp.icns /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources36"C4B81A98-3724-4AB0-8802-D99172920542-
+
+CCpResource pattern ./build/Debug/RDC.app/Contents/Resources/pattern
+s378998142.744182
+e378998142.817506
+r1
+xCpResource
+xpattern
+x./build/Debug/RDC.app/Contents/Resources/pattern
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy ./build/Debug/RDC.app/Contents/Resources/pattern4a97be7e0d97b641^2c4ad17e0d97b641^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources/pattern000000000080d041^320"CpResource pattern ./build/Debug/RDC.app/Contents/Resources/pattern    cd /Users/Gaston/dev/RDC/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Gaston/dev/RDC/xcode/pattern /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources36"4E57554C-7117-4642-81E9-887C8E3D2AFE-
+
+CLd /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/MacOS/RDC normal i386
+s378998149.640162
+e378998153.442681
+r1
+xLd
+x/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/MacOS/RDC
+xnormal
+xi386
+old: warning: ld: warning: ld: warning: ld: warning: ld: warning: ignoring file /opt/local/lib/libopencv_imgproc.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_imgproc.dylibignoring file /opt/local/lib/libopencv_contrib.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_contrib.dylibignoring file /opt/local/lib/libopencv_highgui.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_highgui.dylibignoring file /opt/local/lib/libopencv_core.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_core.dylibignoring file /opt/local/lib/libopencv_legacy.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_legacy.dylib
+o
+o
+o
+o
+old: warning: ignoring file /opt/local/lib/libopencv_calib3d.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_calib3d.dylib
+old: warning: ignoring file /opt/local/lib/libopencv_ml.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_ml.dylib
+old: warning: ignoring file /opt/local/lib/libopencv_flann.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_flann.dylib
+old: warning: ignoring file /opt/local/lib/libopencv_video.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_video.dylib
+old: warning: ignoring file /opt/local/lib/libopencv_objdetect.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_objdetect.dylib
+old: warning: ignoring file /opt/local/lib/libopencv_features2d.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_features2d.dylib
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Link /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/MacOS/RDC4f20a4850d97b641^365771890d97b641^-3108"ld: warning: ld: warning: ld: warning: ld: warning: ld: warning: ignoring file /opt/local/lib/libopencv_imgproc.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_imgproc.dylibignoring file /opt/local/lib/libopencv_contrib.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_contrib.dylibignoring file /opt/local/lib/libopencv_highgui.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_highgui.dylibignoring file /opt/local/lib/libopencv_core.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_core.dylibignoring file /opt/local/lib/libopencv_legacy.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_legacy.dylibld: warning: ignoring file /opt/local/lib/libopencv_calib3d.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_calib3d.dylibld: warning: ignoring file /opt/local/lib/libopencv_ml.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_ml.dylibld: warning: ignoring file /opt/local/lib/libopencv_flann.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_flann.dylibld: warning: ignoring file /opt/local/lib/libopencv_video.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_video.dylibld: warning: ignoring file /opt/local/lib/libopencv_objdetect.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_objdetect.dylibld: warning: ignoring file /opt/local/lib/libopencv_features2d.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_features2d.dylib7(21%IDEActivityLogMessage2@1394"Ld: warning: ld: warning: ld: warning: ld: warning: ignoring file /opt/local/lib/libopencv_imgproc.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_imgproc.dylibignoring file /opt/local/lib/libopencv_contrib.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_contrib.dylibignoring file /opt/local/lib/libopencv_highgui.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_highgui.dylibignoring file /opt/local/lib/libopencv_core.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_core.dylibignoring file /opt/local/lib/libopencv_legacy.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_legacy.dylib-378998151#0#1408#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@270"Ignoring file /opt/local/lib/libopencv_calib3d.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_calib3d.dylib-378998151#1412#284#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@260"Ignoring file /opt/local/lib/libopencv_ml.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_ml.dylib-378998151#1696#274#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@266"Ignoring file /opt/local/lib/libopencv_flann.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_flann.dylib-378998151#1970#280#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@266"Ignoring file /opt/local/lib/libopencv_video.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_video.dylib-378998151#2250#280#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@274"Ignoring file /opt/local/lib/libopencv_objdetect.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_objdetect.dylib-378998151#2530#288#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@276"Ignoring file /opt/local/lib/libopencv_features2d.dylib, file was built for unsupported file format ( 0xcf 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 1 0x 3 0x 0 0x 0 0x 0 0x 6 0x 0 0x 0 0x 0 ) which is not the architecture being linked (i386): /opt/local/lib/libopencv_features2d.dylib-378998151#2818#290#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--0#0#0#--1076"Ld ./build/Debug/RDC.app/Contents/MacOS/RDC normal i386    cd /Users/Gaston/dev/RDC/xcode    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/Gaston/dev/RDC/xcode/build/Debug -L/opt/local/lib -F/Users/Gaston/dev/RDC/xcode/build/Debug -filelist /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDC.LinkFileList -mmacosx-version-min=10.5 ../../cinder/lib/libcinder_d.a -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_legacy -lopencv_contrib -lopencv_calib3d -lopencv_features2d -lopencv_flann -lopencv_ml -lopencv_objdetect -lopencv_video -lcurl -framework Cocoa -framework OpenGL -framework Carbon -framework CoreVideo -framework QTKit -framework QuickTime -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -o /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/MacOS/RDC36"24A9894D-34CB-44C0-A076-CB1A69E00F50-
+
+CProcessInfoPlistFile /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Info.plist Info.plist
+s378998142.732436
+e378998142.736671
+r1
+xProcessInfoPlistFile
+x/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Info.plist
+xInfo.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Process Info.plistfda3bb7e0d97b641^29cbbc7e0d97b641^---0#0#0#-19%DVTDocumentLocation2@54"file://localhost/Users/Gaston/dev/RDC/xcode/Info.plist0000000000000000^339"ProcessInfoPlistFile ./build/Debug/RDC.app/Contents/Info.plist Info.plist    cd /Users/Gaston/dev/RDC/xcode    builtin-infoPlistUtility Info.plist -genpkginfo /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Info.plist36"5B2AB778-A1A0-4AFF-8481-83B70F19984E-
+
+CProcessPCH++ /Users/Gaston/Library/Developer/Xcode/DerivedData/RDC-cmlehkqanocslpbfbcdfzbelmyip/Index/PrecompiledHeaders/RDC_Prefix-gqwdhdncsvmptjadmnnxkcesyyeo_ast/RDC_Prefix.pch.pth RDC_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH++ /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch.pth RDC_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s378998142.825967
+e378998143.057233
+r1
+xProcessPCH++
+x/var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch.pth
+xRDC_Prefix.pch
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection25"Precompile RDC_Prefix.pch2fa4d37e0d97b641^ada70e7f0d97b641^---0#0#0#-19%DVTDocumentLocation2@58"file://localhost/Users/Gaston/dev/RDC/xcode/RDC_Prefix.pch0000000000000000^2433"ProcessPCH++ /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch.pth RDC_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug --serialize-diagnostics /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch.dia -c /Users/Gaston/dev/RDC/xcode/RDC_Prefix.pch -o /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-gozgrruyvbndwtdpcabskgqfnott/RDC_Prefix.pch.d36"8FA462BF-75D0-42BA-8304-D3F7ECFCFDCF-
+
+CTouch /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app
+s378998153.450613
+e378998153.629855
+r1
+xTouch
+x/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Touch /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app3c6773890d97b641^073fa1890d97b641^---0#0#0#--135"Touch ./build/Debug/RDC.app    cd /Users/Gaston/dev/RDC/xcode    /usr/bin/touch -c /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app36"6EAED29D-3FC8-4310-A15A-F246FEDE4B55-
+

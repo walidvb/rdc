@@ -34,7 +34,13 @@ Image RDC::compensate(const Image& srcImg)
     {
         for (int j = 0 ; j < srcImg.height; j++)
         {
-            dstImg.pixelWrite(srcImg.pixelAt(i,j)+1, i, j);
+            float newPix = 0;
+            //Simple fixed threshold method
+            if (srcImg.pixelAt(i,j) > 0.5)
+            {
+                newPix = 255;
+            }
+            dstImg.pixelWrite(newPix, i, j);
         }
     }
     return dstImg;

@@ -8,6 +8,8 @@
 
 #include "Renderer_Cinder.h"
 #include "common.h"
+#include "cinder/Channel.h"
+#include "cinder/gl/Texture.h"
 
 using namespace gl;
 
@@ -34,12 +36,27 @@ Vec2f Renderer_Cinder::V2D2Vecf(V2D src) const
 
 void Renderer_Cinder::drawImg(const Image& img, int POS) const
 {
-    cout <<"=========================="<<endl;
-    for (int i = 0; i < img.width; i++) {
-        for (int j = 0; j < img.height; j++)
+    //Draw mode
+    Channel32f chan(img.width, img.height);
+    for(int i = 0; i < img.width; ++i)
+    {
+        for (int j = 0; j<img.height; ++j)
         {
-            cout << img.pixelAt(i,j)<<" ";
+            chan.setValue(Vec2i(i, j), img.pixelAt(i, j));
         }
-        cout<<endl;
     }
+    
+    Texture myImg;
+    myImg = Texture(chan);
+    draw(myImg);
+    //Verbose mode
+//    
+//    cout <<"=========================="<<endl;
+//    for (int i = 0; i < img.width; i++) {
+//        for (int j = 0; j < img.height; j++)
+//        {
+//            cout << img.pixelAt(i,j)<<" ";
+//        }
+//        cout<<endl;
+//    }
 }

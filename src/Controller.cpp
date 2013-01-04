@@ -31,6 +31,8 @@ void Controller::init(int width, int height)
 
 void Controller::calibrate()
 {
+    //TODO
+    //Get the homography matrice
     rdc->calibrate(sensor, renderer);
 }
 
@@ -47,3 +49,7 @@ void Controller::process()
     renderer->drawImg(frame, FULL);
 }
 
+void Controller::draw()
+{
+    
+}

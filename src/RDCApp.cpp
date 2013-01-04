@@ -3,6 +3,8 @@
 
 #include "cinder/app/AppBasic.h"
 #include "Controller.h"
+#include "cinder/gl/gl.h"
+#include "cinder/Vector.h"
 
 using namespace std;
 
@@ -45,8 +47,11 @@ void RDCApp::update()
 
 void RDCApp::draw()
 {
-	// clear out the window with black
+	//clear out the window with black
     ci::gl::clear( ci::Color( 0, 0, 0 ) );
+    controller->process();
+    //ci::gl::drawSolidCircle( ci::Vec2f( 30, 30 ), 50.0f );
+
 }
 
 void RDCApp::quit()

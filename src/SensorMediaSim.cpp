@@ -8,6 +8,10 @@
 
 #include "SensorMediaSim.h"
 #include "Tools.h"
+#include "cinder/Cinder.h"
+#include "cinder/ImageIo.h"
+#include "cinder/gl/Texture.h"
+#include "cinder/Channel.h"
 
 SensorMediaSim::SensorMediaSim(int w, int h) : Sensor_A(w,h)
 {
@@ -15,24 +19,19 @@ SensorMediaSim::SensorMediaSim(int w, int h) : Sensor_A(w,h)
 
 void SensorMediaSim::init()
 {
-
 }
 
 Image SensorMediaSim::grabFrame()
 {
-    Image tmpImage(this->width, this->height);
+    ci::Url url( "http://testsite.onsport.com/wp-content/themes/onsport-jos/img/players/0601-090529lena512.bmp" );
+    ci::Channel32f mChannel = ci::Channel32f( loadImage( loadUrl( url ) ) );
+    Image tmpImage(mChannel.getWidth(), mChannel.getHeight());
     
-    for (int i = 0; i < this->frame.width; i++) {
-        for (int j = 0 ; j < this->frame.height; j++)
+    for (int i = 0; i < tmpImage.width; i++)
+    {
+        for (int j = 0 ; j < tmpImage.height; j++)
         {
-            if(j%2==0)
-            {
-                tmpImage.pixelWrite(255, i, j);
-            }
-            else
-            {
-                tmpImage.pixelWrite(15, i, j);
-            }
+            tmpImage.pixelWrite(*mChannel.getData(i, j), i, j);
         }
     }
     return tmpImage;

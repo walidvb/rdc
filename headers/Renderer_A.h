@@ -24,8 +24,8 @@ public:
     virtual void drawImg(const Image& img, int POS) const = 0;
 
     //void drawRect( V2D& topleft, V2D& bottomright ) const;
-    void drawStripeVert(float& xOffset, float& width) const;
-    void drawStripeHorz(float& yOffset, float& height) const;
+    void drawStripeVert(float xOffset, float width) const;
+    void drawStripeHorz(float yOffset, float height) const;
     
     //Getters and Setters
     int getWidth() const;
