@@ -73,7 +73,8 @@
 		3D3A0ECC16A80BFB00A4C1A4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3D3A0ECE16A80BFB00A4C1A4 /* homography.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = homography.1; sourceTree = "<group>"; };
 		3D3A0ED716A8416500A4C1A4 /* CameraCalibrator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CameraCalibrator.cc; path = src/CameraCalibrator.cc; sourceTree = "<group>"; };
-		3D3A0ED816A8416500A4C1A4 /* CameraCalibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraCalibrator.h; path = src/CameraCalibrator.h; sourceTree = "<group>"; };
+		3D3A0EDE16A8556B00A4C1A4 /* calibController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = calibController.h; path = headers/calibController.h; sourceTree = "<group>"; };
+		3D3A0EDF16A8556B00A4C1A4 /* CameraCalibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraCalibrator.h; path = headers/CameraCalibrator.h; sourceTree = "<group>"; };
 		3D3C9CDA168C5F1E00EEBCAF /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = ../headers/Image.h; sourceTree = "<group>"; };
 		3D3C9CDB168C5F4500EEBCAF /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Image.cpp; path = ../src/Image.cpp; sourceTree = "<group>"; };
 		3D992F881684C91D008C380E /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Controller.cpp; path = ../src/Controller.cpp; sourceTree = "<group>"; };
@@ -225,7 +226,8 @@
 		3D3A0ED416A8410F00A4C1A4 /* headers */ = {
 			isa = PBXGroup;
 			children = (
-				3D3A0ED816A8416500A4C1A4 /* CameraCalibrator.h */,
+				3D3A0EDE16A8556B00A4C1A4 /* calibController.h */,
+				3D3A0EDF16A8556B00A4C1A4 /* CameraCalibrator.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
