@@ -1,12 +1,12 @@
 ffffffffffffffffffffffffffffffff 4452684f3f76d0b327f1054c670d9c37 ffffffffffffffffffffffffffffffff 102 /Users/Gaston/dev/RDC/xcode/build/Debug/RDC.app
 ffffffffffffffffffffffffffffffff 9b463e52c6de41d17dd24f9eae277f64 ffffffffffffffffffffffffffffffff 7879048 /Users/Gaston/dev/RDC/xcode/build/Debug/RDC.app/Contents/MacOS/RDC
-77531284e90749ebc5166e0b37f25f13 203dbbf11b5698af16b4ada72cb23be3 ffffffffffffffffffffffffffffffff 78728 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/Controller.o
 ffffffffffffffffffffffffffffffff b03ccf8c426f6b2e860e1630faba5009 ffffffffffffffffffffffffffffffff 86156 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/Image.o
-ffffffffffffffffffffffffffffffff d26d4d4555547481f90d93ad057efb8f ffffffffffffffffffffffffffffffff 206956 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorMediaSim.o
+77531284f676b125c5166e0b37f2188d d26d4d4555547481f90d93ad057efb8f ffffffffffffffffffffffffffffffff 206956 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorMediaSim.o
 ffffffffffffffffffffffffffffffff 21ab7c9576c6775368663d577dc076de ffffffffffffffffffffffffffffffff 240068 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/SensorSim.o
+77531284e932d272c5166e0b37f25f17 203dbbf11b5698af16b4ada72cb23be3 ffffffffffffffffffffffffffffffff 167900 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/Controller.o
 ffffffffffffffffffffffffffffffff 2ed8e81a1e046a339c16100cf17ba9e7 ffffffffffffffffffffffffffffffff 63244 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/V2D.o
 7753128493fe0d0fc5166e0b37f17b18 fd336172748ff6699e60c59405fb6d01 ffffffffffffffffffffffffffffffff 36692 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_A.o
-77531284f64df360c5166e0b37f23fc7 823cdf82c37f2cb27d25b17804b945b0 ffffffffffffffffffffffffffffffff 196804 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_Cinder.o
+77531284f67868f9c5166e0b37f23fc3 823cdf82c37f2cb27d25b17804b945b0 ffffffffffffffffffffffffffffffff 196804 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/Renderer_Cinder.o
 ffffffffffffffffffffffffffffffff cfd5509283f489a5d9089294b3f46478 ffffffffffffffffffffffffffffffff 77164 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/Sensor_A.o
 ffffffffffffffffffffffffffffffff c557b81f254d4abc688912d3bf11eb1b ffffffffffffffffffffffffffffffff 2436 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/Tools.o
 7753128493fe0f67c5166e0b37f1791f e7f8f3b0d4e0ad8e63ebd8fdb600227e ffffffffffffffffffffffffffffffff 46856 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/RDC.build/Objects-normal/i386/RDC.o

@@ -24,6 +24,7 @@ void SensorMediaSim::init()
 Image SensorMediaSim::grabFrame()
 {
     ci::Url url( "http://testsite.onsport.com/wp-content/themes/onsport-jos/img/players/0601-090529lena512.bmp" );
+    
     ci::Channel32f mChannel = ci::Channel32f( loadImage( loadUrl( url ) ) );
     Image tmpImage(mChannel.getWidth(), mChannel.getHeight());
     
