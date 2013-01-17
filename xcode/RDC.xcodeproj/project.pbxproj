@@ -20,8 +20,10 @@
 		3D2CD14B165D01860016C8C6 /* Renderer_A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD14A165D01860016C8C6 /* Renderer_A.cpp */; };
 		3D2CD152165D29CC0016C8C6 /* V2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD151165D29CC0016C8C6 /* V2D.cpp */; };
 		3D3A0ECD16A80BFB00A4C1A4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A0ECC16A80BFB00A4C1A4 /* main.cpp */; };
-		3D3A0ECF16A80BFB00A4C1A4 /* homography.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D3A0ECE16A80BFB00A4C1A4 /* homography.1 */; };
 		3D3A0ED916A8416500A4C1A4 /* CameraCalibrator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A0ED716A8416500A4C1A4 /* CameraCalibrator.cc */; };
+		3D3A0EE116A8558900A4C1A4 /* CalibController.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A0EE016A8558900A4C1A4 /* CalibController.cc */; };
+		3D3A0EE816A858D800A4C1A4 /* testChessboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3A0EE716A858D800A4C1A4 /* testChessboard.png */; };
+		3D3A0EE916A858D800A4C1A4 /* testChessboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3A0EE716A858D800A4C1A4 /* testChessboard.png */; };
 		3D3C9CDC168C5F4500EEBCAF /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C9CDB168C5F4500EEBCAF /* Image.cpp */; };
 		3D992F891684C91D008C380E /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F881684C91D008C380E /* Controller.cpp */; };
 		3D992F8D1684CA5E008C380E /* SensorSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F8C1684CA5E008C380E /* SensorSim.cpp */; };
@@ -39,10 +41,9 @@
 		3D3A0EC716A80BFA00A4C1A4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = Resources;
+			dstSubfolderSpec = 16;
 			files = (
-				3D3A0ECF16A80BFB00A4C1A4 /* homography.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -73,8 +74,10 @@
 		3D3A0ECC16A80BFB00A4C1A4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3D3A0ECE16A80BFB00A4C1A4 /* homography.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = homography.1; sourceTree = "<group>"; };
 		3D3A0ED716A8416500A4C1A4 /* CameraCalibrator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CameraCalibrator.cc; path = src/CameraCalibrator.cc; sourceTree = "<group>"; };
-		3D3A0EDE16A8556B00A4C1A4 /* calibController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = calibController.h; path = headers/calibController.h; sourceTree = "<group>"; };
 		3D3A0EDF16A8556B00A4C1A4 /* CameraCalibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraCalibrator.h; path = headers/CameraCalibrator.h; sourceTree = "<group>"; };
+		3D3A0EE016A8558900A4C1A4 /* CalibController.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CalibController.cc; path = src/CalibController.cc; sourceTree = "<group>"; };
+		3D3A0EE216A8559E00A4C1A4 /* CalibController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalibController.h; path = headers/CalibController.h; sourceTree = "<group>"; };
+		3D3A0EE716A858D800A4C1A4 /* testChessboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testChessboard.png; sourceTree = "<group>"; };
 		3D3C9CDA168C5F1E00EEBCAF /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = ../headers/Image.h; sourceTree = "<group>"; };
 		3D3C9CDB168C5F4500EEBCAF /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Image.cpp; path = ../src/Image.cpp; sourceTree = "<group>"; };
 		3D992F881684C91D008C380E /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Controller.cpp; path = ../src/Controller.cpp; sourceTree = "<group>"; };
@@ -196,6 +199,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3D3A0EE716A858D800A4C1A4 /* testChessboard.png */,
 				3D1889E31663BABE00CF9BFA /* pattern */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				00CCAF14116A9FEE008396D5 /* CinderApp.icns */,
@@ -226,7 +230,7 @@
 		3D3A0ED416A8410F00A4C1A4 /* headers */ = {
 			isa = PBXGroup;
 			children = (
-				3D3A0EDE16A8556B00A4C1A4 /* calibController.h */,
+				3D3A0EE216A8559E00A4C1A4 /* CalibController.h */,
 				3D3A0EDF16A8556B00A4C1A4 /* CameraCalibrator.h */,
 			);
 			name = headers;
@@ -235,6 +239,7 @@
 		3D3A0ED516A8411600A4C1A4 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				3D3A0EE016A8558900A4C1A4 /* CalibController.cc */,
 				3D3A0ED716A8416500A4C1A4 /* CameraCalibrator.cc */,
 			);
 			name = src;
@@ -283,6 +288,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D3A0ED216A80BFB00A4C1A4 /* Build configuration list for PBXNativeTarget "homography" */;
 			buildPhases = (
+				3D3A0EE316A8568500A4C1A4 /* Resources */,
 				3D3A0EC516A80BFA00A4C1A4 /* Sources */,
 				3D3A0EC616A80BFA00A4C1A4 /* Frameworks */,
 				3D3A0EC716A80BFA00A4C1A4 /* CopyFiles */,
@@ -337,12 +343,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3D3A0EE316A8568500A4C1A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D3A0EE916A858D800A4C1A4 /* testChessboard.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D1107290486CEB800E47090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */,
 				3D1889E41663BABE00CF9BFA /* pattern in Resources */,
+				3D3A0EE816A858D800A4C1A4 /* testChessboard.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +370,7 @@
 			files = (
 				3D3A0ECD16A80BFB00A4C1A4 /* main.cpp in Sources */,
 				3D3A0ED916A8416500A4C1A4 /* CameraCalibrator.cc in Sources */,
+				3D3A0EE116A8558900A4C1A4 /* CalibController.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
