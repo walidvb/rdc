@@ -21,7 +21,7 @@ public:
     void init(int width, int height);
     void calibrate();   //!< generates the homography matrix needed by the algorithm
     void process();     //!< processes the frame that will be projected, and return it
-    void draw();    //<! draw the image, might not be the right place?
+    void draw();        //<! draw the image, might not be the right place?
     
 private:
     Sensor_A* sensor;

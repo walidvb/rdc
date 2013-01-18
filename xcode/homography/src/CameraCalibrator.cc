@@ -26,21 +26,21 @@ int CameraCalibrator::addChessboardPoints(
         }
     }
     // 2D Image points:
-    cv::Mat image; // to contain chessboard image
+    Mat image; // to contain chessboard image
     int successes = 0;
     // for all viewpoints
     for (int i=0; i<filelist.size(); i++) {
         // Open the image
-        image = cv::imread(filelist[i],0);
+        image = imread(filelist[i],0);
         // Get the chessboard corners
-        bool found = cv::findChessboardCorners(
+        bool found = findChessboardCorners(
                                                image, boardSize, imageCorners);
         // Get subpixel accuracy on the corners
-        cv::cornerSubPix(image, imageCorners,
-                         cv::Size(5,5),
-                         cv::Size(-1,-1),
-                         cv::TermCriteria(cv::TermCriteria::MAX_ITER +
-                                          cv::TermCriteria::EPS,
+        cornerSubPix(image, imageCorners,
+                         Size(5,5),
+                         Size(-1,-1),
+                         TermCriteria(TermCriteria::MAX_ITER +
+                                          TermCriteria::EPS,
                                           30,      // max number of iterations
                                           0.1));  // min accuracy
         //If we have a good board, add it to our data
@@ -63,9 +63,8 @@ void CameraCalibrator::addPoints(const std::vector<cv::Point2f>&
     objectPoints.push_back(objectCorners);
 }
 
-// Calibrate the camera
-// returns the re-projection error
-double CameraCalibrator::calibrate(cv::Size &imageSize)
+
+double CameraCalibrator::calibrate(cv::Size &imageSize) //<! Calibrate the camera returns the re-projection error
 {
     // undistorter must be reinitialized
     mustInitUndistort= true;

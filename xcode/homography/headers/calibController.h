@@ -9,6 +9,9 @@
 #ifndef RDC_calibController_h
 #define RDC_calibController_h
 
+class CalibController{
+    
 
+};
 
 #endif
