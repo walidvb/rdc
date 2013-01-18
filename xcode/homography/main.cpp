@@ -29,19 +29,21 @@ int main (int argc, const char * argv[])
     cout << "trying to read from " << filePath << endl;
     Mat image = imread(filePath, CV_LOAD_IMAGE_COLOR);
     
+    
     // number of corners on the chessboard
     Size boardSize(6,4);
-    
-    calibControl.doCalib();
-    image = calibControl.getRealImage(image);
-    
-    //Draw the image
+
     // output vectors of image points
     std::vector<cv::Point2f> imageCorners;
     // Get the chessboard corners
-    bool found = findChessboardCorners(image,boardSize, imageCorners);
+    bool found = findChessboardCorners(image, boardSize, imageCorners);
     //Draw the corners
     drawChessboardCorners(image, boardSize, imageCorners, found); // corners have been found
+    
+    
+    image = calibControl.getRealImage(image);
+    
+    //Draw the image
     imshow( "Display window", image );                   // Show our image inside it.
     cvWaitKey(0);
     cvDestroyWindow("Display window");

@@ -39,6 +39,7 @@ private:
     vector<string> fileList;    //<! the list of pictures taken
     Size boardSize;             //<! the size of the chessBoard
     Size frameSize;             //<! the resolution of the sensor/camera
+    bool calibDone;             //<! used to know if calib has been done before or not.
     /*
      //Load the images
      string filePath = "/Users/Gaston/Desktop/testChessboard.png";

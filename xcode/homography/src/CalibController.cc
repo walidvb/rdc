@@ -8,7 +8,7 @@
 
 #include "CalibController.h"
 
-CalibController::CalibController()
+CalibController::CalibController() : calibDone(false)
 {
     boardSize = Size(6,4);
     
@@ -46,10 +46,15 @@ void CalibController::doCalib()
 {
     takeAndSavePics();
     computeCalib();
+    calibDone == true;
 }
 
 Mat CalibController::getRealImage(Mat& original)
 {
+    if(!calibDone)
+    {
+        doCalib();
+    }
     return camCalib->remap(original);
 }
 
