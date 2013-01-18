@@ -16,7 +16,8 @@
 using namespace cv;
 using namespace std;
 
-class CameraCalibrator {
+class CameraCalibrator
+{
     // input points:
     vector<vector<Point3f> > objectPoints; //<! the points in world coordinates
 
@@ -29,6 +30,7 @@ class CameraCalibrator {
     
     Mat map1,map2; //<! used in image undistortion
     bool mustInitUndistort;
+    
 public:
     CameraCalibrator();
     int addChessboardPoints(const vector<string>& filelist, Size & boardSize);      //<! Open chessboard images and extract corner points
@@ -36,5 +38,6 @@ public:
     double calibrate(cv::Size &imageSize); //<! Calibrate the camera, returns the re-projection error
     Mat remap(const cv::Mat &image); //<! remove distortion in an image (after calibration)
 
-    #endif /* defined(__RDC__CameraCalibrator__) */
 };
+
+#endif /* defined(__RDC__CameraCalibrator__) */

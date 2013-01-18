@@ -1,6 +1,6 @@
-ffffffffffffffffffffffffffffffff f88c159eb1fb6ed97769b0e859329050 ffffffffffffffffffffffffffffffff 164852 /Users/Gaston/dev/RDC/xcode/build/Debug/homography
-0000000000014fc500000000000000de 9a2b3fa2e9106d9d7900f5199491b22a ffffffffffffffffffffffffffffffff 184 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CalibController.o
+ffffffffffffffffffffffffffffffff f88c159eb1fb6ed97769b0e859329050 ffffffffffffffffffffffffffffffff 179556 /Users/Gaston/dev/RDC/xcode/build/Debug/homography
+0000000050289f3b0000000000006680 7edb4194294fedbca572904066add791 ffffffffffffffffffffffffffffffff 166032 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/main.o
+00000000000003ed00000000000003ad 9a2b3fa2e9106d9d7900f5199491b22a ffffffffffffffffffffffffffffffff 175780 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CalibController.o
 ffffffffffffffffffffffffffffffff 32e4751cccdbe7abbcf039e96baf67db ffffffffffffffffffffffffffffffff 333736 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CameraCalibrator.o
-000000005029a40b0000000000006730 7edb4194294fedbca572904066add791 ffffffffffffffffffffffffffffffff 186480 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/main.o
 ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 0 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/calibController.o
 0000000000e8b77d000000000003ff31 1c3474f391813386fa0e228d1b49e223 ffffffffffffffffffffffffffffffff 26296 /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/main.o
