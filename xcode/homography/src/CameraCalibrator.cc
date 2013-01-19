@@ -32,23 +32,32 @@ int CameraCalibrator::addChessboardPoints(
     for (int i=0; i<filelist.size(); i++) {
         // Open the image
         image = imread(filelist[i],0);
+        cout << filelist[i] << ": ";
         // Get the chessboard corners
-        bool found = findChessboardCorners(
-                                               image, boardSize, imageCorners);
-        // Get subpixel accuracy on the corners
-        cornerSubPix(image, imageCorners,
+        bool found = findChessboardCorners(image, boardSize, imageCorners);
+        if(!found)
+        {
+            cout << "no ";
+        }
+        cout << "corners found" << endl;
+        
+        if(found)
+        {
+            // Get subpixel accuracy on the corners
+            cornerSubPix(image, imageCorners,
                          Size(5,5),
                          Size(-1,-1),
                          TermCriteria(TermCriteria::MAX_ITER +
-                                          TermCriteria::EPS,
-                                          30,      // max number of iterations
-                                          0.1));  // min accuracy
-        //If we have a good board, add it to our data
-        if (imageCorners.size() == boardSize.area()) {
-            // Add image and scene points from one view
-            addPoints(imageCorners, objectCorners);
-        
-            successes++;
+                                      TermCriteria::EPS,
+                                      30,      // max number of iterations
+                                      0.1));  // min accuracy
+            //If we have a good board, add it to our data
+            if (imageCorners.size() == boardSize.area()) {
+                // Add image and scene points from one view
+                addPoints(imageCorners, objectCorners);
+                
+                successes++;
+            }
         }
     }
     return successes;

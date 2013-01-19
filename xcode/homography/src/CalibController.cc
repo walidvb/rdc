@@ -8,16 +8,16 @@
 
 #include "CalibController.h"
 
-CalibController::CalibController() : calibDone(false)
+CalibController::CalibController(Size boardSize) : calibDone(false), boardSize(boardSize)
 {
-    boardSize = Size(6,4);
-    
     //temporary use, see init()
-    string filePath = "/Users/Gaston/Desktop/testChessboard.png";
+    string filePath = "/Users/Gaston/dev/RDC/tmp/IMG_0693.JPG";
     Mat image = imread(filePath, CV_LOAD_IMAGE_COLOR);
     frameSize = image.size();
     camCalib = new CameraCalibrator();
 }
+
+
 void CalibController::init()
 {
     // TODO:
@@ -29,9 +29,20 @@ vector<string> CalibController::takeAndSavePics()
 {
     // TODO:
     // get a camera working in there, using a Sensor?
-    
-    string filePath = "/Users/Gaston/Desktop/testChessboard.png";
-    fileList.push_back(filePath);
+    for(int i = 693; i <= 693; i++)
+    {
+        string filePath = "/Users/Gaston/dev/RDC/tmp/IMG_0";
+        //used to create the filepath
+        stringstream ss;
+        string index;
+        ss << i;
+        ss >> index;
+        filePath += index;
+        filePath += ".JPG";
+        
+        filePath = "/Users/Gaston/Desktop/testChessboard.png";
+        fileList.push_back(filePath);
+    }
     return fileList;
 }
 
@@ -46,7 +57,7 @@ void CalibController::doCalib()
 {
     takeAndSavePics();
     computeCalib();
-    calibDone == true;
+    calibDone = true;
 }
 
 Mat CalibController::getRealImage(Mat& original)

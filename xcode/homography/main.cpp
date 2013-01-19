@@ -14,25 +14,27 @@
 #include "CameraCalibrator.h"
 #include "CalibController.h"
 
-#include <unistd.h>
 using namespace cv;
 using namespace std;
 
 
 int main (int argc, const char * argv[])
 {
-    //init the system
-    CameraCalibrator camCalib;
-    CalibController calibControl;
-    //Load the images
-    string filePath = "/Users/Gaston/Desktop/testChessboard.png";
-    cout << "trying to read from " << filePath << endl;
-    Mat image = imread(filePath, CV_LOAD_IMAGE_COLOR);
+    
     
     
     // number of corners on the chessboard
-    Size boardSize(6,4);
-
+    Size boardSize(5,4);
+    boardSize = Size(6,5);
+    //init the system
+    CalibController calibControl(boardSize);
+    //Load the images
+    string filePath = "/Users/Gaston/Desktop/testChessboard.png";//dev/RDC/tmp/IMG_0704.JPG";
+    Mat image = imread(filePath, CV_LOAD_IMAGE_COLOR);
+    
+    //Resize the images to a more reasonable size before treatment
+    resize(image, image, Size(800, 800*image.size().height/image.size().width) );
+    
     // output vectors of image points
     std::vector<cv::Point2f> imageCorners;
     // Get the chessboard corners
@@ -40,11 +42,12 @@ int main (int argc, const char * argv[])
     //Draw the corners
     drawChessboardCorners(image, boardSize, imageCorners, found); // corners have been found
     
-    
-    image = calibControl.getRealImage(image);
-    
+    imshow( "Before remap", image );                   // Show our image inside it.
+        
+    //image = calibControl.getRealImage(image);
     //Draw the image
-    imshow( "Display window", image );                   // Show our image inside it.
+    imshow( "After remap", calibControl.getRealImage(image) );                   // Show our image inside it.
+    
     cvWaitKey(0);
     cvDestroyWindow("Display window");
     

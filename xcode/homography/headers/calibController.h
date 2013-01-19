@@ -30,7 +30,7 @@ public:
                     //<! takes pictures and does the calibration
     
     //Constructor
-    CalibController();
+    CalibController(Size boardSize);
     
     //Getters and Setters
     Size getBoardSize();
@@ -40,27 +40,6 @@ private:
     Size boardSize;             //<! the size of the chessBoard
     Size frameSize;             //<! the resolution of the sensor/camera
     bool calibDone;             //<! used to know if calib has been done before or not.
-    /*
-     //Load the images
-     string filePath = "/Users/Gaston/Desktop/testChessboard.png";
-     cout << "trying to read from " << filePath << endl;
-     Mat image = imread(filePath, CV_LOAD_IMAGE_COLOR);
-     
-     //Find the corners
-     Size boardSize(6,4);
-     vector<string> fileList;
-     fileList.push_back(filePath);
-     camCalib.addChessboardPoints(fileList, boardSize);
-     Size s(image.rows, image.cols);
-     camCalib.calibrate(s);
-     image = camCalib.remap(image);
-     
-     
-     std::vector<cv::Point2f> imageCorners;
-     bool found = findChessboardCorners(image,boardSize, imageCorners);
-     drawChessboardCorners(image, boardSize, imageCorners, found); // corners have been found
-     */
-    
 };
 
 #endif
