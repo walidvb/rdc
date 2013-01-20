@@ -22,12 +22,12 @@ class CalibController{
     //init the system
 public:
     //methods
-    void init();    //<! well, init..
+    void init();                            //<! well, init..
     vector<string> takeAndSavePics();       //<! take multiple pictures and save them to disk
-    void computeCalib(); //<! compute the calibration matrix
-    Mat getRealImage(Mat& original); //<! returns the undistorted image
-    void doCalib(); //<! the whole package
-                    //<! takes pictures and does the calibration
+    void computeCalib();                    //<! compute the calibration matrix
+    Mat getRealImage(Mat& original);        //<! returns the undistorted image
+    void doCalib();                         //<! the whole package
+                                            //<! takes pictures and does the calibration
     
     //Constructor
     CalibController(Size boardSize);

@@ -25,15 +25,20 @@ int main (int argc, const char * argv[])
     
     // number of corners on the chessboard
     Size boardSize(5,4);
-    boardSize = Size(6,5);
+    
+    //for use with the image from the book, testChessboard
+    //boardSize = Size(6,4);
+    
     //init the system
     CalibController calibControl(boardSize);
     //Load the images
-    string filePath = "/Users/Gaston/Desktop/testChessboard.png";//dev/RDC/tmp/IMG_0704.JPG";
+    string filePath = "/Users/Gaston/dev/RDC/tmp/IMG_0701.JPG";
+    //filePath = "/Users/Gaston/dev/RDC/tmp/testChessboard.png";
+
     Mat image = imread(filePath, CV_LOAD_IMAGE_COLOR);
+    Mat undisto = calibControl.getRealImage(image);
     
-    //Resize the images to a more reasonable size before treatment
-    resize(image, image, Size(800, 800*image.size().height/image.size().width) );
+    
     
     // output vectors of image points
     std::vector<cv::Point2f> imageCorners;
@@ -42,15 +47,18 @@ int main (int argc, const char * argv[])
     //Draw the corners
     drawChessboardCorners(image, boardSize, imageCorners, found); // corners have been found
     
+    //Resize the images to a more reasonable size before treatment
+    resize(image, image, Size(800, 800*image.size().height/image.size().width) );
     imshow( "Before remap", image );                   // Show our image inside it.
         
-    //image = calibControl.getRealImage(image);
+    //Resize the images to a more reasonable size before treatment
+    resize(undisto, undisto, Size(800, 800*undisto.size().height/undisto.size().width) );
     //Draw the image
-    imshow( "After remap", calibControl.getRealImage(image) );                   // Show our image inside it.
+    imshow( "After remap", undisto );                   // Show our image inside it.
     
     cvWaitKey(0);
     cvDestroyWindow("Display window");
-    
+    cout << "application ended: merci au revoir" << endl;
     return 0;
     
 
