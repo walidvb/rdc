@@ -10,13 +10,10 @@
 #ifndef RDC_calibController_h
 #define RDC_calibController_h
 
-//#include <iostream>
-//#include <opencv2/opencv.hpp>
+
 
 #include "CameraCalibrator.h"
 
-using namespace std;
-using namespace cv;
 
 class CalibController{
     //init the system
