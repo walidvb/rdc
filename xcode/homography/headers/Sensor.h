@@ -21,8 +21,8 @@ public:
     //Methods
     Sensor();
     Sensor(int width, int height);
-    bool init(int videoID = 0);   //<! inits a video device, and returns its ID
-    int
+    int init(int videoID = 0);   //<! inits a video device, and returns its ID
+    bool init(string filepath);
     void stop();                 //<! stops the capture device communication
     Mat grabFrame();             //<! updates local frame, and returns it as well
     void saveFrame();            //<! writes current frame to disk
