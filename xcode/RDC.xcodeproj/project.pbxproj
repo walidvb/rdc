@@ -26,6 +26,7 @@
 		3D3A0EE916A858D800A4C1A4 /* testChessboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3A0EE716A858D800A4C1A4 /* testChessboard.png */; };
 		3D3C9CDC168C5F4500EEBCAF /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C9CDB168C5F4500EEBCAF /* Image.cpp */; };
 		3D5FE8CA16AC335D00DB7E28 /* SensorCaptor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FE8C916AC335D00DB7E28 /* SensorCaptor.cc */; };
+		3D5FE8CD16AC367100DB7E28 /* Sensor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FE8CC16AC367100DB7E28 /* Sensor.cc */; };
 		3D992F891684C91D008C380E /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F881684C91D008C380E /* Controller.cpp */; };
 		3D992F8D1684CA5E008C380E /* SensorSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F8C1684CA5E008C380E /* SensorSim.cpp */; };
 		3D992F901684CE2B008C380E /* SensorMediaSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F8F1684CE2B008C380E /* SensorMediaSim.cpp */; };
@@ -83,6 +84,8 @@
 		3D3C9CDB168C5F4500EEBCAF /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Image.cpp; path = ../src/Image.cpp; sourceTree = "<group>"; };
 		3D5FE8C716AC328600DB7E28 /* SensorCaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorCaptor.h; path = ../headers/SensorCaptor.h; sourceTree = "<group>"; };
 		3D5FE8C916AC335D00DB7E28 /* SensorCaptor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SensorCaptor.cc; path = ../src/SensorCaptor.cc; sourceTree = "<group>"; };
+		3D5FE8CB16AC35F800DB7E28 /* Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sensor.h; path = headers/Sensor.h; sourceTree = "<group>"; };
+		3D5FE8CC16AC367100DB7E28 /* Sensor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sensor.cc; path = src/Sensor.cc; sourceTree = "<group>"; };
 		3D992F881684C91D008C380E /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Controller.cpp; path = ../src/Controller.cpp; sourceTree = "<group>"; };
 		3D992F8B1684C929008C380E /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = ../headers/Controller.h; sourceTree = "<group>"; };
 		3D992F8C1684CA5E008C380E /* SensorSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SensorSim.cpp; sourceTree = "<group>"; };
@@ -233,6 +236,7 @@
 		3D3A0ED416A8410F00A4C1A4 /* headers */ = {
 			isa = PBXGroup;
 			children = (
+				3D5FE8CB16AC35F800DB7E28 /* Sensor.h */,
 				3D3A0EE216A8559E00A4C1A4 /* CalibController.h */,
 				3D3A0EDF16A8556B00A4C1A4 /* CameraCalibrator.h */,
 			);
@@ -244,6 +248,7 @@
 			children = (
 				3D3A0EE016A8558900A4C1A4 /* CalibController.cc */,
 				3D3A0ED716A8416500A4C1A4 /* CameraCalibrator.cc */,
+				3D5FE8CC16AC367100DB7E28 /* Sensor.cc */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 				3D3A0ECD16A80BFB00A4C1A4 /* main.cpp in Sources */,
 				3D3A0ED916A8416500A4C1A4 /* CameraCalibrator.cc in Sources */,
 				3D3A0EE116A8558900A4C1A4 /* CalibController.cc in Sources */,
+				3D5FE8CD16AC367100DB7E28 /* Sensor.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
