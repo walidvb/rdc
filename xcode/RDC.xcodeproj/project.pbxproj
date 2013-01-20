@@ -25,6 +25,7 @@
 		3D3A0EE816A858D800A4C1A4 /* testChessboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3A0EE716A858D800A4C1A4 /* testChessboard.png */; };
 		3D3A0EE916A858D800A4C1A4 /* testChessboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3A0EE716A858D800A4C1A4 /* testChessboard.png */; };
 		3D3C9CDC168C5F4500EEBCAF /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C9CDB168C5F4500EEBCAF /* Image.cpp */; };
+		3D5FE8CA16AC335D00DB7E28 /* SensorCaptor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FE8C916AC335D00DB7E28 /* SensorCaptor.cc */; };
 		3D992F891684C91D008C380E /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F881684C91D008C380E /* Controller.cpp */; };
 		3D992F8D1684CA5E008C380E /* SensorSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F8C1684CA5E008C380E /* SensorSim.cpp */; };
 		3D992F901684CE2B008C380E /* SensorMediaSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F8F1684CE2B008C380E /* SensorMediaSim.cpp */; };
@@ -80,6 +81,8 @@
 		3D3A0EE716A858D800A4C1A4 /* testChessboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testChessboard.png; sourceTree = "<group>"; };
 		3D3C9CDA168C5F1E00EEBCAF /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = ../headers/Image.h; sourceTree = "<group>"; };
 		3D3C9CDB168C5F4500EEBCAF /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Image.cpp; path = ../src/Image.cpp; sourceTree = "<group>"; };
+		3D5FE8C716AC328600DB7E28 /* SensorCaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorCaptor.h; path = ../headers/SensorCaptor.h; sourceTree = "<group>"; };
+		3D5FE8C916AC335D00DB7E28 /* SensorCaptor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SensorCaptor.cc; path = ../src/SensorCaptor.cc; sourceTree = "<group>"; };
 		3D992F881684C91D008C380E /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Controller.cpp; path = ../src/Controller.cpp; sourceTree = "<group>"; };
 		3D992F8B1684C929008C380E /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = ../headers/Controller.h; sourceTree = "<group>"; };
 		3D992F8C1684CA5E008C380E /* SensorSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SensorSim.cpp; sourceTree = "<group>"; };
@@ -260,6 +263,7 @@
 				3D992F8E1684CE1C008C380E /* SensorMediaSim.h */,
 				3D3C9CDA168C5F1E00EEBCAF /* Image.h */,
 				3DEC487416A708BF00BE573A /* homography.h */,
+				3D5FE8C716AC328600DB7E28 /* SensorCaptor.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -277,6 +281,7 @@
 				3D992F881684C91D008C380E /* Controller.cpp */,
 				3D992F8F1684CE2B008C380E /* SensorMediaSim.cpp */,
 				3D3C9CDB168C5F4500EEBCAF /* Image.cpp */,
+				3D5FE8C916AC335D00DB7E28 /* SensorCaptor.cc */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 				3D992F8D1684CA5E008C380E /* SensorSim.cpp in Sources */,
 				3D992F901684CE2B008C380E /* SensorMediaSim.cpp in Sources */,
 				3D3C9CDC168C5F4500EEBCAF /* Image.cpp in Sources */,
+				3D5FE8CA16AC335D00DB7E28 /* SensorCaptor.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +473,7 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -503,6 +510,7 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

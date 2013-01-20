@@ -34,6 +34,7 @@ int Image::index(int x, int y, int w)
     return y*w+x;
 }
 
+
 float Image::pixelAt(int x, int y) const
 {
     float pix = pixels[index(x, y, width)];

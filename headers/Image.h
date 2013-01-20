@@ -12,7 +12,6 @@
 #include "common.h"
 #include "Tools.h"
 
-
 class Image{
 public:
     //Constructors
@@ -24,16 +23,17 @@ public:
     float pixelAt(int x, int y) const;    //!< returns the pixel value at (x, y)
     void pixelWrite(float value, int x, int y); //!< writes value at pixel (x, y)
     
+    //vector<float> Mat2Img(cv::Mat original); //<! translates an openCV Mat image into my vector<float> object.
+    
     //Attributes
     vector<float> pixels; //!< list of all pixels of the frame
-    int width;
-    int height;
+    int width;            //<! the width of the image
+    int height;           //<! the height of the image
 
     
-    static int index(int x, int y, int w);
 
 private:
-    
+    static int index(int x, int y, int w);    
     
 };
 
