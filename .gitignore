@@ -18,6 +18,7 @@
 xcode/build/*
 *.dat
 *.dep
+*.xuserstate
 
 # opencv
 OpenCV-2.4.3/*
