@@ -25,7 +25,7 @@ public:
     void drawImg(const Image& img, int POS) const;
     
 private:
-    Vec2f V2D2Vecf(V2D src) const;
+    ci::Vec2f V2D2Vecf(V2D src) const;
     
 };
 #endif

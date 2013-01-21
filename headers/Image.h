@@ -11,6 +11,9 @@
 
 #include "common.h"
 #include "Tools.h"
+#include <opencv2/opencv.hpp>
+
+using namespace cv;
 
 class Image{
 public:
