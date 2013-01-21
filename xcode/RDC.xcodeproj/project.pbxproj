@@ -27,6 +27,8 @@
 		3D3C9CDC168C5F4500EEBCAF /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C9CDB168C5F4500EEBCAF /* Image.cpp */; };
 		3D5FE8CA16AC335D00DB7E28 /* SensorCaptor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FE8C916AC335D00DB7E28 /* SensorCaptor.cc */; };
 		3D5FE8CD16AC367100DB7E28 /* Sensor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FE8CC16AC367100DB7E28 /* Sensor.cc */; };
+		3D5FE8CE16AC77FA00DB7E28 /* CalibController.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A0EE016A8558900A4C1A4 /* CalibController.cc */; };
+		3D5FE8CF16AC77FA00DB7E28 /* CameraCalibrator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A0ED716A8416500A4C1A4 /* CameraCalibrator.cc */; };
 		3D992F891684C91D008C380E /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F881684C91D008C380E /* Controller.cpp */; };
 		3D992F8D1684CA5E008C380E /* SensorSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F8C1684CA5E008C380E /* SensorSim.cpp */; };
 		3D992F901684CE2B008C380E /* SensorMediaSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F8F1684CE2B008C380E /* SensorMediaSim.cpp */; };
@@ -392,6 +394,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5FE8CE16AC77FA00DB7E28 /* CalibController.cc in Sources */,
+				3D5FE8CF16AC77FA00DB7E28 /* CameraCalibrator.cc in Sources */,
 				00BAE65A0E7ED9C10018A608 /* RDCApp.cpp in Sources */,
 				3D996EC5165BEA5A004B258F /* RDC.cpp in Sources */,
 				3D996ECA165BF579004B258F /* Tools.cpp in Sources */,
@@ -489,25 +493,28 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RDC_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				OPENCV_PATH = ../lib;
 				OTHER_LDFLAGS = (
 					"\"$(CINDER_PATH)/lib/libcinder_d.a\"",
-					"-lopencv_core",
-					"-lopencv_highgui",
-					"-lopencv_imgproc",
-					"-lopencv_legacy",
-					"-lopencv_contrib",
-					"-lopencv_calib3d",
-					"-lopencv_features2d",
-					"-lopencv_flann",
-					"-lopencv_ml",
-					"-lopencv_objdetect",
-					"-lopencv_video",
+					"\"$(OPENCV_PATH)/libopencv_core.2.4.3.dylib\"",
+					"\"$(OPENCV_PATH)/libopencv_highgui.2.4.3.dylib\"",
+					"\"$(OPENCV_PATH)/libopencv_imgproc.2.4.3.dylib\"",
+					"\"$(OPENCV_PATH)/libopencv_legacy.2.4.3.dylib\"",
+					"\"$(OPENCV_PATH)/libopencv_contrib.2.4.3.dylib\"",
+					"\"$(OPENCV_PATH)/libopencv_calib3d.2.4.3.dylib\"",
+					"\"$(OPENCV_PATH)/libopencv_features2d.2.4.3.dylib\"",
+					"\"$(OPENCV_PATH)/libopencv_flann.2.4.3.dylib\"",
+					"\"$(OPENCV_PATH)/libopencv_ml.2.4.3.dylib\"",
+					"\"$(OPENCV_PATH)/libopencv_objdetect.2.4.3.dylib\"",
+					"\"$(OPENCV_PATH)/libopencv_video.2.4.3.dylib\"",
 					"-lcurl",
 				);
 				PRODUCT_NAME = RDC;
+				SDKROOT = macosx10.7;
 				SYMROOT = ./build;
 				WRAPPER_EXTENSION = app;
 			};
@@ -528,14 +535,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RDC_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				OPENCV_PATH = ../lib;
 				OTHER_LDFLAGS = (
 					"\"$(CINDER_PATH)/lib/libcinder.a\"",
 					"-lcurl",
 				);
 				PRODUCT_NAME = RDC;
+				SDKROOT = macosx10.7;
 				STRIP_INSTALLED_PRODUCT = YES;
 				SYMROOT = ./build;
 				WRAPPER_EXTENSION = app;

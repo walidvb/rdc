@@ -1,635 +1,0 @@
-TRDC
-v5
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Info.plist Info.plist
-cCpResource pattern ./build/Debug/RDC.app/Contents/Resources/pattern
-cCpResource CinderApp.icns ./build/Debug/RDC.app/Contents/Resources/CinderApp.icns
-cCpResource testChessboard.png ./build/Debug/RDC.app/Contents/Resources/testChessboard.png
-cProcessPCH++ /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch.pth RDC_Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDCApp.o /Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_Cinder.o /Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Tools.o /Users/Gaston/dev/RDC/xcode/../src/Tools.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDC.o /Users/Gaston/dev/RDC/xcode/../src/RDC.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/V2D.o /Users/Gaston/dev/RDC/xcode/../src/V2D.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorMediaSim.o /Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Image.o /Users/Gaston/dev/RDC/xcode/../src/Image.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Sensor_A.o /Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_A.o /Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Controller.o /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorSim.o /Users/Gaston/dev/RDC/xcode/SensorSim.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorCaptor.o /Users/Gaston/dev/RDC/xcode/../src/SensorCaptor.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/MacOS/RDC normal x86_64
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
-c000000005095337800000000000000AA
-t1351955320
-s170
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate
-c000000005028817A00000000000024F0
-t1344831866
-s9456
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
-c00000000505B1C960000000000024D90
-t1348148374
-s150928
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AudioUnit.framework/AudioUnit
-c00000000505B1C9600000000000060B4
-t1348148374
-s24756
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c000000005028817B00000000000001E5
-t1344831867
-s485
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
-c000000005028817B000000000000E920
-t1344831867
-s59680
-
-N/System/Library/Frameworks/Carbon.framework/Carbon
-c000000005011D86200000000000069F0
-t1343346786
-s27120
-
-N/System/Library/Frameworks/Cocoa.framework/Cocoa
-c000000005011D8620000000000006730
-t1343346786
-s26416
-
-N/System/Library/Frameworks/CoreVideo.framework/CoreVideo
-c00000000505A4F0E0000000000081CB0
-t1348095758
-s531632
-
-N/System/Library/Frameworks/OpenGL.framework/OpenGL
-c00000000505A4F13000000000002DAF0
-t1348095763
-s187120
-
-N/System/Library/Frameworks/QTKit.framework/QTKit
-c0000000050592BA800000000004A2D90
-t1348021160
-s4861328
-
-N/System/Library/Frameworks/QuickTime.framework/QuickTime
-c00000000505A4F130000000000322E20
-t1348095763
-s3288608
-
-N/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp
-c0000000050E716DB0000000000000388
-t1357321947
-s904
-
-N/Users/Gaston/dev/RDC/xcode/../src/Image.cpp
-c0000000050FBF854000000000000028B
-t1358690388
-s651
-
-N/Users/Gaston/dev/RDC/xcode/../src/RDC.cpp
-c0000000050E70F540000000000000533
-t1357320020
-s1331
-
-N/Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp
-c0000000050E716BD000000000000048D
-t1357321917
-s1165
-
-N/Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp
-c0000000050E71103000000000000033A
-t1357320451
-s826
-
-N/Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp
-c0000000050E7110D0000000000000514
-t1357320461
-s1300
-
-N/Users/Gaston/dev/RDC/xcode/../src/SensorCaptor.cc
-c0000000050FBFC7E0000000000000092
-t1358691454
-s146
-
-N/Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp
-c0000000050F7D4F00000000000000357
-t1358419184
-s855
-
-N/Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp
-c0000000050DC3D4100000000000001A9
-t1356610881
-s425
-
-N/Users/Gaston/dev/RDC/xcode/../src/Tools.cpp
-c0000000050ABBE460000000000000095
-t1353432646
-s149
-
-N/Users/Gaston/dev/RDC/xcode/../src/V2D.cpp
-c0000000050AD014000000000000008F4
-t1353515328
-s2292
-
-N/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Info.plist
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/MacOS/RDC
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/PkgInfo
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources/CinderApp.icns
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources/pattern
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources/testChessboard.png
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Controller.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Image.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDC.LinkFileList
-c0000000050FBFCB30000000000000478
-t1358691507
-s1144
-
-N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDC.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDCApp.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_A.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_Cinder.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorCaptor.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorMediaSim.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorSim.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Sensor_A.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Tools.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/V2D.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/CinderApp.icns
-c0000000050ABA7F0000000000001BEB5
-t1353426928
-s114357
-
-N/Users/Gaston/dev/RDC/xcode/RDC_Prefix.pch
-c0000000050ABA7F00000000000000093
-t1353426928
-s147
-i<Cocoa/Cocoa.h>
-
-N/Users/Gaston/dev/RDC/xcode/SensorSim.cpp
-c0000000050DC40A300000000000003EF
-t1356611747
-s1007
-
-N/Users/Gaston/dev/RDC/xcode/pattern
-c0000000050B37CB600000000000000AA
-t1353940150
-s170
-
-N/Users/Gaston/dev/RDC/xcode/testChessboard.png
-c0000000050F80396000000000001D903
-t1358431126
-s121091
-
-N/var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch.pth
-t2
-s0
-
-NInfo.plist
-c0000000050ABA7F00000000000000349
-t1353426928
-s841
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/Image.cpp
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/RDC.cpp
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/SensorCaptor.cc
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/Tools.cpp
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/V2D.cpp
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/SensorSim.cpp
-r0
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesda59503334acb641^d82b643334acb641^---0#1#0#--18"Check dependencies36"E8245F9A-049F-4C29-AEA8-5470A82CDB04-
-
-CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Controller.o /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380384307.879272
-e380384310.117319
-r1
-xCompileC
-x./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Controller.o
-x/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp:18:5: warning: delete called on 'Sensor_A' that is abstract but has non-virtual destructor [-Wdelete-non-virtual-dtor]
-o    delete sensor;
-o    ^
-o/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp:19:5: warning: delete called on 'Renderer_A' that is abstract but has non-virtual destructor [-Wdelete-non-virtual-dtor]
-o    delete renderer;
-o    ^
-o/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp:21:5: warning: delete called on 'Sensor_A' that is abstract but has non-virtual destructor [-Wdelete-non-virtual-dtor]
-o    delete sensorMedia;
-o    ^
-o3 warnings generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Compile /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp2638e13334acb641^07081e3634acb641^-613"/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp:18:5: warning: delete called on 'Sensor_A' that is abstract but has non-virtual destructor [-Wdelete-non-virtual-dtor]    delete sensor;    ^/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp:19:5: warning: delete called on 'Renderer_A' that is abstract but has non-virtual destructor [-Wdelete-non-virtual-dtor]    delete renderer;    ^/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp:21:5: warning: delete called on 'Sensor_A' that is abstract but has non-virtual destructor [-Wdelete-non-virtual-dtor]    delete sensorMedia;    ^3 warnings generated.3(36%IDEClangDiagnosticActivityLogMessage2@75"Delete called on 'Sensor_A' that is abstract but has non-virtual destructor-380384310#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@56"file://localhost/Users/Gaston/dev/RDC/src/Controller.cpp0000000000000000^17#4#17#4#230#0#14"Semantic Issue--2@77"Delete called on 'Renderer_A' that is abstract but has non-virtual destructor-380384310#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@56"file://localhost/Users/Gaston/dev/RDC/src/Controller.cpp0000000000000000^18#4#18#4#249#0#14"Semantic Issue--2@75"Delete called on 'Sensor_A' that is abstract but has non-virtual destructor-380384310#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@56"file://localhost/Users/Gaston/dev/RDC/src/Controller.cpp0000000000000000^20#4#20#4#286#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@65"file://localhost/Users/Gaston/dev/RDC/xcode/../src/Controller.cpp0000000000000000^2352"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Controller.o ../src/Controller.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Controller.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Controller.dia -c /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Controller.o36"89632576-D605-4D0C-B361-01DAF9E2B4AF-
-
-CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Image.o /Users/Gaston/dev/RDC/xcode/../src/Image.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380384307.495268
-e380384308.681597
-r1
-xCompileC
-x./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Image.o
-x/Users/Gaston/dev/RDC/xcode/../src/Image.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection52"Compile /Users/Gaston/dev/RDC/xcode/../src/Image.cpp57e97e3334acb641^2d96ae3434acb641^---0#0#0#-19%DVTDocumentLocation2@60"file://localhost/Users/Gaston/dev/RDC/xcode/../src/Image.cpp0000000000000000^2322"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Image.o ../src/Image.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Image.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Image.dia -c /Users/Gaston/dev/RDC/xcode/../src/Image.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Image.o36"B5F1B2C1-0546-4813-B6C7-318E19B422C7-
-
-CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDC.o /Users/Gaston/dev/RDC/xcode/../src/RDC.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380384307.495243
-e380384308.695423
-r1
-xCompileC
-x./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDC.o
-x/Users/Gaston/dev/RDC/xcode/../src/RDC.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Compile /Users/Gaston/dev/RDC/xcode/../src/RDC.cpp00e67e3334acb641^5f07b23434acb641^---0#0#0#-19%DVTDocumentLocation2@58"file://localhost/Users/Gaston/dev/RDC/xcode/../src/RDC.cpp0000000000000000^2310"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDC.o ../src/RDC.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDC.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDC.dia -c /Users/Gaston/dev/RDC/xcode/../src/RDC.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDC.o36"EEA03A38-2186-45ED-A1F6-6C7A2EDDFE71-
-
-CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDCApp.o /Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380384307.495222
-e380384310.606443
-r1
-xCompileC
-x./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDCApp.o
-x/Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Compile /Users/Gaston/dev/RDC/xcode/../src/RDCApp.cppf7e77e3334acb641^70409b3634acb641^---0#0#0#-19%DVTDocumentLocation2@61"file://localhost/Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp0000000000000000^2328"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDCApp.o ../src/RDCApp.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDCApp.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDCApp.dia -c /Users/Gaston/dev/RDC/xcode/../src/RDCApp.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDCApp.o36"F8B48B9F-D81C-40DA-9930-0ECAE93957C0-
-
-CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_A.o /Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380384307.567176
-e380384308.650594
-r1
-xCompileC
-x./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_A.o
-x/Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Compile /Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cppc152913334acb641^8691a63434acb641^---0#0#0#-19%DVTDocumentLocation2@65"file://localhost/Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp0000000000000000^2352"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_A.o ../src/Renderer_A.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_A.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_A.dia -c /Users/Gaston/dev/RDC/xcode/../src/Renderer_A.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_A.o36"7439F036-B26F-4917-B3C0-31E3F73970C4-
-
-CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_Cinder.o /Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380384307.495232
-e380384309.842995
-r1
-xCompileC
-x./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_Cinder.o
-x/Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp8ae57e3334acb641^b7d2d73534acb641^---0#0#0#-19%DVTDocumentLocation2@70"file://localhost/Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp0000000000000000^2382"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_Cinder.o ../src/Renderer_Cinder.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_Cinder.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_Cinder.dia -c /Users/Gaston/dev/RDC/xcode/../src/Renderer_Cinder.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Renderer_Cinder.o36"60397E4E-C6FD-4D19-8A86-E64C52B660B9-
-
-CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorCaptor.o /Users/Gaston/dev/RDC/xcode/../src/SensorCaptor.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380384308.657473
-e380384309.745912
-r1
-xCompileC
-x./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorCaptor.o
-x/Users/Gaston/dev/RDC/xcode/../src/SensorCaptor.cc
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Compile /Users/Gaston/dev/RDC/xcode/../src/SensorCaptor.cc7670a83434acb641^f1f4be3534acb641^---0#0#0#-19%DVTDocumentLocation2@66"file://localhost/Users/Gaston/dev/RDC/xcode/../src/SensorCaptor.cc0000000000000000^2362"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorCaptor.o ../src/SensorCaptor.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorCaptor.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorCaptor.dia -c /Users/Gaston/dev/RDC/xcode/../src/SensorCaptor.cc -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorCaptor.o36"774DB92D-340E-4E05-A0A4-19BC2B2796C4-
-
-CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorMediaSim.o /Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380384307.495260
-e380384309.842798
-r1
-xCompileC
-x./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorMediaSim.o
-x/Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Compile /Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp86e67e3334acb641^6ac1d73534acb641^---0#0#0#-19%DVTDocumentLocation2@69"file://localhost/Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp0000000000000000^2376"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorMediaSim.o ../src/SensorMediaSim.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorMediaSim.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorMediaSim.dia -c /Users/Gaston/dev/RDC/xcode/../src/SensorMediaSim.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorMediaSim.o36"A1149B5F-BCD2-4E7B-A4B4-463D9F75E9D0-
-
-CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorSim.o /Users/Gaston/dev/RDC/xcode/SensorSim.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380384308.652065
-e380384310.231723
-r1
-xCompileC
-x./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorSim.o
-x/Users/Gaston/dev/RDC/xcode/SensorSim.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection49"Compile /Users/Gaston/dev/RDC/xcode/SensorSim.cpp990ca73434acb641^b5533b3634acb641^---0#0#0#-19%DVTDocumentLocation2@57"file://localhost/Users/Gaston/dev/RDC/xcode/SensorSim.cpp0000000000000000^2332"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorSim.o SensorSim.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorSim.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorSim.dia -c /Users/Gaston/dev/RDC/xcode/SensorSim.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/SensorSim.o36"ECC18590-8755-4B58-A4D6-2A198FF49EFC-
-
-CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Sensor_A.o /Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380384307.495271
-e380384308.656141
-r1
-xCompileC
-x./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Sensor_A.o
-x/Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Compile /Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp5ce87e3334acb641^37ffa73434acb641^---0#0#0#-19%DVTDocumentLocation2@63"file://localhost/Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp0000000000000000^2340"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Sensor_A.o ../src/Sensor_A.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Sensor_A.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Sensor_A.dia -c /Users/Gaston/dev/RDC/xcode/../src/Sensor_A.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Sensor_A.o36"2F4262C3-0B0D-446A-9549-14345A447BDF-
-
-CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Tools.o /Users/Gaston/dev/RDC/xcode/../src/Tools.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380384307.495240
-e380384307.565463
-r1
-xCompileC
-x./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Tools.o
-x/Users/Gaston/dev/RDC/xcode/../src/Tools.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection52"Compile /Users/Gaston/dev/RDC/xcode/../src/Tools.cpp3ee77e3334acb641^f8c2903334acb641^---0#0#0#-19%DVTDocumentLocation2@60"file://localhost/Users/Gaston/dev/RDC/xcode/../src/Tools.cpp0000000000000000^2322"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Tools.o ../src/Tools.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Tools.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Tools.dia -c /Users/Gaston/dev/RDC/xcode/../src/Tools.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/Tools.o36"55EE0ECF-F505-4FDB-8730-1263E64D198A-
-
-CCompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/V2D.o /Users/Gaston/dev/RDC/xcode/../src/V2D.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380384307.495248
-e380384307.877973
-r1
-xCompileC
-x./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/V2D.o
-x/Users/Gaston/dev/RDC/xcode/../src/V2D.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Compile /Users/Gaston/dev/RDC/xcode/../src/V2D.cpp47e57e3334acb641^1ac3e03334acb641^---0#0#0#-19%DVTDocumentLocation2@58"file://localhost/Users/Gaston/dev/RDC/xcode/../src/V2D.cpp0000000000000000^2310"CompileC ./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/V2D.o ../src/V2D.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -include /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/V2D.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/V2D.dia -c /Users/Gaston/dev/RDC/xcode/../src/V2D.cpp -o /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/V2D.o36"5CC7ED16-2FE3-4A9F-9336-007B6FC78EE0-
-
-CCpResource CinderApp.icns ./build/Debug/RDC.app/Contents/Resources/CinderApp.icns
-s380384307.406841
-e380384307.411758
-r1
-xCpResource
-xCinderApp.icns
-x./build/Debug/RDC.app/Contents/Resources/CinderApp.icns
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Copy ./build/Debug/RDC.app/Contents/Resources/CinderApp.icnsa836683334acb641^7f69693334acb641^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources/CinderApp.icns000000000080d041^341"CpResource CinderApp.icns ./build/Debug/RDC.app/Contents/Resources/CinderApp.icns    cd /Users/Gaston/dev/RDC/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Gaston/dev/RDC/xcode/CinderApp.icns /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources36"1EED92E0-7E0F-4A7C-9745-9020CBE30636-
-
-CCpResource pattern ./build/Debug/RDC.app/Contents/Resources/pattern
-s380384307.406834
-e380384307.462821
-r1
-xCpResource
-xpattern
-x./build/Debug/RDC.app/Contents/Resources/pattern
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy ./build/Debug/RDC.app/Contents/Resources/patternf035683334acb641^6f7f763334acb641^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources/pattern000000000080d041^320"CpResource pattern ./build/Debug/RDC.app/Contents/Resources/pattern    cd /Users/Gaston/dev/RDC/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Gaston/dev/RDC/xcode/pattern /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources36"63B316F4-3CE4-4E0A-BB7F-0EBC076D1DCC-
-
-CCpResource testChessboard.png ./build/Debug/RDC.app/Contents/Resources/testChessboard.png
-s380384307.406849
-e380384307.458768
-r1
-xCpResource
-xtestChessboard.png
-x./build/Debug/RDC.app/Contents/Resources/testChessboard.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy ./build/Debug/RDC.app/Contents/Resources/testChessboard.png4436683334acb641^8274753334acb641^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources/testChessboard.png000000000080d041^353"CpResource testChessboard.png ./build/Debug/RDC.app/Contents/Resources/testChessboard.png    cd /Users/Gaston/dev/RDC/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Gaston/dev/RDC/xcode/testChessboard.png /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Resources36"06C57CCF-4394-4830-BF0A-11CDB61E9358-
-
-CLd /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/MacOS/RDC normal x86_64
-s380384310.613581
-e380384311.363775
-r0
-xLd
-x/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/MacOS/RDC
-xnormal
-xx86_64
-old: warning: ignoring file ../../cinder/lib/libcinder_d.a, file was built for archive which is not the architecture being linked (x86_64): ../../cinder/lib/libcinder_d.a
-old: warning: ignoring file /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks//QuickTime.framework/QuickTime, file was built for unsupported file format ( 0xce 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 0 0x 3 0x 0 0x 0 0x 0 0x 9 0x 0 0x 0 0x 0 ) which is not the architecture being linked (x86_64): /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks//QuickTime.framework/QuickTime
-oUndefined symbols for architecture x86_64:
-o  "boost::system::system_category()", referenced from:
-o      ___cxx_global_var_init3 in RDCApp.o
-o      ___cxx_global_var_init3 in Renderer_Cinder.o
-o      ___cxx_global_var_init3 in Controller.o
-o      ___cxx_global_var_init3 in SensorSim.o
-o      ___cxx_global_var_init3 in SensorMediaSim.o
-o  "boost::system::generic_category()", referenced from:
-o      ___cxx_global_var_init1 in RDCApp.o
-o      ___cxx_global_var_init2 in RDCApp.o
-o      ___cxx_global_var_init1 in Renderer_Cinder.o
-o      ___cxx_global_var_init2 in Renderer_Cinder.o
-o      ___cxx_global_var_init1 in Controller.o
-o      ___cxx_global_var_init2 in Controller.o
-o      ___cxx_global_var_init1 in SensorSim.o
-o      ...
-o  "cinder::gl::drawSolidRect(cinder::RectT<float> const&, bool)", referenced from:
-o      Renderer_Cinder::drawRect(float&, float&, float&, float&) const in Renderer_Cinder.o
-o  "cinder::gl::draw(cinder::gl::Texture const&)", referenced from:
-o      Renderer_Cinder::drawImg(Image const&, int) const in Renderer_Cinder.o
-o  "cinder::gl::clear(cinder::ColorAT<float> const&, bool)", referenced from:
-o      RDCApp::draw() in RDCApp.o
-o  "cinder::gl::Texture::Format::Format()", referenced from:
-o      Renderer_Cinder::drawImg(Image const&, int) const in Renderer_Cinder.o
-o  "cinder::gl::Texture::Texture(cinder::ChannelT<float> const&, cinder::gl::Texture::Format)", referenced from:
-o      Renderer_Cinder::drawImg(Image const&, int) const in Renderer_Cinder.o
-o  "cinder::Url::Url(std::string const&, bool)", referenced from:
-o      cinder::loadUrl(std::string const&) in SensorSim.o
-o      SensorMediaSim::grabFrame() in SensorMediaSim.o
-o  "cinder::app::RendererGl::RendererGl()", referenced from:
-o      _main in RDCApp.o
-o  "cinder::app::App::cleanupLaunch()", referenced from:
-o      cinder::app::AppBasic::cleanupLaunch() in RDCApp.o
-o  "cinder::app::App::executeLaunch(cinder::app::App*, cinder::app::Renderer*, char const*, int, char* const*)", referenced from:
-o      cinder::app::AppBasic::executeLaunch(cinder::app::AppBasic*, cinder::app::Renderer*, char const*, int, char* const*) in RDCApp.o
-o  "cinder::app::App::prepareLaunch()", referenced from:
-o      cinder::app::AppBasic::prepareLaunch() in RDCApp.o
-o  "cinder::app::App::privateDraw__()", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::App::privateSetup__()", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::App::privateUpdate__()", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::App::privateShutdown__()", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::App::Settings::setFrameRate(float)", referenced from:
-o      RDCApp::prepareSettings(cinder::app::AppBasic::Settings*) in RDCApp.o
-o  "cinder::app::App::Settings::setWindowSize(int, int)", referenced from:
-o      RDCApp::prepareSettings(cinder::app::AppBasic::Settings*) in RDCApp.o
-o  "cinder::app::AppBasic::getAppPath()", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::setFrameRate(float)", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::setWindowPos(cinder::Vec2<int> const&)", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::setBorderless(bool)", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::setFullScreen(bool)", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::setWindowSize(int, int)", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::setAlwaysOnTop(bool)", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::setWindowWidth(int)", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::privateResize__(cinder::app::ResizeEvent const&)", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::setWindowHeight(int)", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::launch(char const*, int, char* const*)", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::sInstance", referenced from:
-o      cinder::app::AppBasic::executeLaunch(cinder::app::AppBasic*, cinder::app::Renderer*, char const*, int, char* const*) in RDCApp.o
-o  "cinder::app::AppBasic::AppBasic()", referenced from:
-o      RDCApp::RDCApp() in RDCApp.o
-o  "cinder::app::AppBasic::~AppBasic()", referenced from:
-o      RDCApp::~RDCApp() in RDCApp.o
-o  "cinder::RectT<float>::set(float, float, float, float)", referenced from:
-o      cinder::RectT<float>::RectT(float, float, float, float) in Renderer_Cinder.o
-o  "cinder::loadUrl(cinder::Url const&)", referenced from:
-o      cinder::loadUrl(std::string const&) in SensorSim.o
-o      SensorMediaSim::grabFrame() in SensorMediaSim.o
-o  "cinder::ChannelT<float>::ChannelT(std::tr1::shared_ptr<cinder::ImageSource>)", referenced from:
-o      SensorSim::loadFakeFrame() in SensorSim.o
-o      SensorMediaSim::grabFrame() in SensorMediaSim.o
-o  "cinder::ChannelT<float>::ChannelT(int, int)", referenced from:
-o      Renderer_Cinder::drawImg(Image const&, int) const in Renderer_Cinder.o
-o  "cinder::loadImage(std::tr1::shared_ptr<cinder::DataSource>, cinder::ImageSource::Options, std::string)", referenced from:
-o      SensorSim::loadFakeFrame() in SensorSim.o
-o      SensorMediaSim::grabFrame() in SensorMediaSim.o
-o  "cinder::app::AppBasic::getFrameRate() const", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::getWindowPos() const", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::isBorderless() const", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::isFullScreen() const", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::isAlwaysOnTop() const", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::getWindowWidth() const", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "cinder::app::AppBasic::getWindowHeight() const", referenced from:
-o      vtable for RDCApp in RDCApp.o
-o  "typeinfo for cinder::app::AppBasic", referenced from:
-o      typeinfo for RDCApp in RDCApp.o
-old: symbol(s) not found for architecture x86_64
-oclang: error: linker command failed with exit code 1 (use -v to see invocation)
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Link /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/MacOS/RDC89259d3634acb641^4b205d3734acb641^-6979"ld: warning: ignoring file ../../cinder/lib/libcinder_d.a, file was built for archive which is not the architecture being linked (x86_64): ../../cinder/lib/libcinder_d.ald: warning: ignoring file /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks//QuickTime.framework/QuickTime, file was built for unsupported file format ( 0xce 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 0 0x 3 0x 0 0x 0 0x 0 0x 9 0x 0 0x 0 0x 0 ) which is not the architecture being linked (x86_64): /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks//QuickTime.framework/QuickTimeUndefined symbols for architecture x86_64:  "boost::system::system_category()", referenced from:      ___cxx_global_var_init3 in RDCApp.o      ___cxx_global_var_init3 in Renderer_Cinder.o      ___cxx_global_var_init3 in Controller.o      ___cxx_global_var_init3 in SensorSim.o      ___cxx_global_var_init3 in SensorMediaSim.o  "boost::system::generic_category()", referenced from:      ___cxx_global_var_init1 in RDCApp.o      ___cxx_global_var_init2 in RDCApp.o      ___cxx_global_var_init1 in Renderer_Cinder.o      ___cxx_global_var_init2 in Renderer_Cinder.o      ___cxx_global_var_init1 in Controller.o      ___cxx_global_var_init2 in Controller.o      ___cxx_global_var_init1 in SensorSim.o      ...  "cinder::gl::drawSolidRect(cinder::RectT<float> const&, bool)", referenced from:      Renderer_Cinder::drawRect(float&, float&, float&, float&) const in Renderer_Cinder.o  "cinder::gl::draw(cinder::gl::Texture const&)", referenced from:      Renderer_Cinder::drawImg(Image const&, int) const in Renderer_Cinder.o  "cinder::gl::clear(cinder::ColorAT<float> const&, bool)", referenced from:      RDCApp::draw() in RDCApp.o  "cinder::gl::Texture::Format::Format()", referenced from:      Renderer_Cinder::drawImg(Image const&, int) const in Renderer_Cinder.o  "cinder::gl::Texture::Texture(cinder::ChannelT<float> const&, cinder::gl::Texture::Format)", referenced from:      Renderer_Cinder::drawImg(Image const&, int) const in Renderer_Cinder.o  "cinder::Url::Url(std::string const&, bool)", referenced from:      cinder::loadUrl(std::string const&) in SensorSim.o      SensorMediaSim::grabFrame() in SensorMediaSim.o  "cinder::app::RendererGl::RendererGl()", referenced from:      _main in RDCApp.o  "cinder::app::App::cleanupLaunch()", referenced from:      cinder::app::AppBasic::cleanupLaunch() in RDCApp.o  "cinder::app::App::executeLaunch(cinder::app::App*, cinder::app::Renderer*, char const*, int, char* const*)", referenced from:      cinder::app::AppBasic::executeLaunch(cinder::app::AppBasic*, cinder::app::Renderer*, char const*, int, char* const*) in RDCApp.o  "cinder::app::App::prepareLaunch()", referenced from:      cinder::app::AppBasic::prepareLaunch() in RDCApp.o  "cinder::app::App::privateDraw__()", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::App::privateSetup__()", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::App::privateUpdate__()", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::App::privateShutdown__()", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::App::Settings::setFrameRate(float)", referenced from:      RDCApp::prepareSettings(cinder::app::AppBasic::Settings*) in RDCApp.o  "cinder::app::App::Settings::setWindowSize(int, int)", referenced from:      RDCApp::prepareSettings(cinder::app::AppBasic::Settings*) in RDCApp.o  "cinder::app::AppBasic::getAppPath()", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::setFrameRate(float)", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::setWindowPos(cinder::Vec2<int> const&)", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::setBorderless(bool)", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::setFullScreen(bool)", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::setWindowSize(int, int)", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::setAlwaysOnTop(bool)", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::setWindowWidth(int)", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::privateResize__(cinder::app::ResizeEvent const&)", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::setWindowHeight(int)", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::launch(char const*, int, char* const*)", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::sInstance", referenced from:      cinder::app::AppBasic::executeLaunch(cinder::app::AppBasic*, cinder::app::Renderer*, char const*, int, char* const*) in RDCApp.o  "cinder::app::AppBasic::AppBasic()", referenced from:      RDCApp::RDCApp() in RDCApp.o  "cinder::app::AppBasic::~AppBasic()", referenced from:      RDCApp::~RDCApp() in RDCApp.o  "cinder::RectT<float>::set(float, float, float, float)", referenced from:      cinder::RectT<float>::RectT(float, float, float, float) in Renderer_Cinder.o  "cinder::loadUrl(cinder::Url const&)", referenced from:      cinder::loadUrl(std::string const&) in SensorSim.o      SensorMediaSim::grabFrame() in SensorMediaSim.o  "cinder::ChannelT<float>::ChannelT(std::tr1::shared_ptr<cinder::ImageSource>)", referenced from:      SensorSim::loadFakeFrame() in SensorSim.o      SensorMediaSim::grabFrame() in SensorMediaSim.o  "cinder::ChannelT<float>::ChannelT(int, int)", referenced from:      Renderer_Cinder::drawImg(Image const&, int) const in Renderer_Cinder.o  "cinder::loadImage(std::tr1::shared_ptr<cinder::DataSource>, cinder::ImageSource::Options, std::string)", referenced from:      SensorSim::loadFakeFrame() in SensorSim.o      SensorMediaSim::grabFrame() in SensorMediaSim.o  "cinder::app::AppBasic::getFrameRate() const", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::getWindowPos() const", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::isBorderless() const", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::isFullScreen() const", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::isAlwaysOnTop() const", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::getWindowWidth() const", referenced from:      vtable for RDCApp in RDCApp.o  "cinder::app::AppBasic::getWindowHeight() const", referenced from:      vtable for RDCApp in RDCApp.o  "typeinfo for cinder::app::AppBasic", referenced from:      typeinfo for RDCApp in RDCApp.old: symbol(s) not found for architecture x86_64clang: error: linker command failed with exit code 1 (use -v to see invocation)109(21%IDEActivityLogMessage2@156"Ignoring file ../../cinder/lib/libcinder_d.a, file was built for archive which is not the architecture being linked (x86_64): ../../cinder/lib/libcinder_d.a-380384310#0#170#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@506"Ignoring file /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks//QuickTime.framework/QuickTime, file was built for unsupported file format ( 0xce 0xfa 0xed 0xfe 0x 7 0x 0 0x 0 0x 0 0x 3 0x 0 0x 0 0x 0 0x 9 0x 0 0x 0 0x 0 ) which is not the architecture being linked (x86_64): /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks//QuickTime.framework/QuickTime-380384310#170#520#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@52""boost::system::system_category()", referenced from:-380384311#733#55#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@35"___cxx_global_var_init3 in RDCApp.o-380384311#788#42#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@44"___cxx_global_var_init3 in Renderer_Cinder.o-380384311#830#51#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@39"___cxx_global_var_init3 in Controller.o-380384311#881#46#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@38"___cxx_global_var_init3 in SensorSim.o-380384311#927#45#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@43"___cxx_global_var_init3 in SensorMediaSim.o-380384311#972#50#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@53""boost::system::generic_category()", referenced from:-380384311#1022#56#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@35"___cxx_global_var_init1 in RDCApp.o-380384311#1078#42#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@35"___cxx_global_var_init2 in RDCApp.o-380384311#1120#42#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@44"___cxx_global_var_init1 in Renderer_Cinder.o-380384311#1162#51#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@44"___cxx_global_var_init2 in Renderer_Cinder.o-380384311#1213#51#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@39"___cxx_global_var_init1 in Controller.o-380384311#1264#46#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@39"___cxx_global_var_init2 in Controller.o-380384311#1310#46#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@38"___cxx_global_var_init1 in SensorSim.o-380384311#1356#45#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@3"...-380384311#1401#10#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@80""cinder::gl::drawSolidRect(cinder::RectT<float> const&, bool)", referenced from:-380384311#1411#83#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@84"Renderer_Cinder::drawRect(float&, float&, float&, float&) const in Renderer_Cinder.o-380384311#1494#91#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@64""cinder::gl::draw(cinder::gl::Texture const&)", referenced from:-380384311#1585#67#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@70"Renderer_Cinder::drawImg(Image const&, int) const in Renderer_Cinder.o-380384311#1652#77#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@74""cinder::gl::clear(cinder::ColorAT<float> const&, bool)", referenced from:-380384311#1729#77#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@26"RDCApp::draw() in RDCApp.o-380384311#1806#33#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@57""cinder::gl::Texture::Format::Format()", referenced from:-380384311#1839#60#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@70"Renderer_Cinder::drawImg(Image const&, int) const in Renderer_Cinder.o-380384311#1899#77#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@109""cinder::gl::Texture::Texture(cinder::ChannelT<float> const&, cinder::gl::Texture::Format)", referenced from:-380384311#1976#112#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@70"Renderer_Cinder::drawImg(Image const&, int) const in Renderer_Cinder.o-380384311#2088#77#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@62""cinder::Url::Url(std::string const&, bool)", referenced from:-380384311#2165#65#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@50"Cinder::loadUrl(std::string const&) in SensorSim.o-380384311#2230#57#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@47"SensorMediaSim::grabFrame() in SensorMediaSim.o-380384311#2287#54#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@57""cinder::app::RendererGl::RendererGl()", referenced from:-380384311#2341#60#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@17"_main in RDCApp.o-380384311#2401#24#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@53""cinder::app::App::cleanupLaunch()", referenced from:-380384311#2425#56#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@50"Cinder::app::AppBasic::cleanupLaunch() in RDCApp.o-380384311#2481#57#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@126""cinder::app::App::executeLaunch(cinder::app::App*, cinder::app::Renderer*, char const*, int, char* const*)", referenced from:-380384311#2538#129#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@128"Cinder::app::AppBasic::executeLaunch(cinder::app::AppBasic*, cinder::app::Renderer*, char const*, int, char* const*) in RDCApp.o-380384311#2667#135#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@53""cinder::app::App::prepareLaunch()", referenced from:-380384311#2802#56#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@50"Cinder::app::AppBasic::prepareLaunch() in RDCApp.o-380384311#2858#57#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@53""cinder::app::App::privateDraw__()", referenced from:-380384311#2915#56#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#2971#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@54""cinder::app::App::privateSetup__()", referenced from:-380384311#3007#57#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#3064#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@55""cinder::app::App::privateUpdate__()", referenced from:-380384311#3100#58#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#3158#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@57""cinder::app::App::privateShutdown__()", referenced from:-380384311#3194#60#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#3254#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@67""cinder::app::App::Settings::setFrameRate(float)", referenced from:-380384311#3290#70#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@69"RDCApp::prepareSettings(cinder::app::AppBasic::Settings*) in RDCApp.o-380384311#3360#76#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@71""cinder::app::App::Settings::setWindowSize(int, int)", referenced from:-380384311#3436#74#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@69"RDCApp::prepareSettings(cinder::app::AppBasic::Settings*) in RDCApp.o-380384311#3510#76#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@55""cinder::app::AppBasic::getAppPath()", referenced from:-380384311#3586#58#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#3644#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@62""cinder::app::AppBasic::setFrameRate(float)", referenced from:-380384311#3680#65#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#3745#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@81""cinder::app::AppBasic::setWindowPos(cinder::Vec2<int> const&)", referenced from:-380384311#3781#84#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#3865#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@62""cinder::app::AppBasic::setBorderless(bool)", referenced from:-380384311#3901#65#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#3966#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@62""cinder::app::AppBasic::setFullScreen(bool)", referenced from:-380384311#4002#65#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#4067#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@66""cinder::app::AppBasic::setWindowSize(int, int)", referenced from:-380384311#4103#69#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#4172#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@63""cinder::app::AppBasic::setAlwaysOnTop(bool)", referenced from:-380384311#4208#66#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#4274#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@62""cinder::app::AppBasic::setWindowWidth(int)", referenced from:-380384311#4310#65#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#4375#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@91""cinder::app::AppBasic::privateResize__(cinder::app::ResizeEvent const&)", referenced from:-380384311#4411#94#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#4505#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@63""cinder::app::AppBasic::setWindowHeight(int)", referenced from:-380384311#4541#66#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#4607#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@81""cinder::app::AppBasic::launch(char const*, int, char* const*)", referenced from:-380384311#4643#84#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#4727#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@52""cinder::app::AppBasic::sInstance", referenced from:-380384311#4763#55#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@128"Cinder::app::AppBasic::executeLaunch(cinder::app::AppBasic*, cinder::app::Renderer*, char const*, int, char* const*) in RDCApp.o-380384311#4818#135#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@53""cinder::app::AppBasic::AppBasic()", referenced from:-380384311#4953#56#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@28"RDCApp::RDCApp() in RDCApp.o-380384311#5009#35#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@54""cinder::app::AppBasic::~AppBasic()", referenced from:-380384311#5044#57#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"RDCApp::~RDCApp() in RDCApp.o-380384311#5101#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@73""cinder::RectT<float>::set(float, float, float, float)", referenced from:-380384311#5137#76#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@76"Cinder::RectT<float>::RectT(float, float, float, float) in Renderer_Cinder.o-380384311#5213#83#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@55""cinder::loadUrl(cinder::Url const&)", referenced from:-380384311#5296#58#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@50"Cinder::loadUrl(std::string const&) in SensorSim.o-380384311#5354#57#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@47"SensorMediaSim::grabFrame() in SensorMediaSim.o-380384311#5411#54#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@96""cinder::ChannelT<float>::ChannelT(std::tr1::shared_ptr<cinder::ImageSource>)", referenced from:-380384311#5465#99#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@41"SensorSim::loadFakeFrame() in SensorSim.o-380384311#5564#48#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@47"SensorMediaSim::grabFrame() in SensorMediaSim.o-380384311#5612#54#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@63""cinder::ChannelT<float>::ChannelT(int, int)", referenced from:-380384311#5666#66#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@70"Renderer_Cinder::drawImg(Image const&, int) const in Renderer_Cinder.o-380384311#5732#77#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@122""cinder::loadImage(std::tr1::shared_ptr<cinder::DataSource>, cinder::ImageSource::Options, std::string)", referenced from:-380384311#5809#125#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@41"SensorSim::loadFakeFrame() in SensorSim.o-380384311#5934#48#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@47"SensorMediaSim::grabFrame() in SensorMediaSim.o-380384311#5982#54#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@63""cinder::app::AppBasic::getFrameRate() const", referenced from:-380384311#6036#66#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#6102#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@63""cinder::app::AppBasic::getWindowPos() const", referenced from:-380384311#6138#66#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#6204#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@63""cinder::app::AppBasic::isBorderless() const", referenced from:-380384311#6240#66#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#6306#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@63""cinder::app::AppBasic::isFullScreen() const", referenced from:-380384311#6342#66#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#6408#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@64""cinder::app::AppBasic::isAlwaysOnTop() const", referenced from:-380384311#6444#67#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#6511#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@65""cinder::app::AppBasic::getWindowWidth() const", referenced from:-380384311#6547#68#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#6615#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@66""cinder::app::AppBasic::getWindowHeight() const", referenced from:-380384311#6651#69#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@29"Vtable for RDCApp in RDCApp.o-380384311#6720#36#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@54""typeinfo for cinder::app::AppBasic", referenced from:-380384311#6756#57#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@31"Typeinfo for RDCApp in RDCApp.o-380384311#6813#38#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@43"Symbol(s) not found for architecture x86_64-380384311#6851#48#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@65"Linker command failed with exit code 1 (use -v to see invocation)-380384311#6899#80#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--0#0#0#--1082"Ld ./build/Debug/RDC.app/Contents/MacOS/RDC normal x86_64    cd /Users/Gaston/dev/RDC/xcode    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/Gaston/dev/RDC/xcode/build/Debug -L/opt/local/lib -F/Users/Gaston/dev/RDC/xcode/build/Debug -filelist /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/Objects-normal/x86_64/RDC.LinkFileList -mmacosx-version-min=10.5 ../../cinder/lib/libcinder_d.a -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_legacy -lopencv_contrib -lopencv_calib3d -lopencv_features2d -lopencv_flann -lopencv_ml -lopencv_objdetect -lopencv_video -lcurl -framework Cocoa -framework OpenGL -framework Carbon -framework CoreVideo -framework QTKit -framework QuickTime -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -o /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/MacOS/RDC36"51C55A7E-2B66-433F-825D-6A60B703432D-
-
-CProcessInfoPlistFile /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Info.plist Info.plist
-s380384307.395609
-e380384307.398648
-r1
-xProcessInfoPlistFile
-x/Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Info.plist
-xInfo.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Process Info.plist2158653334acb641^cc0d663334acb641^---0#0#0#-19%DVTDocumentLocation2@54"file://localhost/Users/Gaston/dev/RDC/xcode/Info.plist0000000000000000^339"ProcessInfoPlistFile ./build/Debug/RDC.app/Contents/Info.plist Info.plist    cd /Users/Gaston/dev/RDC/xcode    builtin-infoPlistUtility Info.plist -genpkginfo /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app/Contents/Info.plist36"68A77FEA-D376-46D0-9B4D-072CA978C6A3-
-
-CProcessPCH++ /Users/Gaston/Library/Developer/Xcode/DerivedData/RDC-cmlehkqanocslpbfbcdfzbelmyip/Index/PrecompiledHeaders/RDC_Prefix-dtdkkyulvhtpssapskrwuphotehf_ast/RDC_Prefix.pch.pth RDC_Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH++ /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch.pth RDC_Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380384307.470812
-e380384307.488550
-r1
-xProcessPCH++
-x/var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch.pth
-xRDC_Prefix.pch
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection25"Precompile RDC_Prefix.pche2ac783334acb641^be117d3334acb641^---0#0#0#-19%DVTDocumentLocation2@58"file://localhost/Users/Gaston/dev/RDC/xcode/RDC_Prefix.pch0000000000000000^2439"ProcessPCH++ /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch.pth RDC_Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/RDC-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/./build/RDC.build/Debug/RDC.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug --serialize-diagnostics /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch.dia -c /Users/Gaston/dev/RDC/xcode/RDC_Prefix.pch -o /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/2n/pyr7wcfs2_106dsy3tg8ktqm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/RDC_Prefix-haxfstcpdfnasagulgwbfhmlmobu/RDC_Prefix.pch.d36"539C9975-4140-4666-998C-37F01DDA43AF-
-
-CTouch /Users/Gaston/dev/RDC/xcode/./build/Debug/RDC.app
-r0
-
