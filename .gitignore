@@ -16,6 +16,8 @@
 *.d
 *.dia
 xcode/build/*
+*.dat
+*.dep
 
 # opencv
 OpenCV-2.4.3/*
