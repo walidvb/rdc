@@ -9,13 +9,13 @@
 #ifndef RDC_RDC_h
 #define RDC_RDC_h
 #include "common.h"
-class Sensor_A;
+class Sensor;
 class Renderer_A;
 class RDC
 {
 public:
     RDC(){}
-    void calibrate(Sensor_A* cam, Renderer_A* gfx);   //Called once, starts the calibration and computes needed values for compensation
+    void calibrate(Sensor* cam, Renderer_A* gfx);   //Called once, starts the calibration and computes needed values for compensation
     Image compensate(const Image& srcImg); //Called each frame, takes source image and returns compensated image
     
 private:

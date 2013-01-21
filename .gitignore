@@ -15,3 +15,7 @@
 # xcode project files
 *.d
 *.dia
+xcode/build/*
+
+# opencv
+OpenCV-2.4.3/*

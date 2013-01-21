@@ -20,6 +20,7 @@ public:
     //Constructors
     Image();
     Image(int width, int height);
+    Image(Mat img);
     Image(Image const& img);
     
     //Methods
@@ -29,7 +30,7 @@ public:
     //vector<float> Mat2Img(cv::Mat original); //<! translates an openCV Mat image into my vector<float> object.
     
     //Attributes
-    vector<float> pixels; //!< list of all pixels of the frame
+    Mat pixels; //!< list of all pixels of the frame
     int width;            //<! the width of the image
     int height;           //<! the height of the image
 

@@ -35,19 +35,31 @@ int Sensor::init(int videoID)
     }
 }
 
-void Sensor::stop()
+string Sensor::init(string filepath)
 {
-    cap.release();
-    bufferedImages.empty();
+    if(cap.isOpened())
+    {
+        cout << "opening " << filepath << endl;
+    }
+    
+    cap = VideoCapture(filepath); // open the default camera
+    if(!cap.isOpened())  // check if we succeeded
+    {
+        return "failed to open " + filepath;
+    }
+    else
+    {
+        Mat tmp;
+        cap >> tmp;
+        width = tmp.cols;
+        height = tmp.rows;
+        return filepath;
+    }
 }
+
 
 Mat Sensor::grabFrame()
 {
     cap >> frame;
     return frame;
-}
-
-void saveFrame()
-{
-    imwrite(frame);
 }

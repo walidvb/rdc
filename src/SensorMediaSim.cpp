@@ -13,27 +13,25 @@
 #include "cinder/gl/Texture.h"
 #include "cinder/Channel.h"
 
-SensorMediaSim::SensorMediaSim(int w, int h) : Sensor_A(w,h)
-{
-}
+SensorMediaSim::SensorMediaSim() : Sensor_A() {}
 
-void SensorMediaSim::init()
+SensorMediaSim::SensorMediaSim(int w, int h) : Sensor_A(w,h) {}
+
+string SensorMediaSim::init(string filepath)
 {
+    Mat img = imread(filepath);
+    Image tmpImage(img);
+    width = tmpImage.width;
+    height = tmpImage.height;
+    frame = tmpImage;
+    return filepath;
 }
 
 Image SensorMediaSim::grabFrame()
 {
-    ci::Url url( "http://testsite.onsport.com/wp-content/themes/onsport-jos/img/players/0601-090529lena512.bmp" );
+
+    //read file
+    //Create image
     
-    ci::Channel32f mChannel = ci::Channel32f( loadImage( loadUrl( url ) ) );
-    Image tmpImage(mChannel.getWidth(), mChannel.getHeight());
-    
-    for (int i = 0; i < tmpImage.width; i++)
-    {
-        for (int j = 0 ; j < tmpImage.height; j++)
-        {
-            tmpImage.pixelWrite(*mChannel.getData(i, j), i, j);
-        }
-    }
-    return tmpImage;
+    return frame;
 }

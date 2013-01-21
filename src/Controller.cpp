@@ -6,47 +6,51 @@
 //
 //
 
+#include "common.h"
 #include "Controller.h"
-#include "SensorSim.h"
+#include "Sensor.h"
 #include "Renderer_Cinder.h"
-#include "SensorMediaSim.h"
+#include "Renderer_CV.h"
 #include "RDC.h"
+
+Controller::Controller()
+{
+    deviceID = 0;
+    sourceMedia = "/Users/Gaston/dev/RDC/resources/media.mov";
+}
 
 
 Controller::~Controller()
 {
-    delete sensor;
+    delete captor;
     delete renderer;
     delete rdc;
-    delete sensorMedia;
+    delete media;
 }
 
 void Controller::init(int width, int height)
 {
-    sensor = new SensorSim();
+    captor = new Sensor();
     renderer = new Renderer_Cinder(width, height);
     rdc = new RDC();
-    sensorMedia = NULL;
+    media = new Sensor();
+    captor->init(deviceID);
+    media->init(sourceMedia);
 }
 
 void Controller::calibrate()
 {
     //TODO
     //Get the homography matrice
-    rdc->calibrate(sensor, renderer);
+    rdc->calibrate(captor, renderer);
 }
 
 void Controller::process()
 {
-    if(!sensorMedia)
-    {
-        sensorMedia = new SensorMediaSim(10,10);
-    }
-    
-    Image frame = sensorMedia->grabFrame();
+    Image frame = captor->grabFrame();
     renderer->drawImg(frame, FULL);
-    frame = rdc->compensate(frame);
-    renderer->drawImg(frame, FULL);
+    //frame = rdc->compensate(frame);
+    //renderer->drawImg(frame, FULL);
 }
 
 void Controller::draw()

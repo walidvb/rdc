@@ -1,7 +1,4 @@
 dependencies: /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp \
-  /Users/Gaston/dev/RDC/xcode/../headers/Controller.h \
-  /Users/Gaston/dev/RDC/xcode/../headers/SensorSim.h \
-  /Users/Gaston/dev/RDC/xcode/../headers/Sensor_A.h \
   /Users/Gaston/dev/RDC/xcode/../headers/common.h \
   /Users/Gaston/dev/RDC/xcode/../headers/Tools.h \
   /Users/Gaston/dev/RDC/xcode/../headers/V2D.h \
@@ -33,7 +30,11 @@ dependencies: /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp \
   /opt/local/include/opencv2/contrib/contrib.hpp \
   /opt/local/include/opencv2/contrib/retina.hpp \
   /opt/local/include/opencv2/contrib/openfabmap.hpp \
-  ../../cinder/include/cinder/Channel.h \
+  /Users/Gaston/dev/RDC/xcode/../headers/Controller.h \
+  /Users/Gaston/dev/RDC/xcode/Sensor.h \
+  /Users/Gaston/dev/RDC/xcode/../headers/Renderer_Cinder.h \
+  /Users/Gaston/dev/RDC/xcode/../headers/Renderer_A.h \
+  ../../cinder/include/cinder/gl/gl.h \
   ../../cinder/include/cinder/Cinder.h \
   ../../cinder/boost/boost/cstdint.hpp \
   ../../cinder/boost/boost/config.hpp \
@@ -72,9 +73,63 @@ dependencies: /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp \
   ../../cinder/boost/boost/smart_ptr/detail/yield_k.hpp \
   ../../cinder/boost/boost/memory_order.hpp \
   ../../cinder/boost/boost/smart_ptr/detail/operator_bool.hpp \
-  ../../cinder/include/cinder/Area.h \
-  ../../cinder/include/cinder/Vector.h \
+  ../../cinder/include/cinder/Exception.h \
+  ../../cinder/include/cinder/Quaternion.h \
   ../../cinder/include/cinder/CinderMath.h \
+  ../../cinder/include/cinder/Vector.h \
+  ../../cinder/include/cinder/Matrix.h \
+  ../../cinder/include/cinder/Matrix22.h \
+  ../../cinder/include/cinder/MatrixAffine2.h \
+  ../../cinder/include/cinder/Matrix33.h \
+  ../../cinder/include/cinder/Matrix44.h \
+  ../../cinder/include/cinder/MatrixAlgo.h \
+  ../../cinder/include/cinder/Color.h \
+  ../../cinder/include/cinder/ChanTraits.h \
+  ../../cinder/boost/boost/preprocessor/seq.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/cat.hpp \
+  ../../cinder/boost/boost/preprocessor/arithmetic/dec.hpp \
+  ../../cinder/boost/boost/preprocessor/config/config.hpp \
+  ../../cinder/boost/boost/preprocessor/control/if.hpp \
+  ../../cinder/boost/boost/preprocessor/control/iif.hpp \
+  ../../cinder/boost/boost/preprocessor/logical/bool.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/fold_left.hpp \
+  ../../cinder/boost/boost/preprocessor/cat.hpp \
+  ../../cinder/boost/boost/preprocessor/debug/error.hpp \
+  ../../cinder/boost/boost/preprocessor/detail/auto_rec.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/seq.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/elem.hpp \
+  ../../cinder/boost/boost/preprocessor/facilities/empty.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/size.hpp \
+  ../../cinder/boost/boost/preprocessor/tuple/eat.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/enum.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/filter.hpp \
+  ../../cinder/boost/boost/preprocessor/control/expr_if.hpp \
+  ../../cinder/boost/boost/preprocessor/control/expr_iif.hpp \
+  ../../cinder/boost/boost/preprocessor/tuple/elem.hpp \
+  ../../cinder/boost/boost/preprocessor/tuple/rem.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/first_n.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/detail/split.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/fold_right.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/reverse.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/for_each.hpp \
+  ../../cinder/boost/boost/preprocessor/repetition/for.hpp \
+  ../../cinder/boost/boost/preprocessor/repetition/detail/for.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/for_each_i.hpp \
+  ../../cinder/boost/boost/preprocessor/arithmetic/inc.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/for_each_product.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/insert.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/rest_n.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/pop_back.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/pop_front.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/push_back.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/push_front.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/remove.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/replace.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/subseq.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/to_array.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/to_tuple.hpp \
+  ../../cinder/boost/boost/preprocessor/seq/transform.hpp \
+  ../../cinder/include/cinder/Rect.h ../../cinder/include/cinder/Area.h \
   ../../cinder/boost/boost/rational.hpp \
   ../../cinder/boost/boost/operators.hpp \
   ../../cinder/boost/boost/iterator.hpp \
@@ -98,25 +153,15 @@ dependencies: /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp \
   ../../cinder/boost/boost/mpl/integral_c_tag.hpp \
   ../../cinder/boost/boost/mpl/aux_/config/static_constant.hpp \
   ../../cinder/boost/boost/mpl/aux_/static_cast.hpp \
-  ../../cinder/boost/boost/preprocessor/cat.hpp \
-  ../../cinder/boost/boost/preprocessor/config/config.hpp \
   ../../cinder/boost/boost/mpl/aux_/template_arity_fwd.hpp \
   ../../cinder/boost/boost/mpl/aux_/preprocessor/params.hpp \
   ../../cinder/boost/boost/mpl/aux_/config/preprocessor.hpp \
   ../../cinder/boost/boost/preprocessor/comma_if.hpp \
   ../../cinder/boost/boost/preprocessor/punctuation/comma_if.hpp \
-  ../../cinder/boost/boost/preprocessor/control/if.hpp \
-  ../../cinder/boost/boost/preprocessor/control/iif.hpp \
-  ../../cinder/boost/boost/preprocessor/logical/bool.hpp \
-  ../../cinder/boost/boost/preprocessor/facilities/empty.hpp \
   ../../cinder/boost/boost/preprocessor/punctuation/comma.hpp \
   ../../cinder/boost/boost/preprocessor/repeat.hpp \
   ../../cinder/boost/boost/preprocessor/repetition/repeat.hpp \
-  ../../cinder/boost/boost/preprocessor/debug/error.hpp \
-  ../../cinder/boost/boost/preprocessor/detail/auto_rec.hpp \
-  ../../cinder/boost/boost/preprocessor/tuple/eat.hpp \
   ../../cinder/boost/boost/preprocessor/inc.hpp \
-  ../../cinder/boost/boost/preprocessor/arithmetic/inc.hpp \
   ../../cinder/boost/boost/mpl/aux_/config/lambda.hpp \
   ../../cinder/boost/boost/mpl/aux_/config/ttp.hpp \
   ../../cinder/boost/boost/mpl/aux_/config/ctps.hpp \
@@ -146,11 +191,13 @@ dependencies: /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp \
   ../../cinder/boost/boost/math_fwd.hpp \
   ../../cinder/boost/boost/limits.hpp \
   ../../cinder/boost/boost/static_assert.hpp \
-  ../../cinder/include/cinder/ImageIo.h \
+  ../../cinder/include/cinder/Font.h \
+  ../../cinder/include/cinder/Shape2d.h \
+  ../../cinder/include/cinder/Path2d.h \
+  ../../cinder/include/cinder/BSpline.h \
   ../../cinder/include/cinder/DataSource.h \
   ../../cinder/include/cinder/Url.h ../../cinder/include/cinder/Stream.h \
   ../../cinder/include/cinder/Buffer.h \
-  ../../cinder/include/cinder/Exception.h \
   ../../cinder/include/cinder/Filesystem.h \
   ../../cinder/boost/boost/filesystem.hpp \
   ../../cinder/boost/boost/filesystem/v3/config.hpp \
@@ -195,11 +242,9 @@ dependencies: /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp \
   ../../cinder/boost/boost/preprocessor/facilities/identity.hpp \
   ../../cinder/boost/boost/preprocessor/empty.hpp \
   ../../cinder/boost/boost/preprocessor/arithmetic/add.hpp \
-  ../../cinder/boost/boost/preprocessor/arithmetic/dec.hpp \
   ../../cinder/boost/boost/preprocessor/control/while.hpp \
   ../../cinder/boost/boost/preprocessor/list/fold_left.hpp \
   ../../cinder/boost/boost/preprocessor/list/detail/fold_left.hpp \
-  ../../cinder/boost/boost/preprocessor/control/expr_iif.hpp \
   ../../cinder/boost/boost/preprocessor/list/adt.hpp \
   ../../cinder/boost/boost/preprocessor/detail/is_binary.hpp \
   ../../cinder/boost/boost/preprocessor/detail/check.hpp \
@@ -208,7 +253,6 @@ dependencies: /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp \
   ../../cinder/boost/boost/preprocessor/list/detail/fold_right.hpp \
   ../../cinder/boost/boost/preprocessor/list/reverse.hpp \
   ../../cinder/boost/boost/preprocessor/control/detail/while.hpp \
-  ../../cinder/boost/boost/preprocessor/tuple/elem.hpp \
   ../../cinder/boost/boost/preprocessor/arithmetic/sub.hpp \
   ../../cinder/boost/boost/mpl/identity.hpp \
   ../../cinder/boost/boost/system/error_code.hpp \
@@ -332,7 +376,6 @@ dependencies: /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp \
   ../../cinder/boost/boost/iostreams/detail/config/limits.hpp \
   ../../cinder/boost/boost/iostreams/detail/push_params.hpp \
   ../../cinder/boost/boost/preprocessor/repetition/enum_binary_params.hpp \
-  ../../cinder/boost/boost/preprocessor/tuple/rem.hpp \
   ../../cinder/boost/boost/preprocessor/repetition/repeat_from_to.hpp \
   ../../cinder/boost/boost/iostreams/detail/iostream.hpp \
   ../../cinder/boost/boost/iostreams/detail/select.hpp \
@@ -360,7 +403,6 @@ dependencies: /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp \
   ../../cinder/boost/boost/iostreams/traits.hpp \
   ../../cinder/boost/boost/iostreams/detail/bool_trait_def.hpp \
   ../../cinder/boost/boost/iostreams/detail/template_params.hpp \
-  ../../cinder/boost/boost/preprocessor/control/expr_if.hpp \
   ../../cinder/boost/boost/iostreams/detail/is_iterator_range.hpp \
   ../../cinder/boost/boost/iostreams/detail/select_by_size.hpp \
   ../../cinder/boost/boost/iostreams/detail/wrap_unwrap.hpp \
@@ -392,12 +434,6 @@ dependencies: /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp \
   ../../cinder/boost/boost/utility/base_from_member.hpp \
   ../../cinder/boost/boost/utility/binary.hpp \
   ../../cinder/boost/boost/preprocessor/control/deduce_d.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/cat.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/fold_left.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/seq.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/elem.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/size.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/transform.hpp \
   ../../cinder/boost/boost/preprocessor/arithmetic/mod.hpp \
   ../../cinder/boost/boost/preprocessor/arithmetic/detail/div_base.hpp \
   ../../cinder/boost/boost/preprocessor/comparison/less_equal.hpp \
@@ -416,10 +452,6 @@ dependencies: /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp \
   ../../cinder/boost/boost/type_traits/conversion_traits.hpp \
   ../../cinder/boost/boost/concept/usage.hpp \
   ../../cinder/boost/boost/concept/detail/concept_def.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/for_each_i.hpp \
-  ../../cinder/boost/boost/preprocessor/repetition/for.hpp \
-  ../../cinder/boost/boost/preprocessor/repetition/detail/for.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/enum.hpp \
   ../../cinder/boost/boost/concept/detail/concept_undef.hpp \
   ../../cinder/boost/boost/iterator/iterator_concepts.hpp \
   ../../cinder/boost/boost/range/value_type.hpp \
@@ -471,47 +503,8 @@ dependencies: /Users/Gaston/dev/RDC/xcode/../src/Controller.cpp \
   ../../cinder/boost/boost/iostreams/detail/adapter/output_iterator_adapter.hpp \
   ../../cinder/boost/boost/iostreams/detail/is_dereferenceable.hpp \
   ../../cinder/boost/boost/iostreams/device/array.hpp \
-  ../../cinder/include/cinder/DataTarget.h \
-  ../../cinder/include/cinder/Surface.h \
-  ../../cinder/include/cinder/ChanTraits.h \
-  ../../cinder/boost/boost/preprocessor/seq.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/filter.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/first_n.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/detail/split.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/fold_right.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/reverse.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/for_each.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/for_each_product.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/insert.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/rest_n.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/pop_back.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/pop_front.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/push_back.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/push_front.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/remove.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/replace.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/subseq.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/to_array.hpp \
-  ../../cinder/boost/boost/preprocessor/seq/to_tuple.hpp \
-  ../../cinder/include/cinder/Color.h \
-  ../../cinder/boost/boost/logic/tribool.hpp \
-  ../../cinder/boost/boost/logic/tribool_fwd.hpp \
-  /Users/Gaston/dev/RDC/xcode/../headers/Renderer_Cinder.h \
-  /Users/Gaston/dev/RDC/xcode/../headers/Renderer_A.h \
-  ../../cinder/include/cinder/gl/gl.h \
-  ../../cinder/include/cinder/Quaternion.h \
-  ../../cinder/include/cinder/Matrix.h \
-  ../../cinder/include/cinder/Matrix22.h \
-  ../../cinder/include/cinder/MatrixAffine2.h \
-  ../../cinder/include/cinder/Matrix33.h \
-  ../../cinder/include/cinder/Matrix44.h \
-  ../../cinder/include/cinder/MatrixAlgo.h \
-  ../../cinder/include/cinder/Rect.h ../../cinder/include/cinder/Font.h \
-  ../../cinder/include/cinder/Shape2d.h \
-  ../../cinder/include/cinder/Path2d.h \
-  ../../cinder/include/cinder/BSpline.h \
   ../../cinder/include/cinder/PolyLine.h \
   ../../cinder/include/cinder/AxisAlignedBox.h \
   ../../cinder/include/cinder/Ray.h \
-  /Users/Gaston/dev/RDC/xcode/../headers/SensorMediaSim.h \
+  /Users/Gaston/dev/RDC/xcode/../headers/Renderer_CV.h \
   /Users/Gaston/dev/RDC/xcode/../headers/RDC.h

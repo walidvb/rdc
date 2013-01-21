@@ -9,7 +9,7 @@
 #ifndef RDC_Controller_h
 #define RDC_Controller_h
 
-class Sensor_A;
+class Sensor;
 class Renderer_A;
 class RDC;
 class Image;
@@ -17,6 +17,7 @@ class Image;
 class Controller{
     
 public:
+    Controller();
     ~Controller();
     void init(int width, int height);
     void calibrate();   //!< generates the homography matrix needed by the algorithm
@@ -24,10 +25,12 @@ public:
     void draw();        //<! draw the image, might not be the right place?
     
 private:
-    Sensor_A* sensor;
-    Sensor_A* sensorMedia;
+    Sensor* media;
+    Sensor* captor;
     Renderer_A* renderer;
     RDC* rdc;
+    std::string sourceMedia;
+    int deviceID;
 };
 
 #endif

@@ -37,12 +37,13 @@ ci::Vec2f Renderer_Cinder::V2D2Vecf(V2D src) const
 void Renderer_Cinder::drawImg(const Image& img, int POS) const
 {
     //Draw mode
-    Channel32f chan(img.width, img.height);
-    for(int i = 0; i < img.width; ++i)
+    cv::imshow("", img.pixels);
+    Channel32f chan(img.pixels.cols, img.pixels.rows);
+    for(int i = 0; i < img.pixels.rows; i++)
     {
-        for (int j = 0; j<img.height; ++j)
+        for (int j = 0; j<img.pixels.cols; j++)
         {
-            chan.setValue(ci::Vec2i(i, j), img.pixelAt(i, j));
+            chan.setValue(ci::Vec2i(i, j), img.pixelAt(j, i));
         }
     }
     

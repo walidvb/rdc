@@ -23,7 +23,7 @@ int main (int argc, const char * argv[])
 {
     
     Sensor capture;
-    capture.init();
+    capture.init("/Users/Gaston/dev/RDC/resources/media.mov");
     
     // number of corners on the chessboard
     Size boardSize(5,4);
@@ -32,11 +32,11 @@ int main (int argc, const char * argv[])
     Mat image;
     while(1)
     {
-        image = capture.grabFrame();
+        
               //Resize the images to a more reasonable size before treatment
         //resize(image, image, Size(800, 800*image.size().height/image.size().width) );
         
-        imshow( "Camera: ", image );                   // Show our image inside it.
+        imshow( "Camera: ", capture.grabFrame() );                   // Show our image inside it.
         if(waitKey(30) >=0 )
         {
             break;
