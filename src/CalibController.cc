@@ -8,7 +8,7 @@
 
 #include "CalibController.h"
 
-CalibController::CalibController(Size boardSize) : calibDone(false), boardSize(boardSize)
+CalibController::CalibController(Size boardSize, Sensor* captor) : calibDone(false), boardSize(boardSize)
 {
     //temporary use, see init()
     string filePath = "/Users/Gaston/dev/RDC/tmp/IMG_0693.JPG";

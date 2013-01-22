@@ -9,9 +9,7 @@
 #ifndef __RDC__CameraCalibrator__
 #define __RDC__CameraCalibrator__
 
-#include <iostream>
-#include <opencv2/opencv.hpp>
-#include <vector>
+#include "common.h"
 
 using namespace cv;
 using namespace std;
@@ -20,7 +18,6 @@ class CameraCalibrator
 {
     // input points:
     vector<vector<Point3f> > objectPoints; //<! the points in world coordinates
-
     vector<vector<Point2f> > imagePoints;  //<! the point positions in pixels
     
     Mat cameraMatrix; //<! output Matrices

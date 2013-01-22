@@ -13,7 +13,7 @@
 
 
 #include "CameraCalibrator.h"
-
+#include "Sensor.h"
 
 class CalibController{
     //init the system
@@ -27,12 +27,13 @@ public:
                                             //<! takes pictures and does the calibration
     
     //Constructor
-    CalibController(Size boardSize);
+    CalibController(Size boardSize, Sensor* captor);
     
     //Getters and Setters
     Size getBoardSize();
 private:
     CameraCalibrator* camCalib; //<! the object doing the calibration
+    Sensor* capture;
     vector<string> fileList;    //<! the list of pictures taken
     Size boardSize;             //<! the size of the chessBoard
     Size frameSize;             //<! the resolution of the sensor/camera
