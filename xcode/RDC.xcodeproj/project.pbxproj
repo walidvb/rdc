@@ -90,7 +90,6 @@
 		3D5FE95216ADA03700DB7E28 /* Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sensor.h; sourceTree = "<group>"; };
 		3D992F881684C91D008C380E /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Controller.cpp; path = ../src/Controller.cpp; sourceTree = "<group>"; };
 		3D992F8B1684C929008C380E /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = ../headers/Controller.h; sourceTree = "<group>"; };
-		3D992F8F1684CE2B008C380E /* SensorMediaSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SensorMediaSim.cpp; path = ../src/SensorMediaSim.cpp; sourceTree = "<group>"; };
 		3D996EBC165BE0D3004B258F /* RDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDC.h; path = ../headers/RDC.h; sourceTree = "<group>"; };
 		3D996EBD165BE215004B258F /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common.h; path = ../headers/common.h; sourceTree = "<group>"; };
 		3D996EC4165BEA5A004B258F /* RDC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RDC.cpp; path = ../src/RDC.cpp; sourceTree = "<group>"; };
@@ -278,7 +277,6 @@
 				3D2CD148165CFEED0016C8C6 /* Renderer_Cinder.cpp */,
 				3D5FE94316AD77BB00DB7E28 /* Renderer_CV.cc */,
 				3D5FE94F16ADA02C00DB7E28 /* Sensor.cc */,
-				3D992F8F1684CE2B008C380E /* SensorMediaSim.cpp */,
 				3D2CD151165D29CC0016C8C6 /* V2D.cpp */,
 				3D996EC4165BEA5A004B258F /* RDC.cpp */,
 			);

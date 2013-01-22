@@ -20,17 +20,21 @@ public:
     Controller();
     ~Controller();
     void init(int width, int height);
-    void calibrate();   //!< generates the homography matrix needed by the algorithm
-    void process();     //!< processes the frame that will be projected, and return it
-    void draw();        //<! draw the image, might not be the right place?
+    void calibrate();           //!< generates the homography matrix needed by the algorithm
+    void process();             //!< processes the frame that will be projected, and return it
+    void draw();                //<! draw the image, might not be the right place?
     
 private:
-    Sensor* media;
-    Sensor* captor;
-    Renderer_A* renderer;
-    RDC* rdc;
-    std::string sourceMedia;
-    int deviceID;
+    Sensor* media;              //<! the loaded media / ftm only video is supported
+    Sensor* captor;             //<! the captor
+    Renderer_A* renderer;       //<! well, the renderer
+    RDC* rdc;                   //<! he does the magic. calibration, compensation matrix generation, and image processing
+    
+    Image* testFrame;            //<! just a test frame, to avoid loading a video. Should be removed for final product
+    
+    std::string sourceMedia;    //<! the media from which to load (is now a default)
+    int deviceID;               //<! the id of the capture device
+    std::string resourcePath = "/Users/Gaston/dev/RDC/resources/";  //<! the path were resources are stored. should be relative to the app, but I don't know how to do that yet.
 };
 
 #endif

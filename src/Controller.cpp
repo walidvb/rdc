@@ -16,7 +16,7 @@
 Controller::Controller()
 {
     deviceID = 0;
-    sourceMedia = "/Users/Gaston/dev/RDC/resources/media.mov";
+    sourceMedia = resourcePath + "media.mov";
 }
 
 
@@ -33,9 +33,10 @@ void Controller::init(int width, int height)
     captor = new Sensor();
     renderer = new Renderer_Cinder(width, height);
     rdc = new RDC();
-    media = new Sensor();
-    captor->init(deviceID);
-    media->init(sourceMedia);
+    //media = new Sensor();
+    //captor->init(deviceID);
+    //media->init(sourceMedia);
+    testFrame = new Image(resourcePath+"lena.bmp");
 }
 
 void Controller::calibrate()
@@ -47,10 +48,16 @@ void Controller::calibrate()
 
 void Controller::process()
 {
-    Image frame = captor->grabFrame();
-    renderer->drawImg(frame, FULL);
-    //frame = rdc->compensate(frame);
+    //TOCHECK: ftm only display test image
+    Image frame = Image(*testFrame);
+    renderer->drawImg(*testFrame, FULL);
+    //Grab frame from media
+    //Image frame = media->grabFrame();
     //renderer->drawImg(frame, FULL);
+    //process it
+    frame = rdc->compensate(frame);
+    //render it
+    renderer->drawImg(frame, FULL);
 }
 
 void Controller::draw()

@@ -30,7 +30,7 @@ void RDC::calibrate(Sensor* cam, Renderer_A* gfx)
 Image RDC::compensate(const Image& srcImg)
 {
     Image dstImg(srcImg.width, srcImg.height);
-    /*for (int i = 0; i < srcImg.width; i++)
+    for (int i = 0; i < srcImg.width; i++)
     {
         for (int j = 0 ; j < srcImg.height; j++)
         {
@@ -45,8 +45,7 @@ Image RDC::compensate(const Image& srcImg)
 
         }
         //cout << endl;
-    }*/
-    threshold( srcImg.pixels, dstImg.pixels, 127, 255, THRESH_BINARY );
+    }
     return dstImg;
     //TODO compensate #1 test with dummy matrix
 }
@@ -62,9 +61,11 @@ void RDC::projectStructuredLights(Renderer_A* gfx)
 
 void RDC::computeEM()
 {
+    
 }
 
 void RDC::computeFM()
 {
+    
 }
 
