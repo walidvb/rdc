@@ -17,12 +17,12 @@ using namespace ci;
 
 class Renderer_Cinder : public Renderer_A
 {
-    
 public:
     Renderer_Cinder();
     Renderer_Cinder(int width, int height);
     void drawRect( float& x1, float& y1, float& x2, float& y2 ) const;
     void drawImg(const Image& img, int POS) const;
+    int windowCount = 0; //<! used to be able to imshow different images
     
 private:
     ci::Vec2f V2D2Vecf(V2D src) const;

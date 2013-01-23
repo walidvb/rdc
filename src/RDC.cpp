@@ -32,8 +32,8 @@ Image RDC::compensate(Image& srcImg, Image& dstImg)
     int w = srcImg.width;
     int h = srcImg.height;
     //make sure dst is the correct size
-    dstImg.pixels.create(h,w,srcImg.pixels.type());
-    
+    dstImg.pixels.create(h, w, srcImg.pixels.type());
+
     // number of lines
     int nl= h;
     // total number of elements per line
@@ -55,6 +55,17 @@ Image RDC::compensate(Image& srcImg, Image& dstImg)
             dataOut[i]= newPix;
         }
     }
+    
+    /* TOCHECK: not working, for some reason..?!?!?!
+    for(int i = 0; i < w; i++)
+    {
+        for(int j = 0; j < h; j++)
+        {
+            int p = (srcImg.pixelAt(i, j) > 127) ? 255 : 0;
+            dstImg.pixelWrite(i, j, p);
+        }
+    }
+     */
     return dstImg;
     //TODO compensate #1 test with dummy matrix
 }

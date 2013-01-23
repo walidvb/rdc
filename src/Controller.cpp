@@ -57,7 +57,7 @@ void Controller::process()
     //process it
     frame = rdc->compensate(frame, frame);
     //render it
-    renderer->drawImg(frame, FULL);
+    renderer->drawImg(frame, ONE);
 }
 
 void Controller::draw()

@@ -37,26 +37,24 @@ ci::Vec2f Renderer_Cinder::V2D2Vecf(V2D src) const
 void Renderer_Cinder::drawImg(const Image& img, int POS) const
 {
     //Draw mode
-    cv::imshow("image", img.pixels);
-    /*
-    int w = img.width;
-    int h = img.height;
-    Channel8u chan(w, h);
-    for(int i = 0, i_ = 0, j_ = 0; i < w; i++)
+    cv::imshow("img ", img.pixels);
+    
+    int w = img.pixels.cols;
+    int h = img.pixels.rows;
+    
+    Channel32f chan(w, h);
+    for(int i = 0; i < w; i+=3)
     {
-        j_ = 0;
-        for (int j = 0; j<h; j++)
+        for (int j = 0; j<h; j+=3)
         {
-            chan.setValue(ci::Vec2i(i, j), img.pixelAt(i_, j_));
-            j_++;
+            chan.setValue(ci::Vec2i(i, j), img.pixels.ptr(j)[i]);
         }
-        i_++;
     }
     
     Texture myImg;
     myImg = Texture(chan);
     draw(myImg);
-    */
+    
     //Verbose mode
 //    
 //    cout <<"=========================="<<endl;
