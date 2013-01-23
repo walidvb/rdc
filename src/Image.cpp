@@ -6,9 +6,6 @@
 //
 //
 
-#define IMG_CLR 0
-#define IMG_GRAY 1
-
 #include "Image.h"
 using namespace cv;
 
@@ -17,7 +14,7 @@ Image::Image()
     
 }
 
-Image::Image(int width, int height) : width(width), height(height)
+Image::Image(int width, int height, imgType type) : width(width), height(height), type(type)
 {
     this->pixels = Mat(width, height, CV_8U);
     setup();
@@ -45,25 +42,26 @@ int Image::index(int x, int y, int w)
     return y*w+x;
 }
 
-
+//TODO change to template, as this should be able to return Vec3b too.
 float Image::pixelAt(int x, int y) const
 {
     float pix = pixels.at<uchar>(y, x);
     return pix;
 }
 
+//TODO change to template, as this should be able to take as argument Vec3b too.
 void Image::pixelWrite(float value, int x, int y)
 {
     pixels.at<uchar>(y, x) = value;
 }
-
+    
 void Image::load(string filepath)
 {
     pixels = imread(filepath);
     setup();
 }
 
-void Image::setPixels(const cv::Mat &src)
+void Image::clone(const cv::Mat &src)
 {
     pixels = src.clone();
     setup();
@@ -79,6 +77,7 @@ void Image::setup()
     {
         type = IMG_CLR;
     }
+
     width = pixels.cols;
     height = pixels.rows;
 

@@ -27,24 +27,33 @@ void RDC::calibrate(Sensor* cam, Renderer_A* gfx)
     //TODO compute compensation matrix
 }
 
-Image RDC::compensate(const Image& srcImg)
+Image RDC::compensate(Image& srcImg, Image& dstImg)
 {
-    Image dstImg(srcImg.width, srcImg.height);
-    for (int i = 0; i < srcImg.width; i++)
-    {
-        for (int j = 0 ; j < srcImg.height; j++)
-        {
+    int w = srcImg.width;
+    int h = srcImg.height;
+    //make sure dst is the correct size
+    dstImg.pixels.create(h,w,srcImg.pixels.type());
+    
+    // number of lines
+    int nl= h;
+    // total number of elements per line
+    int nc= w * srcImg.type;
+    
+    for (int j=0; j<nl; j++) {
+        // get the address of row j
+        uchar* dataIn= srcImg.pixels.ptr<uchar>(j);
+        uchar* dataOut= srcImg.pixels.ptr<uchar>(j);
+        for (int i=0; i<nc; i++) {
+            
+            //Simple fixed thresholding method
             float newPix = 0;
-            //Simple fixed threshold method
-            if (srcImg.pixelAt(i,j) > 127)
+            if (dataIn[i] > 127)
             {
                 newPix = 255;
             }
-            dstImg.pixelWrite(newPix, i, j);
-            //cout << dstImg.pixelAt(i,j) << " ";
-
+            
+            dataOut[i]= newPix;
         }
-        //cout << endl;
     }
     return dstImg;
     //TODO compensate #1 test with dummy matrix

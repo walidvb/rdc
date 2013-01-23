@@ -16,10 +16,14 @@
 using namespace cv;
 
 class Image{
+    
+    
 public:
+    enum imgType {IMG_CLR = 3, IMG_GRAY = 1};   //<! the different types of image we can have. represents the number of channels, actually
+
     //Constructors
     Image();
-    Image(int width, int height);
+    Image(int width, int height, imgType = IMG_GRAY);
     Image(Mat img);
     Image(Image const& img);
     Image(string path);
@@ -33,12 +37,13 @@ public:
     
     //Attributes
     Mat pixels;           //!< all pixels of the image
-    int type;             //<! type of im   age: IMG_GRAY or IMG_CLR
+    imgType type;             //<! type of im   age: IMG_GRAY or IMG_CLR
     int width;            //<! the width of the image
     int height;           //<! the height of the image
     
+    
     //Setter
-    void setPixels(const Mat& src);
+    void clone(const Mat& src);
 
 private:
     static int index(int x, int y, int w);    

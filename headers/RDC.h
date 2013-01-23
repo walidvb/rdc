@@ -16,7 +16,7 @@ class RDC
 public:
     RDC(){}
     void calibrate(Sensor* cam, Renderer_A* gfx);   //Called once, starts the calibration and computes needed values for compensation
-    Image compensate(const Image& srcImg); //Called each frame, takes source image and returns compensated image
+    Image compensate(Image& srcImg, Image& dstImage); //Called each frame, takes source image and returns compensated image
     
 private:
     //Private methods

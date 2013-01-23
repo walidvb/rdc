@@ -55,7 +55,7 @@ void Controller::process()
     //Image frame = media->grabFrame();
     //renderer->drawImg(frame, FULL);
     //process it
-    frame = rdc->compensate(frame);
+    frame = rdc->compensate(frame, frame);
     //render it
     renderer->drawImg(frame, FULL);
 }
