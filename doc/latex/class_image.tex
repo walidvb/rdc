@@ -1,13 +1,26 @@
 \hypertarget{class_image}{\section{Image Class Reference}
 \label{class_image}\index{Image@{Image}}
 }
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries img\-Type} \{ {\bfseries I\-M\-G\-\_\-\-C\-L\-R} =  3, 
+{\bfseries I\-M\-G\-\_\-\-G\-R\-A\-Y} =  1
+ \}
+\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_image_afb0339b802ed560e69eb07358d30198f}{{\bfseries Image} (int width, int height)}\label{class_image_afb0339b802ed560e69eb07358d30198f}
+\hypertarget{class_image_a03b42c8c67f24139f3dc540678919cd3}{{\bfseries Image} (int width, int height, img\-Type=I\-M\-G\-\_\-\-G\-R\-A\-Y)}\label{class_image_a03b42c8c67f24139f3dc540678919cd3}
+
+\item 
+\hypertarget{class_image_a583efff0899692314aa5a37fda3ec89e}{{\bfseries Image} (Mat img)}\label{class_image_a583efff0899692314aa5a37fda3ec89e}
 
 \item 
 \hypertarget{class_image_a11c4da10d93cb19f684f5dbec08e564d}{{\bfseries Image} (\hyperlink{class_image}{Image} const \&img)}\label{class_image_a11c4da10d93cb19f684f5dbec08e564d}
+
+\item 
+\hypertarget{class_image_ab5a8cd26aa2d32873ab871eef30bedf3}{{\bfseries Image} (string path)}\label{class_image_ab5a8cd26aa2d32873ab871eef30bedf3}
 
 \item 
 \hypertarget{class_image_a9b183ad498d8ffea3f91a21e5a67920d}{float \hyperlink{class_image_a9b183ad498d8ffea3f91a21e5a67920d}{pixel\-At} (int x, int y) const }\label{class_image_a9b183ad498d8ffea3f91a21e5a67920d}
@@ -16,6 +29,12 @@
 \hypertarget{class_image_afcd6f049060759d996f08b335ef2351d}{void \hyperlink{class_image_afcd6f049060759d996f08b335ef2351d}{pixel\-Write} (float value, int x, int y)}\label{class_image_afcd6f049060759d996f08b335ef2351d}
 
 \begin{DoxyCompactList}\small\item\em writes value at pixel (x, y) \end{DoxyCompactList}\item 
+\hypertarget{class_image_a0fde38150064d8658110ac3033f24617}{void {\bfseries load} (string filepath)}\label{class_image_a0fde38150064d8658110ac3033f24617}
+
+\item 
+\hypertarget{class_image_a6aa3df4b3f0664a83e3b77587c1b5d70}{void {\bfseries clone} (const Mat \&src)}\label{class_image_a6aa3df4b3f0664a83e3b77587c1b5d70}
+
+\item 
 \hypertarget{class_image_afb0339b802ed560e69eb07358d30198f}{{\bfseries Image} (int width, int height)}\label{class_image_afb0339b802ed560e69eb07358d30198f}
 
 \item 
@@ -37,15 +56,21 @@
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_image_acd0e09aa8465845f1011411c7beb90ac}{vector$<$ float $>$ \hyperlink{class_image_acd0e09aa8465845f1011411c7beb90ac}{pixels}}\label{class_image_acd0e09aa8465845f1011411c7beb90ac}
+\hypertarget{class_image_afd3bc2d21015dfbefba405e41de33e9b}{Mat \hyperlink{class_image_afd3bc2d21015dfbefba405e41de33e9b}{pixels}}\label{class_image_afd3bc2d21015dfbefba405e41de33e9b}
 
-\begin{DoxyCompactList}\small\item\em list of all pixels of the frame \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em all pixels of the image \end{DoxyCompactList}\item 
+\hypertarget{class_image_a6c5f90a678bda512fc0f4b2945f04036}{img\-Type {\bfseries type}}\label{class_image_a6c5f90a678bda512fc0f4b2945f04036}
+
+\item 
 \hypertarget{class_image_ab8d12f635013c04159cd4d3d972bac88}{int {\bfseries width}}\label{class_image_ab8d12f635013c04159cd4d3d972bac88}
 
 \item 
 \hypertarget{class_image_a51df43db420c9c0b57536cb2dd36de5c}{int {\bfseries height}}\label{class_image_a51df43db420c9c0b57536cb2dd36de5c}
 
-\end{DoxyCompactItemize}
+\item 
+\hypertarget{class_image_ac22dddb0c4b1136c745f0dce6db7a1dc}{vector$<$ float $>$ \hyperlink{class_image_ac22dddb0c4b1136c745f0dce6db7a1dc}{pixels}}\label{class_image_ac22dddb0c4b1136c745f0dce6db7a1dc}
+
+\begin{DoxyCompactList}\small\item\em list of all pixels of the frame \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

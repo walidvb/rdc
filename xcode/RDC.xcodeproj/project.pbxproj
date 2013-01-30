@@ -21,6 +21,7 @@
 		3D2CD149165CFEED0016C8C6 /* Renderer_Cinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD148165CFEED0016C8C6 /* Renderer_Cinder.cpp */; };
 		3D2CD14B165D01860016C8C6 /* Renderer_A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD14A165D01860016C8C6 /* Renderer_A.cpp */; };
 		3D2CD152165D29CC0016C8C6 /* V2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD151165D29CC0016C8C6 /* V2D.cpp */; };
+		3D2E3ADB16B848C200DE7582 /* Homo.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E3ADA16B848C200DE7582 /* Homo.cc */; };
 		3D3A0EE816A858D800A4C1A4 /* testChessboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3A0EE716A858D800A4C1A4 /* testChessboard.png */; };
 		3D3C9CDC168C5F4500EEBCAF /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C9CDB168C5F4500EEBCAF /* Image.cpp */; };
 		3D5FE94416AD77BB00DB7E28 /* Renderer_CV.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FE94316AD77BB00DB7E28 /* Renderer_CV.cc */; };
@@ -74,6 +75,8 @@
 		3D2CD14A165D01860016C8C6 /* Renderer_A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer_A.cpp; path = ../src/Renderer_A.cpp; sourceTree = "<group>"; };
 		3D2CD151165D29CC0016C8C6 /* V2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = V2D.cpp; path = ../src/V2D.cpp; sourceTree = "<group>"; };
 		3D2CD153165D29FB0016C8C6 /* V2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = V2D.h; path = ../headers/V2D.h; sourceTree = "<group>"; };
+		3D2E3ADA16B848C200DE7582 /* Homo.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Homo.cc; path = ../src/Homo.cc; sourceTree = "<group>"; };
+		3D2E3ADD16B848D400DE7582 /* Homo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Homo.h; path = ../headers/Homo.h; sourceTree = "<group>"; };
 		3D3A0EE716A858D800A4C1A4 /* testChessboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testChessboard.png; sourceTree = "<group>"; };
 		3D3C9CDA168C5F1E00EEBCAF /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = ../headers/Image.h; sourceTree = "<group>"; };
 		3D3C9CDB168C5F4500EEBCAF /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Image.cpp; path = ../src/Image.cpp; sourceTree = "<group>"; };
@@ -230,6 +233,7 @@
 				3D5FE95216ADA03700DB7E28 /* Sensor.h */,
 				3D2CD153165D29FB0016C8C6 /* V2D.h */,
 				3D996EBC165BE0D3004B258F /* RDC.h */,
+				3D2E3ADD16B848D400DE7582 /* Homo.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -248,6 +252,7 @@
 				3D5FE94F16ADA02C00DB7E28 /* Sensor.cc */,
 				3D2CD151165D29CC0016C8C6 /* V2D.cpp */,
 				3D996EC4165BEA5A004B258F /* RDC.cpp */,
+				3D2E3ADA16B848C200DE7582 /* Homo.cc */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 				3D3C9CDC168C5F4500EEBCAF /* Image.cpp in Sources */,
 				3D5FE94416AD77BB00DB7E28 /* Renderer_CV.cc in Sources */,
 				3D5FE95016ADA02C00DB7E28 /* Sensor.cc in Sources */,
+				3D2E3ADB16B848C200DE7582 /* Homo.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +560,7 @@
 				3DDB52AF16B024B7001D1986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "RDC" */ = {
 			isa = XCConfigurationList;

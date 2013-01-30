@@ -1,7 +1,7 @@
 var searchData=
 [
   ['pixelat',['pixelAt',['../class_image.html#a9b183ad498d8ffea3f91a21e5a67920d',1,'Image::pixelAt(int x, int y) const '],['../class_image.html#a9b183ad498d8ffea3f91a21e5a67920d',1,'Image::pixelAt(int x, int y) const ']]],
-  ['pixels',['pixels',['../class_image.html#acd0e09aa8465845f1011411c7beb90ac',1,'Image']]],
+  ['pixels',['pixels',['../class_image.html#afd3bc2d21015dfbefba405e41de33e9b',1,'Image::pixels()'],['../class_image.html#ac22dddb0c4b1136c745f0dce6db7a1dc',1,'Image::pixels()']]],
   ['pixelwrite',['pixelWrite',['../class_image.html#afcd6f049060759d996f08b335ef2351d',1,'Image::pixelWrite(float value, int x, int y)'],['../class_image.html#afcd6f049060759d996f08b335ef2351d',1,'Image::pixelWrite(float value, int x, int y)']]],
   ['process',['process',['../class_controller.html#a7ac58195c3342b7de52b762c0d759a3c',1,'Controller::process()'],['../class_controller.html#a7ac58195c3342b7de52b762c0d759a3c',1,'Controller::process()']]]
 ];
