@@ -27,7 +27,6 @@ int main(int argc, const char * argv[])
     cout << "init" << endl;
     pattern = imread(resources + "chessboard65.jpg");
     captor = imread(resources + "chesspic2.jpg");
-    resize(captor, captor, Size(pattern.cols, pattern.cols*captor.rows/captor.cols));
     int width = pattern.cols;
     
     
@@ -63,13 +62,13 @@ int main(int argc, const char * argv[])
     {
         Mat pattern_, captor_, result_;
         Size renderSize(width, width*pattern.rows/pattern.cols);
-        /*resize(pattern, pattern_, renderSize);
+        resize(pattern, pattern_, renderSize);
         resize(captor, captor_, renderSize);
         resize(result, result_, renderSize);
-        */
-        imshow("pattern", pattern);
+        
+        imshow("pattern", pattern_);
         //imshow("result", result);
-        imshow("pic", captor);
+        imshow("pic", captor_);
         setMouseCallback("pic", my_mouse_callback);
         
         if(waitKey(20) > 0)

@@ -27,6 +27,11 @@ void RDC::calibrate(Sensor* cam, Renderer_A* gfx)
     //TODO compute compensation matrix
 }
 
+void RDC::computeHomography()
+{
+    
+}
+
 Image RDC::compensate(Image& srcImg, Image& dstImg)
 {
     int w = srcImg.width;

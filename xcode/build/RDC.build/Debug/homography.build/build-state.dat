@@ -5,11 +5,6 @@ cCheck dependencies
 cCompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/main.o /Users/Gaston/dev/RDC/xcode/homography/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
 cLd /Users/Gaston/dev/RDC/xcode/build/Debug/homography normal i386
 
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
-c000000005095335C00000000000000CC
-t1351955292
-s204
-
 N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
 c000000005095337800000000000000AA
 t1351955320
@@ -87,17 +82,10 @@ i<mmintrin.h>
 i<mm_malloc.h>
 i<emmintrin.h>
 
-N/Users/Gaston/dev/RDC/xcode/../headers/CalibController.h
-c0000000050FEE8730000000000000557
-t1358882931
-s1367
-i"CameraCalibrator.h"
-i"Sensor.h"
-
-N/Users/Gaston/dev/RDC/xcode/../headers/CameraCalibrator.h
-c0000000050FEE6E300000000000004DB
-t1358882531
-s1243
+N/Users/Gaston/dev/RDC/xcode/../headers/Homo.h
+c00000000510A630D0000000000000596
+t1359635213
+s1430
 i"common.h"
 
 N/Users/Gaston/dev/RDC/xcode/../headers/Image.h
@@ -131,104 +119,35 @@ i"V2D.h"
 i"Image.h"
 i<opencv2/opencv.hpp>
 
-N/Users/Gaston/dev/RDC/xcode/Sensor.h
-c0000000050FDB91F0000000000000224
-t1358805279
-s548
-i"common.h"
-i"Image.h"
+N/Users/Gaston/dev/RDC/xcode/../src/Homo.cc
+c00000000510A631400000000000009F9
+t1359635220
+s2553
+i"Homo.h"
 
 N/Users/Gaston/dev/RDC/xcode/build/Debug/homography
-t1359483400
+t1359638235
 s38688
 
-N/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/CalibController.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/CameraCalibrator.o
-t1358883296
-s294292
-
-N/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/Sensor.o
-t2
-s0
+N/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/Homo.o
+t1359635538
+s117128
 
 N/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/homography.LinkFileList
-c00000000510015F9000000000000005E
-t1358960121
+c00000000510A6ED9000000000000005E
+t1359638233
 s94
 
 N/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/main.o
-t1359483399
-s124552
-
-N/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CalibController.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CameraCalibrator.o
-t1358883262
-s334532
-
-N/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/Sensor.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/homography.LinkFileList
-c0000000050FC02480000000000000199
-t1358692936
-s409
-
-N/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/main.o
-t2
-s0
-
-N/Users/Gaston/dev/RDC/xcode/homography/headers/CalibController.h
-c00000000000000000000000000000000
-t2
-s0
-i"CameraCalibrator.h"
-
-N/Users/Gaston/dev/RDC/xcode/homography/headers/CameraCalibrator.h
-c00000000000000000000000000000000
-t2
-s0
-i<iostream>
-i<opencv2/opencv.hpp>
-i<vector>
-
-N/Users/Gaston/dev/RDC/xcode/homography/headers/Sensor.h
-c0000000050FD6810000000000000045E
-t1358784528
-s1118
-i<opencv2/opencv.hpp>
-i<iostream>
+t1359638234
+s124780
 
 N/Users/Gaston/dev/RDC/xcode/homography/main.cpp
-c0000000051014CD70000000000000CE3
-t1359039703
-s3299
+c00000000510A647E0000000000000C8B
+t1359635582
+s3211
 i<iostream>
 i<opencv2/opencv.hpp>
-
-N/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc
-c0000000050FBF5E3000000000000069F
-t1358689763
-s1695
-i"CalibController.h"
-
-N/Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc
-c0000000050FBF1E00000000000001091
-t1358688736
-s4241
-i"CameraCalibrator.h"
-
-N/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc
-c0000000050FD7CC300000000000003FB
-t1358789827
-s1019
-i"Sensor.h"
 
 N/opt/local/include/opencv2/calib3d/calib3d.hpp
 c00000000507F376A00000000000092FD
@@ -339,11 +258,6 @@ s63641
 i"opencv2/core/core.hpp"
 i"opencv2/flann/miniflann.hpp"
 i<limits>
-
-N/opt/local/include/opencv2/flann/config.h
-c000000005010796200000000000006FD
-t1343256930
-s1789
 
 N/opt/local/include/opencv2/flann/defines.h
 c000000005064D94A000000000000124B
@@ -463,213 +377,36 @@ s2416
 i"opencv2/video/tracking.hpp"
 i"opencv2/video/background_segm.hpp"
 
+CBuild AST from /Users/Gaston/dev/RDC/xcode/../src/Homo.cc
+r0
+
 CBuild AST from /Users/Gaston/dev/RDC/xcode/homography/main.cpp
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc
-r0
-
-CBuild AST from /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc
 r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesc6516dd449b8b641^dc826dd449b8b641^---0#1#0#--18"Check dependencies36"21C52D19-4470-4F2E-9DF7-82ABBC6E51CB-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciescf11395ea6bab641^603a395ea6bab641^---0#1#0#--18"Check dependencies36"E6AC99ED-5AF1-4B32-81FF-EBDA484DBFF8-
 
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/CalibController.o /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380576147.673027
-e380576150.036150
-r0
+CCompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/Homo.o /Users/Gaston/dev/RDC/xcode/../src/Homo.cc normal i386 c++ com.apple.compilers.llvmgcc42
+s381328337.780814
+e381328338.737209
+r1
 xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/i386/CalibController.o
-x/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc:11:18: error: out-of-line definition of 'CalibController' does not match any declaration in 'CalibController'
-oCalibController::CalibController(Size boardSize) : calibDone(false), boardSize(boardSize)
-o                 ^~~~~~~~~~~~~~~
-o1 error generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc446cac9321afb641^a33e099621afb641^-314"/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc:11:18: error: out-of-line definition of 'CalibController' does not match any declaration in 'CalibController'CalibController::CalibController(Size boardSize) : calibDone(false), boardSize(boardSize)                 ^~~~~~~~~~~~~~~1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@95"Out-of-line definition of 'CalibController' does not match any declaration in 'CalibController'-380576149#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@77"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc0000000000000000^10#17#10#17#125#0#14"Semantic Issue1(3@77"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc0000000000000000^10#17#10#32#125#0#-0#0#0#-19%DVTDocumentLocation4@77"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc0000000000000000^2359"CompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/CalibController.o homography/src/CalibController.cc normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/CalibController.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/CalibController.dia -c /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/CalibController.o36"CF1104AC-D5B4-4212-893F-319BECBAEEB2-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/CalibController.o /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc normal i386 c++ com.apple.compilers.llvmgcc42
-s380576095.180633
-e380576096.682403
-r0
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/i386/CalibController.o
-x/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc
+xbuild/RDC.build/Debug/homography.build/Objects-normal/i386/Homo.o
+x/Users/Gaston/dev/RDC/xcode/../src/Homo.cc
 xnormal
 xi386
 xc++
 xcom.apple.compilers.llvmgcc42
 occ1plus: warning: -Wuninitialized is not supported without -O
-o/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc:11: error: prototype for 'CalibController::CalibController(cv::Size)' does not match any in class 'CalibController'
-o/Users/Gaston/dev/RDC/xcode/../headers/CalibController.h:18: error: candidates are: CalibController::CalibController(const CalibController&)
-o/Users/Gaston/dev/RDC/xcode/../headers/CalibController.h:29: error:                 CalibController::CalibController(cv::Size, Sensor*)
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.ccdd272f5f21afb641^b801af6021afb641^-517"cc1plus: warning: -Wuninitialized is not supported without -O/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc:11: error: prototype for 'CalibController::CalibController(cv::Size)' does not match any in class 'CalibController'/Users/Gaston/dev/RDC/xcode/../headers/CalibController.h:18: error: candidates are: CalibController::CalibController(const CalibController&)/Users/Gaston/dev/RDC/xcode/../headers/CalibController.h:29: error:                 CalibController::CalibController(cv::Size, Sensor*)4(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-380576095#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@104"Prototype for 'CalibController::CalibController(cv::Size)' does not match any in class 'CalibController'-380576096#62#178#-2#-3@77"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc0000000000000000^10#18446744073709551615#10#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@72"Candidates are: CalibController::CalibController(const CalibController&)-380576096#240#141#-2#-3@63"file://localhost/Users/Gaston/dev/RDC/headers/CalibController.h0000000000000000^17#18446744073709551615#17#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@51"CalibController::CalibController(cv::Size, Sensor*)-380576096#381#136#-2#-3@63"file://localhost/Users/Gaston/dev/RDC/headers/CalibController.h0000000000000000^28#18446744073709551615#28#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--0#0#0#-19%DVTDocumentLocation4@77"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc0000000000000000^1590"CompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/CalibController.o homography/src/CalibController.cc normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility-inlines-hidden -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -c /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/CalibController.o36"9EC86B5C-4D09-435D-B2A6-9C64E3080B60-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/CameraCalibrator.o /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380576147.673017
-e380576150.448556
-r1
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/i386/CameraCalibrator.o
-x/Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.ccf969ac9321afb641^9562739621afb641^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc0000000000000000^2365"CompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/CameraCalibrator.o homography/src/CameraCalibrator.cc normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/CameraCalibrator.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/CameraCalibrator.dia -c /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/CameraCalibrator.o36"6BBCEA4E-4620-4DF8-8124-CE466A36B524-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/CameraCalibrator.o /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc normal i386 c++ com.apple.compilers.llvmgcc42
-s380576095.180628
-e380576096.787702
-r1
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/i386/CameraCalibrator.o
-x/Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvmgcc42
-occ1plus: warning: -Wuninitialized is not supported without -O
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc3d292f5f21afb641^efa8c96021afb641^-62"cc1plus: warning: -Wuninitialized is not supported without -O1(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-380576095#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--0#0#0#-19%DVTDocumentLocation4@78"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc0000000000000000^1594"CompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/CameraCalibrator.o homography/src/CameraCalibrator.cc normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility-inlines-hidden -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -c /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/CameraCalibrator.o36"D8E71D6D-B6D6-46A6-9DAF-58B447D4F5FF-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/Sensor.o /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380576147.673044
-e380576150.096584
-r0
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/i386/Sensor.o
-x/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:61:13: error: out-of-line definition of 'Sensor::grabFrame' differs from the declaration in the return type
-oMat Sensor::grabFrame()
-o            ^
-o/Users/Gaston/dev/RDC/xcode/Sensor.h:24:11: note: previous declaration is here
-o    Image grabFrame();
-o          ^
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:63:9: error: invalid operands to binary expression ('cv::VideoCapture' and 'Image')
-o    cap >> frame;
-o    ~~~ ^  ~~~~~
-o/opt/local/include/opencv2/core/operations.hpp:3099:56: note: candidate function [with _Tp = Image] not viable: no known conversion from 'cv::VideoCapture' to 'cv::FileNodeIterator &' for 1st argument; 
-otemplate<typename _Tp> static inline FileNodeIterator& operator >> (FileNodeIterator& it, _Tp& value)
-o                                                       ^
-o/opt/local/include/opencv2/core/operations.hpp:3110:43: note: candidate function [with _Tp = Image] not viable: no known conversion from 'cv::VideoCapture' to 'const cv::FileNode' for 1st argument; 
-otemplate<typename _Tp> static inline void operator >> (const FileNode& n, _Tp& value)
-o                                          ^
-o/opt/local/include/opencv2/highgui/highgui.hpp:217:27: note: candidate function not viable: no known conversion from 'Image' to 'cv::Mat &' for 1st argument; 
-o    virtual VideoCapture& operator >> (CV_OUT Mat& image);
-o                          ^
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:739:1: note: candidate template ignored: failed template argument deduction
-ooperator>>(basic_istream<_CharT, _Traits>& __is, _CharT* __s)
-o^
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:788:1: note: candidate template ignored: failed template argument deduction
-ooperator>>(basic_istream<char, _Traits>& __is, unsigned char* __s)
-o^
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:796:1: note: candidate template ignored: failed template argument deduction
-ooperator>>(basic_istream<char, _Traits>& __is, signed char* __s)
-o^
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:803:1: note: candidate template ignored: failed template argument deduction
-ooperator>>(basic_istream<_CharT, _Traits>& __is, _CharT& __c)
-o^
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:831:1: note: candidate template ignored: failed template argument deduction
-ooperator>>(basic_istream<char, _Traits>& __is, unsigned char& __c)
-o^
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:839:1: note: candidate template ignored: failed template argument deduction
-ooperator>>(basic_istream<char, _Traits>& __is, signed char& __c)
-o^
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:1445:1: note: candidate template ignored: failed template argument deduction
-ooperator>>(basic_istream<_CharT, _Traits>&& __is, _Tp& __x)
-o^
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/valarray:4041:1: note: candidate template ignored: substitution failure [with _Expr1 = cv::VideoCapture, _Expr2 = Image]
-ooperator>>(const _Expr1& __x, const _Expr2& __y)
-o^
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/valarray:4056:1: note: candidate template ignored: substitution failure [with _Expr = cv::VideoCapture]
-ooperator>>(const _Expr& __x, const typename _Expr::value_type& __y)
-o^
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/valarray:4072:1: note: candidate template ignored: substitution failure [with _Expr = Image]
-ooperator>>(const typename _Expr::value_type& __x, const _Expr& __y)
-o^
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:1526:1: note: candidate template ignored: failed template argument deduction
-ooperator>>(basic_istream<_CharT, _Traits>& __is,
-o^
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:1658:1: note: candidate template ignored: failed template argument deduction
-ooperator>>(basic_istream<_CharT, _Traits>& __is, bitset<_Size>& __x)
-o^
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/complex:1445:1: note: candidate template ignored: failed template argument deduction
-ooperator>>(basic_istream<_CharT, _Traits>& __is, complex<_Tp>& __x)
-o^
-o/opt/local/include/opencv2/core/operations.hpp:3103:19: note: candidate template ignored: failed template argument deduction
-oFileNodeIterator& operator >> (FileNodeIterator& it, vector<_Tp>& vec)
-o                  ^
-o/opt/local/include/opencv2/core/operations.hpp:3113:43: note: candidate template ignored: failed template argument deduction
-otemplate<typename _Tp> static inline void operator >> (const FileNode& n, vector<_Tp>& vec)
-o                                          ^
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:64:12: error: no viable conversion from 'Image' to 'cv::Mat'
-o    return frame;
-o           ^~~~~
-o/opt/local/include/opencv2/core/core.hpp:1687:5: note: candidate constructor not viable: no known conversion from 'Image' to 'const CvMat *' for 1st argument; 
-o    Mat(const CvMat* m, bool copyData=false);
-o    ^
-o/opt/local/include/opencv2/core/core.hpp:1689:5: note: candidate constructor not viable: no known conversion from 'Image' to 'const CvMatND *' for 1st argument; 
-o    Mat(const CvMatND* m, bool copyData=false);
-o    ^
-o/opt/local/include/opencv2/core/core.hpp:1691:5: note: candidate constructor not viable: no known conversion from 'Image' to 'const IplImage *' (aka 'const _IplImage *') for 1st argument; 
-o    Mat(const IplImage* img, bool copyData=false);
-o    ^
-o/opt/local/include/opencv2/core/mat.hpp:111:13: note: candidate constructor not viable: no known conversion from 'Image' to 'const cv::Mat &' for 1st argument; 
-oinline Mat::Mat(const Mat& m)
-o            ^
-o3 errors generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Compile /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc5169ac9321afb641^d8ba189621afb641^-6267"/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:61:13: error: out-of-line definition of 'Sensor::grabFrame' differs from the declaration in the return typeMat Sensor::grabFrame()            ^/Users/Gaston/dev/RDC/xcode/Sensor.h:24:11: note: previous declaration is here    Image grabFrame();          ^/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:63:9: error: invalid operands to binary expression ('cv::VideoCapture' and 'Image')    cap >> frame;    ~~~ ^  ~~~~~/opt/local/include/opencv2/core/operations.hpp:3099:56: note: candidate function [with _Tp = Image] not viable: no known conversion from 'cv::VideoCapture' to 'cv::FileNodeIterator &' for 1st argument; template<typename _Tp> static inline FileNodeIterator& operator >> (FileNodeIterator& it, _Tp& value)                                                       ^/opt/local/include/opencv2/core/operations.hpp:3110:43: note: candidate function [with _Tp = Image] not viable: no known conversion from 'cv::VideoCapture' to 'const cv::FileNode' for 1st argument; template<typename _Tp> static inline void operator >> (const FileNode& n, _Tp& value)                                          ^/opt/local/include/opencv2/highgui/highgui.hpp:217:27: note: candidate function not viable: no known conversion from 'Image' to 'cv::Mat &' for 1st argument;     virtual VideoCapture& operator >> (CV_OUT Mat& image);                          ^/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:739:1: note: candidate template ignored: failed template argument deductionoperator>>(basic_istream<_CharT, _Traits>& __is, _CharT* __s)^/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:788:1: note: candidate template ignored: failed template argument deductionoperator>>(basic_istream<char, _Traits>& __is, unsigned char* __s)^/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:796:1: note: candidate template ignored: failed template argument deductionoperator>>(basic_istream<char, _Traits>& __is, signed char* __s)^/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:803:1: note: candidate template ignored: failed template argument deductionoperator>>(basic_istream<_CharT, _Traits>& __is, _CharT& __c)^/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:831:1: note: candidate template ignored: failed template argument deductionoperator>>(basic_istream<char, _Traits>& __is, unsigned char& __c)^/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:839:1: note: candidate template ignored: failed template argument deductionoperator>>(basic_istream<char, _Traits>& __is, signed char& __c)^/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:1445:1: note: candidate template ignored: failed template argument deductionoperator>>(basic_istream<_CharT, _Traits>&& __is, _Tp& __x)^/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/valarray:4041:1: note: candidate template ignored: substitution failure [with _Expr1 = cv::VideoCapture, _Expr2 = Image]operator>>(const _Expr1& __x, const _Expr2& __y)^/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/valarray:4056:1: note: candidate template ignored: substitution failure [with _Expr = cv::VideoCapture]operator>>(const _Expr& __x, const typename _Expr::value_type& __y)^/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/valarray:4072:1: note: candidate template ignored: substitution failure [with _Expr = Image]operator>>(const typename _Expr::value_type& __x, const _Expr& __y)^/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:1526:1: note: candidate template ignored: failed template argument deductionoperator>>(basic_istream<_CharT, _Traits>& __is,^/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:1658:1: note: candidate template ignored: failed template argument deductionoperator>>(basic_istream<_CharT, _Traits>& __is, bitset<_Size>& __x)^/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/complex:1445:1: note: candidate template ignored: failed template argument deductionoperator>>(basic_istream<_CharT, _Traits>& __is, complex<_Tp>& __x)^/opt/local/include/opencv2/core/operations.hpp:3103:19: note: candidate template ignored: failed template argument deductionFileNodeIterator& operator >> (FileNodeIterator& it, vector<_Tp>& vec)                  ^/opt/local/include/opencv2/core/operations.hpp:3113:43: note: candidate template ignored: failed template argument deductiontemplate<typename _Tp> static inline void operator >> (const FileNode& n, vector<_Tp>& vec)                                          ^/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:64:12: error: no viable conversion from 'Image' to 'cv::Mat'    return frame;           ^~~~~/opt/local/include/opencv2/core/core.hpp:1687:5: note: candidate constructor not viable: no known conversion from 'Image' to 'const CvMat *' for 1st argument;     Mat(const CvMat* m, bool copyData=false);    ^/opt/local/include/opencv2/core/core.hpp:1689:5: note: candidate constructor not viable: no known conversion from 'Image' to 'const CvMatND *' for 1st argument;     Mat(const CvMatND* m, bool copyData=false);    ^/opt/local/include/opencv2/core/core.hpp:1691:5: note: candidate constructor not viable: no known conversion from 'Image' to 'const IplImage *' (aka 'const _IplImage *') for 1st argument;     Mat(const IplImage* img, bool copyData=false);    ^/opt/local/include/opencv2/core/mat.hpp:111:13: note: candidate constructor not viable: no known conversion from 'Image' to 'const cv::Mat &' for 1st argument; inline Mat::Mat(const Mat& m)            ^3 errors generated.3(36%IDEClangDiagnosticActivityLogMessage2@93"Out-of-line definition of 'Sensor::grabFrame' differs from the declaration in the return type-380576149#18446744073709551615#0#1(2@28"Previous declaration is here-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@52"file://localhost/Users/Gaston/dev/RDC/xcode/Sensor.h0000000000000000^23#10#23#10#314#0#21"Clang LLVM 1.0 Notice--2#27"com.apple.dt.IDE.diagnostic3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^60#12#60#12#967#0#14"Semantic Issue--2@70"Invalid operands to binary expression ('cv::VideoCapture' and 'Image')-380576150#18446744073709551615#0#18(2@140"Candidate function [with _Tp = Image] not viable: no known conversion from 'cv::VideoCapture' to 'cv::FileNodeIterator &' for 1st argument; -380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@62"file://localhost/opt/local/include/opencv2/core/operations.hpp0000000000000000^3098#55#3098#55#100870#0#14"Semantic Issue1(3@62"file://localhost/opt/local/include/opencv2/core/operations.hpp0000000000000000^62#4#62#7#985#0#-2@136"Candidate function [with _Tp = Image] not viable: no known conversion from 'cv::VideoCapture' to 'const cv::FileNode' for 1st argument; -380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@62"file://localhost/opt/local/include/opencv2/core/operations.hpp0000000000000000^3109#42#3109#42#101217#0#14"Semantic Issue1(3@62"file://localhost/opt/local/include/opencv2/core/operations.hpp0000000000000000^62#4#62#7#985#0#-2@97"Candidate function not viable: no known conversion from 'Image' to 'cv::Mat &' for 1st argument; -380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@62"file://localhost/opt/local/include/opencv2/highgui/highgui.hpp0000000000000000^216#26#216#26#8299#0#14"Semantic Issue1(3@62"file://localhost/opt/local/include/opencv2/highgui/highgui.hpp0000000000000000^62#11#62#16#992#0#-2@62"Candidate template ignored: failed template argument deduction-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1/istream0000000000000000^738#0#738#0#22158#0#14"Semantic Issue--2@62"Candidate template ignored: failed template argument deduction-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1/istream0000000000000000^787#0#787#0#23668#0#14"Semantic Issue--2@62"Candidate template ignored: failed template argument deduction-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1/istream0000000000000000^795#0#795#0#23858#0#14"Semantic Issue--2@62"Candidate template ignored: failed template argument deduction-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1/istream0000000000000000^802#0#802#0#24029#0#14"Semantic Issue--2@62"Candidate template ignored: failed template argument deduction-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1/istream0000000000000000^830#0#830#0#24796#0#14"Semantic Issue--2@62"Candidate template ignored: failed template argument deduction-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1/istream0000000000000000^838#0#838#0#24986#0#14"Semantic Issue--2@62"Candidate template ignored: failed template argument deduction-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1/istream0000000000000000^1444#0#1444#0#41542#0#14"Semantic Issue--2@97"Candidate template ignored: substitution failure [with _Expr1 = cv::VideoCapture, _Expr2 = Image]-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@118"file://localhost/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1/valarray0000000000000000^4040#0#4040#0#108844#0#14"Semantic Issue--2@80"Candidate template ignored: substitution failure [with _Expr = cv::VideoCapture]-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@118"file://localhost/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1/valarray0000000000000000^4055#0#4055#0#109357#0#14"Semantic Issue--2@69"Candidate template ignored: substitution failure [with _Expr = Image]-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@118"file://localhost/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1/valarray0000000000000000^4071#0#4071#0#109972#0#14"Semantic Issue--2@62"Candidate template ignored: failed template argument deduction-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1/istream0000000000000000^1525#0#1525#0#43720#0#14"Semantic Issue--2@62"Candidate template ignored: failed template argument deduction-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1/istream0000000000000000^1657#0#1657#0#47768#0#14"Semantic Issue--2@62"Candidate template ignored: failed template argument deduction-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1/complex0000000000000000^1444#0#1444#0#40206#0#14"Semantic Issue--2@62"Candidate template ignored: failed template argument deduction-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@62"file://localhost/opt/local/include/opencv2/core/operations.hpp0000000000000000^3102#18#3102#18#101016#0#14"Semantic Issue--2@62"Candidate template ignored: failed template argument deduction-380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@62"file://localhost/opt/local/include/opencv2/core/operations.hpp0000000000000000^3112#42#3112#42#101332#0#14"Semantic Issue--2#27"com.apple.dt.IDE.diagnostic3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^62#8#62#8#989#0#14"Semantic Issue2(3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^62#4#62#7#985#0#3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^62#11#62#16#992#0#-2@46"No viable conversion from 'Image' to 'cv::Mat'-380576150#18446744073709551615#0#4(2@104"Candidate constructor not viable: no known conversion from 'Image' to 'const CvMat *' for 1st argument; -380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@56"file://localhost/opt/local/include/opencv2/core/core.hpp0000000000000000^1686#4#1686#4#59146#0#14"Semantic Issue1(3@56"file://localhost/opt/local/include/opencv2/core/core.hpp0000000000000000^63#11#63#16#1010#0#-2@106"Candidate constructor not viable: no known conversion from 'Image' to 'const CvMatND *' for 1st argument; -380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@56"file://localhost/opt/local/include/opencv2/core/core.hpp0000000000000000^1688#4#1688#4#59280#0#14"Semantic Issue1(3@56"file://localhost/opt/local/include/opencv2/core/core.hpp0000000000000000^63#11#63#16#1010#0#-2@133"Candidate constructor not viable: no known conversion from 'Image' to 'const IplImage *' (aka 'const _IplImage *') for 1st argument; -380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@56"file://localhost/opt/local/include/opencv2/core/core.hpp0000000000000000^1690#4#1690#4#59417#0#14"Semantic Issue1(3@56"file://localhost/opt/local/include/opencv2/core/core.hpp0000000000000000^63#11#63#16#1010#0#-2@106"Candidate constructor not viable: no known conversion from 'Image' to 'const cv::Mat &' for 1st argument; -380576150#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@55"file://localhost/opt/local/include/opencv2/core/mat.hpp0000000000000000^110#12#110#12#3492#0#14"Semantic Issue1(3@55"file://localhost/opt/local/include/opencv2/core/mat.hpp0000000000000000^63#11#63#16#1010#0#-2#27"com.apple.dt.IDE.diagnostic3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^63#11#63#11#1010#0#14"Semantic Issue1(3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^63#11#63#16#1010#0#-0#0#0#-19%DVTDocumentLocation4@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^2305"CompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/Sensor.o homography/src/Sensor.cc normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/Sensor.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/Sensor.dia -c /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/Sensor.o36"525647A6-589C-4B2E-8F8F-806F379E1250-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/Sensor.o /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc normal i386 c++ com.apple.compilers.llvmgcc42
-s380576095.181636
-e380576096.682341
-r0
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/i386/Sensor.o
-x/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvmgcc42
-occ1plus: warning: -Wuninitialized is not supported without -O
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:61: error: prototype for 'cv::Mat Sensor::grabFrame()' does not match any in class 'Sensor'
-o/Users/Gaston/dev/RDC/xcode/Sensor.h:24: error: candidate is: Image Sensor::grabFrame()
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:61: error: 'cv::Mat Sensor::grabFrame()' cannot be overloaded
-o/Users/Gaston/dev/RDC/xcode/Sensor.h:24: error: with 'Image Sensor::grabFrame()'
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc: In member function 'cv::Mat Sensor::grabFrame()':
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:63: error: no match for 'operator>>' in '((Sensor*)this)->Sensor::cap >> ((Sensor*)this)->Sensor::frame'
-o/opt/local/include/opencv2/highgui/highgui.hpp:217: note: candidates are: virtual cv::VideoCapture& cv::VideoCapture::operator>>(cv::Mat&)
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:64: error: conversion from 'Image' to non-scalar type 'cv::Mat' requested
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Compile /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.ccb7282f5f21afb641^ebfdae6021afb641^-1019"cc1plus: warning: -Wuninitialized is not supported without -O/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:61: error: prototype for 'cv::Mat Sensor::grabFrame()' does not match any in class 'Sensor'/Users/Gaston/dev/RDC/xcode/Sensor.h:24: error: candidate is: Image Sensor::grabFrame()/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:61: error: 'cv::Mat Sensor::grabFrame()' cannot be overloaded/Users/Gaston/dev/RDC/xcode/Sensor.h:24: error: with 'Image Sensor::grabFrame()'/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc: In member function 'cv::Mat Sensor::grabFrame()':/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:63: error: no match for 'operator>>' in '((Sensor*)this)->Sensor::cap >> ((Sensor*)this)->Sensor::frame'/opt/local/include/opencv2/highgui/highgui.hpp:217: note: candidates are: virtual cv::VideoCapture& cv::VideoCapture::operator>>(cv::Mat&)/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:64: error: conversion from 'Image' to non-scalar type 'cv::Mat' requested8(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-380576095#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@80"Prototype for 'cv::Mat Sensor::grabFrame()' does not match any in class 'Sensor'-380576096#62#145#-2#-3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@39"Candidate is: Image Sensor::grabFrame()-380576096#207#88#-2#-3@52"file://localhost/Users/Gaston/dev/RDC/xcode/Sensor.h0000000000000000^23#18446744073709551615#23#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@50"'cv::Mat Sensor::grabFrame()' cannot be overloaded-380576096#295#115#-2#-3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@32"With 'Image Sensor::grabFrame()'-380576096#410#81#-2#-3@52"file://localhost/Users/Gaston/dev/RDC/xcode/Sensor.h0000000000000000^23#18446744073709551615#23#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@93"No match for 'operator>>' in '((Sensor*)this)->Sensor::cap >> ((Sensor*)this)->Sensor::frame'-380576096#595#158#-2#-3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^62#18446744073709551615#62#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@80"Candidates are: virtual cv::VideoCapture& cv::VideoCapture::operator>>(cv::Mat&)-380576096#753#139#-0#-3@62"file://localhost/opt/local/include/opencv2/highgui/highgui.hpp0000000000000000^216#18446744073709551615#216#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@62"Conversion from 'Image' to non-scalar type 'cv::Mat' requested-380576096#892#127#-2#-3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^63#18446744073709551615#63#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--0#0#0#-19%DVTDocumentLocation4@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^1554"CompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/Sensor.o homography/src/Sensor.cc normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility-inlines-hidden -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -c /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/Sensor.o36"894D5088-8E53-42A1-8278-9235CF919F55-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/main.o /Users/Gaston/dev/RDC/xcode/homography/main.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380652945.021951
-e380652946.348204
-r1
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/i386/main.o
-x/Users/Gaston/dev/RDC/xcode/homography/main.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Compile /Users/Gaston/dev/RDC/xcode/homography/main.cpp4fb205914db0b641^292459924db0b641^---0#0#0#-19%DVTDocumentLocation2@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^2287"CompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/main.o homography/main.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/main.dia -c /Users/Gaston/dev/RDC/xcode/homography/main.cpp -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/main.o36"DFEDC32E-2DE2-4C80-9B6D-BECC50AECE8F-
+o/Users/Gaston/dev/RDC/xcode/../src/Homo.cc: In member function 'cv::Point Homo::getTargetPoint(int, int) const':
+o/Users/Gaston/dev/RDC/xcode/../src/Homo.cc:77: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/Gaston/dev/RDC/xcode/../src/Homo.cc:77: warning: implicit conversion shortens 64-bit value into a 32-bit value
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Compile /Users/Gaston/dev/RDC/xcode/../src/Homo.cc3f8bc9d19bbab641^11c5bcd29bbab641^-411"cc1plus: warning: -Wuninitialized is not supported without -O/Users/Gaston/dev/RDC/xcode/../src/Homo.cc: In member function 'cv::Point Homo::getTargetPoint(int, int) const':/Users/Gaston/dev/RDC/xcode/../src/Homo.cc:77: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/Gaston/dev/RDC/xcode/../src/Homo.cc:77: warning: implicit conversion shortens 64-bit value into a 32-bit value3(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-381328337#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-381328338#175#118#-1#-3@49"file://localhost/Users/Gaston/dev/RDC/src/Homo.cc0000000000000000^76#18446744073709551615#76#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-381328338#293#118#-1#-3@49"file://localhost/Users/Gaston/dev/RDC/src/Homo.cc0000000000000000^76#18446744073709551615#76#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--0#0#0#-19%DVTDocumentLocation4@58"file://localhost/Users/Gaston/dev/RDC/xcode/../src/Homo.cc0000000000000000^1530"CompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/Homo.o ../src/Homo.cc normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility-inlines-hidden -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -c /Users/Gaston/dev/RDC/xcode/../src/Homo.cc -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/Homo.o36"052765A6-1AE7-47CB-98FC-A6E5B3F815B6-
 
 CCompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/main.o /Users/Gaston/dev/RDC/xcode/homography/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-s381176197.853529
-e381176199.678682
+s381331033.235002
+e381331034.667551
 r1
 xCompileC
 xbuild/RDC.build/Debug/homography.build/Objects-normal/i386/main.o
@@ -680,185 +417,21 @@ xc++
 xcom.apple.compilers.llvmgcc42
 occ1plus: warning: -Wuninitialized is not supported without -O
 o/Users/Gaston/dev/RDC/xcode/homography/main.cpp: In function 'cv::Point getPoint(cv::Point, const cv::Mat*)':
-o/Users/Gaston/dev/RDC/xcode/homography/main.cpp:109: warning: implicit conversion shortens 64-bit value into a 32-bit value
-o/Users/Gaston/dev/RDC/xcode/homography/main.cpp:109: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/Gaston/dev/RDC/xcode/homography/main.cpp:108: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/Gaston/dev/RDC/xcode/homography/main.cpp:108: warning: implicit conversion shortens 64-bit value into a 32-bit value
 o/Users/Gaston/dev/RDC/xcode/homography/main.cpp: In function 'void drawPointOnBoth(cv::Point)':
-o/Users/Gaston/dev/RDC/xcode/homography/main.cpp:121: warning: implicit conversion shortens 64-bit value into a 32-bit value
-o/Users/Gaston/dev/RDC/xcode/homography/main.cpp:128: warning: implicit conversion shortens 64-bit value into a 32-bit value
-o/Users/Gaston/dev/RDC/xcode/homography/main.cpp:128: warning: implicit conversion shortens 64-bit value into a 32-bit value
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Compile /Users/Gaston/dev/RDC/xcode/homography/main.cpp60adda8549b8b641^bac0ad8749b8b641^-888"cc1plus: warning: -Wuninitialized is not supported without -O/Users/Gaston/dev/RDC/xcode/homography/main.cpp: In function 'cv::Point getPoint(cv::Point, const cv::Mat*)':/Users/Gaston/dev/RDC/xcode/homography/main.cpp:109: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/Gaston/dev/RDC/xcode/homography/main.cpp:109: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/Gaston/dev/RDC/xcode/homography/main.cpp: In function 'void drawPointOnBoth(cv::Point)':/Users/Gaston/dev/RDC/xcode/homography/main.cpp:121: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/Gaston/dev/RDC/xcode/homography/main.cpp:128: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/Gaston/dev/RDC/xcode/homography/main.cpp:128: warning: implicit conversion shortens 64-bit value into a 32-bit value6(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-381176198#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-381176199#172#124#-1#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^108#18446744073709551615#108#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-381176199#296#124#-1#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^108#18446744073709551615#108#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-381176199#516#124#-1#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^120#18446744073709551615#120#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-381176199#640#124#-1#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^127#18446744073709551615#127#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-381176199#764#124#-1#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^127#18446744073709551615#127#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--0#0#0#-19%DVTDocumentLocation4@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^1540"CompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/main.o homography/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility-inlines-hidden -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -c /Users/Gaston/dev/RDC/xcode/homography/main.cpp -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/main.o36"2538BFEB-FC62-4B7C-9ADF-25CC558CE7A7-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CalibController.o /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380479838.978128
-e380479841.924457
-r1
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/x86_64/CalibController.o
-x/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cced81fa5ea9adb641^5cacec61a9adb641^---0#0#0#-19%DVTDocumentLocation2@77"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc0000000000000000^2373"CompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CalibController.o homography/src/CalibController.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CalibController.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CalibController.dia -c /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CalibController.o36"E8D22B1C-264A-4658-A723-123F269D89C7-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CalibController.o /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc normal x86_64 c++ com.apple.compilers.llvmgcc42
-s380576058.048912
-e380576062.885496
-r0
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/x86_64/CalibController.o
-x/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvmgcc42
-occ1plus: warning: -Wuninitialized is not supported without -O
-oIn file included from /opt/local/include/opencv2/core/core_c.h:47,
-o                 from /opt/local/include/opencv2/opencv.hpp:46,
-o                 from /Users/Gaston/dev/RDC/xcode/../headers/Image.h:14,
-o                 from /Users/Gaston/dev/RDC/xcode/../headers/common.h:17,
-o                 from /Users/Gaston/dev/RDC/xcode/../headers/CameraCalibrator.h:12,
-o                 from /Users/Gaston/dev/RDC/xcode/../headers/CalibController.h:15,
-o                 from /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc:9:
-o/opt/local/include/opencv2/core/types_c.h: In function 'int cvIplDepth(int)':
-o/opt/local/include/opencv2/core/types_c.h:807: warning: implicit conversion shortens 64-bit value into a 32-bit value
-o/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc: At global scope:
-o/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc:11: error: prototype for 'CalibController::CalibController(cv::Size)' does not match any in class 'CalibController'
-o/Users/Gaston/dev/RDC/xcode/../headers/CalibController.h:18: error: candidates are: CalibController::CalibController(const CalibController&)
-o/Users/Gaston/dev/RDC/xcode/../headers/CalibController.h:29: error:                 CalibController::CalibController(cv::Size, Sensor*)
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.ccbaa20c3a21afb641^7347ef3e21afb641^-1325"cc1plus: warning: -Wuninitialized is not supported without -OIn file included from /opt/local/include/opencv2/core/core_c.h:47,                 from /opt/local/include/opencv2/opencv.hpp:46,                 from /Users/Gaston/dev/RDC/xcode/../headers/Image.h:14,                 from /Users/Gaston/dev/RDC/xcode/../headers/common.h:17,                 from /Users/Gaston/dev/RDC/xcode/../headers/CameraCalibrator.h:12,                 from /Users/Gaston/dev/RDC/xcode/../headers/CalibController.h:15,                 from /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc:9:/opt/local/include/opencv2/core/types_c.h: In function 'int cvIplDepth(int)':/opt/local/include/opencv2/core/types_c.h:807: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc: At global scope:/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc:11: error: prototype for 'CalibController::CalibController(cv::Size)' does not match any in class 'CalibController'/Users/Gaston/dev/RDC/xcode/../headers/CalibController.h:18: error: candidates are: CalibController::CalibController(const CalibController&)/Users/Gaston/dev/RDC/xcode/../headers/CalibController.h:29: error:                 CalibController::CalibController(cv::Size, Sensor*)6(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-380576060#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-380576061#672#118#8(36%IDEActivityLogHeaderInclusionMessage4@83"In file included from /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc-380576061#18446744073709551615#0#-0#-3@77"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc0000000000000000^8#18446744073709551615#8#18446744073709551615#18446744073709551615#0#---4@78"In file included from /Users/Gaston/dev/RDC/xcode/../headers/CalibController.h-380576061#18446744073709551615#0#-0#-3@72"file://localhost/Users/Gaston/dev/RDC/xcode/../headers/CalibController.h0000000000000000^14#18446744073709551615#14#18446744073709551615#18446744073709551615#0#---4@79"In file included from /Users/Gaston/dev/RDC/xcode/../headers/CameraCalibrator.h-380576061#18446744073709551615#0#-0#-3@73"file://localhost/Users/Gaston/dev/RDC/xcode/../headers/CameraCalibrator.h0000000000000000^11#18446744073709551615#11#18446744073709551615#18446744073709551615#0#---4@69"In file included from /Users/Gaston/dev/RDC/xcode/../headers/common.h-380576061#18446744073709551615#0#-0#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/../headers/common.h0000000000000000^16#18446744073709551615#16#18446744073709551615#18446744073709551615#0#---4@68"In file included from /Users/Gaston/dev/RDC/xcode/../headers/Image.h-380576061#18446744073709551615#0#-0#-3@62"file://localhost/Users/Gaston/dev/RDC/xcode/../headers/Image.h0000000000000000^13#18446744073709551615#13#18446744073709551615#18446744073709551615#0#---4@59"In file included from /opt/local/include/opencv2/opencv.hpp-380576061#18446744073709551615#0#-0#-3@53"file://localhost/opt/local/include/opencv2/opencv.hpp0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---4@62"In file included from /opt/local/include/opencv2/core/core_c.h-380576061#18446744073709551615#0#-0#-3@56"file://localhost/opt/local/include/opencv2/core/core_c.h0000000000000000^46#18446744073709551615#46#18446744073709551615#18446744073709551615#0#---2@106"Implicit conversion shortens 64-bit value into a 32-bit value in /opt/local/include/opencv2/core/types_c.h-380576061#18446744073709551615#0#-0#-3@57"file://localhost/opt/local/include/opencv2/core/types_c.h0000000000000000^806#18446744073709551615#806#18446744073709551615#18446744073709551615#0#---1#-3@57"file://localhost/opt/local/include/opencv2/core/types_c.h0000000000000000^806#18446744073709551615#806#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--32%IDEActivityLogContextInfoMessage5@16"At global scope:-380576062#790#80#-0#-3@77"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@104"Prototype for 'CalibController::CalibController(cv::Size)' does not match any in class 'CalibController'-380576062#870#178#-2#-3@77"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc0000000000000000^10#18446744073709551615#10#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@72"Candidates are: CalibController::CalibController(const CalibController&)-380576062#1048#141#-2#-3@63"file://localhost/Users/Gaston/dev/RDC/headers/CalibController.h0000000000000000^17#18446744073709551615#17#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@51"CalibController::CalibController(cv::Size, Sensor*)-380576062#1189#136#-2#-3@63"file://localhost/Users/Gaston/dev/RDC/headers/CalibController.h0000000000000000^28#18446744073709551615#28#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--0#0#0#-19%DVTDocumentLocation6@77"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc0000000000000000^1600"CompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CalibController.o homography/src/CalibController.cc normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility-inlines-hidden -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -c /Users/Gaston/dev/RDC/xcode/homography/src/CalibController.cc -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CalibController.o36"00FDA8CA-D2BD-4D82-8918-927CC1E39A55-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CameraCalibrator.o /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380479838.978123
-e380479841.924487
-r1
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/x86_64/CameraCalibrator.o
-x/Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc9981fa5ea9adb641^f2b0ec61a9adb641^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc0000000000000000^2379"CompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CameraCalibrator.o homography/src/CameraCalibrator.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CameraCalibrator.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CameraCalibrator.dia -c /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CameraCalibrator.o36"489DCC14-DB3F-454E-A053-6ACC09CD80B6-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CameraCalibrator.o /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc normal x86_64 c++ com.apple.compilers.llvmgcc42
-s380576058.048914
-e380576062.985642
-r1
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/x86_64/CameraCalibrator.o
-x/Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvmgcc42
-occ1plus: warning: -Wuninitialized is not supported without -O
-oIn file included from /opt/local/include/opencv2/core/core_c.h:47,
-o                 from /opt/local/include/opencv2/opencv.hpp:46,
-o                 from /Users/Gaston/dev/RDC/xcode/../headers/Image.h:14,
-o                 from /Users/Gaston/dev/RDC/xcode/../headers/common.h:17,
-o                 from /Users/Gaston/dev/RDC/xcode/../headers/CameraCalibrator.h:12,
-o                 from /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc:9:
-o/opt/local/include/opencv2/core/types_c.h: In function 'int cvIplDepth(int)':
-o/opt/local/include/opencv2/core/types_c.h:807: warning: implicit conversion shortens 64-bit value into a 32-bit value
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc1ea30c3a21afb641^1d56fc3e21afb641^-708"cc1plus: warning: -Wuninitialized is not supported without -OIn file included from /opt/local/include/opencv2/core/core_c.h:47,                 from /opt/local/include/opencv2/opencv.hpp:46,                 from /Users/Gaston/dev/RDC/xcode/../headers/Image.h:14,                 from /Users/Gaston/dev/RDC/xcode/../headers/common.h:17,                 from /Users/Gaston/dev/RDC/xcode/../headers/CameraCalibrator.h:12,                 from /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc:9:/opt/local/include/opencv2/core/types_c.h: In function 'int cvIplDepth(int)':/opt/local/include/opencv2/core/types_c.h:807: warning: implicit conversion shortens 64-bit value into a 32-bit value2(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-380576060#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-380576061#590#118#7(36%IDEActivityLogHeaderInclusionMessage4@84"In file included from /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc-380576061#18446744073709551615#0#-0#-3@78"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc0000000000000000^8#18446744073709551615#8#18446744073709551615#18446744073709551615#0#---4@79"In file included from /Users/Gaston/dev/RDC/xcode/../headers/CameraCalibrator.h-380576061#18446744073709551615#0#-0#-3@73"file://localhost/Users/Gaston/dev/RDC/xcode/../headers/CameraCalibrator.h0000000000000000^11#18446744073709551615#11#18446744073709551615#18446744073709551615#0#---4@69"In file included from /Users/Gaston/dev/RDC/xcode/../headers/common.h-380576061#18446744073709551615#0#-0#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/../headers/common.h0000000000000000^16#18446744073709551615#16#18446744073709551615#18446744073709551615#0#---4@68"In file included from /Users/Gaston/dev/RDC/xcode/../headers/Image.h-380576061#18446744073709551615#0#-0#-3@62"file://localhost/Users/Gaston/dev/RDC/xcode/../headers/Image.h0000000000000000^13#18446744073709551615#13#18446744073709551615#18446744073709551615#0#---4@59"In file included from /opt/local/include/opencv2/opencv.hpp-380576061#18446744073709551615#0#-0#-3@53"file://localhost/opt/local/include/opencv2/opencv.hpp0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---4@62"In file included from /opt/local/include/opencv2/core/core_c.h-380576061#18446744073709551615#0#-0#-3@56"file://localhost/opt/local/include/opencv2/core/core_c.h0000000000000000^46#18446744073709551615#46#18446744073709551615#18446744073709551615#0#---2@106"Implicit conversion shortens 64-bit value into a 32-bit value in /opt/local/include/opencv2/core/types_c.h-380576061#18446744073709551615#0#-0#-3@57"file://localhost/opt/local/include/opencv2/core/types_c.h0000000000000000^806#18446744073709551615#806#18446744073709551615#18446744073709551615#0#---1#-3@57"file://localhost/opt/local/include/opencv2/core/types_c.h0000000000000000^806#18446744073709551615#806#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--0#0#0#-19%DVTDocumentLocation5@78"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc0000000000000000^1604"CompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CameraCalibrator.o homography/src/CameraCalibrator.cc normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility-inlines-hidden -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -c /Users/Gaston/dev/RDC/xcode/homography/src/CameraCalibrator.cc -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/CameraCalibrator.o36"8FFF1295-654A-457F-8AE7-0ADA09F2114B-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/Sensor.o /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380479967.442284
-e380479969.085594
-r1
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/x86_64/Sensor.o
-x/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Compile /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc085671dfa9adb641^89ea15e1a9adb641^---0#0#0#-19%DVTDocumentLocation2@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^2319"CompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/Sensor.o homography/src/Sensor.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/Sensor.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/Sensor.dia -c /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/Sensor.o36"5B8D7FC3-0A99-4C5B-A009-801839858CF6-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/Sensor.o /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc normal x86_64 c++ com.apple.compilers.llvmgcc42
-s380576058.048923
-e380576062.885514
-r0
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/x86_64/Sensor.o
-x/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvmgcc42
-occ1plus: warning: -Wuninitialized is not supported without -O
-oIn file included from /opt/local/include/opencv2/core/core_c.h:47,
-o                 from /opt/local/include/opencv2/opencv.hpp:46,
-o                 from /Users/Gaston/dev/RDC/xcode/../headers/Image.h:14,
-o                 from /Users/Gaston/dev/RDC/xcode/../headers/common.h:17,
-o                 from /Users/Gaston/dev/RDC/xcode/Sensor.h:12,
-o                 from /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:9:
-o/opt/local/include/opencv2/core/types_c.h: In function 'int cvIplDepth(int)':
-o/opt/local/include/opencv2/core/types_c.h:807: warning: implicit conversion shortens 64-bit value into a 32-bit value
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc: At global scope:
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:61: error: prototype for 'cv::Mat Sensor::grabFrame()' does not match any in class 'Sensor'
-o/Users/Gaston/dev/RDC/xcode/Sensor.h:24: error: candidate is: Image Sensor::grabFrame()
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:61: error: 'cv::Mat Sensor::grabFrame()' cannot be overloaded
-o/Users/Gaston/dev/RDC/xcode/Sensor.h:24: error: with 'Image Sensor::grabFrame()'
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc: In member function 'cv::Mat Sensor::grabFrame()':
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:63: error: no match for 'operator>>' in '((Sensor*)this)->Sensor::cap >> ((Sensor*)this)->Sensor::frame'
-o/opt/local/include/opencv2/highgui/highgui.hpp:217: note: candidates are: virtual cv::VideoCapture& cv::VideoCapture::operator>>(cv::Mat&)
-o/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:64: error: conversion from 'Image' to non-scalar type 'cv::Mat' requested
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Compile /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc65aa0c3a21afb641^aa46ef3e21afb641^-1705"cc1plus: warning: -Wuninitialized is not supported without -OIn file included from /opt/local/include/opencv2/core/core_c.h:47,                 from /opt/local/include/opencv2/opencv.hpp:46,                 from /Users/Gaston/dev/RDC/xcode/../headers/Image.h:14,                 from /Users/Gaston/dev/RDC/xcode/../headers/common.h:17,                 from /Users/Gaston/dev/RDC/xcode/Sensor.h:12,                 from /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:9:/opt/local/include/opencv2/core/types_c.h: In function 'int cvIplDepth(int)':/opt/local/include/opencv2/core/types_c.h:807: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc: At global scope:/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:61: error: prototype for 'cv::Mat Sensor::grabFrame()' does not match any in class 'Sensor'/Users/Gaston/dev/RDC/xcode/Sensor.h:24: error: candidate is: Image Sensor::grabFrame()/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:61: error: 'cv::Mat Sensor::grabFrame()' cannot be overloaded/Users/Gaston/dev/RDC/xcode/Sensor.h:24: error: with 'Image Sensor::grabFrame()'/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc: In member function 'cv::Mat Sensor::grabFrame()':/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:63: error: no match for 'operator>>' in '((Sensor*)this)->Sensor::cap >> ((Sensor*)this)->Sensor::frame'/opt/local/include/opencv2/highgui/highgui.hpp:217: note: candidates are: virtual cv::VideoCapture& cv::VideoCapture::operator>>(cv::Mat&)/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc:64: error: conversion from 'Image' to non-scalar type 'cv::Mat' requested10(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-380576060#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-380576061#559#118#7(36%IDEActivityLogHeaderInclusionMessage4@74"In file included from /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc-380576061#18446744073709551615#0#-0#-3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^8#18446744073709551615#8#18446744073709551615#18446744073709551615#0#---4@58"In file included from /Users/Gaston/dev/RDC/xcode/Sensor.h-380576061#18446744073709551615#0#-0#-3@52"file://localhost/Users/Gaston/dev/RDC/xcode/Sensor.h0000000000000000^11#18446744073709551615#11#18446744073709551615#18446744073709551615#0#---4@69"In file included from /Users/Gaston/dev/RDC/xcode/../headers/common.h-380576061#18446744073709551615#0#-0#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/../headers/common.h0000000000000000^16#18446744073709551615#16#18446744073709551615#18446744073709551615#0#---4@68"In file included from /Users/Gaston/dev/RDC/xcode/../headers/Image.h-380576061#18446744073709551615#0#-0#-3@62"file://localhost/Users/Gaston/dev/RDC/xcode/../headers/Image.h0000000000000000^13#18446744073709551615#13#18446744073709551615#18446744073709551615#0#---4@59"In file included from /opt/local/include/opencv2/opencv.hpp-380576061#18446744073709551615#0#-0#-3@53"file://localhost/opt/local/include/opencv2/opencv.hpp0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---4@62"In file included from /opt/local/include/opencv2/core/core_c.h-380576061#18446744073709551615#0#-0#-3@56"file://localhost/opt/local/include/opencv2/core/core_c.h0000000000000000^46#18446744073709551615#46#18446744073709551615#18446744073709551615#0#---2@106"Implicit conversion shortens 64-bit value into a 32-bit value in /opt/local/include/opencv2/core/types_c.h-380576061#18446744073709551615#0#-0#-3@57"file://localhost/opt/local/include/opencv2/core/types_c.h0000000000000000^806#18446744073709551615#806#18446744073709551615#18446744073709551615#0#---1#-3@57"file://localhost/opt/local/include/opencv2/core/types_c.h0000000000000000^806#18446744073709551615#806#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--32%IDEActivityLogContextInfoMessage5@16"At global scope:-380576062#677#71#-0#-3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@80"Prototype for 'cv::Mat Sensor::grabFrame()' does not match any in class 'Sensor'-380576062#748#145#-2#-3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@39"Candidate is: Image Sensor::grabFrame()-380576062#893#88#-2#-3@52"file://localhost/Users/Gaston/dev/RDC/xcode/Sensor.h0000000000000000^23#18446744073709551615#23#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@50"'cv::Mat Sensor::grabFrame()' cannot be overloaded-380576062#981#115#-2#-3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@32"With 'Image Sensor::grabFrame()'-380576062#1096#81#-2#-3@52"file://localhost/Users/Gaston/dev/RDC/xcode/Sensor.h0000000000000000^23#18446744073709551615#23#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@93"No match for 'operator>>' in '((Sensor*)this)->Sensor::cap >> ((Sensor*)this)->Sensor::frame'-380576062#1281#158#-2#-3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^62#18446744073709551615#62#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@80"Candidates are: virtual cv::VideoCapture& cv::VideoCapture::operator>>(cv::Mat&)-380576062#1439#139#-0#-3@62"file://localhost/opt/local/include/opencv2/highgui/highgui.hpp0000000000000000^216#18446744073709551615#216#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@62"Conversion from 'Image' to non-scalar type 'cv::Mat' requested-380576062#1578#127#-2#-3@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^63#18446744073709551615#63#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--0#0#0#-19%DVTDocumentLocation6@68"file://localhost/Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc0000000000000000^1564"CompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/Sensor.o homography/src/Sensor.cc normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility-inlines-hidden -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -c /Users/Gaston/dev/RDC/xcode/homography/src/Sensor.cc -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/Sensor.o36"0DF13E7F-5C7A-44F9-8E8A-0565BEDBB01C-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/main.o /Users/Gaston/dev/RDC/xcode/homography/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s380479967.442053
-e380479969.141736
-r1
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/x86_64/main.o
-x/Users/Gaston/dev/RDC/xcode/homography/main.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Compile /Users/Gaston/dev/RDC/xcode/homography/main.cpp094e71dfa9adb641^a14b24e1a9adb641^---0#0#0#-19%DVTDocumentLocation2@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^2301"CompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/main.o homography/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -MMD -MT dependencies -MF /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/main.dia -c /Users/Gaston/dev/RDC/xcode/homography/main.cpp -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/main.o36"FD853252-1F0F-4F12-B8A2-DF1395A403CA-
-
-CCompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/main.o /Users/Gaston/dev/RDC/xcode/homography/main.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
-s380576058.048908
-e380576062.885431
-r0
-xCompileC
-xbuild/RDC.build/Debug/homography.build/Objects-normal/x86_64/main.o
-x/Users/Gaston/dev/RDC/xcode/homography/main.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvmgcc42
-occ1plus: warning: -Wuninitialized is not supported without -O
-oIn file included from /opt/local/include/opencv2/core/core_c.h:47,
-o                 from /opt/local/include/opencv2/opencv.hpp:46,
-o                 from /Users/Gaston/dev/RDC/xcode/homography/main.cpp:13:
-o/opt/local/include/opencv2/core/types_c.h: In function 'int cvIplDepth(int)':
-o/opt/local/include/opencv2/core/types_c.h:807: warning: implicit conversion shortens 64-bit value into a 32-bit value
-o/Users/Gaston/dev/RDC/xcode/homography/main.cpp: In function 'int main(int, const char**)':
-o/Users/Gaston/dev/RDC/xcode/homography/main.cpp:39: error: invalid initialization of reference of type 'const cv::_InputArray&' from expression of type 'Image'
-o/opt/local/include/opencv2/highgui/highgui.hpp:78: error: in passing argument 2 of 'void cv::imshow(const std::string&, const cv::_InputArray&)'
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Compile /Users/Gaston/dev/RDC/xcode/homography/main.cppd49c0c3a21afb641^3945ef3e21afb641^-860"cc1plus: warning: -Wuninitialized is not supported without -OIn file included from /opt/local/include/opencv2/core/core_c.h:47,                 from /opt/local/include/opencv2/opencv.hpp:46,                 from /Users/Gaston/dev/RDC/xcode/homography/main.cpp:13:/opt/local/include/opencv2/core/types_c.h: In function 'int cvIplDepth(int)':/opt/local/include/opencv2/core/types_c.h:807: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/Gaston/dev/RDC/xcode/homography/main.cpp: In function 'int main(int, const char**)':/Users/Gaston/dev/RDC/xcode/homography/main.cpp:39: error: invalid initialization of reference of type 'const cv::_InputArray&' from expression of type 'Image'/opt/local/include/opencv2/highgui/highgui.hpp:78: error: in passing argument 2 of 'void cv::imshow(const std::string&, const cv::_InputArray&)'4(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-380576060#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-380576061#345#118#4(36%IDEActivityLogHeaderInclusionMessage4@69"In file included from /Users/Gaston/dev/RDC/xcode/homography/main.cpp-380576061#18446744073709551615#0#-0#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^12#18446744073709551615#12#18446744073709551615#18446744073709551615#0#---4@59"In file included from /opt/local/include/opencv2/opencv.hpp-380576061#18446744073709551615#0#-0#-3@53"file://localhost/opt/local/include/opencv2/opencv.hpp0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---4@62"In file included from /opt/local/include/opencv2/core/core_c.h-380576061#18446744073709551615#0#-0#-3@56"file://localhost/opt/local/include/opencv2/core/core_c.h0000000000000000^46#18446744073709551615#46#18446744073709551615#18446744073709551615#0#---2@106"Implicit conversion shortens 64-bit value into a 32-bit value in /opt/local/include/opencv2/core/types_c.h-380576061#18446744073709551615#0#-0#-3@57"file://localhost/opt/local/include/opencv2/core/types_c.h0000000000000000^806#18446744073709551615#806#18446744073709551615#18446744073709551615#0#---1#-3@57"file://localhost/opt/local/include/opencv2/core/types_c.h0000000000000000^806#18446744073709551615#806#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@100"Invalid initialization of reference of type 'const cv::_InputArray&' from expression of type 'Image'-380576062#555#160#-2#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^38#18446744073709551615#38#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--2@86"In passing argument 2 of 'void cv::imshow(const std::string&, const cv::_InputArray&)'-380576062#715#145#-2#-3@62"file://localhost/opt/local/include/opencv2/highgui/highgui.hpp0000000000000000^77#18446744073709551615#77#18446744073709551615#18446744073709551615#0#18"LLVM GCC 4.2 Error--0#0#0#-19%DVTDocumentLocation5@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^1550"CompileC build/RDC.build/Debug/homography.build/Objects-normal/x86_64/main.o homography/main.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility-inlines-hidden -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/x86_64 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -c /Users/Gaston/dev/RDC/xcode/homography/main.cpp -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/main.o36"7A89E472-5CE2-491B-8005-ABEEFED56336-
+o/Users/Gaston/dev/RDC/xcode/homography/main.cpp:120: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/Gaston/dev/RDC/xcode/homography/main.cpp:127: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/Gaston/dev/RDC/xcode/homography/main.cpp:127: warning: implicit conversion shortens 64-bit value into a 32-bit value
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Compile /Users/Gaston/dev/RDC/xcode/homography/main.cpp74453d59a6bab641^71e7aa5aa6bab641^-888"cc1plus: warning: -Wuninitialized is not supported without -O/Users/Gaston/dev/RDC/xcode/homography/main.cpp: In function 'cv::Point getPoint(cv::Point, const cv::Mat*)':/Users/Gaston/dev/RDC/xcode/homography/main.cpp:108: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/Gaston/dev/RDC/xcode/homography/main.cpp:108: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/Gaston/dev/RDC/xcode/homography/main.cpp: In function 'void drawPointOnBoth(cv::Point)':/Users/Gaston/dev/RDC/xcode/homography/main.cpp:120: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/Gaston/dev/RDC/xcode/homography/main.cpp:127: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/Gaston/dev/RDC/xcode/homography/main.cpp:127: warning: implicit conversion shortens 64-bit value into a 32-bit value6(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-381331033#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-381331034#172#124#-1#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^107#18446744073709551615#107#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-381331034#296#124#-1#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^107#18446744073709551615#107#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-381331034#516#124#-1#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^119#18446744073709551615#119#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-381331034#640#124#-1#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^126#18446744073709551615#126#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-381331034#764#124#-1#-3@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^126#18446744073709551615#126#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--0#0#0#-19%DVTDocumentLocation4@63"file://localhost/Users/Gaston/dev/RDC/xcode/homography/main.cpp0000000000000000^1540"CompileC build/RDC.build/Debug/homography.build/Objects-normal/i386/main.o homography/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/Gaston/dev/RDC/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility-inlines-hidden -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-generated-files.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-own-target-headers.hmap -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-all-target-headers.hmap -iquote /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/homography-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/Gaston/dev/RDC/xcode/build/Debug/include -I../../cinder/boost -I/opt/local/include -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources/i386 -I/Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/DerivedSources -F/Users/Gaston/dev/RDC/xcode/build/Debug -c /Users/Gaston/dev/RDC/xcode/homography/main.cpp -o /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/main.o36"24161CBC-F62D-4F09-A658-475F34BA658B-
 
 CLd /Users/Gaston/dev/RDC/xcode/build/Debug/homography normal i386
-s381176199.695664
-e381176200.337350
+s381331034.674296
+e381331035.128991
 r1
 xLd
 x/Users/Gaston/dev/RDC/xcode/build/Debug/homography
 xnormal
 xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Link /Users/Gaston/dev/RDC/xcode/build/Debug/homography1328b28749b8b641^3a5d568849b8b641^---0#0#0#--860"Ld build/Debug/homography normal i386    cd /Users/Gaston/dev/RDC/xcode    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-g++-4.2 -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/Gaston/dev/RDC/xcode/build/Debug -F/Users/Gaston/dev/RDC/xcode/build/Debug -filelist /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/homography.LinkFileList -mmacosx-version-min=10.8 ../lib/libopencv_core.2.4.3.dylib ../lib/libopencv_highgui.2.4.3.dylib ../lib/libopencv_imgproc.2.4.3.dylib ../lib/libopencv_legacy.2.4.3.dylib ../lib/libopencv_contrib.2.4.3.dylib ../lib/libopencv_calib3d.2.4.3.dylib ../lib/libopencv_features2d.2.4.3.dylib -stdlib=libc++ -o /Users/Gaston/dev/RDC/xcode/build/Debug/homography36"C8DAE8A8-DE07-453F-B581-26444C80CA31-
-
-CLd /Users/Gaston/dev/RDC/xcode/build/Debug/homography normal x86_64
-s380480230.304817
-e380480230.447488
-r1
-xLd
-x/Users/Gaston/dev/RDC/xcode/build/Debug/homography
-xnormal
-xx86_64
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Link /Users/Gaston/dev/RDC/xcode/build/Debug/homographyde204ee6aaadb641^2a8f72e6aaadb641^---0#0#0#--818"Ld build/Debug/homography normal x86_64    cd /Users/Gaston/dev/RDC/xcode    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-g++-4.2 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/Gaston/dev/RDC/xcode/build/Debug -L/opt/local/lib -F/Users/Gaston/dev/RDC/xcode/build/Debug -filelist /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/x86_64/homography.LinkFileList -mmacosx-version-min=10.8 -lopencv_core -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_flann -stdlib=libc++ -o /Users/Gaston/dev/RDC/xcode/build/Debug/homography36"A21C1190-0F5E-4459-92AC-AF6BD795773F-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Link /Users/Gaston/dev/RDC/xcode/build/Debug/homographydeadac5aa6bab641^f305215ba6bab641^---0#0#0#--860"Ld build/Debug/homography normal i386    cd /Users/Gaston/dev/RDC/xcode    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-g++-4.2 -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/Gaston/dev/RDC/xcode/build/Debug -F/Users/Gaston/dev/RDC/xcode/build/Debug -filelist /Users/Gaston/dev/RDC/xcode/build/RDC.build/Debug/homography.build/Objects-normal/i386/homography.LinkFileList -mmacosx-version-min=10.8 ../lib/libopencv_core.2.4.3.dylib ../lib/libopencv_highgui.2.4.3.dylib ../lib/libopencv_imgproc.2.4.3.dylib ../lib/libopencv_legacy.2.4.3.dylib ../lib/libopencv_contrib.2.4.3.dylib ../lib/libopencv_calib3d.2.4.3.dylib ../lib/libopencv_features2d.2.4.3.dylib -stdlib=libc++ -o /Users/Gaston/dev/RDC/xcode/build/Debug/homography36"69C804A3-6E87-4663-8164-61630E0A8556-
 
