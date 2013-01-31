@@ -27,9 +27,30 @@ void RDC::calibrate(Sensor* cam, Renderer_A* gfx)
     //TODO compute compensation matrix
 }
 
-void RDC::computeHomography()
+void RDC::computeHomography(Sensor* cam, Renderer_A* gfx)
 {
+    //project pattern
+    //capture pattern
+    Image pattern = cam->grabFrame();
+    //add them to our Homo object
+    homo.addImages(pattern, pattern);
     
+    //compute the homography matrix
+    homo.computeHomo();
+    
+    int height = gfx->getHeight();
+    int width = gfx->getWidth();
+    int channels = 3;
+    //TODO: fill a mapping matrix rather than getPoint for each pixel? Probably best way to go
+    camera2proj.create(height, width, CV_32FC2);   //CV_32FC2 for 2 channels of Point2f
+    for (int i = 0; i < width; i++)
+    {
+        for (int j = 0; j < height; j++)
+        {
+            //set Mat[x][y] to the corresponding point
+            //camera2proj.at<CV_32FC2>(j)(i) = homo.getSourcePoint(i, j);
+        }
+    }
 }
 
 Image RDC::compensate(Image& srcImg, Image& dstImg)

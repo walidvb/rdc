@@ -23,15 +23,20 @@ public:
     Mat computeHomo();                              //<! computes the homography matrix from all the points that were added via addImages, and returns it
     Point getTargetPoint(int x, int y) const;       //<! used to retrieve point*homography
     Point getTargetPoint(const Point pos) const;    //<! used to retrieve point*homography
+    Point getSourcePoint(int x, int y) const;
+    Point getSourcePoint(const Point pos) const;
     
     Size boardSize;                                 //<! size of the board used for the homography
     //Getters
-    Mat getHomo();                                  //<! returns the homography matrix
+    Mat getHomo() const;                            //<! returns the homography matrix
+    Mat getHomoInv() const;                            //<! returns the homography matrix inverse
     void setPattern(Image* pattern);                //<! sets the pattern projected used in the homography / unused
     
 private:
+    Point getPoint(int x, int y, Mat h) const;
     Image* source;                                  //<! the source image used, the pattern in our case /unused
     Mat homo;                                       //<! the homography matrix
+    Mat homoInv;                                    //<! the homography matrix inverse
     vector<Point2f> srcPoints;                      //<! the points found in the source image
     vector<Point2f> trgPoints;                      //<! the points found in the target image
 };

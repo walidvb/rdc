@@ -69,8 +69,8 @@ Mat Homo::computeHomo(){
     return homo;
 }
 
-Point Homo::getTargetPoint(int x, int y) const{
-    Mat h = homo;
+
+Point Homo::getPoint(int x, int y, Mat h) const{
     double Z = 1./(h.ptr<double>(2)[0]*x + h.ptr<double>(2)[1]*y + h.ptr<double>(2)[2]);
     double px = (double)((h.ptr<double>(0)[0]*x + h.ptr<double>(0)[1]*y + h.ptr<double>(0)[2])*Z);
     double py = (double)((h.ptr<double>(1)[0]*x + h.ptr<double>(1)[1]*y + h.ptr<double>(1)[2])*Z);
@@ -78,15 +78,30 @@ Point Homo::getTargetPoint(int x, int y) const{
     return pt;
 }
 
+Point Homo::getTargetPoint(int x, int y) const{
+    return getPoint(x, y, homo);
+}
+
+Point Homo::getSourcePoint(int x, int y) const{
+    return getPoint(x, y, homoInv);
+}
+
+Point Homo::getSourcePoint(const Point pos) const{
+    return getSourcePoint(pos.x, pos.y);
+}
+
 Point Homo::getTargetPoint(const Point pos) const{
     return getTargetPoint(pos.x, pos.y);
 }
 
 
-
 //Getters
-Mat Homo::getHomo(){
+Mat Homo::getHomo() const{
     return homo;
+}
+
+Mat Homo::getHomoInv() const{
+    return homoInv;
 }
 
 void Homo::setPattern(Image* pattern){}
