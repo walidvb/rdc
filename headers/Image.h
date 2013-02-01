@@ -29,25 +29,35 @@ public:
     Image(string path);
     
     //Methods
-    float pixelAt(int x, int y) const;    //!< returns the pixel value at (x, y)
-    void pixelWrite(float value, int x, int y); //!< writes value at pixel (x, y)
+    uchar pixelAt(int x, int y) const;    //!< returns the pixel value at (x, y)
+    void pixelWrite(uchar value, int x, int y); //!< writes value at pixel (x, y)
     
     void load(string filepath);         //<! used to load an image file. Supported formats are those of openCV
     //vector<float> Mat2Img(cv::Mat original); //<! translates an openCV Mat image into my vector<float> object.
+    
+
+    
+    //Getters
+    Mat getPixels() const;
+    imgType getType() const;
+    int getWidth() const;
+    int getHeight() const;
+    
+    //Setter
+    void setPixels(Mat& mat);
+    void setType(Image::imgType type);
+    void setWidth(int width);
+    void setHeight(int height);
+
+private:
+    static int index(int x, int y, int w);    
+    void setup();   //<! just a private function to keep everything in order
     
     //Attributes
     Mat pixels;           //!< all pixels of the image
     imgType type;             //<! type of im   age: IMG_GRAY or IMG_CLR
     int width;            //<! the width of the image
     int height;           //<! the height of the image
-    
-    
-    //Setter
-    void clone(const Mat& src);
-
-private:
-    static int index(int x, int y, int w);    
-    void setup();   //<! just a private function to keep everything in order
 };
 
 

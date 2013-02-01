@@ -21,8 +21,9 @@ class Renderer_A
 public:
     Renderer_A();
     Renderer_A(int width, int height);
+    virtual ~Renderer_A(){}
     virtual void drawImg(const Image& img, int POS) const = 0;
-
+    
     //void drawRect( V2D& topleft, V2D& bottomright ) const;
     void drawStripeVert(float xOffset, float width) const;
     void drawStripeHorz(float yOffset, float height) const;

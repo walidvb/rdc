@@ -25,8 +25,8 @@ void Renderer_CV::drawRect(float& x1, float& y1, float& x2, float& y2) const
 
 void Renderer_CV::drawImg(const Image& img, int POS) const
 {
-    Mat clone = img.pixels.clone();
-    resize( clone, clone, Size(width, height) );
+    Mat clone = img.getPixels().clone();
+    //resize( clone, clone, Size(width, height) );
     string name = "Window " + POS;
     namedWindow(name);
     imshow(name, clone);

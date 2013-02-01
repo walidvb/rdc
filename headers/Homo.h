@@ -26,13 +26,13 @@ public:
     Point getSourcePoint(int x, int y) const;
     Point getSourcePoint(const Point pos) const;
     
-    Size boardSize;                                 //<! size of the board used for the homography
     //Getters
     Mat getHomo() const;                            //<! returns the homography matrix
     Mat getHomoInv() const;                            //<! returns the homography matrix inverse
     void setPattern(Image* pattern);                //<! sets the pattern projected used in the homography / unused
     
 private:
+    Size boardSize;                                 //<! size of the board used for the homography
     Point getPoint(int x, int y, Mat h) const;
     Image* source;                                  //<! the source image used, the pattern in our case /unused
     Mat homo;                                       //<! the homography matrix

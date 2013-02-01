@@ -14,6 +14,7 @@ void RDC::calibrate(Sensor* cam, Renderer_A* gfx)
 {
     Image img = cam->grabFrame();
     cout << "Camera pixels:" << endl;
+    /*
     for (int i = 0; i < cam->getWidth(); i++)
     {
         for (int j = 0; j < cam->getHeight(); j++)
@@ -22,6 +23,7 @@ void RDC::calibrate(Sensor* cam, Renderer_A* gfx)
         }
         cout << endl;
     }
+    */
     projectStructuredLights(gfx);
     
     //TODO compute compensation matrix
@@ -55,24 +57,24 @@ void RDC::computeHomography(Sensor* cam, Renderer_A* gfx)
 
 Image RDC::compensate(Image& srcImg, Image& dstImg)
 {
-    int w = srcImg.width;
-    int h = srcImg.height;
+    int w = srcImg.getWidth();
+    int h = srcImg.getHeight();
     //make sure dst is the correct size
-    dstImg.pixels.create(h, w, srcImg.pixels.type());
+    dstImg.getPixels().create(h, w, srcImg.getPixels().type());
 
     // number of lines
     int nl= h;
     // total number of elements per line
-    int nc= w * srcImg.type;
+    int nc= w * srcImg.getType();
     
     for (int j=0; j<nl; j++) {
         // get the address of row j
-        uchar* dataIn= srcImg.pixels.ptr<uchar>(j);
-        uchar* dataOut= srcImg.pixels.ptr<uchar>(j);
+        uchar* dataIn= srcImg.getPixels().ptr<uchar>(j);
+        uchar* dataOut= srcImg.getPixels().ptr<uchar>(j);
         for (int i=0; i<nc; i++) {
             
             //Simple fixed thresholding method
-            float newPix = 0;
+            uchar newPix = 0;
             if (dataIn[i] > 127)
             {
                 newPix = 255;
@@ -81,17 +83,17 @@ Image RDC::compensate(Image& srcImg, Image& dstImg)
             dataOut[i]= newPix;
         }
     }
-    
-    /* TOCHECK: not working, for some reason..?!?!?!
+    /*
+    //TOCHECK: not working, for some reason..?!?!?!
     for(int i = 0; i < w; i++)
     {
         for(int j = 0; j < h; j++)
         {
-            int p = (srcImg.pixelAt(i, j) > 127) ? 255 : 0;
+            uchar p = (srcImg.pixelAt(i, j) > 127) ? 255 : 0;
             dstImg.pixelWrite(p, i, j);
         }
     }
-     */
+    */
     return dstImg;
     //TODO compensate #1 test with dummy matrix
 }

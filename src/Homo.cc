@@ -20,9 +20,9 @@ void Homo::addImages(Image src, Image trg){
     int successes = 0;
     // Get the chessboard corners
     vector<Point2f> srcCorners;
-    bool srcFound = cv::findChessboardCorners(src.pixels, boardSize, srcCorners);
+    bool srcFound = cv::findChessboardCorners(src.getPixels(), boardSize, srcCorners);
     vector<Point2f> trgCorners;
-    bool trgFound = findChessboardCorners(trg.pixels, boardSize,trgCorners);
+    bool trgFound = findChessboardCorners(trg.getPixels(), boardSize,trgCorners);
 
     if(!srcFound)
     {
@@ -33,7 +33,7 @@ void Homo::addImages(Image src, Image trg){
     if(srcFound && trgFound)
     {
         // Get subpixel accuracy on the corners
-        cornerSubPix(src.pixels, srcCorners,
+        cornerSubPix(src.getPixels(), srcCorners,
                      Size(5,5),
                      Size(-1,-1),
                      TermCriteria(TermCriteria::MAX_ITER +
@@ -41,7 +41,7 @@ void Homo::addImages(Image src, Image trg){
                                   30,      // max number of iterations
                                   0.1));  // min accuracy
         // Get subpixel accuracy on the corners
-        cornerSubPix(trg.pixels, trgCorners,
+        cornerSubPix(trg.getPixels(), trgCorners,
                      Size(5,5),
                      Size(-1,-1),
                      TermCriteria(TermCriteria::MAX_ITER +

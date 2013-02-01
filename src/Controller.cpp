@@ -31,7 +31,7 @@ Controller::~Controller()
 void Controller::init(int width, int height)
 {
     captor = new Sensor();
-    renderer = new Renderer_Cinder(width, height);
+    renderer = new Renderer_CV(width, height);
     rdc = new RDC();
     //media = new Sensor();
     //captor->init(deviceID);
@@ -46,18 +46,11 @@ void Controller::calibrate()
     rdc->calibrate(captor, renderer);
 }
 
-void Controller::process()
+void Controller::process(Image& img)
 {
-    //TOCHECK: ftm only display test image
-    Image frame = Image(*testFrame);
-    renderer->drawImg(*testFrame, FULL);
-    //Grab frame from media
-    //Image frame = media->grabFrame();
-    //renderer->drawImg(frame, FULL);
-    //process it
-    frame = rdc->compensate(frame, frame);
-    //render it
-    renderer->drawImg(frame, ONE);
+    renderer->drawImg(img, FULL);//For test purpose
+    rdc->compensate(img, img);
+    renderer->drawImg(img, FULL);
 }
 
 void Controller::draw()

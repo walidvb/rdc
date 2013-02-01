@@ -94,7 +94,6 @@
 		3DDB52A716B024B6001D1986 /* homography */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = homography; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDB52AA16B024B6001D1986 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3DDB52AC16B024B6001D1986 /* homography.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = homography.1; sourceTree = "<group>"; };
-		3DEC487416A708BF00BE573A /* homography.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = homography.h; path = ../headers/homography.h; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -177,8 +176,8 @@
 		29B97314FDCFA39411CA2CEA /* RDC */ = {
 			isa = PBXGroup;
 			children = (
-				3D996EC2165BE74A004B258F /* src */,
 				3D996EC1165BE72F004B258F /* headers */,
+				3D996EC2165BE74A004B258F /* src */,
 				29B97315FDCFA39411CA2CEA /* Headers */,
 				080E96DDFE201D6D7F000001 /* Source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -226,7 +225,6 @@
 				3D3C9CDA168C5F1E00EEBCAF /* Image.h */,
 				3D996EBD165BE215004B258F /* common.h */,
 				3D992F8B1684C929008C380E /* Controller.h */,
-				3DEC487416A708BF00BE573A /* homography.h */,
 				3D2CD146165CFA880016C8C6 /* Renderer_A.h */,
 				3D2CD147165CFDDB0016C8C6 /* Renderer_Cinder.h */,
 				3D5FE94216AD77A900DB7E28 /* Renderer_CV.h */,

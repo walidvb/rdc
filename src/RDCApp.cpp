@@ -5,7 +5,7 @@
 #include "Controller.h"
 #include "cinder/gl/gl.h"
 #include "cinder/Vector.h"
-
+#include "Image.h"
 using namespace std;
 
 class RDCApp : public cinder::app::AppBasic {
@@ -34,7 +34,12 @@ void RDCApp::setup()
     
     controller = new Controller();
     controller->init(width, height);
-    controller->process();
+    controller->calibrate();
+    //TODO open image
+    //convert to Image
+    Image img;
+    img.load("/Users/Gaston/dev/RDC/resources/lena.bmp");
+    controller->process(img);
 }
 
 void RDCApp::mouseDown( cinder::app::MouseEvent event )
@@ -49,7 +54,6 @@ void RDCApp::draw()
 {
 	//clear out the window with black
     ci::gl::clear( ci::Color( 0, 0, 0 ) );
-    controller->process();
     //ci::gl::drawSolidCircle( ci::Vec2f( 30, 30 ), 50.0f );
 
 }
