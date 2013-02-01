@@ -58,6 +58,7 @@ void Image::pixelWrite(float value, int x, int y)
 void Image::load(string filepath)
 {
     pixels = imread(filepath);
+    cout << pixels.channels() << endl;
     setup();
 }
 

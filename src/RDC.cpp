@@ -88,7 +88,7 @@ Image RDC::compensate(Image& srcImg, Image& dstImg)
         for(int j = 0; j < h; j++)
         {
             int p = (srcImg.pixelAt(i, j) > 127) ? 255 : 0;
-            dstImg.pixelWrite(i, j, p);
+            dstImg.pixelWrite(p, i, j);
         }
     }
      */

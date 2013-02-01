@@ -43,9 +43,9 @@ void Renderer_Cinder::drawImg(const Image& img, int POS) const
     int h = img.pixels.rows;
     
     Channel32f chan(w, h);
-    for(int i = 0; i < w; i+=3)
+    for(int i = 0; i < w; i+=1)
     {
-        for (int j = 0; j<h; j+=3)
+        for (int j = 0; j<h; j+=1)
         {
             chan.setValue(ci::Vec2i(i, j), img.pixels.ptr(j)[i]);
         }
