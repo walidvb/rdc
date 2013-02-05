@@ -25,7 +25,7 @@ public:
     Image();
     Image(int width, int height, imgType = IMG_GRAY);
     Image(Mat img);
-    Image(Image const& img);
+    Image(Image const& img, bool clone = true);
     Image(string path);
     
     //Methods
@@ -35,17 +35,21 @@ public:
     void load(string filepath);         //<! used to load an image file. Supported formats are those of openCV
     //vector<float> Mat2Img(cv::Mat original); //<! translates an openCV Mat image into my vector<float> object.
     
-
+    //proc
+    void resize(int maxHeight);
+    void resize(int width_, int height_);
     
     //Getters
-    Mat getPixels() const;
+    Mat getMat() const;
+    vector<uchar> getPixels() ;
     imgType getType() const;
     int getWidth() const;
     int getHeight() const;
     
     //Setter
-    void setPixels(Mat& mat);
-    void setType(Image::imgType type);
+    void setPixels(vector<uchar>& pixels, int width, int height);
+    void setMat(Mat& mat);
+    void setType(imgType type);
     void setWidth(int width);
     void setHeight(int height);
 

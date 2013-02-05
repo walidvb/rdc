@@ -33,10 +33,11 @@ void Controller::init(int width, int height)
     captor = new Sensor();
     renderer = new Renderer_CV(width, height);
     rdc = new RDC();
+    rdc->init();
     //media = new Sensor();
     //captor->init(deviceID);
     //media->init(sourceMedia);
-    testFrame = new Image(resourcePath+"lena.bmp");
+    testFrame = new Image(resourcePath+"chesspic.jpg");
 }
 
 void Controller::calibrate()
@@ -48,7 +49,7 @@ void Controller::calibrate()
 
 void Controller::process(Image& img)
 {
-    renderer->drawImg(img, FULL);//For test purpose
+    //renderer->drawImg(img, FULL);//For test purpose
     rdc->compensate(img, img);
     renderer->drawImg(img, FULL);
 }

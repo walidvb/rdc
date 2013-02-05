@@ -25,15 +25,24 @@ Image::Image(Mat img) : pixels(img)
     setup();
 }
 
-Image::Image(Image const& img)
+Image::Image(Image const& img, bool clone)
 {
-    this->pixels = img.pixels;
+    if(clone)
+    {
+    this->pixels = img.pixels.clone();
+    }
+    else
+    {
+        this->pixels = img.pixels;
+    }
     setup();
 }
 
 Image::Image(string path)
 {
     load(path);
+    cout << "creating image for " << path << "(channels: " << pixels.channels() << ", size[" << pixels.cols << " " << pixels.rows << "];" << endl;
+    cout << "or, in other terms:" << path << "(channels: " << type << ", size[" << width << " " << height << "];" << endl;
 }
 
 int Image::index(int x, int y, int w)
@@ -45,21 +54,32 @@ int Image::index(int x, int y, int w)
 //TODO change to template, as this should be able to return Vec3b too.
 uchar Image::pixelAt(int x, int y) const
 {
-    uchar pix = pixels.ptr<uchar>(y)[x];
+    uchar pix = pixels.at<uchar>(y, x);
     return pix;
 }
 
 //TODO change to template, as this should be able to take as argument Vec3b too.
 void Image::pixelWrite(uchar value, int x, int y)
 {
-    pixels.ptr<uchar>(y)[x] = value;
+    
+    pixels.at<uchar>(y,x) = value;
 }
     
 void Image::load(string filepath)
 {
     pixels = imread(filepath);
-    cout << pixels.channels() << endl;
     setup();
+}
+
+void Image::resize(int maxHeight)
+{
+    this->resize(maxHeight*width/height, maxHeight);
+}
+
+void Image::resize(int width_, int height_)
+{
+    Size s(width_, height_);
+    cv::resize(pixels, pixels, s);
 }
 
 
@@ -79,11 +99,30 @@ void Image::setup()
 }
 
 //Getters
-Mat Image::getPixels() const
+Mat Image::getMat() const
 {
     return pixels;
 }
+vector<uchar> Image::getPixels()
+{
+    vector<uchar> pix;
+    // number of lines
+    int nl= height;
+    // total number of elements per line
+    int nc= width * type;
+    
+    for (int j=0; j<nl; j++)
+    {
+        // get the address of row j
+        uchar* data= pixels.ptr<uchar>(j);
+        for (int i=0; i<nc; i++)
+        {
+            pix.push_back(data[j]);
+        }
+    }
+    return pix;
 
+}
 Image::imgType Image::getType() const
 {
     return type;
@@ -98,9 +137,14 @@ int Image::getHeight() const
 }
 
 //Setter
-void Image::setPixels(Mat& mat)
+void Image::setMat(Mat& mat)
 {
     pixels = mat;
+}
+void Image::setPixels(vector<uchar>& pixels, int width, int height)
+{
+    Mat m(height, width, CV_8UC2, &pixels);
+    this->pixels = m;
 }
 void Image::setType(Image::imgType type)
 {

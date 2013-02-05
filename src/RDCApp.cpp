@@ -23,7 +23,7 @@ private:
 };
 
 void RDCApp::prepareSettings( Settings *settings ){
-    settings->setWindowSize( 800, 600 );
+    settings->setWindowSize( 0, 0 );
     settings->setFrameRate( 60.0f );
 }
 
@@ -38,7 +38,7 @@ void RDCApp::setup()
     //TODO open image
     //convert to Image
     Image img;
-    img.load("/Users/Gaston/dev/RDC/resources/lena.bmp");
+    img.load("/Users/Gaston/dev/RDC/resources/chesspic.jpg");
     controller->process(img);
 }
 
