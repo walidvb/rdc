@@ -91,13 +91,12 @@ void RDC::compensate(Image& srcImg, Image& dstImg)
     }
      */
     bool d(true);
-    for(int i = 0; i < w; i+=chan)
+    for(int i = 0; i < w*chan; i+=1)
     {
-        for(int j = 0; j < h; j+=chan)
+        for(int j = 0; j < h; j+=1)
         {
 
-            uchar v = srcImg.pixelAt(i, j) > 127 ? 255 : 0;
-            if(d){cout << v << endl; d = !d;}
+            Vec3b v = srcImg.pixelAt(i, j);
             dstImg.pixelWrite(v, i, j);
         }
         

@@ -52,17 +52,17 @@ int Image::index(int x, int y, int w)
 }
 
 //TODO change to template, as this should be able to return Vec3b too.
-uchar Image::pixelAt(int x, int y) const
+Vec3b Image::pixelAt(int x, int y) const
 {
-    uchar pix = pixels.at<uchar>(y, x);
+    Vec3b pix = pixels.at<Vec3b>(y, x);
     return pix;
 }
 
 //TODO change to template, as this should be able to take as argument Vec3b too.
-void Image::pixelWrite(uchar value, int x, int y)
+void Image::pixelWrite(Vec3b value, int x, int y)
 {
     
-    pixels.at<uchar>(y,x) = value;
+    pixels.at<Vec3b>(y,x) = value;
 }
     
 void Image::load(string filepath)

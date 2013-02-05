@@ -38,7 +38,7 @@ void RDCApp::setup()
     //TODO open image
     //convert to Image
     Image img;
-    img.load("/Users/Gaston/dev/RDC/resources/chesspic.jpg");
+    img.load("/Users/Gaston/dev/RDC/resources/lena.bmp");
     controller->process(img);
 }
 

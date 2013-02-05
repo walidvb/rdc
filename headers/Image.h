@@ -29,8 +29,8 @@ public:
     Image(string path);
     
     //Methods
-    uchar pixelAt(int x, int y) const;    //!< returns the pixel value at (x, y)
-    void pixelWrite(uchar value, int x, int y); //!< writes value at pixel (x, y)
+    Vec3b pixelAt(int x, int y) const;    //!< returns the pixel value at (x, y)
+    void pixelWrite(Vec3b value, int x, int y); //!< writes value at pixel (x, y)
     
     void load(string filepath);         //<! used to load an image file. Supported formats are those of openCV
     //vector<float> Mat2Img(cv::Mat original); //<! translates an openCV Mat image into my vector<float> object.
