@@ -38,11 +38,10 @@ Image::Image(Image const& img, bool clone)
     setup();
 }
 
-Image::Image(string path)
+Image::Image(string path, bool grayscale)
 {
-    load(path);
+    load(path, grayscale);
     cout << "creating image for " << path << "(channels: " << pixels.channels() << ", size[" << pixels.cols << " " << pixels.rows << "];" << endl;
-    cout << "or, in other terms:" << path << "(channels: " << type << ", size[" << width << " " << height << "];" << endl;
 }
 
 int Image::index(int x, int y, int w)
@@ -65,9 +64,22 @@ void Image::pixelWrite(Vec3b value, int x, int y)
     pixels.at<Vec3b>(y,x) = value;
 }
     
-void Image::load(string filepath)
+void Image::load(string filepath, bool grayscale)
 {
-    pixels = imread(filepath);
+    if(grayscale)
+    {
+        pixels = imread(filepath, 0);
+    }
+    else
+    {
+        pixels = imread(filepath);
+    }
+    setup();
+}
+
+void Image::clone(Image& src)
+{
+    this->pixels = src.pixels.clone();
     setup();
 }
 
@@ -99,9 +111,9 @@ void Image::setup()
 }
 
 //Getters
-Mat Image::getMat() const
+Mat* Image::getMat()
 {
-    return pixels;
+    return &pixels;
 }
 vector<uchar> Image::getPixels()
 {
@@ -141,7 +153,7 @@ void Image::setMat(Mat& mat)
 {
     pixels = mat;
 }
-void Image::setPixels(vector<uchar>& pixels, int width, int height)
+void Image::setPixels(vector<uchar>&  pixels , int width, int height)
 {
     Mat m(height, width, CV_8UC2, &pixels);
     this->pixels = m;

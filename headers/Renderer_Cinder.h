@@ -21,7 +21,7 @@ public:
     Renderer_Cinder();
     Renderer_Cinder(int width, int height);
     void drawRect( float& x1, float& y1, float& x2, float& y2 ) const;
-    void drawImg(const Image& img, int POS) const;
+    void drawImg(Image& img, int POS) const;
     int windowCount = 0; //<! used to be able to imshow different images
     
 private:

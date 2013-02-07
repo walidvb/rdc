@@ -26,28 +26,29 @@ public:
     Image(int width, int height, imgType = IMG_GRAY);
     Image(Mat img);
     Image(Image const& img, bool clone = true);
-    Image(string path);
+    Image(string path, bool grayscale = false);
     
     //Methods
     Vec3b pixelAt(int x, int y) const;    //!< returns the pixel value at (x, y)
     void pixelWrite(Vec3b value, int x, int y); //!< writes value at pixel (x, y)
     
-    void load(string filepath);         //<! used to load an image file. Supported formats are those of openCV
+    void load(string filepath, bool grayscale = false);         //<! used to load an image file. Supported formats are those of openCV
     //vector<float> Mat2Img(cv::Mat original); //<! translates an openCV Mat image into my vector<float> object.
     
+    void clone(Image& src);                  //<! clones src into caller
     //proc
     void resize(int maxHeight);
     void resize(int width_, int height_);
     
     //Getters
-    Mat getMat() const;
+    Mat* getMat();                   //<! isn't const because Matrix can be modified through this.
     vector<uchar> getPixels() ;
     imgType getType() const;
     int getWidth() const;
     int getHeight() const;
     
     //Setter
-    void setPixels(vector<uchar>& pixels, int width, int height);
+    void setPixels(vector<uchar>&  pixels , int width, int height);
     void setMat(Mat& mat);
     void setType(imgType type);
     void setWidth(int width);

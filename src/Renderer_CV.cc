@@ -29,7 +29,7 @@ void Renderer_CV::drawImg(const Image& img, int POS) const
     display.resize(600);
     string name = "Window " + POS;
     namedWindow(name);
-    imshow(name, display.getMat());
+    imshow(name, *display.getMat());
     
     waitKey(0);
     

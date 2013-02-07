@@ -10,6 +10,10 @@
 #include "Homo.h"
 #include "RDC.h"
 
+//Constructor
+RDC::RDC(int width, int height) : outWidth(width), outHeight(height){}
+
+
 //Public methods
 
 void RDC::init()
@@ -19,8 +23,9 @@ void RDC::init()
 void RDC::calibrate(Sensor* cam, Renderer_A* gfx)
 {
     Image img = cam->grabFrame();
-    cout << "Camera pixels:" << endl;
     /*
+    cout << "Camera pixels:" << endl;
+    
      for (int i = 0; i < cam->getWidth(); i++)
      {
      for (int j = 0; j < cam->getHeight(); j++)
@@ -30,12 +35,21 @@ void RDC::calibrate(Sensor* cam, Renderer_A* gfx)
      cout << endl;
      }
      */
-    projectStructuredLights(gfx);
-    
-    //TODO compute compensation matrix
+    //TODO: add images to the homography
+    projectPatterns(gfx);
+    homo->computeHomo();
+    computeMatrices();
 }
 
-void RDC::computeHomography(Sensor* cam, Renderer_A* gfx)
+void RDC::computeMatrices()
+{
+    //TODO: remove that shit
+    Image tmp_("/Users/Gaston/dev/RDC/resources/chesspic.jpg");
+    getSurface(&tmp_, &EM);
+    //getSurface(&FM, &FM);
+}
+
+void RDC::computeHomography(Sensor* cam)
 {
     //project pattern
     //capture pattern
@@ -46,9 +60,7 @@ void RDC::computeHomography(Sensor* cam, Renderer_A* gfx)
     //compute the homography matrix
     homo->computeHomo();
     
-    int height = gfx->getHeight();
-    int width = gfx->getWidth();
-    
+    /*
     //TODO: fill a mapping matrix rather than getPoint for each pixel? Probably best way to go
     camera2proj.create(height, width, CV_32FC2);   //CV_32FC2 for 2 channels of Point2f
     for (int i = 0; i < width; i++)
@@ -58,6 +70,7 @@ void RDC::computeHomography(Sensor* cam, Renderer_A* gfx)
             //set Mat[x][y] to the corresponding point
         }
     }
+    */
 }
 
 void RDC::compensate(Image& srcImg, Image& dstImg)
@@ -67,36 +80,14 @@ void RDC::compensate(Image& srcImg, Image& dstImg)
     int chan = srcImg.getType();
     
     //make sure dst is the correct size
-    dstImg.getMat().create(h, w, srcImg.getMat().type());
-    /*
-    // number of lines
-    int nl= h;
-    // total number of elements per line
-    int nc= w * srcImg.getType();
-    
-    for (int j=0; j<nl; j++) {
-        // get the address of row j
-        uchar* dataIn= srcImg.getMat().ptr<uchar>(j);
-        uchar* dataOut= srcImg.getMat().ptr<uchar>(j);
-        for (int i=0; i<nc; i++) {
-            
-            //Simple fixed thresholding method
-            uchar newPix = 0;
-            if (dataIn[i] > 127)
-            {
-                newPix = 255;
-            }
-            dataOut[i]= newPix;
-        }
-    }
-     */
-    bool d(true);
+    dstImg.getMat()->create(outHeight, outWidth, srcImg.getMat()->type());
     for(int i = 0; i < w*chan; i+=1)
     {
         for(int j = 0; j < h; j+=1)
         {
 
             Vec3b v = srcImg.pixelAt(i, j);
+            //TODO compensat v according to EM and FM
             dstImg.pixelWrite(v, i, j);
         }
         
@@ -105,27 +96,37 @@ void RDC::compensate(Image& srcImg, Image& dstImg)
 }
 
 //Private methods
-void RDC::projectStructuredLights(Renderer_A* gfx)
+void RDC::projectPatterns(Renderer_A* gfx)
 {
     float xOffset = 20.0;
     float width_ = 20.0;
     gfx->drawStripeVert(xOffset, width_);
+    Image  im1("/Users/Gaston/dev/RDC/resources/chessboard65.jpg", true);
+    Image im2("/Users/Gaston/dev/RDC/resources/chesspic.jpg", true);
+
+    homo->addImages(im1.getMat(), im2.getMat());
+    
 }
 
 void RDC::getSurface(const Image* source, Image* target)
 {
-    for(int i = 0; i < target->getWidth(); i++)
+    Image tmp(outWidth, outHeight);
+    //TOCHECK: probably not too efficient, but ill go with that for the moment...
+    for(int i = 0; i < outWidth; i++)
     {
-        for(int j = 0; j < target->getHeight(); j++)
+        for(int j = 0; j < outHeight; j++)
         {
             Point2f loc = homo->getSourcePoint(i, j);
-            target->pixelWrite(source->pixelAt(loc.x, loc.y), i, j);
+            tmp.pixelWrite(source->pixelAt(loc.x, loc.y), i, j);
         }
     }
+    *target = tmp;
 }
 
-void RDC::computeFM(const Image* FM)
+//Getters
+
+Image RDC::getEM() const
 {
-    getSurface(FM, &this->FM);
+    return EM;
 }
-
+//Setters

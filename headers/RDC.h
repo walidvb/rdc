@@ -18,26 +18,33 @@ class RDC
 {
 public:
     RDC(){}
+    RDC(int width, int height);
     void init();
-    void calibrate(Sensor* cam, Renderer_A* gfx);       //<!Called once, starts the calibration and computes needed values for compensation
-    void compensate(Image& srcImg, Image& dstImage);   //<!Called each frame, takes source image and returns compensated image
+    void calibrate(Sensor* cam, Renderer_A* gfx);      //<! Called once, starts the calibration and computes needed values for compensation
+    void computeMatrices();                            //<! Fill env light and max light images
+    void compensate(Image& srcImg, Image& dstImage);   //<! Called each frame, takes source image and returns compensated image
+    
+    //Getters
+    Image getEM() const;                                //<! returns EM, only used for testing purposes
     
 private:
     //Private methods
     //Setup
     int getLatency();                                   //<! get projector camera latency
-    void projectStructuredLights(Renderer_A* gfx);      //<! will call gfx->drawRect, or simply gfx->drawImg
-    void computeHomography(Sensor* cam, Renderer_A* gfx);
+    void projectPatterns(Renderer_A* gfx);      //<! project patterns, take a picture and
+    void computeHomography(Sensor* cam);
     Homo* homo;                                          //<! The object handling the homography
     
     //Preprocessing
-    void getSurface(const Image* source, Image* target);                                   //<! fill target with pixels from source, homographied
-    void computeFM(const Image* FM);                                   //<! compute the max projected light
+    void getSurface(const Image* source, Image* target); //<! fill target with pixels from source, homographied
+                                                         //<! used to fill max and min light images
     
     Mat camera2proj;                                    //<! Camera to projector mapping
     Image EM;                                             //<! Matrix storing the environmental light, row major
     Image FM;                                             //<! Matrix storing the proj light, row major
 
+    int outWidth;                                           //<! the width of the output
+    int outHeight;                                          //<! the height of the output
 };
 
 #endif
