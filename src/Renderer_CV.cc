@@ -23,13 +23,12 @@ void Renderer_CV::drawRect(float& x1, float& y1, float& x2, float& y2) const
     
 }
 
-void Renderer_CV::drawImg(const Image& img, int POS) const
+void Renderer_CV::drawImg(Image* img, int POS) const
 {
-    Image display(img);
-    display.resize(600);
+    //display.resize(600);
     string name = "Window " + POS;
     namedWindow(name);
-    imshow(name, *display.getMat());
+    imshow(name, (*img->getMat()));
     
     waitKey(0);
     

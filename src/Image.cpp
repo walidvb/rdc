@@ -16,7 +16,7 @@ Image::Image()
 
 Image::Image(int width, int height, imgType type) : width(width), height(height), type(type)
 {
-    this->pixels = Mat(width, height, CV_8U);
+    this->pixels.create(height, width, CV_8U);
     setup();
 }
 
@@ -41,7 +41,7 @@ Image::Image(Image const& img, bool clone)
 Image::Image(string path, bool grayscale)
 {
     load(path, grayscale);
-    cout << "creating image for " << path << "(channels: " << pixels.channels() << ", size[" << pixels.cols << " " << pixels.rows << "];" << endl;
+
 }
 
 int Image::index(int x, int y, int w)
@@ -151,7 +151,7 @@ int Image::getHeight() const
 //Setter
 void Image::setMat(Mat& mat)
 {
-    pixels = mat;
+    pixels = mat.clone();
 }
 void Image::setPixels(vector<uchar>&  pixels , int width, int height)
 {
@@ -169,4 +169,11 @@ void Image::setWidth(int width)
 void Image::setHeight(int height)
 {
     this->height = height;
+}
+
+
+ostream& operator<<(ostream& o, const Image& img)
+{
+    o << "(" << img.width << ", " << img.height << ", " <<  img.type << ")";
+    return o;
 }

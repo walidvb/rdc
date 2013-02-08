@@ -19,11 +19,11 @@ class Image{
     
     
 public:
-    enum imgType {IMG_CLR = 3, IMG_GRAY = 1};   //<! the different types of image we can have. represents the number of channels, actually
+    enum imgType { IMG_GRAY = 1, IMG_CLR = 3};   //<! the different types of image we can have. represents the number of channels, actually
 
     //Constructors
     Image();
-    Image(int width, int height, imgType = IMG_GRAY);
+    Image(int width, int height, imgType = IMG_CLR);
     Image(Mat img);
     Image(Image const& img, bool clone = true);
     Image(string path, bool grayscale = false);
@@ -54,6 +54,8 @@ public:
     void setWidth(int width);
     void setHeight(int height);
 
+    friend ostream& operator<<(ostream& o, const Image& img);   //<! couts width, height, type
+    
 private:
     static int index(int x, int y, int w);    
     void setup();   //<! just a private function to keep everything in order

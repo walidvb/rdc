@@ -25,7 +25,7 @@ public:
     void compensate(Image& srcImg, Image& dstImage);   //<! Called each frame, takes source image and returns compensated image
     
     //Getters
-    Image getEM() const;                                //<! returns EM, only used for testing purposes
+    Image* getEM();                                //<! returns EM, only used for testing purposes
     
 private:
     //Private methods

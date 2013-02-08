@@ -16,7 +16,6 @@
 Controller::Controller()
 {
     deviceID = 0;
-    sourceMedia = resourcePath + "media.mov";
 }
 
 
@@ -32,7 +31,7 @@ void Controller::init(int width, int height)
 {
     captor = new Sensor();
     renderer = new Renderer_CV(width, height);
-    rdc = new RDC();
+    rdc = new RDC(width, height);
     rdc->init();
     //media = new Sensor();
     //captor->init(deviceID);
@@ -52,7 +51,8 @@ void Controller::process(Image& img)
 {
     //renderer->drawImg(img, FULL);//For test purpose
     rdc->compensate(img, img);
-    renderer->drawImg(img, FULL);
+
+    renderer->drawImg(&img, FULL);
 }
 
 void Controller::draw()

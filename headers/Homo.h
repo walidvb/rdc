@@ -19,23 +19,23 @@ public:
     Homo();
     Homo(Size boardSize_);
     
-    void addImages(Mat* src, Mat* trg);           //<! adds a pair of images, directly translated into a set of point correspondences
-    void addImages(Image& src, Image& trg);           //<! adds a pair of images, directly translated into a set of point correspondences
+    void addImages(Mat* src, Mat* trg);             //<! adds a pair of images, directly translated into a set of point correspondences
+    void addImages(Image& src, Image& trg);         //<! adds a pair of images, directly translated into a set of point correspondences
     
-    Mat computeHomo();                              //<! computes the homography matrix from all the points that were added via addImages, and returns it
-    Point getTargetPoint(int x, int y) const;       //<! used to retrieve point*homography
-    Point getTargetPoint(const Point pos) const;    //<! used to retrieve point*homography
-    Point getSourcePoint(int x, int y) const;
-    Point getSourcePoint(const Point pos) const;
+    void computeHomo();                              //<! computes the homography matrix from all the points that were added via addImages, and its inverse
+    Point getTargetPoint(int x, int y);       //<! used to retrieve point*homography
+    Point getTargetPoint(const Point pos);    //<! used to retrieve point*homography
+    Point getSourcePoint(int x, int y);
+    Point getSourcePoint(const Point pos);
     
     //Getters
     Mat getHomo() const;                            //<! returns the homography matrix
-    Mat getHomoInv() const;                            //<! returns the homography matrix inverse
+    Mat getHomoInv() const;                         //<! returns the homography matrix inverse
     void setPattern(Image* pattern);                //<! sets the pattern projected used in the homography / unused
     
 private:
     Size boardSize;                                 //<! size of the board used for the homography
-    Point getPoint(int x, int y, Mat h) const;
+    Point getPoint(int x, int y, Mat& h) ;
     Image* source;                                  //<! the source image used, the pattern in our case /unused
     Mat homo;                                       //<! the homography matrix
     Mat homoInv;                                    //<! the homography matrix inverse

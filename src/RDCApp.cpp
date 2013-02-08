@@ -23,7 +23,7 @@ private:
 };
 
 void RDCApp::prepareSettings( Settings *settings ){
-    settings->setWindowSize( 0, 0 );
+    settings->setWindowSize( 1082, 887 );
     settings->setFrameRate( 60.0f );
 }
 

@@ -11,7 +11,9 @@
 #include "RDC.h"
 
 //Constructor
-RDC::RDC(int width, int height) : outWidth(width), outHeight(height){}
+RDC::RDC(int width, int height) : outWidth(width), outHeight(height){
+    cout << "constructor RDC" << outWidth << "," << outHeight << endl;
+}
 
 
 //Public methods
@@ -36,8 +38,8 @@ void RDC::calibrate(Sensor* cam, Renderer_A* gfx)
      }
      */
     //TODO: add images to the homography
-    projectPatterns(gfx);
-    homo->computeHomo();
+    projectPatterns(gfx);//TOCHECK: for the moment simply takes stills and adds them to the homo object
+    computeHomography(cam);
     computeMatrices();
 }
 
@@ -53,9 +55,9 @@ void RDC::computeHomography(Sensor* cam)
 {
     //project pattern
     //capture pattern
-    Image pattern = cam->grabFrame();
+    //Image pattern = cam->grabFrame();
     //add them to our Homo object
-    homo->addImages(pattern, pattern);
+    //homo->addImages(pattern, pattern);
     
     //compute the homography matrix
     homo->computeHomo();
@@ -105,28 +107,30 @@ void RDC::projectPatterns(Renderer_A* gfx)
     Image im2("/Users/Gaston/dev/RDC/resources/chesspic.jpg", true);
 
     homo->addImages(im1.getMat(), im2.getMat());
-    
 }
 
 void RDC::getSurface(const Image* source, Image* target)
 {
+    cout << outWidth << "," << outHeight << endl;
     Image tmp(outWidth, outHeight);
+    cout << "tmp: " << tmp << endl;
+    
     //TOCHECK: probably not too efficient, but ill go with that for the moment...
     for(int i = 0; i < outWidth; i++)
     {
         for(int j = 0; j < outHeight; j++)
         {
-            Point2f loc = homo->getSourcePoint(i, j);
+            Point2f loc = homo->getTargetPoint(i, j);
             tmp.pixelWrite(source->pixelAt(loc.x, loc.y), i, j);
         }
     }
-    *target = tmp;
+    target->setMat(*tmp.getMat());
 }
 
 //Getters
 
-Image RDC::getEM() const
+Image* RDC::getEM()
 {
-    return EM;
+    return &EM;
 }
 //Setters

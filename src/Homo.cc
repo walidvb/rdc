@@ -31,8 +31,6 @@ void Homo::addImages(Mat* src, Mat* trg)
     //TOCHECK: remove drawing of the corners on the images.
     drawChessboardCorners(*src, boardSize, srcCorners, srcFound);
     drawChessboardCorners(*trg, boardSize, trgCorners, trgFound);
-    
-    cout << "corners found in src: " << srcCorners.size() << ", trg: " << trgCorners.size() << endl;
     if(srcFound && trgFound)
     {
         // Get subpixel accuracy on the corners
@@ -57,7 +55,7 @@ void Homo::addImages(Mat* src, Mat* trg)
         if (srcCorners.size() == trgCorners.size())
         {
             
-            cout << "point added: ";
+            cout << "corresponding points added: ";
             // Add src and trg points to our total of points, point by point
             for(int i = 0; i < srcCorners.size(); i++)
             {
@@ -78,14 +76,22 @@ void Homo::addImages(Image& src, Image& trg)
     addImages(src.getMat(), trg.getMat());
 }
 
-Mat Homo::computeHomo(){
-    cout << "corresponding points found:" << srcPoints.size() << endl;
-    homo = findHomography(srcPoints, trgPoints);
-    return homo;
+void Homo::computeHomo(){
+    if(srcPoints.size() <= 0)
+    {
+        std::cerr << "Not enough corresponding points found(" << srcPoints.size() << "found, 7 needed)" << endl;
+    }
+    homoInv = findHomography(trgPoints, srcPoints);
+    homo = homoInv.inv();
 }
 
 
-Point Homo::getPoint(int x, int y, Mat h) const{
+Point Homo::getPoint(int x, int y, Mat& h)
+{
+    if(h.size <= 0)
+    {
+        cerr << "Homography matrix has not been computed yet" << endl;
+    }
     double Z = 1./(h.ptr<double>(2)[0]*x + h.ptr<double>(2)[1]*y + h.ptr<double>(2)[2]);
     double px = (double)((h.ptr<double>(0)[0]*x + h.ptr<double>(0)[1]*y + h.ptr<double>(0)[2])*Z);
     double py = (double)((h.ptr<double>(1)[0]*x + h.ptr<double>(1)[1]*y + h.ptr<double>(1)[2])*Z);
@@ -93,19 +99,23 @@ Point Homo::getPoint(int x, int y, Mat h) const{
     return pt;
 }
 
-Point Homo::getTargetPoint(int x, int y) const{
+Point Homo::getTargetPoint(int x, int y)
+{
     return getPoint(x, y, homo);
 }
 
-Point Homo::getSourcePoint(int x, int y) const{
+Point Homo::getSourcePoint(int x, int y)
+{
     return getPoint(x, y, homoInv);
 }
 
-Point Homo::getSourcePoint(const Point pos) const{
+Point Homo::getSourcePoint(const Point pos)
+{
     return getSourcePoint(pos.x, pos.y);
 }
 
-Point Homo::getTargetPoint(const Point pos) const{
+Point Homo::getTargetPoint(const Point pos)
+{
     return getTargetPoint(pos.x, pos.y);
 }
 
