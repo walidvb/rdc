@@ -151,12 +151,14 @@ int Image::getHeight() const
 //Setter
 void Image::setMat(Mat& mat)
 {
-    pixels = mat.clone();
+    pixels = mat;
+    setup();
 }
 void Image::setPixels(vector<uchar>&  pixels , int width, int height)
 {
     Mat m(height, width, CV_8UC2, &pixels);
     this->pixels = m;
+    setup();
 }
 void Image::setType(Image::imgType type)
 {

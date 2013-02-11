@@ -48,7 +48,7 @@ public:
     int getHeight() const;
     
     //Setter
-    void setPixels(vector<uchar>&  pixels , int width, int height);
+    void setPixels(vector<uchar>&  pixels, int width, int height);
     void setMat(Mat& mat);
     void setType(imgType type);
     void setWidth(int width);

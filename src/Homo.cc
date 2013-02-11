@@ -55,7 +55,7 @@ void Homo::addImages(Mat* src, Mat* trg)
         if (srcCorners.size() == trgCorners.size())
         {
             
-            cout << "corresponding points added: ";
+            cout << "correspondence points added: ";
             // Add src and trg points to our total of points, point by point
             for(int i = 0; i < srcCorners.size(); i++)
             {

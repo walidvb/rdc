@@ -36,7 +36,7 @@ private:
     Homo* homo;                                          //<! The object handling the homography
     
     //Preprocessing
-    void getSurface(Image* source, Image* target); //<! fill target with pixels from source, homographied
+    void getSurface(Image* source, Image* target); //<! fill target with pixels from source, homographied, unused
                                                          //<! used to fill max and min light images
     
     Mat camera2proj;                                    //<! Camera to projector mapping

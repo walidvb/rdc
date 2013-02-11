@@ -43,10 +43,18 @@ void RDC::calibrate(Sensor* cam, Renderer_A* gfx)
 
 void RDC::computeLighting()
 {
-    //TODO: remove that shit
+    //TODO: remove that shit, and get real images from the sensor
     Image tmp_("/Users/Gaston/dev/RDC/resources/chesspic.jpg");
+    Image tmp_2("/Users/Gaston/dev/RDC/resources/chesspic.jpg");
+
+    //get EM and FM matrices
     cv::warpPerspective(*tmp_.getMat(), // input image
                         *EM.getMat(),         // output image
+                        homo->getHomoInv(),      // homography
+                        Size(outWidth,
+                             outHeight));
+    cv::warpPerspective(*tmp_2.getMat(), // input image
+                        *FM.getMat(),         // output image
                         homo->getHomoInv(),      // homography
                         Size(outWidth,
                              outHeight));
@@ -84,19 +92,17 @@ void RDC::compensate(Image& srcImg, Image& dstImg)
     int chan = srcImg.getType();
     
     //make sure dst is the correct size
-    dstImg.getMat()->create(outHeight, outWidth, srcImg.getMat()->type());
+    dstImg.getMat()->create(h, w, srcImg.getMat()->type());
     for(int i = 0; i < w*chan; i+=1)
     {
         for(int j = 0; j < h; j+=1)
         {
 
             Vec3b v = srcImg.pixelAt(i, j);
-            //TODO compensat v according to EM and FM
+            //TODO compensate v according to EM and FM
             dstImg.pixelWrite(v, i, j);
         }
-        
     }
-    //TODO compensate #1 test with dummy matrix
 }
 
 //Private methods
