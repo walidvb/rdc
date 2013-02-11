@@ -22,3 +22,9 @@ xcode/build/*
 
 # opencv
 OpenCV-2.4.3/*
+
+# tex
+*.aux
+*.gz
+*.toc
+*.log
