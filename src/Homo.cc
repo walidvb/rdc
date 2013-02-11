@@ -59,7 +59,7 @@ void Homo::addImages(Mat* src, Mat* trg)
             // Add src and trg points to our total of points, point by point
             for(int i = 0; i < srcCorners.size(); i++)
             {
-                cout << i << " " ;
+                cout << i+1 << " " ;
                 srcPoints.push_back(srcCorners[i]);
                 trgPoints.push_back(trgCorners[i]);
                 

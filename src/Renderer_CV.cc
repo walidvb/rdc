@@ -25,13 +25,13 @@ void Renderer_CV::drawRect(float& x1, float& y1, float& x2, float& y2) const
 
 void Renderer_CV::drawImg(Image* img, int POS) const
 {
-    //display.resize(600);
-    string name = "Window " + POS;
+    //img->resize(600);
+    string name = "Window ha!";
     namedWindow(name);
     imshow(name, (*img->getMat()));
     
     waitKey(0);
     
-    cvDestroyWindow("Display window");
+    cvDestroyWindow("Window ha!");
     cout << "application ended: merci au revoir" << endl;
 }

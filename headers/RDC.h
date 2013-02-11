@@ -21,7 +21,7 @@ public:
     RDC(int width, int height);
     void init();
     void calibrate(Sensor* cam, Renderer_A* gfx);      //<! Called once, starts the calibration and computes needed values for compensation
-    void computeMatrices();                            //<! Fill env light and max light images
+    void computeLighting();                            //<! Fill env light and max light images
     void compensate(Image& srcImg, Image& dstImage);   //<! Called each frame, takes source image and returns compensated image
     
     //Getters
@@ -36,7 +36,7 @@ private:
     Homo* homo;                                          //<! The object handling the homography
     
     //Preprocessing
-    void getSurface(const Image* source, Image* target); //<! fill target with pixels from source, homographied
+    void getSurface(Image* source, Image* target); //<! fill target with pixels from source, homographied
                                                          //<! used to fill max and min light images
     
     Mat camera2proj;                                    //<! Camera to projector mapping

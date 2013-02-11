@@ -46,18 +46,18 @@ int main(int argc, const char * argv[])
     
     if(patternFound && picFound)
     {
-        homo = (findHomography(patternCorners, picCorners));
-        warpPerspective(pattern, // input image
+        homo = findHomography(picCorners, patternCorners);
+        warpPerspective(captor, // input image
                         result,         // output image
                         homo,      // homography
-                        Size(result.cols,
-                             result.rows));
+                        Size(pattern.cols,
+                             pattern.rows));
+        cout << "warped" << endl;
     }
     
     
     
 
-    
     while(1)
     {
         Mat pattern_, captor_, result_;
@@ -65,9 +65,8 @@ int main(int argc, const char * argv[])
         resize(pattern, pattern_, renderSize);
         resize(captor, captor_, renderSize);
         resize(result, result_, renderSize);
-        
         imshow("pattern", pattern_);
-        //imshow("result", result);
+        imshow("result", result);
         imshow("pic", captor_);
         setMouseCallback("pic", my_mouse_callback);
         

@@ -11,9 +11,7 @@
 #include "RDC.h"
 
 //Constructor
-RDC::RDC(int width, int height) : outWidth(width), outHeight(height){
-    cout << "constructor RDC" << outWidth << "," << outHeight << endl;
-}
+RDC::RDC(int width, int height) : outWidth(width), outHeight(height){}
 
 
 //Public methods
@@ -40,14 +38,18 @@ void RDC::calibrate(Sensor* cam, Renderer_A* gfx)
     //TODO: add images to the homography
     projectPatterns(gfx);//TOCHECK: for the moment simply takes stills and adds them to the homo object
     computeHomography(cam);
-    computeMatrices();
+    computeLighting();
 }
 
-void RDC::computeMatrices()
+void RDC::computeLighting()
 {
     //TODO: remove that shit
     Image tmp_("/Users/Gaston/dev/RDC/resources/chesspic.jpg");
-    getSurface(&tmp_, &EM);
+    cv::warpPerspective(*tmp_.getMat(), // input image
+                        *EM.getMat(),         // output image
+                        homo->getHomoInv(),      // homography
+                        Size(outWidth,
+                             outHeight));
     //getSurface(&FM, &FM);
 }
 
@@ -109,21 +111,30 @@ void RDC::projectPatterns(Renderer_A* gfx)
     homo->addImages(im1.getMat(), im2.getMat());
 }
 
-void RDC::getSurface(const Image* source, Image* target)
+void RDC::getSurface(Image* source, Image* target)
 {
+    int outWidth = source->getWidth();
+    int outHeight = source->getHeight();
     cout << outWidth << "," << outHeight << endl;
     Image tmp(outWidth, outHeight);
     cout << "tmp: " << tmp << endl;
     
     //TOCHECK: probably not too efficient, but ill go with that for the moment...
-    for(int i = 0; i < outWidth; i++)
+    /*for(int i = 0; i < outWidth; i++)
     {
         for(int j = 0; j < outHeight; j++)
         {
             Point2f loc = homo->getTargetPoint(i, j);
-            tmp.pixelWrite(source->pixelAt(loc.x, loc.y), i, j);
+            tmp.pixelWrite(source->pixelAt(i, j), i, j);
         }
     }
+    */
+    cv::warpPerspective(*source->getMat(), // input image
+                        *tmp.getMat(),         // output image
+                        homo->getHomoInv(),      // homography
+                        Size(outWidth,
+                             outHeight));
+
     target->setMat(*tmp.getMat());
 }
 
