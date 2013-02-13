@@ -78,13 +78,10 @@ void RDC::computeHomography(Sensor* cam, Renderer_A* gfx)
     Image im2("/Users/Gaston/dev/RDC/resources/chesspic.jpg", true);
     
     //project chessboard
-    cout << "Press enter to take the picture" << endl;
-    cin;
-    //gfx->drawImg(&im1);
-    cout << "Enter c if you want to retake the picture, or any key to continue: ";
+
     //capture it
     
-    //add chessboard, chessboard_capture to homo
+    //add (chessboard, chessboard_capture) to homo
     
     homo->addImages(im1.getMat(), im2.getMat());
 
