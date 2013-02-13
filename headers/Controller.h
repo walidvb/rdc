@@ -24,7 +24,6 @@ public:
     void calibrate();           //!< calibrates the camera/projector system
     void homography();          //!< generates the homography matrix needed by the algorithm
     void process(Image& img);             //!< processes the frame that will be projected, and return it
-    void draw();                //<! draw the image, might not be the right place?
     
 private:
     Sensor* media;              //<! the loaded media / ftm only video is supported

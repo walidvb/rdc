@@ -20,19 +20,18 @@ public:
     RDC(){}
     RDC(int width, int height);
     void init();
-    void calibrate(Sensor* cam, Renderer_A* gfx);      //<! Called once, starts the calibration and computes needed values for compensation
-    void computeLighting();                            //<! Fill env light and max light images
+    void calibrateSystem(Sensor* cam, Renderer_A* gfx);      //<! Called once, starts the calibration and computes needed values for compensation
     void compensate(Image* srcImg, Image* dstImage);   //<! Called each frame, takes source image and returns compensated image
     void simulateWall(Image* srcImg, Image* dstImg, Image* wall);   //<! writes 
     //Getters
-    Image* getEM();                                //<! returns EM, only used for testing purposes
     
 private:
     //Private methods
+
+    void computeLighting(Sensor* cam, Renderer_A* gfx);                            //<! Fill env light and max light images
     //Setup
     int getLatency();                                   //<! get projector camera latency
-    void projectPatterns(Renderer_A* gfx);      //<! project patterns, take a picture and
-    void computeHomography(Sensor* cam);
+    void computeHomography(Sensor* cam, Renderer_A* gfx);   //<! projects patterns, and captures them
     Homo* homo;                                          //<! The object handling the homography
     
     //Preprocessing
@@ -40,8 +39,8 @@ private:
                                                          //<! used to fill max and min light images
     
     Mat camera2proj;                                    //<! Camera to projector mapping
-    Image EM;                                             //<! Matrix storing the environmental light, row major
-    Image FM;                                             //<! Matrix storing the proj light, row major
+    Mat EM;                                             //<! Matrix storing the environmental light, row major
+    Mat FM;                                             //<! Matrix storing the proj light, row major
 
     int outWidth;                                           //<! the width of the output
     int outHeight;                                          //<! the height of the output

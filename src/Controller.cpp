@@ -43,7 +43,7 @@ void Controller::calibrate()
 {
     //TODO
     //Get the homography matrice
-    rdc->calibrate(captor, renderer);
+    rdc->calibrateSystem(captor, renderer);
     //renderer->drawImg(rdc->getEM());
 }
 
@@ -53,9 +53,4 @@ void Controller::process(Image& img)
     rdc->compensate(&img, &img);
 
     renderer->drawImg(&img, FULL);
-}
-
-void Controller::draw()
-{
-    
 }

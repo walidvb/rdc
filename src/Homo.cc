@@ -64,7 +64,7 @@ void Homo::addImages(Mat* src, Mat* trg)
                 trgPoints.push_back(trgCorners[i]);
                 
             }
-            cout << endl;
+            cout << ";" << endl;
             successes++;
         }
     }
