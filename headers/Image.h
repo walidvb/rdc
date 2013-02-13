@@ -53,7 +53,7 @@ public:
     void setType(imgType type);
     void setWidth(int width);
     void setHeight(int height);
-
+    
     friend ostream& operator<<(ostream& o, const Image& img);   //<! couts width, height, type
     
 private:

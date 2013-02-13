@@ -14,12 +14,14 @@ class Sensor;
 class Renderer_A;
 class Homo;
 
+//enum res {r854x480, r1024x576, r1280x720};
+enum res {pfalse, p480, p576, p720};
 class RDC
 {
 public:
     RDC(){}
     RDC(int width, int height);
-    void init();
+    void init(int resolution);
     void calibrateSystem(Sensor* cam, Renderer_A* gfx);      //<! Called once, starts the calibration and computes needed values for compensation
     void compensate(Image* srcImg, Image* dstImage);   //<! Called each frame, takes source image and returns compensated image
     void simulateWall(Image* srcImg, Image* dstImg, Image* wall);   //<! writes 
@@ -35,7 +37,6 @@ private:
     Homo* homo;                                          //<! The object handling the homography
     
     //Preprocessing
-    void getSurface(Image* source, Image* target); //<! fill target with pixels from source, homographied, unused
                                                          //<! used to fill max and min light images
     
     Mat camera2proj;                                    //<! Camera to projector mapping
@@ -44,6 +45,7 @@ private:
 
     int outWidth;                                           //<! the width of the output
     int outHeight;                                          //<! the height of the output
+    int resolution;                                         //<! the resolution of the output, as defined per enum res up there, but not fucking taking it because it ain't no int
 };
 
 #endif
