@@ -24,8 +24,8 @@ void RDC::calibrate(Sensor* cam, Renderer_A* gfx)
 {
     Image img = cam->grabFrame();
     /*
-    cout << "Camera pixels:" << endl;
-    
+     cout << "Camera pixels:" << endl;
+     
      for (int i = 0; i < cam->getWidth(); i++)
      {
      for (int j = 0; j < cam->getHeight(); j++)
@@ -37,8 +37,8 @@ void RDC::calibrate(Sensor* cam, Renderer_A* gfx)
      */
     //TODO: add images to the homography
     projectPatterns(gfx);//TOCHECK: for the moment simply takes stills and adds them to the homo object
-    computeHomography(cam);
-    computeLighting();
+    computeHomography(cam);//working
+    computeLighting();//
 }
 
 void RDC::computeLighting()
@@ -46,7 +46,7 @@ void RDC::computeLighting()
     //TODO: remove that shit, and get real images from the sensor
     Image tmp_("/Users/Gaston/dev/RDC/resources/chesspic.jpg");
     Image tmp_2("/Users/Gaston/dev/RDC/resources/chesspic.jpg");
-
+    
     //get EM and FM matrices
     cv::warpPerspective(*tmp_.getMat(), // input image
                         *EM.getMat(),         // output image
@@ -73,36 +73,44 @@ void RDC::computeHomography(Sensor* cam)
     homo->computeHomo();
     
     /*
-    //TODO: fill a mapping matrix rather than getPoint for each pixel? Probably best way to go
-    camera2proj.create(height, width, CV_32FC2);   //CV_32FC2 for 2 channels of Point2f
-    for (int i = 0; i < width; i++)
-    {
-        for (int j = 0; j < height; j++)
-        {
-            //set Mat[x][y] to the corresponding point
-        }
-    }
-    */
+     //TODO: fill a mapping matrix rather than getPoint for each pixel? Probably best way to go
+     camera2proj.create(height, width, CV_32FC2);   //CV_32FC2 for 2 channels of Point2f
+     for (int i = 0; i < width; i++)
+     {
+     for (int j = 0; j < height; j++)
+     {
+     //set Mat[x][y] to the corresponding point
+     }
+     }
+     */
 }
 
-void RDC::compensate(Image& srcImg, Image& dstImg)
+/*  The compensation algorithm goes like this:
+ *   The image is altered by environment ligth(EM) and reflexivity of the surface(FM)
+ *   in the following manner: R = I*FM+EM
+ *   Compensated image can be found by solving I:I=(R-EM)/FM
+ */
+void RDC::compensate(Image* srcImg, Image* dstImg)
 {
-    int w = srcImg.getWidth();
-    int h = srcImg.getHeight();
-    int chan = srcImg.getType();
+    Size originalSize(srcImg->getWidth(), srcImg->getHeight());
     
-    //make sure dst is the correct size
-    dstImg.getMat()->create(h, w, srcImg.getMat()->type());
-    for(int i = 0; i < w*chan; i+=1)
+    Mat* R = srcImg->getMat();
+    Mat* result = dstImg->getMat();
+    Mat croppedEM = (*EM.getMat())(Rect(Point(0,0), R->size()));
+    imshow("a4ter copy", croppedEM);
+    waitKey(0);
+    
+    Size out(outWidth, outHeight);
+    resize(*R, *R, out);    //resize the matrix to the size of the output
+    
+    if(srcImg != dstImg)
     {
-        for(int j = 0; j < h; j+=1)
-        {
-
-            Vec3b v = srcImg.pixelAt(i, j);
-            //TODO compensate v according to EM and FM
-            dstImg.pixelWrite(v, i, j);
-        }
+        //resize(*result, *result, out);    //resize the matrix to the size of the output
     }
+    cv::subtract(tmp, *EM.getMat(), tmp);
+    //cv::divide(tmp, *FM.getMat(), *result);
+    //resize(*result, *result, originalSize);
+    cout << "image was compensated!" << endl;
 }
 
 //Private methods
@@ -113,7 +121,7 @@ void RDC::projectPatterns(Renderer_A* gfx)
     gfx->drawStripeVert(xOffset, width_);
     Image  im1("/Users/Gaston/dev/RDC/resources/chessboard65.jpg", true);
     Image im2("/Users/Gaston/dev/RDC/resources/chesspic.jpg", true);
-
+    
     homo->addImages(im1.getMat(), im2.getMat());
 }
 
@@ -127,20 +135,20 @@ void RDC::getSurface(Image* source, Image* target)
     
     //TOCHECK: probably not too efficient, but ill go with that for the moment...
     /*for(int i = 0; i < outWidth; i++)
-    {
-        for(int j = 0; j < outHeight; j++)
-        {
-            Point2f loc = homo->getTargetPoint(i, j);
-            tmp.pixelWrite(source->pixelAt(i, j), i, j);
-        }
-    }
-    */
+     {
+     for(int j = 0; j < outHeight; j++)
+     {
+     Point2f loc = homo->getTargetPoint(i, j);
+     tmp.pixelWrite(source->pixelAt(i, j), i, j);
+     }
+     }
+     */
     cv::warpPerspective(*source->getMat(), // input image
                         *tmp.getMat(),         // output image
                         homo->getHomoInv(),      // homography
                         Size(outWidth,
                              outHeight));
-
+    
     target->setMat(*tmp.getMat());
 }
 

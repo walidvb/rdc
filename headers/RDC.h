@@ -22,8 +22,8 @@ public:
     void init();
     void calibrate(Sensor* cam, Renderer_A* gfx);      //<! Called once, starts the calibration and computes needed values for compensation
     void computeLighting();                            //<! Fill env light and max light images
-    void compensate(Image& srcImg, Image& dstImage);   //<! Called each frame, takes source image and returns compensated image
-    
+    void compensate(Image* srcImg, Image* dstImage);   //<! Called each frame, takes source image and returns compensated image
+    void simulateWall(Image* srcImg, Image* dstImg, Image* wall);   //<! writes 
     //Getters
     Image* getEM();                                //<! returns EM, only used for testing purposes
     

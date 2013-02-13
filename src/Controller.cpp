@@ -50,7 +50,7 @@ void Controller::calibrate()
 void Controller::process(Image& img)
 {
     //renderer->drawImg(img, FULL);//For test purpose
-    rdc->compensate(img, img);
+    rdc->compensate(&img, &img);
 
     renderer->drawImg(&img, FULL);
 }

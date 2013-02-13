@@ -27,11 +27,12 @@ void Renderer_CV::drawImg(Image* img, int POS) const
 {
     //img->resize(600);
     string name = "Window ha!";
-    namedWindow(name);
+    namedWindow(name, WINDOW_NORMAL);
+    setWindowProperty(name, CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
     imshow(name, (*img->getMat()));
     
     waitKey(0);
     
-    cvDestroyWindow("Window ha!");
+    destroyWindow(name);
     cout << "application ended: merci au revoir" << endl;
 }
