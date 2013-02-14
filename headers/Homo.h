@@ -19,8 +19,7 @@ public:
     Homo();
     Homo(Size boardSize_);
     
-    void addImages(Mat* src, Mat* trg);             //<! adds a pair of images, directly translated into a set of point correspondences
-    void addImages(Image& src, Image& trg);         //<! adds a pair of images, directly translated into a set of point correspondences
+    bool addImages(Mat* src, Mat* trg);             //<! adds a pair of images, directly translated into a set of point correspondences
     
     void computeHomo();                              //<! computes the homography matrix from all the points that were added via addImages, and its inverse
     Point getTargetPoint(int x, int y);       //<! used to retrieve point*homography

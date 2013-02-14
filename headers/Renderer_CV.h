@@ -21,7 +21,8 @@ public:
     Renderer_CV();
     Renderer_CV(int width, int height);
     void drawRect( float& x1, float& y1, float& x2, float& y2 ) const;
-    void drawImg(Image* img, int POS) const;
+    void drawImg(Image* img) const;
+    void destroyImg(string name);
     
 private:
     cv::Vec2f V2D2Vecf(V2D src) const;

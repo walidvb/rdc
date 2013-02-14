@@ -84,7 +84,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">Image Class Reference</div>  </div>
 </div><!--header-->
@@ -94,30 +95,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a053e7160b6567c4929de1cae9a911581"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>imgType</b> { <b>IMG_CLR</b> =  3, 
-<b>IMG_GRAY</b> =  1
+<tr class="memitem:a053e7160b6567c4929de1cae9a911581"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>imgType</b> { <b>IMG_GRAY</b> =  1, 
+<b>IMG_CLR</b> =  3
  }</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a03b42c8c67f24139f3dc540678919cd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03b42c8c67f24139f3dc540678919cd3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Image</b> (int width, int height, imgType=IMG_GRAY)</td></tr>
+<tr class="memitem:a0b993f2b506ec12654cb275921127b00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b993f2b506ec12654cb275921127b00"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Image</b> (int width, int height, imgType=IMG_CLR)</td></tr>
 <tr class="memitem:a583efff0899692314aa5a37fda3ec89e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a583efff0899692314aa5a37fda3ec89e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Image</b> (Mat img)</td></tr>
-<tr class="memitem:a11c4da10d93cb19f684f5dbec08e564d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11c4da10d93cb19f684f5dbec08e564d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Image</b> (<a class="el" href="class_image.html">Image</a> const &amp;img)</td></tr>
-<tr class="memitem:ab5a8cd26aa2d32873ab871eef30bedf3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5a8cd26aa2d32873ab871eef30bedf3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Image</b> (string path)</td></tr>
+<tr class="memitem:ae714fa5c88b1b87e647d7f839c7bb24f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae714fa5c88b1b87e647d7f839c7bb24f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Image</b> (<a class="el" href="class_image.html">Image</a> const &amp;img, bool clone=true)</td></tr>
+<tr class="memitem:aab588538f35c49606ee9e7e51121d592"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab588538f35c49606ee9e7e51121d592"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Image</b> (string path, bool grayscale=false)</td></tr>
 <tr class="memitem:a9b183ad498d8ffea3f91a21e5a67920d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b183ad498d8ffea3f91a21e5a67920d"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a9b183ad498d8ffea3f91a21e5a67920d">pixelAt</a> (int x, int y) const </td></tr>
+Vec3b&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a9b183ad498d8ffea3f91a21e5a67920d">pixelAt</a> (int x, int y) const </td></tr>
 <tr class="memdesc:a9b183ad498d8ffea3f91a21e5a67920d"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the pixel value at (x, y) <br/></td></tr>
-<tr class="memitem:afcd6f049060759d996f08b335ef2351d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcd6f049060759d996f08b335ef2351d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#afcd6f049060759d996f08b335ef2351d">pixelWrite</a> (float value, int x, int y)</td></tr>
-<tr class="memdesc:afcd6f049060759d996f08b335ef2351d"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes value at pixel (x, y) <br/></td></tr>
-<tr class="memitem:a0fde38150064d8658110ac3033f24617"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fde38150064d8658110ac3033f24617"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> (string filepath)</td></tr>
-<tr class="memitem:a6aa3df4b3f0664a83e3b77587c1b5d70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6aa3df4b3f0664a83e3b77587c1b5d70"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> (const Mat &amp;src)</td></tr>
+<tr class="memitem:aec3c66b278ee2f0d0e12710627e97985"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec3c66b278ee2f0d0e12710627e97985"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#aec3c66b278ee2f0d0e12710627e97985">pixelWrite</a> (Vec3b value, int x, int y)</td></tr>
+<tr class="memdesc:aec3c66b278ee2f0d0e12710627e97985"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes value at pixel (x, y) <br/></td></tr>
+<tr class="memitem:a6750920d01caedc1a3782d9782df3cf1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6750920d01caedc1a3782d9782df3cf1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> (string filepath, bool grayscale=false)</td></tr>
+<tr class="memitem:a2d48b9ae9b3e3bc254db7ee5b2cca0a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d48b9ae9b3e3bc254db7ee5b2cca0a4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> (<a class="el" href="class_image.html">Image</a> &amp;src)</td></tr>
+<tr class="memitem:a3b2b0b209ce9fa05ac86e434635385b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b2b0b209ce9fa05ac86e434635385b6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (int maxHeight)</td></tr>
+<tr class="memitem:a3c71a8e60be0adb70a9ee7aa2101f2a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c71a8e60be0adb70a9ee7aa2101f2a1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (int width_, int height_)</td></tr>
+<tr class="memitem:ac7db46ef48be05f16f1a48568609b2b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7db46ef48be05f16f1a48568609b2b7"></a>
+Mat *&#160;</td><td class="memItemRight" valign="bottom"><b>getMat</b> ()</td></tr>
+<tr class="memitem:a967ec7a693253014cc8ade9eee1b1c12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a967ec7a693253014cc8ade9eee1b1c12"></a>
+vector&lt; uchar &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getPixels</b> ()</td></tr>
+<tr class="memitem:a31258142b60882231d1b8ba999cd6d88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31258142b60882231d1b8ba999cd6d88"></a>
+imgType&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> () const </td></tr>
+<tr class="memitem:adbe5f8b9f79338c7eb6a66bdc69ca0b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbe5f8b9f79338c7eb6a66bdc69ca0b7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> () const </td></tr>
+<tr class="memitem:a45dd31ebd02682c5963858f62aa53dd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45dd31ebd02682c5963858f62aa53dd9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> () const </td></tr>
+<tr class="memitem:ab0a38137a9077dc382bbbdd00efcc70b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0a38137a9077dc382bbbdd00efcc70b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPixels</b> (vector&lt; uchar &gt; &amp;pixels, int width, int height)</td></tr>
+<tr class="memitem:a1c0874758106668b22c312fe9904cbfe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c0874758106668b22c312fe9904cbfe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMat</b> (Mat &amp;mat)</td></tr>
+<tr class="memitem:a1e881fec68466ad342c6a85cff07a42f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e881fec68466ad342c6a85cff07a42f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setType</b> (imgType type)</td></tr>
+<tr class="memitem:a2087192970c1d0358e6d7d96d940ed18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2087192970c1d0358e6d7d96d940ed18"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWidth</b> (int width)</td></tr>
+<tr class="memitem:a031c156741deddb462c0c3cc0b7c1251"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a031c156741deddb462c0c3cc0b7c1251"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setHeight</b> (int height)</td></tr>
 <tr class="memitem:afb0339b802ed560e69eb07358d30198f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb0339b802ed560e69eb07358d30198f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Image</b> (int width, int height)</td></tr>
 <tr class="memitem:a11c4da10d93cb19f684f5dbec08e564d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11c4da10d93cb19f684f5dbec08e564d"></a>
@@ -136,18 +161,14 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>index</b> (int 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:afd3bc2d21015dfbefba405e41de33e9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd3bc2d21015dfbefba405e41de33e9b"></a>
-Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#afd3bc2d21015dfbefba405e41de33e9b">pixels</a></td></tr>
-<tr class="memdesc:afd3bc2d21015dfbefba405e41de33e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">all pixels of the image <br/></td></tr>
-<tr class="memitem:a6c5f90a678bda512fc0f4b2945f04036"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c5f90a678bda512fc0f4b2945f04036"></a>
-imgType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
-<tr class="memitem:ab8d12f635013c04159cd4d3d972bac88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8d12f635013c04159cd4d3d972bac88"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>width</b></td></tr>
-<tr class="memitem:a51df43db420c9c0b57536cb2dd36de5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51df43db420c9c0b57536cb2dd36de5c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
 <tr class="memitem:ac22dddb0c4b1136c745f0dce6db7a1dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac22dddb0c4b1136c745f0dce6db7a1dc"></a>
 vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#ac22dddb0c4b1136c745f0dce6db7a1dc">pixels</a></td></tr>
 <tr class="memdesc:ac22dddb0c4b1136c745f0dce6db7a1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">list of all pixels of the frame <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a514d99877d9fdcfed14a8df1cc4237c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a514d99877d9fdcfed14a8df1cc4237c7"></a>
+ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (ostream &amp;o, const <a class="el" href="class_image.html">Image</a> &amp;img)</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>headers/<a class="el" href="headers_2_image_8h_source.html">Image.h</a></li>
@@ -158,7 +179,7 @@ vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 30 2013 12:36:31 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 14 2013 18:41:53 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

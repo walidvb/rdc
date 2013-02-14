@@ -26,11 +26,16 @@ Controller::~Controller()
     delete rdc;
     delete media;
 }
+Renderer_A* Controller::getRenderer()
+{
+    return this->renderer;
+}
+
 
 void Controller::init(int width, int height)
 {
     int resolution;
-    do
+    /*do
     {
         cout << "Choose your resolution: " << endl;
         cout << "  1: 480p" << endl;
@@ -38,21 +43,22 @@ void Controller::init(int width, int height)
         cout << "  3: 720p" << endl;
         cin >> resolution;
     }while (resolution < 0 || resolution > 3);
-
-    
+    */
+    cout << "[Controller] initializing system" << endl;
     captor = new Sensor();
-    renderer = new Renderer_CV(width, height);
+    renderer = new Renderer_Cinder(width, height);
     rdc = new RDC(width, height);
     rdc->init(resolution);
     //media = new Sensor();
-    //captor->init(deviceID);
+    captor->init(deviceID);
     //media->init(sourceMedia);
-    testFrame = new Image(resourcePath+"chesspic.jpg");
 }
 
 void Controller::calibrate()
 {
-    //TODO
+
+    cout << "[Controller] calibrating system" << endl;
+
     //Get the homography matrice
     rdc->calibrateSystem(captor, renderer);
     //renderer->drawImg(rdc->getEM());
@@ -60,8 +66,6 @@ void Controller::calibrate()
 
 void Controller::process(Image& img)
 {
-    //renderer->drawImg(img, FULL);//For test purpose
+    cout << "[Controller] processing image" << endl;
     rdc->compensate(&img, &img);
-
-    renderer->drawImg(&img, FULL);
 }

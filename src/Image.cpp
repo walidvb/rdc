@@ -86,12 +86,14 @@ void Image::clone(Image& src)
 void Image::resize(int maxHeight)
 {
     this->resize(maxHeight*width/height, maxHeight);
+    setup();
 }
 
 void Image::resize(int width_, int height_)
 {
     Size s(width_, height_);
     cv::resize(pixels, pixels, s);
+    setup();
 }
 
 

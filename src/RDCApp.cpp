@@ -6,6 +6,7 @@
 #include "cinder/gl/gl.h"
 #include "cinder/Vector.h"
 #include "Image.h"
+#include "Renderer_A.h"
 using namespace std;
 
 class RDCApp : public cinder::app::AppBasic {
@@ -20,11 +21,14 @@ class RDCApp : public cinder::app::AppBasic {
 private:
     Controller* controller;
     int width, height;
+    Image img;
+    bool isCalibrated;
 };
 
 void RDCApp::prepareSettings( Settings *settings ){
-    settings->setWindowSize( 1082, 887 );
+    settings->setWindowSize( 640, 480 );
     settings->setFrameRate( 60.0f );
+    setFullScreen( true );
 }
 
 void RDCApp::setup()
@@ -34,12 +38,9 @@ void RDCApp::setup()
     
     controller = new Controller();
     controller->init(width, height);
-    controller->calibrate();
-    //TODO open image
-    //convert to Image
-    Image img;
+
+    isCalibrated = false;
     img.load("/Users/Gaston/dev/RDC/resources/cucu.jpg");
-    controller->process(img);
 }
 
 void RDCApp::mouseDown( cinder::app::MouseEvent event )
@@ -52,9 +53,17 @@ void RDCApp::update()
 
 void RDCApp::draw()
 {
-	//clear out the window with black
     ci::gl::clear( ci::Color( 0, 0, 0 ) );
-    //ci::gl::drawSolidCircle( ci::Vec2f( 30, 30 ), 50.0f );
+
+    if(!isCalibrated)
+    {
+        controller->calibrate();
+        controller->process(img);
+        isCalibrated = true;
+    }
+
+	//clear out the window with black
+    controller->getRenderer()->drawImg(&img);
 
 }
 

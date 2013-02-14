@@ -34,7 +34,8 @@ void RDC::compensate(Image* srcImg, Image* dstImg)
     Mat* R = srcImg->getMat();
     Mat* result = dstImg->getMat();
     Mat croppedEM = EM(Rect(Point(0,0), R->size()));
-    
+    Mat croppedFM = FM(Rect(Point(0,0), R->size()));
+   
     if(srcImg != dstImg)
     {
         //resize(*result, *result, out);    //resize the matrix to the size of the output
@@ -47,32 +48,28 @@ void RDC::compensate(Image* srcImg, Image* dstImg)
 //Private methods
 void RDC::calibrateSystem(Sensor* cam, Renderer_A* gfx)
 {
-    //TODO: actually calibrate the camera(not needed for colorimetry)
-    //TODO: add images to the homography
-    computeHomography(cam, gfx);//working
-    computeLighting(cam , gfx);//
+    computeHomography(cam, gfx);
+    computeLighting(cam , gfx);
 }
 
 void RDC::computeLighting(Sensor* cam, Renderer_A* gfx)
 {
-    //TODO: remove that shit, and get real images from the sensor
-    Image tmp_("/Users/Gaston/dev/RDC/resources/chesspic.jpg");
-    Image tmp_2("/Users/Gaston/dev/RDC/resources/chesspic.jpg");
     
     //create black and white images. probably only white though, doesn't make too much sense to actually display black, rather display nothing
     Mat plain_ = Mat::ones(outHeight, outWidth, CV_8U)*255;
     Image plain(plain_);
     //draw it
-    gfx->drawImg(&plain);
+    //gfx->drawImg(&plain);
     //capture this into FM
     FM = *(cam->grabFrame().getMat());
     //do the same with black
     plain_ = Mat::zeros(outHeight, outWidth, CV_8U);
     plain.setMat(plain_); //probably not needed, as it points to the same Mat already, but for the heck of it
-    gfx->drawImg(&plain);
+    //gfx->drawImg(&plain);
     EM = *(cam->grabFrame().getMat());
     
     //get EM and FM matrices
+    //TODO: explain this function
     cv::warpPerspective(EM, // input image
                         EM,         // output image
                         homo->getHomoInv(),      // homography
@@ -89,42 +86,40 @@ void RDC::computeHomography(Sensor* cam, Renderer_A* gfx)
 {
     //choose chessboard
     string chessboard;
-    switch (resolution) {
-        case p480:
-            chessboard = "/Users/Gaston/dev/RDC/resources/chessboard480p.jpg";
-            break;
-        case p576:
-            chessboard = "/Users/Gaston/dev/RDC/resources/chessboard576p.jpg";
-            break;
-        case p720:
-            chessboard = "/Users/Gaston/dev/RDC/resources/chessboard720p.jpg";
-            break;
-        default:
-            break;
-    }
-    
-    Image chessboardPattern(chessboard, true);
-    //project chessboard
-    gfx->drawImg(&chessboardPattern);
-    //capture it
-    Image picture = cam->grabFrame();
-    //add (chessboard, chessboard_capture) to homo
-    homo->addImages(chessboardPattern.getMat(), picture.getMat());
+    /*switch (resolution) {
+     case p480:
+     chessboard = "/Users/Gaston/dev/RDC/resources/chessboard480p.jpg";
+     break;
+     case p576:
+     chessboard = "/Users/Gaston/dev/RDC/resources/chessboard576p.jpg";
+     break;
+     case p720:
+     chessboard = "/Users/Gaston/dev/RDC/resources/chessboard720p.jpg";
+     break;
+     default:
+     break;
+     }
+     */
+    chessboard = "/Users/Gaston/dev/RDC/resources/test.jpg";
+    bool isGrayScale = false;
+    Image chessboardPattern(chessboard, isGrayScale);
 
+    chessboardPattern.resize(outWidth, outHeight);
+    //project chessboard
+    //gfx->drawImg(&chessboardPattern);
+    
+    Image picture;
+    do{
+        picture = cam->grabFrame();
+        //gfx->drawImg(&picture);
+        cout << "[RDC] trying to get chessboard points from picture" << endl;
+        //add (chessboard, chessboard_capture) to homo
+    }
+    while(!homo->addImages(chessboardPattern.getMat(), picture.getMat()));
+    
     //compute the homography matrix
     homo->computeHomo();
     
-    /*
-     //TODO: fill a mapping matrix rather than getPoint for each pixel? Probably best way to go
-     camera2proj.create(height, width, CV_32FC2);   //CV_32FC2 for 2 channels of Point2f
-     for (int i = 0; i < width; i++)
-     {
-        for (int j = 0; j < height; j++)
-        {
-            //set Mat[x][y] to the corresponding point
-        }
-     }
-     */
 }
 
 //Getters

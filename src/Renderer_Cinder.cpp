@@ -34,34 +34,30 @@ ci::Vec2f Renderer_Cinder::V2D2Vecf(V2D src) const
     return dst;
 }
 
-void Renderer_Cinder::drawImg(Image& img, int POS) const
-{
-    //Draw mode
-    
-    int w = img.getWidth();
-    int h = img.getHeight();
-    
-    Channel32f chan(w, h);
+void Renderer_Cinder::drawImg(Image* img) const
+{    
+    int w = img->getWidth();
+    int h = img->getHeight();
+    cout<<"[Renderer]: "<<w<<" "<<h<<endl;
+
+    //conversion from cv::mat to ci::surface
+    ci::Surface8u surface(w, h, false);
     for(int i = 0; i < w; i+=1)
     {
         for (int j = 0; j<h; j+=1)
         {
-            chan.setValue(ci::Vec2i(i, j), img.getMat()->ptr(j)[i]);
+            cv::Vec3b pixel = img->pixelAt(i,j);
+            unsigned char b = pixel[0];
+            unsigned char g = pixel[1];
+            unsigned char r = pixel[2];
+            cinder::Vec2i pos(i,j);
+            ci::ColorT<unsigned char> color(r,g,b);
+            surface.setPixel(pos, color);
         }
     }
     
-    Texture myImg;
-    myImg = Texture(chan);
-    draw(myImg);
-    
-    //Verbose mode
-//    
-//    cout <<"=========================="<<endl;
-//    for (int i = 0; i < img.width; i++) {
-//        for (int j = 0; j < img.height; j++)
-//        {
-//            cout << img.pixelAt(i,j)<<" ";
-//        }
-//        cout<<endl;
-//    }
+    ci::gl::Texture myImg;
+    //give surface to texture
+    myImg = ci::gl::Texture(surface);
+    ci::gl::draw(myImg);
 }

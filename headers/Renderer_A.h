@@ -22,7 +22,7 @@ public:
     Renderer_A();
     Renderer_A(int width, int height);
     virtual ~Renderer_A(){}
-    virtual void drawImg(Image* img, int POS = 0) const = 0;
+    virtual void drawImg(Image* img) const = 0;
     
     //void drawRect( V2D& topleft, V2D& bottomright ) const;
     void drawStripeVert(float xOffset, float width) const;
