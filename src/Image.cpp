@@ -77,6 +77,11 @@ void Image::load(string filepath, bool grayscale)
     setup();
 }
 
+void Image::save(string filepath)
+{
+    imwrite(filepath, this->pixels);
+}
+
 void Image::clone(Image& src)
 {
     this->pixels = src.pixels.clone();

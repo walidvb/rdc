@@ -1,111 +1,366 @@
 \hypertarget{class_image}{\section{Image Class Reference}
 \label{class_image}\index{Image@{Image}}
 }
+
+
+{\ttfamily \#include $<$Image.\-h$>$}
+
+
+
+Collaboration diagram for Image\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{class_image__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries img\-Type} \{ {\bfseries I\-M\-G\-\_\-\-G\-R\-A\-Y} =  1, 
-{\bfseries I\-M\-G\-\_\-\-C\-L\-R} =  3
+enum \hyperlink{class_image_a053e7160b6567c4929de1cae9a911581}{img\-Type} \{ \hyperlink{class_image_a053e7160b6567c4929de1cae9a911581a28e925c2b797f2443b8732f42093f632}{I\-M\-G\-\_\-\-G\-R\-A\-Y} =  1, 
+\hyperlink{class_image_a053e7160b6567c4929de1cae9a911581a9a4b55aceff11e487f46b51cad901247}{I\-M\-G\-\_\-\-C\-L\-R} =  3
  \}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_image_a0b993f2b506ec12654cb275921127b00}{{\bfseries Image} (int width, int height, img\-Type=I\-M\-G\-\_\-\-C\-L\-R)}\label{class_image_a0b993f2b506ec12654cb275921127b00}
-
+\hyperlink{class_image_a58edd1c45b4faeb5f789b0d036d02313}{Image} ()
 \item 
-\hypertarget{class_image_a583efff0899692314aa5a37fda3ec89e}{{\bfseries Image} (Mat img)}\label{class_image_a583efff0899692314aa5a37fda3ec89e}
-
+\hyperlink{class_image_a0b993f2b506ec12654cb275921127b00}{Image} (int width, int height, \hyperlink{class_image_a053e7160b6567c4929de1cae9a911581}{img\-Type}=\hyperlink{class_image_a053e7160b6567c4929de1cae9a911581a9a4b55aceff11e487f46b51cad901247}{I\-M\-G\-\_\-\-C\-L\-R})
 \item 
-\hypertarget{class_image_ae714fa5c88b1b87e647d7f839c7bb24f}{{\bfseries Image} (\hyperlink{class_image}{Image} const \&img, bool clone=true)}\label{class_image_ae714fa5c88b1b87e647d7f839c7bb24f}
-
+\hyperlink{class_image_a583efff0899692314aa5a37fda3ec89e}{Image} (Mat img)
 \item 
-\hypertarget{class_image_aab588538f35c49606ee9e7e51121d592}{{\bfseries Image} (string path, bool grayscale=false)}\label{class_image_aab588538f35c49606ee9e7e51121d592}
-
+\hyperlink{class_image_ae714fa5c88b1b87e647d7f839c7bb24f}{Image} (\hyperlink{class_image}{Image} const \&img, bool \hyperlink{class_image_a2d48b9ae9b3e3bc254db7ee5b2cca0a4}{clone}=true)
 \item 
-\hypertarget{class_image_a9b183ad498d8ffea3f91a21e5a67920d}{Vec3b \hyperlink{class_image_a9b183ad498d8ffea3f91a21e5a67920d}{pixel\-At} (int x, int y) const }\label{class_image_a9b183ad498d8ffea3f91a21e5a67920d}
-
+\hyperlink{class_image_aab588538f35c49606ee9e7e51121d592}{Image} (string path, bool grayscale=false)
+\item 
+Vec3b \hyperlink{class_image_a9b183ad498d8ffea3f91a21e5a67920d}{pixel\-At} (int x, int y) const 
 \begin{DoxyCompactList}\small\item\em returns the pixel value at (x, y) \end{DoxyCompactList}\item 
-\hypertarget{class_image_aec3c66b278ee2f0d0e12710627e97985}{void \hyperlink{class_image_aec3c66b278ee2f0d0e12710627e97985}{pixel\-Write} (Vec3b value, int x, int y)}\label{class_image_aec3c66b278ee2f0d0e12710627e97985}
-
+void \hyperlink{class_image_aec3c66b278ee2f0d0e12710627e97985}{pixel\-Write} (Vec3b value, int x, int y)
 \begin{DoxyCompactList}\small\item\em writes value at pixel (x, y) \end{DoxyCompactList}\item 
-\hypertarget{class_image_a6750920d01caedc1a3782d9782df3cf1}{void {\bfseries load} (string filepath, bool grayscale=false)}\label{class_image_a6750920d01caedc1a3782d9782df3cf1}
-
+void \hyperlink{class_image_a6750920d01caedc1a3782d9782df3cf1}{load} (string filepath, bool grayscale=false)
 \item 
-\hypertarget{class_image_a2d48b9ae9b3e3bc254db7ee5b2cca0a4}{void {\bfseries clone} (\hyperlink{class_image}{Image} \&src)}\label{class_image_a2d48b9ae9b3e3bc254db7ee5b2cca0a4}
-
+void \hyperlink{class_image_a2d48b9ae9b3e3bc254db7ee5b2cca0a4}{clone} (\hyperlink{class_image}{Image} \&src)
 \item 
-\hypertarget{class_image_a3b2b0b209ce9fa05ac86e434635385b6}{void {\bfseries resize} (int max\-Height)}\label{class_image_a3b2b0b209ce9fa05ac86e434635385b6}
-
+void \hyperlink{class_image_a3b2b0b209ce9fa05ac86e434635385b6}{resize} (int max\-Height)
 \item 
-\hypertarget{class_image_a3c71a8e60be0adb70a9ee7aa2101f2a1}{void {\bfseries resize} (int width\-\_\-, int height\-\_\-)}\label{class_image_a3c71a8e60be0adb70a9ee7aa2101f2a1}
-
+void \hyperlink{class_image_a3c71a8e60be0adb70a9ee7aa2101f2a1}{resize} (int width\-\_\-, int height\-\_\-)
 \item 
-\hypertarget{class_image_ac7db46ef48be05f16f1a48568609b2b7}{Mat $\ast$ {\bfseries get\-Mat} ()}\label{class_image_ac7db46ef48be05f16f1a48568609b2b7}
-
+Mat $\ast$ \hyperlink{class_image_ac7db46ef48be05f16f1a48568609b2b7}{get\-Mat} ()
 \item 
-\hypertarget{class_image_a967ec7a693253014cc8ade9eee1b1c12}{vector$<$ uchar $>$ {\bfseries get\-Pixels} ()}\label{class_image_a967ec7a693253014cc8ade9eee1b1c12}
-
+vector$<$ uchar $>$ \hyperlink{class_image_a967ec7a693253014cc8ade9eee1b1c12}{get\-Pixels} ()
 \item 
-\hypertarget{class_image_a31258142b60882231d1b8ba999cd6d88}{img\-Type {\bfseries get\-Type} () const }\label{class_image_a31258142b60882231d1b8ba999cd6d88}
-
+\hyperlink{class_image_a053e7160b6567c4929de1cae9a911581}{img\-Type} \hyperlink{class_image_a31258142b60882231d1b8ba999cd6d88}{get\-Type} () const 
 \item 
-\hypertarget{class_image_adbe5f8b9f79338c7eb6a66bdc69ca0b7}{int {\bfseries get\-Width} () const }\label{class_image_adbe5f8b9f79338c7eb6a66bdc69ca0b7}
-
+int \hyperlink{class_image_adbe5f8b9f79338c7eb6a66bdc69ca0b7}{get\-Width} () const 
 \item 
-\hypertarget{class_image_a45dd31ebd02682c5963858f62aa53dd9}{int {\bfseries get\-Height} () const }\label{class_image_a45dd31ebd02682c5963858f62aa53dd9}
-
+int \hyperlink{class_image_a45dd31ebd02682c5963858f62aa53dd9}{get\-Height} () const 
 \item 
-\hypertarget{class_image_ab0a38137a9077dc382bbbdd00efcc70b}{void {\bfseries set\-Pixels} (vector$<$ uchar $>$ \&pixels, int width, int height)}\label{class_image_ab0a38137a9077dc382bbbdd00efcc70b}
-
+void \hyperlink{class_image_ab0a38137a9077dc382bbbdd00efcc70b}{set\-Pixels} (vector$<$ uchar $>$ \&pixels, int width, int height)
 \item 
-\hypertarget{class_image_a1c0874758106668b22c312fe9904cbfe}{void {\bfseries set\-Mat} (Mat \&mat)}\label{class_image_a1c0874758106668b22c312fe9904cbfe}
-
+void \hyperlink{class_image_a1c0874758106668b22c312fe9904cbfe}{set\-Mat} (Mat \&mat)
 \item 
-\hypertarget{class_image_a1e881fec68466ad342c6a85cff07a42f}{void {\bfseries set\-Type} (img\-Type type)}\label{class_image_a1e881fec68466ad342c6a85cff07a42f}
-
+void \hyperlink{class_image_a1e881fec68466ad342c6a85cff07a42f}{set\-Type} (\hyperlink{class_image_a053e7160b6567c4929de1cae9a911581}{img\-Type} type)
 \item 
-\hypertarget{class_image_a2087192970c1d0358e6d7d96d940ed18}{void {\bfseries set\-Width} (int width)}\label{class_image_a2087192970c1d0358e6d7d96d940ed18}
-
+void \hyperlink{class_image_a2087192970c1d0358e6d7d96d940ed18}{set\-Width} (int width)
 \item 
-\hypertarget{class_image_a031c156741deddb462c0c3cc0b7c1251}{void {\bfseries set\-Height} (int height)}\label{class_image_a031c156741deddb462c0c3cc0b7c1251}
-
+void \hyperlink{class_image_a031c156741deddb462c0c3cc0b7c1251}{set\-Height} (int height)
 \item 
-\hypertarget{class_image_afb0339b802ed560e69eb07358d30198f}{{\bfseries Image} (int width, int height)}\label{class_image_afb0339b802ed560e69eb07358d30198f}
-
+\hyperlink{class_image_a58edd1c45b4faeb5f789b0d036d02313}{Image} ()
 \item 
-\hypertarget{class_image_a11c4da10d93cb19f684f5dbec08e564d}{{\bfseries Image} (\hyperlink{class_image}{Image} const \&img)}\label{class_image_a11c4da10d93cb19f684f5dbec08e564d}
-
+\hyperlink{class_image_afb0339b802ed560e69eb07358d30198f}{Image} (int width, int height)
 \item 
-\hypertarget{class_image_a9b183ad498d8ffea3f91a21e5a67920d}{float \hyperlink{class_image_a9b183ad498d8ffea3f91a21e5a67920d}{pixel\-At} (int x, int y) const }\label{class_image_a9b183ad498d8ffea3f91a21e5a67920d}
-
+\hyperlink{class_image_a11c4da10d93cb19f684f5dbec08e564d}{Image} (\hyperlink{class_image}{Image} const \&img)
+\item 
+float \hyperlink{class_image_a9b183ad498d8ffea3f91a21e5a67920d}{pixel\-At} (int x, int y) const 
 \begin{DoxyCompactList}\small\item\em returns the pixel value at (x, y) \end{DoxyCompactList}\item 
-\hypertarget{class_image_afcd6f049060759d996f08b335ef2351d}{void \hyperlink{class_image_afcd6f049060759d996f08b335ef2351d}{pixel\-Write} (float value, int x, int y)}\label{class_image_afcd6f049060759d996f08b335ef2351d}
-
+void \hyperlink{class_image_afcd6f049060759d996f08b335ef2351d}{pixel\-Write} (float value, int x, int y)
 \begin{DoxyCompactList}\small\item\em writes value at pixel (x, y) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_image_a990667d3006b26e839421d76cfb8d1d9}{static int {\bfseries index} (int x, int y, int w)}\label{class_image_a990667d3006b26e839421d76cfb8d1d9}
-
+static int \hyperlink{class_image_a990667d3006b26e839421d76cfb8d1d9}{index} (int x, int y, int w)
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_image_ac22dddb0c4b1136c745f0dce6db7a1dc}{vector$<$ float $>$ \hyperlink{class_image_ac22dddb0c4b1136c745f0dce6db7a1dc}{pixels}}\label{class_image_ac22dddb0c4b1136c745f0dce6db7a1dc}
-
+vector$<$ float $>$ \hyperlink{class_image_ac22dddb0c4b1136c745f0dce6db7a1dc}{pixels}
 \begin{DoxyCompactList}\small\item\em list of all pixels of the frame \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_image_a514d99877d9fdcfed14a8df1cc4237c7}{ostream \& {\bfseries operator$<$$<$} (ostream \&o, const \hyperlink{class_image}{Image} \&img)}\label{class_image_a514d99877d9fdcfed14a8df1cc4237c7}
-
+ostream \& \hyperlink{class_image_a514d99877d9fdcfed14a8df1cc4237c7}{operator$<$$<$} (ostream \&o, const \hyperlink{class_image}{Image} \&img)
 \end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_image_a053e7160b6567c4929de1cae9a911581}{\index{Image@{Image}!img\-Type@{img\-Type}}
+\index{img\-Type@{img\-Type}!Image@{Image}}
+\subsubsection[{img\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Image\-::img\-Type}}}\label{class_image_a053e7160b6567c4929de1cae9a911581}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{I\-M\-G\-\_\-\-G\-R\-A\-Y@{I\-M\-G\-\_\-\-G\-R\-A\-Y}!Image@{Image}}\index{Image@{Image}!I\-M\-G\-\_\-\-G\-R\-A\-Y@{I\-M\-G\-\_\-\-G\-R\-A\-Y}}\item[{\em 
+\hypertarget{class_image_a053e7160b6567c4929de1cae9a911581a28e925c2b797f2443b8732f42093f632}{I\-M\-G\-\_\-\-G\-R\-A\-Y}\label{class_image_a053e7160b6567c4929de1cae9a911581a28e925c2b797f2443b8732f42093f632}
+}]\index{I\-M\-G\-\_\-\-C\-L\-R@{I\-M\-G\-\_\-\-C\-L\-R}!Image@{Image}}\index{Image@{Image}!I\-M\-G\-\_\-\-C\-L\-R@{I\-M\-G\-\_\-\-C\-L\-R}}\item[{\em 
+\hypertarget{class_image_a053e7160b6567c4929de1cae9a911581a9a4b55aceff11e487f46b51cad901247}{I\-M\-G\-\_\-\-C\-L\-R}\label{class_image_a053e7160b6567c4929de1cae9a911581a9a4b55aceff11e487f46b51cad901247}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_image_a58edd1c45b4faeb5f789b0d036d02313}{\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}Image\-::\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_image_a58edd1c45b4faeb5f789b0d036d02313}
+\hypertarget{class_image_a0b993f2b506ec12654cb275921127b00}{\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}Image\-::\-Image (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{{\bf img\-Type}}]{type = {\ttfamily {\bf I\-M\-G\-\_\-\-C\-L\-R}}}
+\end{DoxyParamCaption}
+)}}\label{class_image_a0b993f2b506ec12654cb275921127b00}
+\hypertarget{class_image_a583efff0899692314aa5a37fda3ec89e}{\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}Image\-::\-Image (
+\begin{DoxyParamCaption}
+\item[{Mat}]{img}
+\end{DoxyParamCaption}
+)}}\label{class_image_a583efff0899692314aa5a37fda3ec89e}
+\hypertarget{class_image_ae714fa5c88b1b87e647d7f839c7bb24f}{\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}Image\-::\-Image (
+\begin{DoxyParamCaption}
+\item[{{\bf Image} const \&}]{img, }
+\item[{bool}]{clone = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{class_image_ae714fa5c88b1b87e647d7f839c7bb24f}
+\hypertarget{class_image_aab588538f35c49606ee9e7e51121d592}{\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}Image\-::\-Image (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{bool}]{grayscale = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_image_aab588538f35c49606ee9e7e51121d592}
+\hypertarget{class_image_a58edd1c45b4faeb5f789b0d036d02313}{\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}Image\-::\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_image_a58edd1c45b4faeb5f789b0d036d02313}
+\hypertarget{class_image_afb0339b802ed560e69eb07358d30198f}{\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}Image\-::\-Image (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{class_image_afb0339b802ed560e69eb07358d30198f}
+\hypertarget{class_image_a11c4da10d93cb19f684f5dbec08e564d}{\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}Image\-::\-Image (
+\begin{DoxyParamCaption}
+\item[{{\bf Image} const \&}]{img}
+\end{DoxyParamCaption}
+)}}\label{class_image_a11c4da10d93cb19f684f5dbec08e564d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_image_a2d48b9ae9b3e3bc254db7ee5b2cca0a4}{\index{Image@{Image}!clone@{clone}}
+\index{clone@{clone}!Image@{Image}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}void Image\-::clone (
+\begin{DoxyParamCaption}
+\item[{{\bf Image} \&}]{src}
+\end{DoxyParamCaption}
+)}}\label{class_image_a2d48b9ae9b3e3bc254db7ee5b2cca0a4}
+\hypertarget{class_image_a45dd31ebd02682c5963858f62aa53dd9}{\index{Image@{Image}!get\-Height@{get\-Height}}
+\index{get\-Height@{get\-Height}!Image@{Image}}
+\subsubsection[{get\-Height}]{\setlength{\rightskip}{0pt plus 5cm}int Image\-::get\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_image_a45dd31ebd02682c5963858f62aa53dd9}
+\hypertarget{class_image_ac7db46ef48be05f16f1a48568609b2b7}{\index{Image@{Image}!get\-Mat@{get\-Mat}}
+\index{get\-Mat@{get\-Mat}!Image@{Image}}
+\subsubsection[{get\-Mat}]{\setlength{\rightskip}{0pt plus 5cm}Mat $\ast$ Image\-::get\-Mat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_image_ac7db46ef48be05f16f1a48568609b2b7}
+\hypertarget{class_image_a967ec7a693253014cc8ade9eee1b1c12}{\index{Image@{Image}!get\-Pixels@{get\-Pixels}}
+\index{get\-Pixels@{get\-Pixels}!Image@{Image}}
+\subsubsection[{get\-Pixels}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ uchar $>$ Image\-::get\-Pixels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_image_a967ec7a693253014cc8ade9eee1b1c12}
+\hypertarget{class_image_a31258142b60882231d1b8ba999cd6d88}{\index{Image@{Image}!get\-Type@{get\-Type}}
+\index{get\-Type@{get\-Type}!Image@{Image}}
+\subsubsection[{get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Image\-::img\-Type} Image\-::get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_image_a31258142b60882231d1b8ba999cd6d88}
+\hypertarget{class_image_adbe5f8b9f79338c7eb6a66bdc69ca0b7}{\index{Image@{Image}!get\-Width@{get\-Width}}
+\index{get\-Width@{get\-Width}!Image@{Image}}
+\subsubsection[{get\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int Image\-::get\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_image_adbe5f8b9f79338c7eb6a66bdc69ca0b7}
+\hypertarget{class_image_a990667d3006b26e839421d76cfb8d1d9}{\index{Image@{Image}!index@{index}}
+\index{index@{index}!Image@{Image}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}static int Image\-::index (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_image_a990667d3006b26e839421d76cfb8d1d9}
+\hypertarget{class_image_a6750920d01caedc1a3782d9782df3cf1}{\index{Image@{Image}!load@{load}}
+\index{load@{load}!Image@{Image}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Image\-::load (
+\begin{DoxyParamCaption}
+\item[{string}]{filepath, }
+\item[{bool}]{grayscale = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_image_a6750920d01caedc1a3782d9782df3cf1}
+\hypertarget{class_image_a9b183ad498d8ffea3f91a21e5a67920d}{\index{Image@{Image}!pixel\-At@{pixel\-At}}
+\index{pixel\-At@{pixel\-At}!Image@{Image}}
+\subsubsection[{pixel\-At}]{\setlength{\rightskip}{0pt plus 5cm}float Image\-::pixel\-At (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+) const}}\label{class_image_a9b183ad498d8ffea3f91a21e5a67920d}
+
+
+returns the pixel value at (x, y) 
+
+\hypertarget{class_image_a9b183ad498d8ffea3f91a21e5a67920d}{\index{Image@{Image}!pixel\-At@{pixel\-At}}
+\index{pixel\-At@{pixel\-At}!Image@{Image}}
+\subsubsection[{pixel\-At}]{\setlength{\rightskip}{0pt plus 5cm}float Image\-::pixel\-At (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+) const}}\label{class_image_a9b183ad498d8ffea3f91a21e5a67920d}
+
+
+returns the pixel value at (x, y) 
+
+\hypertarget{class_image_afcd6f049060759d996f08b335ef2351d}{\index{Image@{Image}!pixel\-Write@{pixel\-Write}}
+\index{pixel\-Write@{pixel\-Write}!Image@{Image}}
+\subsubsection[{pixel\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void Image\-::pixel\-Write (
+\begin{DoxyParamCaption}
+\item[{float}]{value, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_image_afcd6f049060759d996f08b335ef2351d}
+
+
+writes value at pixel (x, y) 
+
+\hypertarget{class_image_aec3c66b278ee2f0d0e12710627e97985}{\index{Image@{Image}!pixel\-Write@{pixel\-Write}}
+\index{pixel\-Write@{pixel\-Write}!Image@{Image}}
+\subsubsection[{pixel\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void Image\-::pixel\-Write (
+\begin{DoxyParamCaption}
+\item[{Vec3b}]{value, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_image_aec3c66b278ee2f0d0e12710627e97985}
+
+
+writes value at pixel (x, y) 
+
+\hypertarget{class_image_a3b2b0b209ce9fa05ac86e434635385b6}{\index{Image@{Image}!resize@{resize}}
+\index{resize@{resize}!Image@{Image}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}void Image\-::resize (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-Height}
+\end{DoxyParamCaption}
+)}}\label{class_image_a3b2b0b209ce9fa05ac86e434635385b6}
+\hypertarget{class_image_a3c71a8e60be0adb70a9ee7aa2101f2a1}{\index{Image@{Image}!resize@{resize}}
+\index{resize@{resize}!Image@{Image}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}void Image\-::resize (
+\begin{DoxyParamCaption}
+\item[{int}]{width\-\_\-, }
+\item[{int}]{height\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_image_a3c71a8e60be0adb70a9ee7aa2101f2a1}
+\hypertarget{class_image_a031c156741deddb462c0c3cc0b7c1251}{\index{Image@{Image}!set\-Height@{set\-Height}}
+\index{set\-Height@{set\-Height}!Image@{Image}}
+\subsubsection[{set\-Height}]{\setlength{\rightskip}{0pt plus 5cm}void Image\-::set\-Height (
+\begin{DoxyParamCaption}
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{class_image_a031c156741deddb462c0c3cc0b7c1251}
+\hypertarget{class_image_a1c0874758106668b22c312fe9904cbfe}{\index{Image@{Image}!set\-Mat@{set\-Mat}}
+\index{set\-Mat@{set\-Mat}!Image@{Image}}
+\subsubsection[{set\-Mat}]{\setlength{\rightskip}{0pt plus 5cm}void Image\-::set\-Mat (
+\begin{DoxyParamCaption}
+\item[{Mat \&}]{mat}
+\end{DoxyParamCaption}
+)}}\label{class_image_a1c0874758106668b22c312fe9904cbfe}
+\hypertarget{class_image_ab0a38137a9077dc382bbbdd00efcc70b}{\index{Image@{Image}!set\-Pixels@{set\-Pixels}}
+\index{set\-Pixels@{set\-Pixels}!Image@{Image}}
+\subsubsection[{set\-Pixels}]{\setlength{\rightskip}{0pt plus 5cm}void Image\-::set\-Pixels (
+\begin{DoxyParamCaption}
+\item[{vector$<$ uchar $>$ \&}]{pixels, }
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{class_image_ab0a38137a9077dc382bbbdd00efcc70b}
+\hypertarget{class_image_a1e881fec68466ad342c6a85cff07a42f}{\index{Image@{Image}!set\-Type@{set\-Type}}
+\index{set\-Type@{set\-Type}!Image@{Image}}
+\subsubsection[{set\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Image\-::set\-Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Image\-::img\-Type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_image_a1e881fec68466ad342c6a85cff07a42f}
+\hypertarget{class_image_a2087192970c1d0358e6d7d96d940ed18}{\index{Image@{Image}!set\-Width@{set\-Width}}
+\index{set\-Width@{set\-Width}!Image@{Image}}
+\subsubsection[{set\-Width}]{\setlength{\rightskip}{0pt plus 5cm}void Image\-::set\-Width (
+\begin{DoxyParamCaption}
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}}\label{class_image_a2087192970c1d0358e6d7d96d940ed18}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_image_a514d99877d9fdcfed14a8df1cc4237c7}{\index{Image@{Image}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Image@{Image}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{o, }
+\item[{const {\bf Image} \&}]{img}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_image_a514d99877d9fdcfed14a8df1cc4237c7}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_image_ac22dddb0c4b1136c745f0dce6db7a1dc}{\index{Image@{Image}!pixels@{pixels}}
+\index{pixels@{pixels}!Image@{Image}}
+\subsubsection[{pixels}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$float$>$ Image\-::pixels}}\label{class_image_ac22dddb0c4b1136c745f0dce6db7a1dc}
+
+
+list of all pixels of the frame 
+
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-headers/Image.\-h\item 
-xcode/headers/Image.\-h\item 
-src/Image.\-cpp\item 
-xcode/src/Image.\-cpp\end{DoxyCompactItemize}
+headers/\hyperlink{headers_2_image_8h}{Image.\-h}\item 
+xcode/headers/\hyperlink{xcode_2headers_2_image_8h}{Image.\-h}\item 
+src/\hyperlink{src_2_image_8cpp}{Image.\-cpp}\item 
+xcode/src/\hyperlink{xcode_2src_2_image_8cpp}{Image.\-cpp}\end{DoxyCompactItemize}

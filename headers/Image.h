@@ -34,7 +34,7 @@ public:
     
     void load(string filepath, bool grayscale = false);         //<! used to load an image file. Supported formats are those of openCV
     //vector<float> Mat2Img(cv::Mat original); //<! translates an openCV Mat image into my vector<float> object.
-    
+    void save(string filepath);                                 //<! saves an image to disk, in resourcePath
     void clone(Image& src);                  //<! clones src into caller
     //proc
     void resize(int maxHeight);

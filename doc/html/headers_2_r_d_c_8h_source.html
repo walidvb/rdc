@@ -59,6 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -85,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">RDC.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<a href="headers_2_r_d_c_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  RDC.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  RDC</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -95,51 +96,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef RDC_RDC_h</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RDC_RDC_h</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;common.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="headers_2common_8h.html">common.h</a>&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span><a class="code" href="class_sensor.html">Sensor</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span><a class="code" href="class_renderer___a.html">Renderer_A</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span><a class="code" href="class_homo.html">Homo</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//enum res {r854x480, r1024x576, r1280x720};</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">enum</span> res {pfalse, p480, p576, p720};</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="headers_2_r_d_c_8h.html#ab0bd7560790c13b656fd58e17e35143e">   18</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="headers_2_r_d_c_8h.html#ab0bd7560790c13b656fd58e17e35143e">res</a> {<a class="code" href="headers_2_r_d_c_8h.html#ab0bd7560790c13b656fd58e17e35143ea1df1f85af8dc2799e6949cdbd15057de">pfalse</a>, <a class="code" href="headers_2_r_d_c_8h.html#ab0bd7560790c13b656fd58e17e35143ea5bc95b72c5ae572f3b6c452fc5662fc7">p480</a>, <a class="code" href="headers_2_r_d_c_8h.html#ab0bd7560790c13b656fd58e17e35143eafbeb67938539ea0aa315441b15b7e162">p576</a>, <a class="code" href="headers_2_r_d_c_8h.html#ab0bd7560790c13b656fd58e17e35143ea62bbb64e31046da3c24f80c36fc2fe0a">p720</a>};</div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="class_r_d_c.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_r_d_c.html">RDC</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_r_d_c.html">RDC</a>(){}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_r_d_c.html">RDC</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> init(<span class="keywordtype">int</span> resolution);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> calibrateSystem(<a class="code" href="class_sensor.html">Sensor</a>* cam, <a class="code" href="class_renderer___a.html">Renderer_A</a>* gfx);      <span class="comment">//&lt;! Called once, starts the calibration and computes needed values for compensation</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> compensate(<a class="code" href="class_image.html">Image</a>* srcImg, <a class="code" href="class_image.html">Image</a>* dstImage);   <span class="comment">//&lt;! Called each frame, takes source image and returns compensated image</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> simulateWall(<a class="code" href="class_image.html">Image</a>* srcImg, <a class="code" href="class_image.html">Image</a>* dstImg, <a class="code" href="class_image.html">Image</a>* wall);   <span class="comment">//&lt;! writes </span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//Getters</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//Private methods</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> computeLighting(<a class="code" href="class_sensor.html">Sensor</a>* cam, <a class="code" href="class_renderer___a.html">Renderer_A</a>* gfx);                            <span class="comment">//&lt;! Fill env light and max light images</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//Setup</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> getLatency();                                   <span class="comment">//&lt;! get projector camera latency</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> computeHomography(<a class="code" href="class_sensor.html">Sensor</a>* cam, <a class="code" href="class_renderer___a.html">Renderer_A</a>* gfx);   <span class="comment">//&lt;! projects patterns, and captures them</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_homo.html">Homo</a>* homo;                                          <span class="comment">//&lt;! The object handling the homography</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//Preprocessing</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                                         <span class="comment">//&lt;! used to fill max and min light images</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_r_d_c.html#a609ab17eb672a23a49c00f853785c0b1">   22</a></span>&#160;    <a class="code" href="class_r_d_c.html#a609ab17eb672a23a49c00f853785c0b1">RDC</a>(){}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_r_d_c.html#a609ab17eb672a23a49c00f853785c0b1">RDC</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_r_d_c.html#a4cce740ee5b8b5a56dad854acdf2ba9b">init</a>(<span class="keywordtype">int</span> resolution);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_r_d_c.html#a520a27505dafa3ded833045ca748207c">calibrateSystem</a>(<a class="code" href="class_sensor.html">Sensor</a>* cam, <a class="code" href="class_renderer___a.html">Renderer_A</a>* gfx);      <span class="comment">//&lt;! Called once, starts the calibration and computes needed values for compensation</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_r_d_c.html#a6345820b0dc9fd9c63440eb7f69ec4c9">compensate</a>(<a class="code" href="class_image.html">Image</a>* srcImg, <a class="code" href="class_image.html">Image</a>* dstImage);   <span class="comment">//&lt;! Called each frame, takes source image and returns compensated image</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_r_d_c.html#abaa34773cddd4c9d59f6beefed42289a">simulateWall</a>(<a class="code" href="class_image.html">Image</a>* srcImg, <a class="code" href="class_image.html">Image</a>* dstImg, <a class="code" href="class_image.html">Image</a>* wall);   <span class="comment">//&lt;! writes back to dstImg, as per the formula R = EM + I*FM. named ater its function, simulating the wall</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_r_d_c.html#a54f036329e0267703c9bba536a3dc8c7">wait</a>(<span class="keywordtype">int</span> ms = 2000) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">//Getters &amp; Setters</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_r_d_c.html#a470abc7b60568295a64bd800477fe535">getWaitingKey</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_r_d_c.html#af73a1c18834bf4a842de6fd8d231565d">setWaitingKey</a>(<span class="keywordtype">bool</span> waiting);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//Private methods</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> computeLighting(<a class="code" href="class_sensor.html">Sensor</a>* cam, <a class="code" href="class_renderer___a.html">Renderer_A</a>* gfx);                            <span class="comment">//&lt;! Fill env light and max light images</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//Setup</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> getLatency();                                   <span class="comment">//&lt;! get projector camera latency</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> computeHomography(<a class="code" href="class_sensor.html">Sensor</a>* cam, <a class="code" href="class_renderer___a.html">Renderer_A</a>* gfx);   <span class="comment">//&lt;! projects patterns, and captures them</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_homo.html">Homo</a>* homo;                                          <span class="comment">//&lt;! The object handling the homography</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    Mat camera2proj;                                    <span class="comment">//&lt;! Camera to projector mapping</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Mat EM;                                             <span class="comment">//&lt;! Matrix storing the environmental light, row major</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    Mat FM;                                             <span class="comment">//&lt;! Matrix storing the proj light, row major</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> outWidth;                                           <span class="comment">//&lt;! the width of the output</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> outHeight;                                          <span class="comment">//&lt;! the height of the output</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> resolution;                                         <span class="comment">//&lt;! the resolution of the output, as defined per enum res up there, but not fucking taking it because it ain&#39;t no int</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">//Preprocessing</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                                         <span class="comment">//&lt;! used to fill max and min light images</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    Mat camera2proj;                                    <span class="comment">//&lt;! Camera to projector mapping</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    Mat EM;                                             <span class="comment">//&lt;! Matrix storing the environmental light, row major</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    Mat FM;                                             <span class="comment">//&lt;! Matrix storing the proj light, row major</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span> outWidth;                                           <span class="comment">//&lt;! the width of the output</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> outHeight;                                          <span class="comment">//&lt;! the height of the output</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> resolution;                                         <span class="comment">//&lt;! the resolution of the output, as defined per enum res up there, but not fucking taking it because it ain&#39;t no int</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> waitingKey;                                    <span class="comment">//&lt;! boolean controlling the logic. (Basically, if true wait for key before going to next step</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 14 2013 18:41:52 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 28 2013 19:08:35 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

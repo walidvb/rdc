@@ -19,10 +19,11 @@ class Sensor
 public:
     Sensor();
     Sensor(int width, int height);
-    string init(string source);
-    int init(int deviceID);
-    Image grabFrame();
-    
+    string init(string source);     //<! open a file
+    int init(int deviceID);         //<! open a device
+    Image grabFrame();              //<! grab a frame
+    void destroy();                 //<! destroy the device
+    bool isOpened();                  //<! returns true if a device/stream is open
     //Getters and Setters
     int getWidth() const;
     int getHeight() const;

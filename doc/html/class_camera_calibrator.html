@@ -60,7 +60,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,37 +87,238 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p><code>#include &lt;<a class="el" href="headers_2_camera_calibrator_8h_source.html">CameraCalibrator.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for CameraCalibrator:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_camera_calibrator__coll__graph.png" border="0" usemap="#_camera_calibrator_coll__map" alt="Collaboration graph"/></div>
+</div>
+
 <p><a href="class_camera_calibrator-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a525d73f2da64eb204f7b18869366d3fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a525d73f2da64eb204f7b18869366d3fb"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>addChessboardPoints</b> (const vector&lt; string &gt; &amp;filelist, Size &amp;boardSize)</td></tr>
-<tr class="memitem:afd58e42b53941ef5e1dade637f90f5b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd58e42b53941ef5e1dade637f90f5b4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addPoints</b> (const std::vector&lt; cv::Point2f &gt; &amp;imageCorners, const std::vector&lt; cv::Point3f &gt; &amp;objectCorners)</td></tr>
-<tr class="memitem:acf70d5b8a2e8eb17822e864ad936ae3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf70d5b8a2e8eb17822e864ad936ae3f"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>calibrate</b> (cv::Size &amp;imageSize)</td></tr>
-<tr class="memitem:af1b2cff3d345a70bbc5421c20847b14f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1b2cff3d345a70bbc5421c20847b14f"></a>
-Mat&#160;</td><td class="memItemRight" valign="bottom"><b>remap</b> (const cv::Mat &amp;image)</td></tr>
-<tr class="memitem:a525d73f2da64eb204f7b18869366d3fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a525d73f2da64eb204f7b18869366d3fb"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>addChessboardPoints</b> (const vector&lt; string &gt; &amp;filelist, Size &amp;boardSize)</td></tr>
-<tr class="memitem:afd58e42b53941ef5e1dade637f90f5b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd58e42b53941ef5e1dade637f90f5b4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addPoints</b> (const std::vector&lt; cv::Point2f &gt; &amp;imageCorners, const std::vector&lt; cv::Point3f &gt; &amp;objectCorners)</td></tr>
-<tr class="memitem:acf70d5b8a2e8eb17822e864ad936ae3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf70d5b8a2e8eb17822e864ad936ae3f"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>calibrate</b> (cv::Size &amp;imageSize)</td></tr>
-<tr class="memitem:aecc1991d46487c6e305f95101e8f9bd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecc1991d46487c6e305f95101e8f9bd2"></a>
-Mat&#160;</td><td class="memItemRight" valign="bottom"><b>remap</b> (const cv::Mat &amp;image)</td></tr>
+<tr class="memitem:a7774e5cf52111648fe91d50adbb2b6de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_calibrator.html#a7774e5cf52111648fe91d50adbb2b6de">CameraCalibrator</a> ()</td></tr>
+<tr class="memitem:a525d73f2da64eb204f7b18869366d3fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_calibrator.html#a525d73f2da64eb204f7b18869366d3fb">addChessboardPoints</a> (const vector&lt; string &gt; &amp;filelist, Size &amp;boardSize)</td></tr>
+<tr class="memitem:afd58e42b53941ef5e1dade637f90f5b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_calibrator.html#afd58e42b53941ef5e1dade637f90f5b4">addPoints</a> (const std::vector&lt; cv::Point2f &gt; &amp;imageCorners, const std::vector&lt; cv::Point3f &gt; &amp;objectCorners)</td></tr>
+<tr class="memitem:acf70d5b8a2e8eb17822e864ad936ae3f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_calibrator.html#acf70d5b8a2e8eb17822e864ad936ae3f">calibrate</a> (cv::Size &amp;imageSize)</td></tr>
+<tr class="memitem:af1b2cff3d345a70bbc5421c20847b14f"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_calibrator.html#af1b2cff3d345a70bbc5421c20847b14f">remap</a> (const cv::Mat &amp;image)</td></tr>
+<tr class="memitem:a7774e5cf52111648fe91d50adbb2b6de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_calibrator.html#a7774e5cf52111648fe91d50adbb2b6de">CameraCalibrator</a> ()</td></tr>
+<tr class="memitem:a525d73f2da64eb204f7b18869366d3fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_calibrator.html#a525d73f2da64eb204f7b18869366d3fb">addChessboardPoints</a> (const vector&lt; string &gt; &amp;filelist, Size &amp;boardSize)</td></tr>
+<tr class="memitem:afd58e42b53941ef5e1dade637f90f5b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_calibrator.html#afd58e42b53941ef5e1dade637f90f5b4">addPoints</a> (const std::vector&lt; cv::Point2f &gt; &amp;imageCorners, const std::vector&lt; cv::Point3f &gt; &amp;objectCorners)</td></tr>
+<tr class="memitem:acf70d5b8a2e8eb17822e864ad936ae3f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_calibrator.html#acf70d5b8a2e8eb17822e864ad936ae3f">calibrate</a> (cv::Size &amp;imageSize)</td></tr>
+<tr class="memitem:aecc1991d46487c6e305f95101e8f9bd2"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_calibrator.html#aecc1991d46487c6e305f95101e8f9bd2">remap</a> (const cv::Mat &amp;image)</td></tr>
 </table>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a7774e5cf52111648fe91d50adbb2b6de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CameraCalibrator::CameraCalibrator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7774e5cf52111648fe91d50adbb2b6de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CameraCalibrator::CameraCalibrator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a525d73f2da64eb204f7b18869366d3fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CameraCalibrator::addChessboardPoints </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>filelist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Size &amp;&#160;</td>
+          <td class="paramname"><em>boardSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a525d73f2da64eb204f7b18869366d3fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CameraCalibrator::addChessboardPoints </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>filelist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Size &amp;&#160;</td>
+          <td class="paramname"><em>boardSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afd58e42b53941ef5e1dade637f90f5b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraCalibrator::addPoints </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; cv::Point2f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>imageCorners</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; cv::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>objectCorners</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afd58e42b53941ef5e1dade637f90f5b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraCalibrator::addPoints </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; cv::Point2f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>imageCorners</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; cv::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>objectCorners</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acf70d5b8a2e8eb17822e864ad936ae3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double CameraCalibrator::calibrate </td>
+          <td>(</td>
+          <td class="paramtype">cv::Size &amp;&#160;</td>
+          <td class="paramname"><em>imageSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acf70d5b8a2e8eb17822e864ad936ae3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double CameraCalibrator::calibrate </td>
+          <td>(</td>
+          <td class="paramtype">cv::Size &amp;&#160;</td>
+          <td class="paramname"><em>imageSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af1b2cff3d345a70bbc5421c20847b14f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat CameraCalibrator::remap </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aecc1991d46487c6e305f95101e8f9bd2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mat CameraCalibrator::remap </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>headers/<a class="el" href="headers_2_camera_calibrator_8h_source.html">CameraCalibrator.h</a></li>
 <li>xcode/xcode/homography/headers/<a class="el" href="xcode_2xcode_2homography_2headers_2_camera_calibrator_8h_source.html">CameraCalibrator.h</a></li>
-<li>src/CameraCalibrator.cc</li>
-<li>xcode/xcode/homography/src/CameraCalibrator.cc</li>
+<li>src/<a class="el" href="src_2_camera_calibrator_8cc.html">CameraCalibrator.cc</a></li>
+<li>xcode/xcode/homography/src/<a class="el" href="xcode_2xcode_2homography_2src_2_camera_calibrator_8cc.html">CameraCalibrator.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 14 2013 18:41:53 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 28 2013 19:08:35 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

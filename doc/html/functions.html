@@ -60,7 +60,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li class="current"><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -69,17 +69,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
-      <li><a href="#index_c"><span>c</span></a></li>
-      <li><a href="#index_g"><span>g</span></a></li>
-      <li><a href="#index_h"><span>h</span></a></li>
-      <li><a href="#index_n"><span>n</span></a></li>
-      <li><a href="#index_o"><span>o</span></a></li>
-      <li><a href="#index_p"><span>p</span></a></li>
+      <li class="current"><a href="functions.html#index_a"><span>a</span></a></li>
+      <li><a href="functions_0x63.html#index_c"><span>c</span></a></li>
+      <li><a href="functions_0x64.html#index_d"><span>d</span></a></li>
+      <li><a href="functions_0x66.html#index_f"><span>f</span></a></li>
+      <li><a href="functions_0x67.html#index_g"><span>g</span></a></li>
+      <li><a href="functions_0x68.html#index_h"><span>h</span></a></li>
+      <li><a href="functions_0x69.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_0x6b.html#index_k"><span>k</span></a></li>
+      <li><a href="functions_0x6c.html#index_l"><span>l</span></a></li>
+      <li><a href="functions_0x6d.html#index_m"><span>m</span></a></li>
+      <li><a href="functions_0x6e.html#index_n"><span>n</span></a></li>
+      <li><a href="functions_0x6f.html#index_o"><span>o</span></a></li>
+      <li><a href="functions_0x70.html#index_p"><span>p</span></a></li>
+      <li><a href="functions_0x71.html#index_q"><span>q</span></a></li>
+      <li><a href="functions_0x72.html#index_r"><span>r</span></a></li>
+      <li><a href="functions_0x73.html#index_s"><span>s</span></a></li>
+      <li><a href="functions_0x74.html#index_t"><span>t</span></a></li>
+      <li><a href="functions_0x75.html#index_u"><span>u</span></a></li>
+      <li><a href="functions_0x76.html#index_v"><span>v</span></a></li>
+      <li><a href="functions_0x77.html#index_w"><span>w</span></a></li>
+      <li><a href="functions_0x78.html#index_x"><span>x</span></a></li>
+      <li><a href="functions_0x79.html#index_y"><span>y</span></a></li>
+      <li><a href="functions_0x7e.html#index_0x7e"><span>~</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -88,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,94 +117,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
+<div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
-<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
-<li>calibrate()
-: <a class="el" href="class_controller.html#a3281d6167b17007535c5414c5c409b4b">Controller</a>
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>addChessboardPoints()
+: <a class="el" href="class_camera_calibrator.html#a525d73f2da64eb204f7b18869366d3fb">CameraCalibrator</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
-<li>getNorm()
-: <a class="el" href="class_v2_d.html#aefe4d7bf3752796db34a38a9d3cf8a86">V2D</a>
+<li>addImages()
+: <a class="el" href="class_homo.html#a5412617c15ec4b68ab31c109d1b2d6b2">Homo</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
-<li>homography()
-: <a class="el" href="class_controller.html#ab05765b131b9cdf49b0665cb4bc91140">Controller</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
-<li>normalize()
-: <a class="el" href="class_v2_d.html#a18db66d223c2a2fd279852e23ac8c79c">V2D</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
-<li>operator!=()
-: <a class="el" href="class_v2_d.html#a3f2a0a369dd816bf5e06acc056336e2d">V2D</a>
-</li>
-<li>operator*()
-: <a class="el" href="class_v2_d.html#a8fb2f52d56ec45f508a062443c4ec542">V2D</a>
-</li>
-<li>operator*=()
-: <a class="el" href="class_v2_d.html#a852acf979baa56c82b898ffc255ccb75">V2D</a>
-</li>
-<li>operator+()
-: <a class="el" href="class_v2_d.html#afa76dfe256b2709097757f50ba8adde5">V2D</a>
-</li>
-<li>operator+=()
-: <a class="el" href="class_v2_d.html#a4cb584db9232f9f5972cf8c1d0c259ed">V2D</a>
-</li>
-<li>operator-()
-: <a class="el" href="class_v2_d.html#a47fe35f6dfb99627224f364840018717">V2D</a>
-</li>
-<li>operator-=()
-: <a class="el" href="class_v2_d.html#a07332a36c046b9eb453e7b8a7fd9d58c">V2D</a>
-</li>
-<li>operator/()
-: <a class="el" href="class_v2_d.html#a308fabbd4804f0380a3387e2fbdcf96a">V2D</a>
-</li>
-<li>operator/=()
-: <a class="el" href="class_v2_d.html#a71ea2c9997e9f7707a4f60c9b9555ac0">V2D</a>
-</li>
-<li>operator&lt;&lt;
-: <a class="el" href="class_v2_d.html#ad016e30b53d24828202d536c445b7505">V2D</a>
-</li>
-<li>operator==()
-: <a class="el" href="class_v2_d.html#a41af4794bd110944bd88094525f8f2eb">V2D</a>
-</li>
-<li>operator|()
-: <a class="el" href="class_v2_d.html#af70b4ebebefd254d768e5439a49c7ebd">V2D</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
-<li>pixelAt()
-: <a class="el" href="class_image.html#a9b183ad498d8ffea3f91a21e5a67920d">Image</a>
-</li>
-<li>pixels
-: <a class="el" href="class_image.html#ac22dddb0c4b1136c745f0dce6db7a1dc">Image</a>
-</li>
-<li>pixelWrite()
-: <a class="el" href="class_image.html#afcd6f049060759d996f08b335ef2351d">Image</a>
-</li>
-<li>process()
-: <a class="el" href="class_controller.html#aa9a8284feff5b720249e3fc6ad9b1592">Controller</a>
+<li>addPoints()
+: <a class="el" href="class_camera_calibrator.html#afd58e42b53941ef5e1dade637f90f5b4">CameraCalibrator</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 14 2013 18:41:53 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 28 2013 19:08:35 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

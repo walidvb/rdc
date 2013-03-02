@@ -60,7 +60,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,78 +89,629 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Renderer_A Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="headers_2_renderer___a_8h_source.html">Renderer_A.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Renderer_A:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_renderer___a.png" usemap="#Renderer_A_map" alt=""/>
-  <map id="Renderer_A_map" name="Renderer_A_map">
-<area href="class_renderer___cinder.html" alt="Renderer_Cinder" shape="rect" coords="0,56,110,80"/>
-<area href="class_renderer___cinder.html" alt="Renderer_Cinder" shape="rect" coords="120,56,230,80"/>
-<area href="class_renderer___c_v.html" alt="Renderer_CV" shape="rect" coords="240,56,350,80"/>
-</map>
- </div></div>
+<div class="center"><img src="class_renderer___a__inherit__graph.png" border="0" usemap="#_renderer___a_inherit__map" alt="Inheritance graph"/></div>
+<map name="_renderer___a_inherit__map" id="_renderer___a_inherit__map">
+<area shape="rect" id="node3" href="class_renderer___cinder.html" title="{Renderer_Cinder\n||+ Renderer_Cinder()\l+ Renderer_Cinder()\l+ drawRect()\l+ drawImg()\l+ setFullscreen()\l+ clear()\l+ Renderer_Cinder()\l+ Renderer_Cinder()\l+ drawRect()\l+ drawImg()\l}" alt="" coords="5,353,141,562"/><area shape="rect" id="node6" href="class_renderer___c_v.html" title="{Renderer_CV\n||+ Renderer_CV()\l+ Renderer_CV()\l+ drawRect()\l+ drawImg()\l+ destroyImg()\l}" alt="" coords="166,389,284,525"/></map>
+</div>
+<div class="dynheader">
+Collaboration diagram for Renderer_A:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_renderer___a__coll__graph.png" border="0" usemap="#_renderer___a_coll__map" alt="Collaboration graph"/></div>
+</div>
 
 <p><a href="class_renderer___a-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afaef918b4d9abdb929d9a437d00e3eb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afaef918b4d9abdb929d9a437d00e3eb8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Renderer_A</b> (int width, int height)</td></tr>
-<tr class="memitem:ae17c1f0f1858f8088dc04a4b04482d4e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae17c1f0f1858f8088dc04a4b04482d4e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>drawImg</b> (<a class="el" href="class_image.html">Image</a> *img) const =0</td></tr>
-<tr class="memitem:af817037b1ebd9906e5f4faee1637bdf0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af817037b1ebd9906e5f4faee1637bdf0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawStripeVert</b> (float xOffset, float width) const </td></tr>
-<tr class="memitem:a70ea4a1396787e8a3c59c848a6aeabcd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70ea4a1396787e8a3c59c848a6aeabcd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawStripeHorz</b> (float yOffset, float height) const </td></tr>
-<tr class="memitem:a79fb640a6c4a733647f3bc5cd96c3bad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79fb640a6c4a733647f3bc5cd96c3bad"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> () const </td></tr>
-<tr class="memitem:a69aeb74354637f5d9d7a5508f00dde33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69aeb74354637f5d9d7a5508f00dde33"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> () const </td></tr>
-<tr class="memitem:afaef918b4d9abdb929d9a437d00e3eb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afaef918b4d9abdb929d9a437d00e3eb8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Renderer_A</b> (int width, int height)</td></tr>
-<tr class="memitem:a9702e174f4c76edd6059e3593ce03291"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9702e174f4c76edd6059e3593ce03291"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>drawImg</b> (const <a class="el" href="class_image.html">Image</a> &amp;img, int POS) const =0</td></tr>
-<tr class="memitem:af817037b1ebd9906e5f4faee1637bdf0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af817037b1ebd9906e5f4faee1637bdf0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawStripeVert</b> (float xOffset, float width) const </td></tr>
-<tr class="memitem:a70ea4a1396787e8a3c59c848a6aeabcd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70ea4a1396787e8a3c59c848a6aeabcd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawStripeHorz</b> (float yOffset, float height) const </td></tr>
-<tr class="memitem:a79fb640a6c4a733647f3bc5cd96c3bad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79fb640a6c4a733647f3bc5cd96c3bad"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> () const </td></tr>
-<tr class="memitem:a69aeb74354637f5d9d7a5508f00dde33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69aeb74354637f5d9d7a5508f00dde33"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> () const </td></tr>
+<tr class="memitem:a718e5ed623321a960f15541de5e70b3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a718e5ed623321a960f15541de5e70b3e">Renderer_A</a> ()</td></tr>
+<tr class="memitem:afaef918b4d9abdb929d9a437d00e3eb8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#afaef918b4d9abdb929d9a437d00e3eb8">Renderer_A</a> (int <a class="el" href="class_renderer___a.html#a0ca3fbb31eb776ee00b70536f267dfe7">width</a>, int <a class="el" href="class_renderer___a.html#a36d0dfb8eeccad9e1ff0b0c461632f6a">height</a>)</td></tr>
+<tr class="memitem:a45c8fd733be7578754cedf95a9f8986e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a45c8fd733be7578754cedf95a9f8986e">~Renderer_A</a> ()</td></tr>
+<tr class="memitem:ae17c1f0f1858f8088dc04a4b04482d4e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#ae17c1f0f1858f8088dc04a4b04482d4e">drawImg</a> (<a class="el" href="class_image.html">Image</a> *img) const =0</td></tr>
+<tr class="memitem:a65b10c7ee561d9a206ea931cc50c3e91"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a65b10c7ee561d9a206ea931cc50c3e91">clear</a> () const =0</td></tr>
+<tr class="memitem:af817037b1ebd9906e5f4faee1637bdf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#af817037b1ebd9906e5f4faee1637bdf0">drawStripeVert</a> (float xOffset, float <a class="el" href="class_renderer___a.html#a0ca3fbb31eb776ee00b70536f267dfe7">width</a>) const </td></tr>
+<tr class="memitem:a70ea4a1396787e8a3c59c848a6aeabcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a70ea4a1396787e8a3c59c848a6aeabcd">drawStripeHorz</a> (float yOffset, float <a class="el" href="class_renderer___a.html#a36d0dfb8eeccad9e1ff0b0c461632f6a">height</a>) const </td></tr>
+<tr class="memitem:a79fb640a6c4a733647f3bc5cd96c3bad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a79fb640a6c4a733647f3bc5cd96c3bad">getWidth</a> () const </td></tr>
+<tr class="memitem:a69aeb74354637f5d9d7a5508f00dde33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a69aeb74354637f5d9d7a5508f00dde33">getHeight</a> () const </td></tr>
+<tr class="memitem:a7ebd9c4c5edba231c6014bcd28248016"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a7ebd9c4c5edba231c6014bcd28248016">setFullscreen</a> (bool isFullscreen)=0</td></tr>
+<tr class="memitem:a718e5ed623321a960f15541de5e70b3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a718e5ed623321a960f15541de5e70b3e">Renderer_A</a> ()</td></tr>
+<tr class="memitem:afaef918b4d9abdb929d9a437d00e3eb8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#afaef918b4d9abdb929d9a437d00e3eb8">Renderer_A</a> (int <a class="el" href="class_renderer___a.html#a0ca3fbb31eb776ee00b70536f267dfe7">width</a>, int <a class="el" href="class_renderer___a.html#a36d0dfb8eeccad9e1ff0b0c461632f6a">height</a>)</td></tr>
+<tr class="memitem:a9702e174f4c76edd6059e3593ce03291"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a9702e174f4c76edd6059e3593ce03291">drawImg</a> (const <a class="el" href="class_image.html">Image</a> &amp;img, int POS) const =0</td></tr>
+<tr class="memitem:af817037b1ebd9906e5f4faee1637bdf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#af817037b1ebd9906e5f4faee1637bdf0">drawStripeVert</a> (float xOffset, float <a class="el" href="class_renderer___a.html#a0ca3fbb31eb776ee00b70536f267dfe7">width</a>) const </td></tr>
+<tr class="memitem:a70ea4a1396787e8a3c59c848a6aeabcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a70ea4a1396787e8a3c59c848a6aeabcd">drawStripeHorz</a> (float yOffset, float <a class="el" href="class_renderer___a.html#a36d0dfb8eeccad9e1ff0b0c461632f6a">height</a>) const </td></tr>
+<tr class="memitem:a79fb640a6c4a733647f3bc5cd96c3bad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a79fb640a6c4a733647f3bc5cd96c3bad">getWidth</a> () const </td></tr>
+<tr class="memitem:a69aeb74354637f5d9d7a5508f00dde33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a69aeb74354637f5d9d7a5508f00dde33">getHeight</a> () const </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:aeab3b86fbef2f719f01fdbf0792d4848"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeab3b86fbef2f719f01fdbf0792d4848"></a>
-static const float&#160;</td><td class="memItemRight" valign="bottom"><b>X_ZERO</b> = 0.0f</td></tr>
-<tr class="memitem:ac2d79b93854681441cb48f96cb7e9f93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2d79b93854681441cb48f96cb7e9f93"></a>
-static const float&#160;</td><td class="memItemRight" valign="bottom"><b>Y_ZERO</b> = 0.0f</td></tr>
+<tr class="memitem:aeab3b86fbef2f719f01fdbf0792d4848"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#aeab3b86fbef2f719f01fdbf0792d4848">X_ZERO</a> = 0.0f</td></tr>
+<tr class="memitem:ac2d79b93854681441cb48f96cb7e9f93"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#ac2d79b93854681441cb48f96cb7e9f93">Y_ZERO</a> = 0.0f</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aaaec84a39a7a49825b7513c12812740d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaaec84a39a7a49825b7513c12812740d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>drawRect</b> (float &amp;x1, float &amp;y1, float &amp;x2, float &amp;y2) const =0</td></tr>
-<tr class="memitem:aaaec84a39a7a49825b7513c12812740d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaaec84a39a7a49825b7513c12812740d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>drawRect</b> (float &amp;x1, float &amp;y1, float &amp;x2, float &amp;y2) const =0</td></tr>
+<tr class="memitem:aaaec84a39a7a49825b7513c12812740d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#aaaec84a39a7a49825b7513c12812740d">drawRect</a> (float &amp;x1, float &amp;y1, float &amp;x2, float &amp;y2) const =0</td></tr>
+<tr class="memitem:aaaec84a39a7a49825b7513c12812740d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#aaaec84a39a7a49825b7513c12812740d">drawRect</a> (float &amp;x1, float &amp;y1, float &amp;x2, float &amp;y2) const =0</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a0ca3fbb31eb776ee00b70536f267dfe7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ca3fbb31eb776ee00b70536f267dfe7"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>width</b></td></tr>
-<tr class="memitem:a36d0dfb8eeccad9e1ff0b0c461632f6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36d0dfb8eeccad9e1ff0b0c461632f6a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
+<tr class="memitem:a0ca3fbb31eb776ee00b70536f267dfe7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a0ca3fbb31eb776ee00b70536f267dfe7">width</a></td></tr>
+<tr class="memitem:a36d0dfb8eeccad9e1ff0b0c461632f6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer___a.html#a36d0dfb8eeccad9e1ff0b0c461632f6a">height</a></td></tr>
 </table>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a718e5ed623321a960f15541de5e70b3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Renderer_A::Renderer_A </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afaef918b4d9abdb929d9a437d00e3eb8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Renderer_A::Renderer_A </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a45c8fd733be7578754cedf95a9f8986e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Renderer_A::~Renderer_A </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a718e5ed623321a960f15541de5e70b3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Renderer_A::Renderer_A </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afaef918b4d9abdb929d9a437d00e3eb8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Renderer_A::Renderer_A </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a65b10c7ee561d9a206ea931cc50c3e91"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Renderer_A::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_renderer___cinder.html#a9602d7d3306fa590f77d6f401da561f9">Renderer_Cinder</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9702e174f4c76edd6059e3593ce03291"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Renderer_A::drawImg </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_image.html">Image</a> &amp;&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>POS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_renderer___cinder.html#ad6700d502a42c60b2c97dd6e2b44b80a">Renderer_Cinder</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae17c1f0f1858f8088dc04a4b04482d4e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Renderer_A::drawImg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_image.html">Image</a> *&#160;</td>
+          <td class="paramname"><em>img</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_renderer___cinder.html#abe70ac6d46e0cf38878e470ebc2b0350">Renderer_Cinder</a>, and <a class="el" href="class_renderer___c_v.html#af71acbce70697b36ecfd1c6d2632030d">Renderer_CV</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaaec84a39a7a49825b7513c12812740d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Renderer_A::drawRect </td>
+          <td>(</td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_renderer___cinder.html#ae14f510b0f03226b9067ad11b3711c13">Renderer_Cinder</a>, <a class="el" href="class_renderer___cinder.html#ae14f510b0f03226b9067ad11b3711c13">Renderer_Cinder</a>, and <a class="el" href="class_renderer___c_v.html#a7933650142d29e9a8fb4a690f22d9595">Renderer_CV</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaaec84a39a7a49825b7513c12812740d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Renderer_A::drawRect </td>
+          <td>(</td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_renderer___cinder.html#ae14f510b0f03226b9067ad11b3711c13">Renderer_Cinder</a>, <a class="el" href="class_renderer___cinder.html#ae14f510b0f03226b9067ad11b3711c13">Renderer_Cinder</a>, and <a class="el" href="class_renderer___c_v.html#a7933650142d29e9a8fb4a690f22d9595">Renderer_CV</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a70ea4a1396787e8a3c59c848a6aeabcd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer_A::drawStripeHorz </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>yOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a70ea4a1396787e8a3c59c848a6aeabcd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer_A::drawStripeHorz </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>yOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af817037b1ebd9906e5f4faee1637bdf0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer_A::drawStripeVert </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>xOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af817037b1ebd9906e5f4faee1637bdf0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer_A::drawStripeVert </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>xOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a69aeb74354637f5d9d7a5508f00dde33"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Renderer_A::getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a69aeb74354637f5d9d7a5508f00dde33"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Renderer_A::getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a79fb640a6c4a733647f3bc5cd96c3bad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Renderer_A::getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a79fb640a6c4a733647f3bc5cd96c3bad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Renderer_A::getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7ebd9c4c5edba231c6014bcd28248016"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Renderer_A::setFullscreen </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isFullscreen</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_renderer___cinder.html#a8903673b17ff5bf042a4408ab064e92e">Renderer_Cinder</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a36d0dfb8eeccad9e1ff0b0c461632f6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Renderer_A::height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0ca3fbb31eb776ee00b70536f267dfe7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Renderer_A::width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aeab3b86fbef2f719f01fdbf0792d4848"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Renderer_A::X_ZERO = 0.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac2d79b93854681441cb48f96cb7e9f93"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Renderer_A::Y_ZERO = 0.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>headers/<a class="el" href="headers_2_renderer___a_8h_source.html">Renderer_A.h</a></li>
 <li>xcode/headers/<a class="el" href="xcode_2headers_2_renderer___a_8h_source.html">Renderer_A.h</a></li>
-<li>src/Renderer_A.cpp</li>
-<li>xcode/src/Renderer_A.cpp</li>
+<li>src/<a class="el" href="src_2_renderer___a_8cpp.html">Renderer_A.cpp</a></li>
+<li>xcode/src/<a class="el" href="xcode_2src_2_renderer___a_8cpp.html">Renderer_A.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 14 2013 18:41:53 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 28 2013 19:08:35 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

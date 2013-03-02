@@ -60,7 +60,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,19 +87,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_r_d_c.html">RDC</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>calibrate</b>(Sensor_A *cam, Renderer_A *gfx) (defined in <a class="el" href="class_r_d_c.html">RDC</a>)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>calibrateSystem</b>(Sensor *cam, Renderer_A *gfx) (defined in <a class="el" href="class_r_d_c.html">RDC</a>)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>compensate</b>(Image *srcImg, Image *dstImage) (defined in <a class="el" href="class_r_d_c.html">RDC</a>)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>compensate</b>(const Image &amp;srcImg) (defined in <a class="el" href="class_r_d_c.html">RDC</a>)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>init</b>(int resolution) (defined in <a class="el" href="class_r_d_c.html">RDC</a>)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>RDC</b>() (defined in <a class="el" href="class_r_d_c.html">RDC</a>)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>RDC</b>(int width, int height) (defined in <a class="el" href="class_r_d_c.html">RDC</a>)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>RDC</b>() (defined in <a class="el" href="class_r_d_c.html">RDC</a>)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>simulateWall</b>(Image *srcImg, Image *dstImg, Image *wall) (defined in <a class="el" href="class_r_d_c.html">RDC</a>)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_r_d_c.html#a70face7e6f7c3f65772614fca001a52e">calibrate</a>(Sensor_A *cam, Renderer_A *gfx)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_r_d_c.html#a520a27505dafa3ded833045ca748207c">calibrateSystem</a>(Sensor *cam, Renderer_A *gfx)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_r_d_c.html#a6345820b0dc9fd9c63440eb7f69ec4c9">compensate</a>(Image *srcImg, Image *dstImage)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_r_d_c.html#afd4c8763d879d5c811ed1329d1ab12a2">compensate</a>(const Image &amp;srcImg)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_r_d_c.html#a470abc7b60568295a64bd800477fe535">getWaitingKey</a>()</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_r_d_c.html#a4cce740ee5b8b5a56dad854acdf2ba9b">init</a>(int resolution)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_r_d_c.html#a609ab17eb672a23a49c00f853785c0b1">RDC</a>()</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_r_d_c.html#a2f266b7215ade29eb5f4ecd3882ee475">RDC</a>(int width, int height)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_r_d_c.html#a609ab17eb672a23a49c00f853785c0b1">RDC</a>()</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_r_d_c.html#af73a1c18834bf4a842de6fd8d231565d">setWaitingKey</a>(bool waiting)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_r_d_c.html#abaa34773cddd4c9d59f6beefed42289a">simulateWall</a>(Image *srcImg, Image *dstImg, Image *wall)</td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_r_d_c.html#a54f036329e0267703c9bba536a3dc8c7">wait</a>(int ms=2000) const </td><td class="entry"><a class="el" href="class_r_d_c.html">RDC</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 14 2013 18:41:53 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 28 2013 19:08:35 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

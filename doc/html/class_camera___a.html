@@ -60,7 +60,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,48 +87,230 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Camera_A Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_camera___a_8h_source.html">Camera_A.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Camera_A:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_camera___a.png" usemap="#Camera_A_map" alt=""/>
-  <map id="Camera_A_map" name="Camera_A_map">
-<area href="class_camera.html" alt="Camera" shape="rect" coords="0,56,72,80"/>
-</map>
- </div></div>
+<div class="center"><img src="class_camera___a__inherit__graph.png" border="0" usemap="#_camera___a_inherit__map" alt="Inheritance graph"/></div>
+<map name="_camera___a_inherit__map" id="_camera___a_inherit__map">
+<area shape="rect" id="node3" href="class_camera.html" title="{Camera\n||+ Camera()\l+ Camera()\l+ init()\l+ grabFrame()\l}" alt="" coords="6,235,108,357"/></map>
+</div>
+<div class="dynheader">
+Collaboration diagram for Camera_A:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_camera___a__coll__graph.png" border="0" usemap="#_camera___a_coll__map" alt="Collaboration graph"/></div>
+</div>
 
 <p><a href="class_camera___a-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:affa6bad32fb358538d87b42e131789a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affa6bad32fb358538d87b42e131789a3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Camera_A</b> (int width, int height)</td></tr>
-<tr class="memitem:a9545b869b944da4a9baa528b8a1fef8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9545b869b944da4a9baa528b8a1fef8e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()=0</td></tr>
-<tr class="memitem:afebeedc438219ef7590e2e0b6c140c42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afebeedc438219ef7590e2e0b6c140c42"></a>
-virtual vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>grabFrame</b> ()=0</td></tr>
-<tr class="memitem:a4f71c1a128299b587696f996714e0002"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f71c1a128299b587696f996714e0002"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> () const </td></tr>
-<tr class="memitem:afe39759777fa2722e0a013ad5af0fe8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe39759777fa2722e0a013ad5af0fe8e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> () const </td></tr>
+<tr class="memitem:a5204e28a95f0cd2d8aa17387f34d3fea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera___a.html#a5204e28a95f0cd2d8aa17387f34d3fea">Camera_A</a> ()</td></tr>
+<tr class="memitem:affa6bad32fb358538d87b42e131789a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera___a.html#affa6bad32fb358538d87b42e131789a3">Camera_A</a> (int <a class="el" href="class_camera___a.html#abe6c7a2c84c368e8e8dd366444490953">width</a>, int <a class="el" href="class_camera___a.html#af2d2b7eedefafea58af3467325f4214e">height</a>)</td></tr>
+<tr class="memitem:a9545b869b944da4a9baa528b8a1fef8e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera___a.html#a9545b869b944da4a9baa528b8a1fef8e">init</a> ()=0</td></tr>
+<tr class="memitem:afebeedc438219ef7590e2e0b6c140c42"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera___a.html#afebeedc438219ef7590e2e0b6c140c42">grabFrame</a> ()=0</td></tr>
+<tr class="memitem:a4f71c1a128299b587696f996714e0002"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera___a.html#a4f71c1a128299b587696f996714e0002">getWidth</a> () const </td></tr>
+<tr class="memitem:afe39759777fa2722e0a013ad5af0fe8e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera___a.html#afe39759777fa2722e0a013ad5af0fe8e">getHeight</a> () const </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a062e331c0b3bc525ba2f2724008d3d20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a062e331c0b3bc525ba2f2724008d3d20"></a>
-vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>frame</b></td></tr>
-<tr class="memitem:abe6c7a2c84c368e8e8dd366444490953"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe6c7a2c84c368e8e8dd366444490953"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>width</b></td></tr>
-<tr class="memitem:af2d2b7eedefafea58af3467325f4214e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2d2b7eedefafea58af3467325f4214e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
+<tr class="memitem:a062e331c0b3bc525ba2f2724008d3d20"><td class="memItemLeft" align="right" valign="top">vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera___a.html#a062e331c0b3bc525ba2f2724008d3d20">frame</a></td></tr>
+<tr class="memitem:abe6c7a2c84c368e8e8dd366444490953"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera___a.html#abe6c7a2c84c368e8e8dd366444490953">width</a></td></tr>
+<tr class="memitem:af2d2b7eedefafea58af3467325f4214e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera___a.html#af2d2b7eedefafea58af3467325f4214e">height</a></td></tr>
 </table>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a5204e28a95f0cd2d8aa17387f34d3fea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Camera_A::Camera_A </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="affa6bad32fb358538d87b42e131789a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Camera_A::Camera_A </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="afe39759777fa2722e0a013ad5af0fe8e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Camera_A::getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4f71c1a128299b587696f996714e0002"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Camera_A::getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afebeedc438219ef7590e2e0b6c140c42"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual vector&lt;float&gt; Camera_A::grabFrame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_camera.html#a3374922c6e19f1174c469fbb7d0c7a03">Camera</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9545b869b944da4a9baa528b8a1fef8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Camera_A::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_camera.html#af930ce1f46c9f5af3bd5e5bbff6b5022">Camera</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a062e331c0b3bc525ba2f2724008d3d20"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;float&gt; Camera_A::frame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af2d2b7eedefafea58af3467325f4214e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Camera_A::height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abe6c7a2c84c368e8e8dd366444490953"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Camera_A::width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>xcode/headers/<a class="el" href="_camera___a_8h_source.html">Camera_A.h</a></li>
-<li>xcode/src/Camera_A.cpp</li>
+<li>xcode/src/<a class="el" href="_camera___a_8cpp.html">Camera_A.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 14 2013 18:41:53 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 28 2013 19:08:35 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

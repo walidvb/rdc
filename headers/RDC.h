@@ -22,18 +22,30 @@ public:
     RDC(){}
     RDC(int width, int height);
     void init(int resolution);
-    void calibrateSystem(Sensor* cam, Renderer_A* gfx);      //<! Called once, starts the calibration and computes needed values for compensation
     void compensate(Image* srcImg, Image* dstImage);   //<! Called each frame, takes source image and returns compensated image
-    void simulateWall(Image* srcImg, Image* dstImg, Image* wall);   //<! writes 
-    //Getters
+    void simulateWall(Image* srcImg, Image* dstImg, Image* wall);   //<! writes back to dstImg, as per the formula R = EM + I*FM. named ater its function, simulating the wall
+    void computeLighting();                                 //<! computes env light and max light images
+    void computeHomography(Sensor* cam, Renderer_A* gfx);   //<! projects patterns, and captures them
+    void grabEM(Sensor* cam, Renderer_A* gfx);
+    void grabFM(Sensor* cam, Renderer_A* gfx);
     
+    void wait(int ms = 2000) const;//for debugging purpose
+    
+    //logic
+    bool getIsHomoComputed();
+    bool getIsEMComputed();
+    bool getIsFMComputed();
+    bool getIsCalibrated();
+    bool getIsEMRendered();
+    bool getIsFMRendered();
+
+    void setIsEMRendered(bool isIt);
+    void setIsFMRendered(bool isIt);
 private:
     //Private methods
 
-    void computeLighting(Sensor* cam, Renderer_A* gfx);                            //<! Fill env light and max light images
     //Setup
     int getLatency();                                   //<! get projector camera latency
-    void computeHomography(Sensor* cam, Renderer_A* gfx);   //<! projects patterns, and captures them
     Homo* homo;                                          //<! The object handling the homography
     
     //Preprocessing
@@ -46,6 +58,14 @@ private:
     int outWidth;                                           //<! the width of the output
     int outHeight;                                          //<! the height of the output
     int resolution;                                         //<! the resolution of the output, as defined per enum res up there, but not fucking taking it because it ain't no int
+    
+    //logic
+    bool isHomoComputed;
+    bool isEMComputed;
+    bool isFMComputed;
+    bool isCalibrated;
+    bool isEMRendered;
+    bool isFMRendered;
 };
 
 #endif

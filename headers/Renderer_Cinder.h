@@ -22,8 +22,9 @@ public:
     Renderer_Cinder(int width, int height);
     void drawRect( float& x1, float& y1, float& x2, float& y2 ) const;
     void drawImg(Image* img) const;
-    int windowCount = 0; //<! used to be able to imshow different images
-    
+
+    void setFullscreen(bool isFullscreen);
+    void clear() const;
 private:
     ci::Vec2f V2D2Vecf(V2D src) const;
     

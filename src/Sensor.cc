@@ -23,8 +23,8 @@ string Sensor::init(string source)
     cap = VideoCapture(source); // open the default camera
     if(!cap.isOpened())  // return -1 if we failed to open
     {
-        cerr << "Failed to open " << source << endl;
-        return "Failed to open";
+        cerr << "[Sensor] Failed to open " << source << endl;
+        return "[Sensor] Failed to open";
     }
     else                //return the deviceID used
     {
@@ -40,12 +40,12 @@ int Sensor::init(int deviceID)
 {
     if(cap.isOpened())
     {
-        cout << "switching to " << deviceID << endl;
+        cout << "[Sensor] switching to " << deviceID << endl;
     }
     cap = VideoCapture(deviceID); // open the default camera
     if(!cap.isOpened())  // return -1 if we failed to open
     {
-        cerr << "Failed to open capture device " << deviceID << endl;
+        cerr << "[Sensor] Failed to open capture device " << deviceID << ", the following devices are available: " << endl;
         return -1;
     }
     else                //return the deviceID used
@@ -58,6 +58,10 @@ int Sensor::init(int deviceID)
     }
 }
 
+void Sensor::destroy()
+{
+    cap.release();
+}
 Image Sensor::grabFrame()
 {
     Mat tmp;
@@ -66,6 +70,10 @@ Image Sensor::grabFrame()
     return img;
 }
 
+bool Sensor::isOpened()
+{
+    return cap.isOpened();
+}
 
 //Getters and Setters
 int Sensor::getWidth() const

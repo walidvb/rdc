@@ -38,7 +38,6 @@ void Renderer_Cinder::drawImg(Image* img) const
 {    
     int w = img->getWidth();
     int h = img->getHeight();
-    cout<<"[Renderer]: "<<w<<" "<<h<<endl;
 
     //conversion from cv::mat to ci::surface
     ci::Surface8u surface(w, h, false);
@@ -60,4 +59,14 @@ void Renderer_Cinder::drawImg(Image* img) const
     //give surface to texture
     myImg = ci::gl::Texture(surface);
     ci::gl::draw(myImg);
+}
+
+void Renderer_Cinder::clear() const
+{
+    ci::gl::clear( ci::Color( 0, 0, 0 ) );
+}
+
+void Renderer_Cinder::setFullscreen(bool isFullscreen)
+{
+    
 }

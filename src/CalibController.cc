@@ -50,16 +50,16 @@ void CalibController::computeCalib()
 {
    
     camCalib->addChessboardPoints(fileList, boardSize);
-    cout << "Calibration quality: " << camCalib->calibrate(frameSize);
+    cout << "[CalibControl] Calibration quality: " << camCalib->calibrate(frameSize);
 }
 
 void CalibController::doCalib()
 {
-    cout << "taking pictures..." << endl;
+    cout << "[CalibControl] taking pictures..." << endl;
     takeAndSavePics();
-    cout << " computing calibration coefficient..." << endl;
+    cout << "[CalibControl] computing calibration coefficient..." << endl;
     computeCalib();
-    cout << "Done!" << endl;
+    cout << "[CalibControl] Done!" << endl;
     calibDone = true;
 }
 

@@ -60,7 +60,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,35 +87,303 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p><code>#include &lt;<a class="el" href="headers_2_r_d_c_8h_source.html">RDC.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for RDC:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_r_d_c__coll__graph.png" border="0" usemap="#_r_d_c_coll__map" alt="Collaboration graph"/></div>
+</div>
+
 <p><a href="class_r_d_c-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2f266b7215ade29eb5f4ecd3882ee475"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f266b7215ade29eb5f4ecd3882ee475"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RDC</b> (int width, int height)</td></tr>
-<tr class="memitem:a4cce740ee5b8b5a56dad854acdf2ba9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cce740ee5b8b5a56dad854acdf2ba9b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (int resolution)</td></tr>
-<tr class="memitem:a520a27505dafa3ded833045ca748207c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a520a27505dafa3ded833045ca748207c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>calibrateSystem</b> (<a class="el" href="class_sensor.html">Sensor</a> *cam, <a class="el" href="class_renderer___a.html">Renderer_A</a> *gfx)</td></tr>
-<tr class="memitem:a6345820b0dc9fd9c63440eb7f69ec4c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6345820b0dc9fd9c63440eb7f69ec4c9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>compensate</b> (<a class="el" href="class_image.html">Image</a> *srcImg, <a class="el" href="class_image.html">Image</a> *dstImage)</td></tr>
-<tr class="memitem:abaa34773cddd4c9d59f6beefed42289a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abaa34773cddd4c9d59f6beefed42289a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>simulateWall</b> (<a class="el" href="class_image.html">Image</a> *srcImg, <a class="el" href="class_image.html">Image</a> *dstImg, <a class="el" href="class_image.html">Image</a> *wall)</td></tr>
-<tr class="memitem:a70face7e6f7c3f65772614fca001a52e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70face7e6f7c3f65772614fca001a52e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>calibrate</b> (<a class="el" href="class_sensor___a.html">Sensor_A</a> *cam, <a class="el" href="class_renderer___a.html">Renderer_A</a> *gfx)</td></tr>
-<tr class="memitem:afd4c8763d879d5c811ed1329d1ab12a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd4c8763d879d5c811ed1329d1ab12a2"></a>
-<a class="el" href="class_image.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><b>compensate</b> (const <a class="el" href="class_image.html">Image</a> &amp;srcImg)</td></tr>
+<tr class="memitem:a609ab17eb672a23a49c00f853785c0b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_d_c.html#a609ab17eb672a23a49c00f853785c0b1">RDC</a> ()</td></tr>
+<tr class="memitem:a2f266b7215ade29eb5f4ecd3882ee475"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_d_c.html#a2f266b7215ade29eb5f4ecd3882ee475">RDC</a> (int width, int height)</td></tr>
+<tr class="memitem:a4cce740ee5b8b5a56dad854acdf2ba9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_d_c.html#a4cce740ee5b8b5a56dad854acdf2ba9b">init</a> (int resolution)</td></tr>
+<tr class="memitem:a520a27505dafa3ded833045ca748207c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_d_c.html#a520a27505dafa3ded833045ca748207c">calibrateSystem</a> (<a class="el" href="class_sensor.html">Sensor</a> *cam, <a class="el" href="class_renderer___a.html">Renderer_A</a> *gfx)</td></tr>
+<tr class="memitem:a6345820b0dc9fd9c63440eb7f69ec4c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_d_c.html#a6345820b0dc9fd9c63440eb7f69ec4c9">compensate</a> (<a class="el" href="class_image.html">Image</a> *srcImg, <a class="el" href="class_image.html">Image</a> *dstImage)</td></tr>
+<tr class="memitem:abaa34773cddd4c9d59f6beefed42289a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_d_c.html#abaa34773cddd4c9d59f6beefed42289a">simulateWall</a> (<a class="el" href="class_image.html">Image</a> *srcImg, <a class="el" href="class_image.html">Image</a> *dstImg, <a class="el" href="class_image.html">Image</a> *wall)</td></tr>
+<tr class="memitem:a54f036329e0267703c9bba536a3dc8c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_d_c.html#a54f036329e0267703c9bba536a3dc8c7">wait</a> (int ms=2000) const </td></tr>
+<tr class="memitem:a470abc7b60568295a64bd800477fe535"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_d_c.html#a470abc7b60568295a64bd800477fe535">getWaitingKey</a> ()</td></tr>
+<tr class="memitem:af73a1c18834bf4a842de6fd8d231565d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_d_c.html#af73a1c18834bf4a842de6fd8d231565d">setWaitingKey</a> (bool waiting)</td></tr>
+<tr class="memitem:a609ab17eb672a23a49c00f853785c0b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_d_c.html#a609ab17eb672a23a49c00f853785c0b1">RDC</a> ()</td></tr>
+<tr class="memitem:a70face7e6f7c3f65772614fca001a52e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_d_c.html#a70face7e6f7c3f65772614fca001a52e">calibrate</a> (<a class="el" href="class_sensor___a.html">Sensor_A</a> *cam, <a class="el" href="class_renderer___a.html">Renderer_A</a> *gfx)</td></tr>
+<tr class="memitem:afd4c8763d879d5c811ed1329d1ab12a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_image.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_d_c.html#afd4c8763d879d5c811ed1329d1ab12a2">compensate</a> (const <a class="el" href="class_image.html">Image</a> &amp;srcImg)</td></tr>
 </table>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a609ab17eb672a23a49c00f853785c0b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RDC::RDC </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2f266b7215ade29eb5f4ecd3882ee475"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RDC::RDC </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a609ab17eb672a23a49c00f853785c0b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RDC::RDC </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a70face7e6f7c3f65772614fca001a52e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RDC::calibrate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sensor___a.html">Sensor_A</a> *&#160;</td>
+          <td class="paramname"><em>cam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_renderer___a.html">Renderer_A</a> *&#160;</td>
+          <td class="paramname"><em>gfx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a520a27505dafa3ded833045ca748207c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RDC::calibrateSystem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sensor.html">Sensor</a> *&#160;</td>
+          <td class="paramname"><em>cam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_renderer___a.html">Renderer_A</a> *&#160;</td>
+          <td class="paramname"><em>gfx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afd4c8763d879d5c811ed1329d1ab12a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_image.html">Image</a> RDC::compensate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_image.html">Image</a> &amp;&#160;</td>
+          <td class="paramname"><em>srcImg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6345820b0dc9fd9c63440eb7f69ec4c9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RDC::compensate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_image.html">Image</a> *&#160;</td>
+          <td class="paramname"><em>srcImg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_image.html">Image</a> *&#160;</td>
+          <td class="paramname"><em>dstImage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a470abc7b60568295a64bd800477fe535"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RDC::getWaitingKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4cce740ee5b8b5a56dad854acdf2ba9b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RDC::init </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resolution</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af73a1c18834bf4a842de6fd8d231565d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RDC::setWaitingKey </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>waiting</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abaa34773cddd4c9d59f6beefed42289a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RDC::simulateWall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_image.html">Image</a> *&#160;</td>
+          <td class="paramname"><em>srcImg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_image.html">Image</a> *&#160;</td>
+          <td class="paramname"><em>dstImg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_image.html">Image</a> *&#160;</td>
+          <td class="paramname"><em>wall</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a54f036329e0267703c9bba536a3dc8c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RDC::wait </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ms</em> = <code>2000</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>headers/<a class="el" href="headers_2_r_d_c_8h_source.html">RDC.h</a></li>
 <li>xcode/headers/<a class="el" href="xcode_2headers_2_r_d_c_8h_source.html">RDC.h</a></li>
-<li>src/RDC.cpp</li>
-<li>xcode/src/RDC.cpp</li>
+<li>src/<a class="el" href="src_2_r_d_c_8cpp.html">RDC.cpp</a></li>
+<li>xcode/src/<a class="el" href="xcode_2src_2_r_d_c_8cpp.html">RDC.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 14 2013 18:41:53 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 28 2013 19:08:35 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

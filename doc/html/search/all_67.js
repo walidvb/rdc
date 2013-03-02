@@ -1,4 +1,25 @@
 var searchData=
 [
-  ['getnorm',['getNorm',['../class_v2_d.html#aefe4d7bf3752796db34a38a9d3cf8a86',1,'V2D::getNorm() const '],['../class_v2_d.html#aefe4d7bf3752796db34a38a9d3cf8a86',1,'V2D::getNorm() const ']]]
+  ['getboardsize',['getBoardSize',['../class_calib_controller.html#ad5f91606cb01ac9ee3da9c8dfc90495c',1,'CalibController::getBoardSize()'],['../class_calib_controller.html#ad5f91606cb01ac9ee3da9c8dfc90495c',1,'CalibController::getBoardSize()']]],
+  ['getcoords',['getCoords',['../class_v2_d.html#a15a9ab85cd256a983ebeacdf5033cfb8',1,'V2D::getCoords(float &amp;x, float &amp;y) const '],['../class_v2_d.html#a15a9ab85cd256a983ebeacdf5033cfb8',1,'V2D::getCoords(float &amp;x, float &amp;y) const ']]],
+  ['getframecount',['getFrameCount',['../class_sensor_sim.html#a717983aadf1eb7df2c7ae063bc460864',1,'SensorSim']]],
+  ['getheight',['getHeight',['../class_image.html#a45dd31ebd02682c5963858f62aa53dd9',1,'Image::getHeight()'],['../class_renderer___a.html#a69aeb74354637f5d9d7a5508f00dde33',1,'Renderer_A::getHeight()'],['../class_camera___a.html#afe39759777fa2722e0a013ad5af0fe8e',1,'Camera_A::getHeight()'],['../class_renderer___a.html#a69aeb74354637f5d9d7a5508f00dde33',1,'Renderer_A::getHeight()'],['../class_sensor___a.html#a4bc03abe623fb70ababd037c7f9e16fa',1,'Sensor_A::getHeight()'],['../class_sensor.html#a178b9d44931efb7fb7ad0a95d94940d2',1,'Sensor::getHeight()']]],
+  ['gethomo',['getHomo',['../class_homo.html#ac613f239b006de5c5e858946ff662438',1,'Homo']]],
+  ['gethomoinv',['getHomoInv',['../class_homo.html#af26f925be5708e0c22aaccd9d9ecadd4',1,'Homo']]],
+  ['getmat',['getMat',['../class_image.html#ac7db46ef48be05f16f1a48568609b2b7',1,'Image']]],
+  ['getnorm',['getNorm',['../class_v2_d.html#aefe4d7bf3752796db34a38a9d3cf8a86',1,'V2D::getNorm() const '],['../class_v2_d.html#aefe4d7bf3752796db34a38a9d3cf8a86',1,'V2D::getNorm() const ']]],
+  ['getpixels',['getPixels',['../class_image.html#a967ec7a693253014cc8ade9eee1b1c12',1,'Image']]],
+  ['getpoint',['getPoint',['../homography_2main_8cpp.html#aa6c3001c854a298d28857c817c416486',1,'getPoint(int x, int y, const Mat *homo):&#160;main.cpp'],['../homography_2main_8cpp.html#af34e80b677914631ee32581ebde2fb1a',1,'getPoint(Point pos, const Mat *homo):&#160;main.cpp']]],
+  ['getrealimage',['getRealImage',['../class_calib_controller.html#a01093e8a1e478e536dafdba833b24d57',1,'CalibController::getRealImage(Mat &amp;original)'],['../class_calib_controller.html#a01093e8a1e478e536dafdba833b24d57',1,'CalibController::getRealImage(Mat &amp;original)']]],
+  ['getrenderer',['getRenderer',['../class_controller.html#a0220f7841ce40fd47e693b3e89e8cd52',1,'Controller']]],
+  ['getsize',['getSize',['../class_sensor.html#adab47cb9052f4ccd778e28090fe86f85',1,'Sensor']]],
+  ['getsourcepoint',['getSourcePoint',['../class_homo.html#a10f5de8c9a2aa431c6163f827e9e8afc',1,'Homo::getSourcePoint(int x, int y)'],['../class_homo.html#a5114c847e911ee46fe8fe6f756801552',1,'Homo::getSourcePoint(const Point pos)']]],
+  ['gettargetpoint',['getTargetPoint',['../class_homo.html#af8f500747fd887d4692b77acba76c6ca',1,'Homo::getTargetPoint(int x, int y)'],['../class_homo.html#a18f0551bcd55d63537ece501359cd446',1,'Homo::getTargetPoint(const Point pos)']]],
+  ['gettype',['getType',['../class_image.html#a31258142b60882231d1b8ba999cd6d88',1,'Image']]],
+  ['getwaitingkey',['getWaitingKey',['../class_r_d_c.html#a470abc7b60568295a64bd800477fe535',1,'RDC']]],
+  ['getwidth',['getWidth',['../class_image.html#adbe5f8b9f79338c7eb6a66bdc69ca0b7',1,'Image::getWidth()'],['../class_renderer___a.html#a79fb640a6c4a733647f3bc5cd96c3bad',1,'Renderer_A::getWidth()'],['../class_camera___a.html#a4f71c1a128299b587696f996714e0002',1,'Camera_A::getWidth()'],['../class_renderer___a.html#a79fb640a6c4a733647f3bc5cd96c3bad',1,'Renderer_A::getWidth()'],['../class_sensor___a.html#adb31a9fb92f2493eabb8bae07b9de74d',1,'Sensor_A::getWidth()'],['../class_sensor.html#a76de3d54511c3ab4df5f08d871e9fae6',1,'Sensor::getWidth()']]],
+  ['getx',['getX',['../class_v2_d.html#af833c27bc15bf96f0eebce77bd2ec13f',1,'V2D::getX() const '],['../class_v2_d.html#af833c27bc15bf96f0eebce77bd2ec13f',1,'V2D::getX() const ']]],
+  ['gety',['getY',['../class_v2_d.html#a8d77fa030907aa90f1ce8afca8a9b079',1,'V2D::getY() const '],['../class_v2_d.html#a8d77fa030907aa90f1ce8afca8a9b079',1,'V2D::getY() const ']]],
+  ['grabframe',['grabFrame',['../class_camera.html#a3374922c6e19f1174c469fbb7d0c7a03',1,'Camera::grabFrame()'],['../class_camera___a.html#afebeedc438219ef7590e2e0b6c140c42',1,'Camera_A::grabFrame()'],['../class_sensor___a.html#ae34f4a1ed24847b22b8c7e68feb08483',1,'Sensor_A::grabFrame()'],['../class_sensor_media_sim.html#ad5ed2570d1aaf799aad3b9fd787f1c81',1,'SensorMediaSim::grabFrame()'],['../class_sensor_sim.html#a02725c6197d9d860d92da7a8a05dbe66',1,'SensorSim::grabFrame()'],['../class_sensor.html#af4b8b6a2a6c2902ef542caf7b2a1e538',1,'Sensor::grabFrame()']]],
+  ['grabframetest',['grabFrameTest',['../class_sensor_sim.html#a470016c6177cbc0898d5c9a5d9a1482b',1,'SensorSim']]]
 ];

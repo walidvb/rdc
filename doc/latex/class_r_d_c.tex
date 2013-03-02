@@ -1,35 +1,147 @@
 \hypertarget{class_r_d_c}{\section{R\-D\-C Class Reference}
 \label{class_r_d_c}\index{R\-D\-C@{R\-D\-C}}
 }
+
+
+{\ttfamily \#include $<$R\-D\-C.\-h$>$}
+
+
+
+Collaboration diagram for R\-D\-C\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_r_d_c__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_r_d_c_a2f266b7215ade29eb5f4ecd3882ee475}{{\bfseries R\-D\-C} (int width, int height)}\label{class_r_d_c_a2f266b7215ade29eb5f4ecd3882ee475}
-
+\hyperlink{class_r_d_c_a609ab17eb672a23a49c00f853785c0b1}{R\-D\-C} ()
 \item 
-\hypertarget{class_r_d_c_a4cce740ee5b8b5a56dad854acdf2ba9b}{void {\bfseries init} (int resolution)}\label{class_r_d_c_a4cce740ee5b8b5a56dad854acdf2ba9b}
-
+\hyperlink{class_r_d_c_a2f266b7215ade29eb5f4ecd3882ee475}{R\-D\-C} (int width, int height)
 \item 
-\hypertarget{class_r_d_c_a520a27505dafa3ded833045ca748207c}{void {\bfseries calibrate\-System} (\hyperlink{class_sensor}{Sensor} $\ast$cam, \hyperlink{class_renderer___a}{Renderer\-\_\-\-A} $\ast$gfx)}\label{class_r_d_c_a520a27505dafa3ded833045ca748207c}
-
+void \hyperlink{class_r_d_c_a4cce740ee5b8b5a56dad854acdf2ba9b}{init} (int resolution)
 \item 
-\hypertarget{class_r_d_c_a6345820b0dc9fd9c63440eb7f69ec4c9}{void {\bfseries compensate} (\hyperlink{class_image}{Image} $\ast$src\-Img, \hyperlink{class_image}{Image} $\ast$dst\-Image)}\label{class_r_d_c_a6345820b0dc9fd9c63440eb7f69ec4c9}
-
+void \hyperlink{class_r_d_c_a520a27505dafa3ded833045ca748207c}{calibrate\-System} (\hyperlink{class_sensor}{Sensor} $\ast$cam, \hyperlink{class_renderer___a}{Renderer\-\_\-\-A} $\ast$gfx)
 \item 
-\hypertarget{class_r_d_c_abaa34773cddd4c9d59f6beefed42289a}{void {\bfseries simulate\-Wall} (\hyperlink{class_image}{Image} $\ast$src\-Img, \hyperlink{class_image}{Image} $\ast$dst\-Img, \hyperlink{class_image}{Image} $\ast$wall)}\label{class_r_d_c_abaa34773cddd4c9d59f6beefed42289a}
-
+void \hyperlink{class_r_d_c_a6345820b0dc9fd9c63440eb7f69ec4c9}{compensate} (\hyperlink{class_image}{Image} $\ast$src\-Img, \hyperlink{class_image}{Image} $\ast$dst\-Image)
 \item 
-\hypertarget{class_r_d_c_a70face7e6f7c3f65772614fca001a52e}{void {\bfseries calibrate} (\hyperlink{class_sensor___a}{Sensor\-\_\-\-A} $\ast$cam, \hyperlink{class_renderer___a}{Renderer\-\_\-\-A} $\ast$gfx)}\label{class_r_d_c_a70face7e6f7c3f65772614fca001a52e}
-
+void \hyperlink{class_r_d_c_abaa34773cddd4c9d59f6beefed42289a}{simulate\-Wall} (\hyperlink{class_image}{Image} $\ast$src\-Img, \hyperlink{class_image}{Image} $\ast$dst\-Img, \hyperlink{class_image}{Image} $\ast$wall)
 \item 
-\hypertarget{class_r_d_c_afd4c8763d879d5c811ed1329d1ab12a2}{\hyperlink{class_image}{Image} {\bfseries compensate} (const \hyperlink{class_image}{Image} \&src\-Img)}\label{class_r_d_c_afd4c8763d879d5c811ed1329d1ab12a2}
-
+void \hyperlink{class_r_d_c_a54f036329e0267703c9bba536a3dc8c7}{wait} (int ms=2000) const 
+\item 
+bool \hyperlink{class_r_d_c_a470abc7b60568295a64bd800477fe535}{get\-Waiting\-Key} ()
+\item 
+void \hyperlink{class_r_d_c_af73a1c18834bf4a842de6fd8d231565d}{set\-Waiting\-Key} (bool waiting)
+\item 
+\hyperlink{class_r_d_c_a609ab17eb672a23a49c00f853785c0b1}{R\-D\-C} ()
+\item 
+void \hyperlink{class_r_d_c_a70face7e6f7c3f65772614fca001a52e}{calibrate} (\hyperlink{class_sensor___a}{Sensor\-\_\-\-A} $\ast$cam, \hyperlink{class_renderer___a}{Renderer\-\_\-\-A} $\ast$gfx)
+\item 
+\hyperlink{class_image}{Image} \hyperlink{class_r_d_c_afd4c8763d879d5c811ed1329d1ab12a2}{compensate} (const \hyperlink{class_image}{Image} \&src\-Img)
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_r_d_c_a609ab17eb672a23a49c00f853785c0b1}{\index{R\-D\-C@{R\-D\-C}!R\-D\-C@{R\-D\-C}}
+\index{R\-D\-C@{R\-D\-C}!RDC@{R\-D\-C}}
+\subsubsection[{R\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}R\-D\-C\-::\-R\-D\-C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_d_c_a609ab17eb672a23a49c00f853785c0b1}
+\hypertarget{class_r_d_c_a2f266b7215ade29eb5f4ecd3882ee475}{\index{R\-D\-C@{R\-D\-C}!R\-D\-C@{R\-D\-C}}
+\index{R\-D\-C@{R\-D\-C}!RDC@{R\-D\-C}}
+\subsubsection[{R\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}R\-D\-C\-::\-R\-D\-C (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{class_r_d_c_a2f266b7215ade29eb5f4ecd3882ee475}
+\hypertarget{class_r_d_c_a609ab17eb672a23a49c00f853785c0b1}{\index{R\-D\-C@{R\-D\-C}!R\-D\-C@{R\-D\-C}}
+\index{R\-D\-C@{R\-D\-C}!RDC@{R\-D\-C}}
+\subsubsection[{R\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}R\-D\-C\-::\-R\-D\-C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_d_c_a609ab17eb672a23a49c00f853785c0b1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_d_c_a70face7e6f7c3f65772614fca001a52e}{\index{R\-D\-C@{R\-D\-C}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!RDC@{R\-D\-C}}
+\subsubsection[{calibrate}]{\setlength{\rightskip}{0pt plus 5cm}void R\-D\-C\-::calibrate (
+\begin{DoxyParamCaption}
+\item[{{\bf Sensor\-\_\-\-A} $\ast$}]{cam, }
+\item[{{\bf Renderer\-\_\-\-A} $\ast$}]{gfx}
+\end{DoxyParamCaption}
+)}}\label{class_r_d_c_a70face7e6f7c3f65772614fca001a52e}
+\hypertarget{class_r_d_c_a520a27505dafa3ded833045ca748207c}{\index{R\-D\-C@{R\-D\-C}!calibrate\-System@{calibrate\-System}}
+\index{calibrate\-System@{calibrate\-System}!RDC@{R\-D\-C}}
+\subsubsection[{calibrate\-System}]{\setlength{\rightskip}{0pt plus 5cm}void R\-D\-C\-::calibrate\-System (
+\begin{DoxyParamCaption}
+\item[{{\bf Sensor} $\ast$}]{cam, }
+\item[{{\bf Renderer\-\_\-\-A} $\ast$}]{gfx}
+\end{DoxyParamCaption}
+)}}\label{class_r_d_c_a520a27505dafa3ded833045ca748207c}
+\hypertarget{class_r_d_c_afd4c8763d879d5c811ed1329d1ab12a2}{\index{R\-D\-C@{R\-D\-C}!compensate@{compensate}}
+\index{compensate@{compensate}!RDC@{R\-D\-C}}
+\subsubsection[{compensate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Image} R\-D\-C\-::compensate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Image} \&}]{src\-Img}
+\end{DoxyParamCaption}
+)}}\label{class_r_d_c_afd4c8763d879d5c811ed1329d1ab12a2}
+\hypertarget{class_r_d_c_a6345820b0dc9fd9c63440eb7f69ec4c9}{\index{R\-D\-C@{R\-D\-C}!compensate@{compensate}}
+\index{compensate@{compensate}!RDC@{R\-D\-C}}
+\subsubsection[{compensate}]{\setlength{\rightskip}{0pt plus 5cm}void R\-D\-C\-::compensate (
+\begin{DoxyParamCaption}
+\item[{{\bf Image} $\ast$}]{src\-Img, }
+\item[{{\bf Image} $\ast$}]{dst\-Image}
+\end{DoxyParamCaption}
+)}}\label{class_r_d_c_a6345820b0dc9fd9c63440eb7f69ec4c9}
+\hypertarget{class_r_d_c_a470abc7b60568295a64bd800477fe535}{\index{R\-D\-C@{R\-D\-C}!get\-Waiting\-Key@{get\-Waiting\-Key}}
+\index{get\-Waiting\-Key@{get\-Waiting\-Key}!RDC@{R\-D\-C}}
+\subsubsection[{get\-Waiting\-Key}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-D\-C\-::get\-Waiting\-Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_r_d_c_a470abc7b60568295a64bd800477fe535}
+\hypertarget{class_r_d_c_a4cce740ee5b8b5a56dad854acdf2ba9b}{\index{R\-D\-C@{R\-D\-C}!init@{init}}
+\index{init@{init}!RDC@{R\-D\-C}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void R\-D\-C\-::init (
+\begin{DoxyParamCaption}
+\item[{int}]{resolution}
+\end{DoxyParamCaption}
+)}}\label{class_r_d_c_a4cce740ee5b8b5a56dad854acdf2ba9b}
+\hypertarget{class_r_d_c_af73a1c18834bf4a842de6fd8d231565d}{\index{R\-D\-C@{R\-D\-C}!set\-Waiting\-Key@{set\-Waiting\-Key}}
+\index{set\-Waiting\-Key@{set\-Waiting\-Key}!RDC@{R\-D\-C}}
+\subsubsection[{set\-Waiting\-Key}]{\setlength{\rightskip}{0pt plus 5cm}void R\-D\-C\-::set\-Waiting\-Key (
+\begin{DoxyParamCaption}
+\item[{bool}]{waiting}
+\end{DoxyParamCaption}
+)}}\label{class_r_d_c_af73a1c18834bf4a842de6fd8d231565d}
+\hypertarget{class_r_d_c_abaa34773cddd4c9d59f6beefed42289a}{\index{R\-D\-C@{R\-D\-C}!simulate\-Wall@{simulate\-Wall}}
+\index{simulate\-Wall@{simulate\-Wall}!RDC@{R\-D\-C}}
+\subsubsection[{simulate\-Wall}]{\setlength{\rightskip}{0pt plus 5cm}void R\-D\-C\-::simulate\-Wall (
+\begin{DoxyParamCaption}
+\item[{{\bf Image} $\ast$}]{src\-Img, }
+\item[{{\bf Image} $\ast$}]{dst\-Img, }
+\item[{{\bf Image} $\ast$}]{wall}
+\end{DoxyParamCaption}
+)}}\label{class_r_d_c_abaa34773cddd4c9d59f6beefed42289a}
+\hypertarget{class_r_d_c_a54f036329e0267703c9bba536a3dc8c7}{\index{R\-D\-C@{R\-D\-C}!wait@{wait}}
+\index{wait@{wait}!RDC@{R\-D\-C}}
+\subsubsection[{wait}]{\setlength{\rightskip}{0pt plus 5cm}void R\-D\-C\-::wait (
+\begin{DoxyParamCaption}
+\item[{int}]{ms = {\ttfamily 2000}}
+\end{DoxyParamCaption}
+) const}}\label{class_r_d_c_a54f036329e0267703c9bba536a3dc8c7}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-headers/R\-D\-C.\-h\item 
-xcode/headers/R\-D\-C.\-h\item 
-src/R\-D\-C.\-cpp\item 
-xcode/src/R\-D\-C.\-cpp\end{DoxyCompactItemize}
+headers/\hyperlink{headers_2_r_d_c_8h}{R\-D\-C.\-h}\item 
+xcode/headers/\hyperlink{xcode_2headers_2_r_d_c_8h}{R\-D\-C.\-h}\item 
+src/\hyperlink{src_2_r_d_c_8cpp}{R\-D\-C.\-cpp}\item 
+xcode/src/\hyperlink{xcode_2src_2_r_d_c_8cpp}{R\-D\-C.\-cpp}\end{DoxyCompactItemize}

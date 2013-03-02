@@ -60,7 +60,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,39 +87,241 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p><code>#include &lt;<a class="el" href="_homo_8h_source.html">Homo.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Homo:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_homo__coll__graph.png" border="0" usemap="#_homo_coll__map" alt="Collaboration graph"/></div>
+</div>
+
 <p><a href="class_homo-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a76176c64001e0a7f3c51878ea0e343cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76176c64001e0a7f3c51878ea0e343cc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Homo</b> (Size boardSize_)</td></tr>
-<tr class="memitem:a5412617c15ec4b68ab31c109d1b2d6b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5412617c15ec4b68ab31c109d1b2d6b2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>addImages</b> (Mat *src, Mat *trg)</td></tr>
-<tr class="memitem:a65119d961a8cc3541699178fc664107a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65119d961a8cc3541699178fc664107a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>computeHomo</b> ()</td></tr>
-<tr class="memitem:af8f500747fd887d4692b77acba76c6ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8f500747fd887d4692b77acba76c6ca"></a>
-Point&#160;</td><td class="memItemRight" valign="bottom"><b>getTargetPoint</b> (int x, int y)</td></tr>
-<tr class="memitem:a18f0551bcd55d63537ece501359cd446"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18f0551bcd55d63537ece501359cd446"></a>
-Point&#160;</td><td class="memItemRight" valign="bottom"><b>getTargetPoint</b> (const Point pos)</td></tr>
-<tr class="memitem:a10f5de8c9a2aa431c6163f827e9e8afc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10f5de8c9a2aa431c6163f827e9e8afc"></a>
-Point&#160;</td><td class="memItemRight" valign="bottom"><b>getSourcePoint</b> (int x, int y)</td></tr>
-<tr class="memitem:a5114c847e911ee46fe8fe6f756801552"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5114c847e911ee46fe8fe6f756801552"></a>
-Point&#160;</td><td class="memItemRight" valign="bottom"><b>getSourcePoint</b> (const Point pos)</td></tr>
-<tr class="memitem:ac613f239b006de5c5e858946ff662438"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac613f239b006de5c5e858946ff662438"></a>
-Mat&#160;</td><td class="memItemRight" valign="bottom"><b>getHomo</b> () const </td></tr>
-<tr class="memitem:af26f925be5708e0c22aaccd9d9ecadd4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af26f925be5708e0c22aaccd9d9ecadd4"></a>
-Mat&#160;</td><td class="memItemRight" valign="bottom"><b>getHomoInv</b> () const </td></tr>
-<tr class="memitem:aaf9f8de23b9cd624c4f9ac49df6155fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf9f8de23b9cd624c4f9ac49df6155fc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPattern</b> (<a class="el" href="class_image.html">Image</a> *pattern)</td></tr>
+<tr class="memitem:ad900be60d091d959b64d49f4490e5c70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_homo.html#ad900be60d091d959b64d49f4490e5c70">Homo</a> ()</td></tr>
+<tr class="memitem:a76176c64001e0a7f3c51878ea0e343cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_homo.html#a76176c64001e0a7f3c51878ea0e343cc">Homo</a> (Size boardSize_)</td></tr>
+<tr class="memitem:a5412617c15ec4b68ab31c109d1b2d6b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_homo.html#a5412617c15ec4b68ab31c109d1b2d6b2">addImages</a> (Mat *src, Mat *trg)</td></tr>
+<tr class="memitem:a65119d961a8cc3541699178fc664107a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_homo.html#a65119d961a8cc3541699178fc664107a">computeHomo</a> ()</td></tr>
+<tr class="memitem:af8f500747fd887d4692b77acba76c6ca"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_homo.html#af8f500747fd887d4692b77acba76c6ca">getTargetPoint</a> (int x, int y)</td></tr>
+<tr class="memitem:a18f0551bcd55d63537ece501359cd446"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_homo.html#a18f0551bcd55d63537ece501359cd446">getTargetPoint</a> (const Point pos)</td></tr>
+<tr class="memitem:a10f5de8c9a2aa431c6163f827e9e8afc"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_homo.html#a10f5de8c9a2aa431c6163f827e9e8afc">getSourcePoint</a> (int x, int y)</td></tr>
+<tr class="memitem:a5114c847e911ee46fe8fe6f756801552"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_homo.html#a5114c847e911ee46fe8fe6f756801552">getSourcePoint</a> (const Point pos)</td></tr>
+<tr class="memitem:ac613f239b006de5c5e858946ff662438"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_homo.html#ac613f239b006de5c5e858946ff662438">getHomo</a> () const </td></tr>
+<tr class="memitem:af26f925be5708e0c22aaccd9d9ecadd4"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_homo.html#af26f925be5708e0c22aaccd9d9ecadd4">getHomoInv</a> () const </td></tr>
+<tr class="memitem:aaf9f8de23b9cd624c4f9ac49df6155fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_homo.html#aaf9f8de23b9cd624c4f9ac49df6155fc">setPattern</a> (<a class="el" href="class_image.html">Image</a> *<a class="el" href="homography_2main_8cpp.html#aa64c85b483c7d8ad894f881e664ade9a">pattern</a>)</td></tr>
 </table>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ad900be60d091d959b64d49f4490e5c70"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Homo::Homo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a76176c64001e0a7f3c51878ea0e343cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Homo::Homo </td>
+          <td>(</td>
+          <td class="paramtype">Size&#160;</td>
+          <td class="paramname"><em>boardSize_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a5412617c15ec4b68ab31c109d1b2d6b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Homo::addImages </td>
+          <td>(</td>
+          <td class="paramtype">Mat *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Mat *&#160;</td>
+          <td class="paramname"><em>trg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a65119d961a8cc3541699178fc664107a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Homo::computeHomo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac613f239b006de5c5e858946ff662438"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mat Homo::getHomo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af26f925be5708e0c22aaccd9d9ecadd4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mat Homo::getHomoInv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a10f5de8c9a2aa431c6163f827e9e8afc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Point Homo::getSourcePoint </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5114c847e911ee46fe8fe6f756801552"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Point Homo::getSourcePoint </td>
+          <td>(</td>
+          <td class="paramtype">const Point&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af8f500747fd887d4692b77acba76c6ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Point Homo::getTargetPoint </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a18f0551bcd55d63537ece501359cd446"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Point Homo::getTargetPoint </td>
+          <td>(</td>
+          <td class="paramtype">const Point&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaf9f8de23b9cd624c4f9ac49df6155fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Homo::setPattern </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_image.html">Image</a> *&#160;</td>
+          <td class="paramname"><em>pattern</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>headers/<a class="el" href="_homo_8h_source.html">Homo.h</a></li>
-<li>src/Homo.cc</li>
+<li>src/<a class="el" href="_homo_8cc.html">Homo.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 14 2013 18:41:53 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 28 2013 19:08:35 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

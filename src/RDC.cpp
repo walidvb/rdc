@@ -18,8 +18,14 @@ RDC::RDC(int width, int height) : outWidth(width), outHeight(height){}
 
 void RDC::init(int resolution)
 {
-    resolution = resolution;
+    this->resolution = resolution;
     homo = new Homo();
+    isHomoComputed = false;
+    isEMComputed = false;
+    isFMComputed = false;
+    isCalibrated = false;
+    isEMRendered = false;
+    isFMRendered = false;
 }
 
 /*  The compensation algorithm goes like this:
@@ -29,57 +35,79 @@ void RDC::init(int resolution)
  */
 void RDC::compensate(Image* srcImg, Image* dstImg)
 {
+    if (EM.empty() || FM.empty()) {
+        cerr << "[RDC] Compensation matrices have not been initialized, please run calibrateSystem" << endl;
+        exit(-1);
+    }
     Size originalSize(srcImg->getWidth(), srcImg->getHeight());
     
     Mat* R = srcImg->getMat();
     Mat* result = dstImg->getMat();
-    Mat croppedEM = EM(Rect(Point(0,0), R->size()));
-    Mat croppedFM = FM(Rect(Point(0,0), R->size()));
-   
+    *result /= 255;
+    Mat croppedEM = EM(Rect(Point(0,0), R->size()))/255;
+    Mat croppedFM = FM/255;
+    
     if(srcImg != dstImg)
     {
         //resize(*result, *result, out);    //resize the matrix to the size of the output
     }
     cv::subtract(*R, croppedEM, *result);
-    //cv::divide(*result, croppedFM, *result);  //commented to see smth.
-    cout << "image was compensated!" << endl;
+    cv::divide(*result, croppedFM, *result);  //commented to see smth.
+    *result *= 255;
+    imwrite("/Users/Gaston/dev/RDC/tests/result.jpg", *result);
+
+    cout << "[RDC] image was compensated!" << endl;
 }
 
-//Private methods
-void RDC::calibrateSystem(Sensor* cam, Renderer_A* gfx)
+void RDC::grabFM(Sensor *cam, Renderer_A *gfx)
 {
-    computeHomography(cam, gfx);
-    computeLighting(cam , gfx);
-}
-
-void RDC::computeLighting(Sensor* cam, Renderer_A* gfx)
-{
-    
-    //create black and white images. probably only white though, doesn't make too much sense to actually display black, rather display nothing
     Mat plain_ = Mat::ones(outHeight, outWidth, CV_8U)*255;
     Image plain(plain_);
     //draw it
-    //gfx->drawImg(&plain);
-    //capture this into FM
-    FM = *(cam->grabFrame().getMat());
-    //do the same with black
-    plain_ = Mat::zeros(outHeight, outWidth, CV_8U);
-    plain.setMat(plain_); //probably not needed, as it points to the same Mat already, but for the heck of it
-    //gfx->drawImg(&plain);
-    EM = *(cam->grabFrame().getMat());
-    
-    //get EM and FM matrices
-    //TODO: explain this function
-    cv::warpPerspective(EM, // input image
-                        EM,         // output image
-                        homo->getHomoInv(),      // homography
+    gfx->drawImg(&plain);
+    if(isFMRendered)
+    {
+        FM = cam->grabFrame().getMat()->clone();
+        imwrite("/Users/Gaston/dev/RDC/tests/FM_before.jpg", FM);
+
+        isFMComputed = true;
+    }
+}
+
+void RDC::grabEM(Sensor *cam, Renderer_A *gfx)
+{
+    Mat plain_ = Mat::zeros(outHeight, outWidth, CV_8U);
+    Image plain(plain_);
+    //draw it
+    gfx->drawImg(&plain);
+    if(isEMRendered)
+    {
+        EM = cam->grabFrame().getMat()->clone();
+        isEMComputed = true;
+    }
+}
+
+void RDC::computeLighting()
+{
+    imwrite("/Users/Gaston/dev/RDC/tests/FM.jpg", FM);
+    imwrite("/Users/Gaston/dev/RDC/tests/EM.jpg", EM);
+
+    //compute homographies EM and FM images
+    cv::warpPerspective(EM,                         // input image
+                        EM,                         // output image
+                        homo->getHomoInv(),         // homography
                         Size(outWidth,
                              outHeight));
-    cv::warpPerspective(FM, // input image
-                        FM,         // output image
-                        homo->getHomoInv(),      // homography
+    imwrite("/Users/Gaston/dev/RDC/tests/EM_warp.jpg", EM);
+
+    cv::warpPerspective(FM,                         // input image
+                        FM,                         // output image
+                        homo->getHomoInv(),         // homography
                         Size(outWidth,
                              outHeight));
+    imwrite("/Users/Gaston/dev/RDC/tests/FM_warp.jpg", FM);
+
+    isCalibrated = true;
 }
 
 void RDC::computeHomography(Sensor* cam, Renderer_A* gfx)
@@ -103,25 +131,50 @@ void RDC::computeHomography(Sensor* cam, Renderer_A* gfx)
     chessboard = "/Users/Gaston/dev/RDC/resources/test.jpg";
     bool isGrayScale = false;
     Image chessboardPattern(chessboard, isGrayScale);
-
-    chessboardPattern.resize(outWidth, outHeight);
-    //project chessboard
-    //gfx->drawImg(&chessboardPattern);
-    
     Image picture;
-    do{
-        picture = cam->grabFrame();
-        //gfx->drawImg(&picture);
-        cout << "[RDC] trying to get chessboard points from picture" << endl;
-        //add (chessboard, chessboard_capture) to homo
+    chessboardPattern.resize(outWidth, outHeight);
+    gfx->drawImg(&chessboardPattern);
+    picture = cam->grabFrame();
+    
+    if(homo->addImages(chessboardPattern.getMat(), picture.getMat()))
+    {
+        homo->computeHomo();
+        isHomoComputed = true;
     }
-    while(!homo->addImages(chessboardPattern.getMat(), picture.getMat()));
-    
-    //compute the homography matrix
-    homo->computeHomo();
-    
+
+}
+//Getters & Setters
+
+bool RDC::getIsHomoComputed()
+{
+    return isHomoComputed;
+}
+bool RDC::getIsEMComputed()
+{
+    return isEMComputed;
+}
+bool RDC::getIsFMComputed()
+{
+    return isFMComputed;
+}
+bool RDC::getIsCalibrated()
+{
+    return isCalibrated;
+}
+bool RDC::getIsEMRendered()
+{
+    return isEMRendered;
+}
+bool RDC::getIsFMRendered()
+{
+    return isFMRendered;
 }
 
-//Getters
-
-//Setters
+void RDC::setIsEMRendered(bool isIt)
+{
+    isEMRendered = isIt;
+}
+void RDC::setIsFMRendered(bool isIt)
+{
+    isFMRendered = isIt;
+}

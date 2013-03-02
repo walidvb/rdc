@@ -31,7 +31,7 @@ void Renderer_CV::drawImg(Image* img) const
     //setWindowProperty(name, CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
     if(img->getMat()->empty())
     {
-        cout << "Error! Could not read the image from disk";
+        cout << "[Renderer] Error! Could not read the image from disk";
         exit(-1);
     }
     imshow(name, (*img->getMat()));

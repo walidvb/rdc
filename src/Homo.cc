@@ -27,7 +27,7 @@ bool Homo::addImages(Mat* src, Mat* trg)
     Mat trgTmp;
     bool trgFound = findChessboardCorners(*trg, boardSize, trgCorners);
 
-    cout<<"srcfound: "<<srcFound<<" targFound :"<<trgFound<<endl;
+    cout<<"[Homo] srcfound: "<<srcFound<<" targFound :"<<trgFound<<endl;
     if(srcFound && trgFound)
     {
         /*FIXME: because type is not mathching expected type

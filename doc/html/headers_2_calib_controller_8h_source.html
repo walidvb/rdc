@@ -59,6 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -85,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">CalibController.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<a href="headers_2_calib_controller_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  calibController.h</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//  RDC</span></div>
@@ -99,24 +100,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;CameraCalibrator.h&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;Sensor.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="headers_2_camera_calibrator_8h.html">CameraCalibrator.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_sensor_8h.html">Sensor.h</a>&quot;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="class_calib_controller.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_calib_controller.html">CalibController</a>{</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">//methods</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> init();                            <span class="comment">//&lt;! well, init..</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    vector&lt;string&gt; takeAndSavePics();       <span class="comment">//&lt;! take multiple pictures and save them to disk</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> computeCalib();                    <span class="comment">//&lt;! compute the calibration matrix</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    Mat getRealImage(Mat&amp; original);        <span class="comment">//&lt;! returns the undistorted image</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> doCalib();                         <span class="comment">//&lt;! the whole package</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_calib_controller.html#a40eb2511d1666b5fc105b5d3018f8976">init</a>();                            <span class="comment">//&lt;! well, init..</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    vector&lt;string&gt; <a class="code" href="class_calib_controller.html#afeb31602e51c3a6e1206f8dd27f85ca2">takeAndSavePics</a>();       <span class="comment">//&lt;! take multiple pictures and save them to disk</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_calib_controller.html#a1e4505d8fd2f7ce275fec12a10e1c591">computeCalib</a>();                    <span class="comment">//&lt;! compute the calibration matrix</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    Mat <a class="code" href="class_calib_controller.html#a01093e8a1e478e536dafdba833b24d57">getRealImage</a>(Mat&amp; original);        <span class="comment">//&lt;! returns the undistorted image</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_calib_controller.html#ab5118d61dbbb24ca2b88713f56666540">doCalib</a>();                         <span class="comment">//&lt;! the whole package</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                            <span class="comment">//&lt;! takes pictures and does the calibration</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//Constructor</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_calib_controller.html">CalibController</a>(Size boardSize, <a class="code" href="class_sensor.html">Sensor</a>* captor);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_calib_controller.html#a9a77e4bf8ef429ee4738c7d7c7e7be25">CalibController</a>(Size boardSize, <a class="code" href="class_sensor.html">Sensor</a>* <a class="code" href="homography_2main_8cpp.html#a06102d39198e31579beb0539bff11cd9">captor</a>);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//Getters and Setters</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Size getBoardSize();        <span class="comment">//&lt;! used i can&#39;t remember where...</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Size <a class="code" href="class_calib_controller.html#ad5f91606cb01ac9ee3da9c8dfc90495c">getBoardSize</a>();        <span class="comment">//&lt;! used i can&#39;t remember where...</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_camera_calibrator.html">CameraCalibrator</a>* camCalib; <span class="comment">//&lt;! the object doing the calibration</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_sensor.html">Sensor</a>* capture;            <span class="comment">//&lt;! the device used to capture the scene, therefor allowing calibration</span></div>
@@ -130,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 14 2013 18:41:52 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 28 2013 19:08:35 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

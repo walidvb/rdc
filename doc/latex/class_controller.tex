@@ -1,41 +1,172 @@
 \hypertarget{class_controller}{\section{Controller Class Reference}
 \label{class_controller}\index{Controller@{Controller}}
 }
+
+
+{\ttfamily \#include $<$Controller.\-h$>$}
+
+
+
+Collaboration diagram for Controller\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_controller__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_controller_a53e2dfd2b170b86a607fb23f69c13859}{void {\bfseries init} (int width, int height)}\label{class_controller_a53e2dfd2b170b86a607fb23f69c13859}
-
+\hyperlink{class_controller_a95c56822d667e94b031451729ce069a9}{Controller} ()
 \item 
-\hypertarget{class_controller_a3281d6167b17007535c5414c5c409b4b}{void \hyperlink{class_controller_a3281d6167b17007535c5414c5c409b4b}{calibrate} ()}\label{class_controller_a3281d6167b17007535c5414c5c409b4b}
-
+\hyperlink{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}{$\sim$\-Controller} ()
+\item 
+void \hyperlink{class_controller_a53e2dfd2b170b86a607fb23f69c13859}{init} (int width, int height)
+\item 
+void \hyperlink{class_controller_a3281d6167b17007535c5414c5c409b4b}{calibrate} ()
 \begin{DoxyCompactList}\small\item\em calibrates the camera/projector system \end{DoxyCompactList}\item 
-\hypertarget{class_controller_ab05765b131b9cdf49b0665cb4bc91140}{void \hyperlink{class_controller_ab05765b131b9cdf49b0665cb4bc91140}{homography} ()}\label{class_controller_ab05765b131b9cdf49b0665cb4bc91140}
-
+void \hyperlink{class_controller_ab05765b131b9cdf49b0665cb4bc91140}{homography} ()
 \begin{DoxyCompactList}\small\item\em generates the homography matrix needed by the algorithm \end{DoxyCompactList}\item 
-\hypertarget{class_controller_aa9a8284feff5b720249e3fc6ad9b1592}{void \hyperlink{class_controller_aa9a8284feff5b720249e3fc6ad9b1592}{process} (\hyperlink{class_image}{Image} \&img)}\label{class_controller_aa9a8284feff5b720249e3fc6ad9b1592}
-
+void \hyperlink{class_controller_aa9a8284feff5b720249e3fc6ad9b1592}{process} (\hyperlink{class_image}{Image} \&img)
 \begin{DoxyCompactList}\small\item\em processes the frame that will be projected, and return it \end{DoxyCompactList}\item 
-\hypertarget{class_controller_a0220f7841ce40fd47e693b3e89e8cd52}{\hyperlink{class_renderer___a}{Renderer\-\_\-\-A} $\ast$ {\bfseries get\-Renderer} ()}\label{class_controller_a0220f7841ce40fd47e693b3e89e8cd52}
-
+void \hyperlink{class_controller_a962e99675e6d27c2da77734a550340f4}{send\-Command} (char command)
 \item 
-\hypertarget{class_controller_a53e2dfd2b170b86a607fb23f69c13859}{void {\bfseries init} (int width, int height)}\label{class_controller_a53e2dfd2b170b86a607fb23f69c13859}
-
+\hyperlink{class_renderer___a}{Renderer\-\_\-\-A} $\ast$ \hyperlink{class_controller_a0220f7841ce40fd47e693b3e89e8cd52}{get\-Renderer} ()
 \item 
-\hypertarget{class_controller_a3281d6167b17007535c5414c5c409b4b}{void \hyperlink{class_controller_a3281d6167b17007535c5414c5c409b4b}{calibrate} ()}\label{class_controller_a3281d6167b17007535c5414c5c409b4b}
-
+\hyperlink{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}{$\sim$\-Controller} ()
+\item 
+void \hyperlink{class_controller_a53e2dfd2b170b86a607fb23f69c13859}{init} (int width, int height)
+\item 
+void \hyperlink{class_controller_a3281d6167b17007535c5414c5c409b4b}{calibrate} ()
 \begin{DoxyCompactList}\small\item\em generates the homography matrix needed by the algorithm \end{DoxyCompactList}\item 
-\hypertarget{class_controller_a7ac58195c3342b7de52b762c0d759a3c}{void \hyperlink{class_controller_a7ac58195c3342b7de52b762c0d759a3c}{process} ()}\label{class_controller_a7ac58195c3342b7de52b762c0d759a3c}
-
+void \hyperlink{class_controller_a7ac58195c3342b7de52b762c0d759a3c}{process} ()
 \begin{DoxyCompactList}\small\item\em processes the frame that will be projected, and return it \end{DoxyCompactList}\item 
-\hypertarget{class_controller_a02fdbce18ccb7becaa2aa9fd8fc4aa2b}{void {\bfseries draw} ()}\label{class_controller_a02fdbce18ccb7becaa2aa9fd8fc4aa2b}
-
+void \hyperlink{class_controller_a02fdbce18ccb7becaa2aa9fd8fc4aa2b}{draw} ()
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_controller_a95c56822d667e94b031451729ce069a9}{\index{Controller@{Controller}!Controller@{Controller}}
+\index{Controller@{Controller}!Controller@{Controller}}
+\subsubsection[{Controller}]{\setlength{\rightskip}{0pt plus 5cm}Controller\-::\-Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a95c56822d667e94b031451729ce069a9}
+\hypertarget{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}{\index{Controller@{Controller}!$\sim$\-Controller@{$\sim$\-Controller}}
+\index{$\sim$\-Controller@{$\sim$\-Controller}!Controller@{Controller}}
+\subsubsection[{$\sim$\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}Controller\-::$\sim$\-Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}
+\hypertarget{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}{\index{Controller@{Controller}!$\sim$\-Controller@{$\sim$\-Controller}}
+\index{$\sim$\-Controller@{$\sim$\-Controller}!Controller@{Controller}}
+\subsubsection[{$\sim$\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}Controller\-::$\sim$\-Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_controller_a3281d6167b17007535c5414c5c409b4b}{\index{Controller@{Controller}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!Controller@{Controller}}
+\subsubsection[{calibrate}]{\setlength{\rightskip}{0pt plus 5cm}void Controller\-::calibrate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a3281d6167b17007535c5414c5c409b4b}
+
+
+generates the homography matrix needed by the algorithm 
+
+\hypertarget{class_controller_a3281d6167b17007535c5414c5c409b4b}{\index{Controller@{Controller}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!Controller@{Controller}}
+\subsubsection[{calibrate}]{\setlength{\rightskip}{0pt plus 5cm}void Controller\-::calibrate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a3281d6167b17007535c5414c5c409b4b}
+
+
+calibrates the camera/projector system 
+
+\hypertarget{class_controller_a02fdbce18ccb7becaa2aa9fd8fc4aa2b}{\index{Controller@{Controller}!draw@{draw}}
+\index{draw@{draw}!Controller@{Controller}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Controller\-::draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a02fdbce18ccb7becaa2aa9fd8fc4aa2b}
+\hypertarget{class_controller_a0220f7841ce40fd47e693b3e89e8cd52}{\index{Controller@{Controller}!get\-Renderer@{get\-Renderer}}
+\index{get\-Renderer@{get\-Renderer}!Controller@{Controller}}
+\subsubsection[{get\-Renderer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Renderer\-\_\-\-A} $\ast$ Controller\-::get\-Renderer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a0220f7841ce40fd47e693b3e89e8cd52}
+\hypertarget{class_controller_ab05765b131b9cdf49b0665cb4bc91140}{\index{Controller@{Controller}!homography@{homography}}
+\index{homography@{homography}!Controller@{Controller}}
+\subsubsection[{homography}]{\setlength{\rightskip}{0pt plus 5cm}void Controller\-::homography (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_controller_ab05765b131b9cdf49b0665cb4bc91140}
+
+
+generates the homography matrix needed by the algorithm 
+
+\hypertarget{class_controller_a53e2dfd2b170b86a607fb23f69c13859}{\index{Controller@{Controller}!init@{init}}
+\index{init@{init}!Controller@{Controller}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Controller\-::init (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a53e2dfd2b170b86a607fb23f69c13859}
+\hypertarget{class_controller_a53e2dfd2b170b86a607fb23f69c13859}{\index{Controller@{Controller}!init@{init}}
+\index{init@{init}!Controller@{Controller}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Controller\-::init (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a53e2dfd2b170b86a607fb23f69c13859}
+\hypertarget{class_controller_a7ac58195c3342b7de52b762c0d759a3c}{\index{Controller@{Controller}!process@{process}}
+\index{process@{process}!Controller@{Controller}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}void Controller\-::process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a7ac58195c3342b7de52b762c0d759a3c}
+
+
+processes the frame that will be projected, and return it 
+
+\hypertarget{class_controller_aa9a8284feff5b720249e3fc6ad9b1592}{\index{Controller@{Controller}!process@{process}}
+\index{process@{process}!Controller@{Controller}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}void Controller\-::process (
+\begin{DoxyParamCaption}
+\item[{{\bf Image} \&}]{img}
+\end{DoxyParamCaption}
+)}}\label{class_controller_aa9a8284feff5b720249e3fc6ad9b1592}
+
+
+processes the frame that will be projected, and return it 
+
+\hypertarget{class_controller_a962e99675e6d27c2da77734a550340f4}{\index{Controller@{Controller}!send\-Command@{send\-Command}}
+\index{send\-Command@{send\-Command}!Controller@{Controller}}
+\subsubsection[{send\-Command}]{\setlength{\rightskip}{0pt plus 5cm}void Controller\-::send\-Command (
+\begin{DoxyParamCaption}
+\item[{char}]{command}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a962e99675e6d27c2da77734a550340f4}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-headers/Controller.\-h\item 
-xcode/headers/Controller.\-h\item 
-src/Controller.\-cpp\item 
-xcode/src/Controller.\-cpp\end{DoxyCompactItemize}
+headers/\hyperlink{headers_2_controller_8h}{Controller.\-h}\item 
+xcode/headers/\hyperlink{xcode_2headers_2_controller_8h}{Controller.\-h}\item 
+src/\hyperlink{src_2_controller_8cpp}{Controller.\-cpp}\item 
+xcode/src/\hyperlink{xcode_2src_2_controller_8cpp}{Controller.\-cpp}\end{DoxyCompactItemize}

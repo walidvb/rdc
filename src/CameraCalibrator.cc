@@ -37,7 +37,7 @@ int CameraCalibrator::addChessboardPoints(
         bool found = findChessboardCorners(image, boardSize, imageCorners);
         if(!found)
         {
-            cout << "no ";
+            cout << "[CamCalib] no ";
         }
         cout << "corners found" << endl;
         

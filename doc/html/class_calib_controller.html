@@ -60,7 +60,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,49 +87,268 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p><code>#include &lt;<a class="el" href="headers_2_calib_controller_8h_source.html">CalibController.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for CalibController:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_calib_controller__coll__graph.png" border="0" usemap="#_calib_controller_coll__map" alt="Collaboration graph"/></div>
+</div>
+
 <p><a href="class_calib_controller-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a40eb2511d1666b5fc105b5d3018f8976"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40eb2511d1666b5fc105b5d3018f8976"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
-<tr class="memitem:afeb31602e51c3a6e1206f8dd27f85ca2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afeb31602e51c3a6e1206f8dd27f85ca2"></a>
-vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>takeAndSavePics</b> ()</td></tr>
-<tr class="memitem:a1e4505d8fd2f7ce275fec12a10e1c591"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e4505d8fd2f7ce275fec12a10e1c591"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>computeCalib</b> ()</td></tr>
-<tr class="memitem:a01093e8a1e478e536dafdba833b24d57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01093e8a1e478e536dafdba833b24d57"></a>
-Mat&#160;</td><td class="memItemRight" valign="bottom"><b>getRealImage</b> (Mat &amp;original)</td></tr>
-<tr class="memitem:ab5118d61dbbb24ca2b88713f56666540"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5118d61dbbb24ca2b88713f56666540"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>doCalib</b> ()</td></tr>
-<tr class="memitem:a9a77e4bf8ef429ee4738c7d7c7e7be25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a77e4bf8ef429ee4738c7d7c7e7be25"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CalibController</b> (Size boardSize, <a class="el" href="class_sensor.html">Sensor</a> *captor)</td></tr>
-<tr class="memitem:ad5f91606cb01ac9ee3da9c8dfc90495c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5f91606cb01ac9ee3da9c8dfc90495c"></a>
-Size&#160;</td><td class="memItemRight" valign="bottom"><b>getBoardSize</b> ()</td></tr>
-<tr class="memitem:a40eb2511d1666b5fc105b5d3018f8976"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40eb2511d1666b5fc105b5d3018f8976"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
-<tr class="memitem:a98f63965152d1f337c55bd1584eb4cb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98f63965152d1f337c55bd1584eb4cb3"></a>
-vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>takeAndSavePics</b> ()</td></tr>
-<tr class="memitem:a1e4505d8fd2f7ce275fec12a10e1c591"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e4505d8fd2f7ce275fec12a10e1c591"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>computeCalib</b> ()</td></tr>
-<tr class="memitem:a01093e8a1e478e536dafdba833b24d57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01093e8a1e478e536dafdba833b24d57"></a>
-Mat&#160;</td><td class="memItemRight" valign="bottom"><b>getRealImage</b> (Mat &amp;original)</td></tr>
-<tr class="memitem:ab5118d61dbbb24ca2b88713f56666540"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5118d61dbbb24ca2b88713f56666540"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>doCalib</b> ()</td></tr>
-<tr class="memitem:a927ad2def953ee2f7f7e6819d73352d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a927ad2def953ee2f7f7e6819d73352d7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CalibController</b> (Size boardSize)</td></tr>
-<tr class="memitem:ad5f91606cb01ac9ee3da9c8dfc90495c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5f91606cb01ac9ee3da9c8dfc90495c"></a>
-Size&#160;</td><td class="memItemRight" valign="bottom"><b>getBoardSize</b> ()</td></tr>
+<tr class="memitem:a40eb2511d1666b5fc105b5d3018f8976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#a40eb2511d1666b5fc105b5d3018f8976">init</a> ()</td></tr>
+<tr class="memitem:afeb31602e51c3a6e1206f8dd27f85ca2"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#afeb31602e51c3a6e1206f8dd27f85ca2">takeAndSavePics</a> ()</td></tr>
+<tr class="memitem:a1e4505d8fd2f7ce275fec12a10e1c591"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#a1e4505d8fd2f7ce275fec12a10e1c591">computeCalib</a> ()</td></tr>
+<tr class="memitem:a01093e8a1e478e536dafdba833b24d57"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#a01093e8a1e478e536dafdba833b24d57">getRealImage</a> (Mat &amp;original)</td></tr>
+<tr class="memitem:ab5118d61dbbb24ca2b88713f56666540"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#ab5118d61dbbb24ca2b88713f56666540">doCalib</a> ()</td></tr>
+<tr class="memitem:a9a77e4bf8ef429ee4738c7d7c7e7be25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#a9a77e4bf8ef429ee4738c7d7c7e7be25">CalibController</a> (Size boardSize, <a class="el" href="class_sensor.html">Sensor</a> *<a class="el" href="homography_2main_8cpp.html#a06102d39198e31579beb0539bff11cd9">captor</a>)</td></tr>
+<tr class="memitem:ad5f91606cb01ac9ee3da9c8dfc90495c"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#ad5f91606cb01ac9ee3da9c8dfc90495c">getBoardSize</a> ()</td></tr>
+<tr class="memitem:a40eb2511d1666b5fc105b5d3018f8976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#a40eb2511d1666b5fc105b5d3018f8976">init</a> ()</td></tr>
+<tr class="memitem:a98f63965152d1f337c55bd1584eb4cb3"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#a98f63965152d1f337c55bd1584eb4cb3">takeAndSavePics</a> ()</td></tr>
+<tr class="memitem:a1e4505d8fd2f7ce275fec12a10e1c591"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#a1e4505d8fd2f7ce275fec12a10e1c591">computeCalib</a> ()</td></tr>
+<tr class="memitem:a01093e8a1e478e536dafdba833b24d57"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#a01093e8a1e478e536dafdba833b24d57">getRealImage</a> (Mat &amp;original)</td></tr>
+<tr class="memitem:ab5118d61dbbb24ca2b88713f56666540"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#ab5118d61dbbb24ca2b88713f56666540">doCalib</a> ()</td></tr>
+<tr class="memitem:a927ad2def953ee2f7f7e6819d73352d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#a927ad2def953ee2f7f7e6819d73352d7">CalibController</a> (Size boardSize)</td></tr>
+<tr class="memitem:ad5f91606cb01ac9ee3da9c8dfc90495c"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calib_controller.html#ad5f91606cb01ac9ee3da9c8dfc90495c">getBoardSize</a> ()</td></tr>
 </table>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a9a77e4bf8ef429ee4738c7d7c7e7be25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CalibController::CalibController </td>
+          <td>(</td>
+          <td class="paramtype">Size&#160;</td>
+          <td class="paramname"><em>boardSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_sensor.html">Sensor</a> *&#160;</td>
+          <td class="paramname"><em>captor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a927ad2def953ee2f7f7e6819d73352d7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CalibController::CalibController </td>
+          <td>(</td>
+          <td class="paramtype">Size&#160;</td>
+          <td class="paramname"><em>boardSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a1e4505d8fd2f7ce275fec12a10e1c591"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalibController::computeCalib </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1e4505d8fd2f7ce275fec12a10e1c591"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalibController::computeCalib </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab5118d61dbbb24ca2b88713f56666540"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalibController::doCalib </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab5118d61dbbb24ca2b88713f56666540"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalibController::doCalib </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad5f91606cb01ac9ee3da9c8dfc90495c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Size CalibController::getBoardSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad5f91606cb01ac9ee3da9c8dfc90495c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Size CalibController::getBoardSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a01093e8a1e478e536dafdba833b24d57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mat CalibController::getRealImage </td>
+          <td>(</td>
+          <td class="paramtype">Mat &amp;&#160;</td>
+          <td class="paramname"><em>original</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a01093e8a1e478e536dafdba833b24d57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mat CalibController::getRealImage </td>
+          <td>(</td>
+          <td class="paramtype">Mat &amp;&#160;</td>
+          <td class="paramname"><em>original</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a40eb2511d1666b5fc105b5d3018f8976"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalibController::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a40eb2511d1666b5fc105b5d3018f8976"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalibController::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afeb31602e51c3a6e1206f8dd27f85ca2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; string &gt; CalibController::takeAndSavePics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a98f63965152d1f337c55bd1584eb4cb3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;string&gt; CalibController::takeAndSavePics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>headers/<a class="el" href="headers_2_calib_controller_8h_source.html">CalibController.h</a></li>
 <li>xcode/xcode/homography/headers/<a class="el" href="xcode_2xcode_2homography_2headers_2_calib_controller_8h_source.html">calibController.h</a></li>
-<li>src/CalibController.cc</li>
-<li>xcode/xcode/homography/src/CalibController.cc</li>
+<li>src/<a class="el" href="src_2_calib_controller_8cc.html">CalibController.cc</a></li>
+<li>xcode/xcode/homography/src/<a class="el" href="xcode_2xcode_2homography_2src_2_calib_controller_8cc.html">CalibController.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 14 2013 18:41:52 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 28 2013 19:08:35 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

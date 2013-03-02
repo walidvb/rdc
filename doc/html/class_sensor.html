@@ -60,7 +60,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,33 +87,169 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p><code>#include &lt;<a class="el" href="_sensor_8h_source.html">Sensor.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Sensor:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sensor__coll__graph.png" border="0" usemap="#_sensor_coll__map" alt="Collaboration graph"/></div>
+</div>
+
 <p><a href="class_sensor-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a695b9f55230ae5b0a4d587e83d1761b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a695b9f55230ae5b0a4d587e83d1761b1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Sensor</b> (int width, int height)</td></tr>
-<tr class="memitem:a435914c7ea7c9987840dac52c9c36b4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a435914c7ea7c9987840dac52c9c36b4b"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (string source)</td></tr>
-<tr class="memitem:aeaf3d9e395c592e7ff039c0ed5b86c44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeaf3d9e395c592e7ff039c0ed5b86c44"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (int deviceID)</td></tr>
-<tr class="memitem:af4b8b6a2a6c2902ef542caf7b2a1e538"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4b8b6a2a6c2902ef542caf7b2a1e538"></a>
-<a class="el" href="class_image.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><b>grabFrame</b> ()</td></tr>
-<tr class="memitem:a76de3d54511c3ab4df5f08d871e9fae6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76de3d54511c3ab4df5f08d871e9fae6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> () const </td></tr>
-<tr class="memitem:a178b9d44931efb7fb7ad0a95d94940d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a178b9d44931efb7fb7ad0a95d94940d2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> () const </td></tr>
-<tr class="memitem:adab47cb9052f4ccd778e28090fe86f85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adab47cb9052f4ccd778e28090fe86f85"></a>
-Size&#160;</td><td class="memItemRight" valign="bottom"><b>getSize</b> ()</td></tr>
+<tr class="memitem:a342d6d11ef572c8cba92cb76fb1a294b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#a342d6d11ef572c8cba92cb76fb1a294b">Sensor</a> ()</td></tr>
+<tr class="memitem:a695b9f55230ae5b0a4d587e83d1761b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#a695b9f55230ae5b0a4d587e83d1761b1">Sensor</a> (int width, int height)</td></tr>
+<tr class="memitem:a435914c7ea7c9987840dac52c9c36b4b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#a435914c7ea7c9987840dac52c9c36b4b">init</a> (string source)</td></tr>
+<tr class="memitem:aeaf3d9e395c592e7ff039c0ed5b86c44"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#aeaf3d9e395c592e7ff039c0ed5b86c44">init</a> (int deviceID)</td></tr>
+<tr class="memitem:af4b8b6a2a6c2902ef542caf7b2a1e538"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_image.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#af4b8b6a2a6c2902ef542caf7b2a1e538">grabFrame</a> ()</td></tr>
+<tr class="memitem:a76de3d54511c3ab4df5f08d871e9fae6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#a76de3d54511c3ab4df5f08d871e9fae6">getWidth</a> () const </td></tr>
+<tr class="memitem:a178b9d44931efb7fb7ad0a95d94940d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#a178b9d44931efb7fb7ad0a95d94940d2">getHeight</a> () const </td></tr>
+<tr class="memitem:adab47cb9052f4ccd778e28090fe86f85"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#adab47cb9052f4ccd778e28090fe86f85">getSize</a> ()</td></tr>
 </table>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a342d6d11ef572c8cba92cb76fb1a294b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sensor::Sensor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a695b9f55230ae5b0a4d587e83d1761b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sensor::Sensor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a178b9d44931efb7fb7ad0a95d94940d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Sensor::getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adab47cb9052f4ccd778e28090fe86f85"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Size Sensor::getSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a76de3d54511c3ab4df5f08d871e9fae6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Sensor::getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af4b8b6a2a6c2902ef542caf7b2a1e538"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_image.html">Image</a> Sensor::grabFrame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a435914c7ea7c9987840dac52c9c36b4b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Sensor::init </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aeaf3d9e395c592e7ff039c0ed5b86c44"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Sensor::init </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>deviceID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>xcode/<a class="el" href="_sensor_8h_source.html">Sensor.h</a></li>
-<li>src/Sensor.cc</li>
+<li>src/<a class="el" href="_sensor_8cc.html">Sensor.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 14 2013 18:41:53 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 28 2013 19:08:35 for RDC by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

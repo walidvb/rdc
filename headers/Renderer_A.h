@@ -24,6 +24,7 @@ public:
     virtual ~Renderer_A(){}
     virtual void drawImg(Image* img) const = 0;
     
+    virtual void clear() const = 0;     //<! clears window of previous content
     //void drawRect( V2D& topleft, V2D& bottomright ) const;
     void drawStripeVert(float xOffset, float width) const;
     void drawStripeHorz(float yOffset, float height) const;
@@ -32,6 +33,7 @@ public:
     int getWidth() const;
     int getHeight() const;
     
+    virtual void setFullscreen(bool isFullscreen) = 0;
     static const float X_ZERO;
     static const float Y_ZERO;
     
