@@ -10,6 +10,7 @@
 
 Homo::Homo(){
     boardSize = Size(5, 4);
+    cout << "[Homo] looking for a [" << boardSize.width << "," << boardSize.height << "] chessboard" << endl;
 }
 
 Homo::Homo(Size boardSize_) : boardSize(boardSize)
@@ -19,15 +20,13 @@ Homo::Homo(Size boardSize_) : boardSize(boardSize)
 bool Homo::addImages(Mat* src, Mat* trg)
 {
     int successes = 0;
-    
-        // Get the chessboard corners
     vector<Point2f> srcCorners;
-    bool srcFound = findChessboardCorners(*src, boardSize, srcCorners);
+    bool srcFound = findChessboardCorners(*src, boardSize, srcCorners, CV_CALIB_CB_ADAPTIVE_THRESH|CV_CALIB_CB_FILTER_QUADS);
+        // Get the chessboard corners
     vector<Point2f> trgCorners;
-    Mat trgTmp;
-    bool trgFound = findChessboardCorners(*trg, boardSize, trgCorners);
+    bool trgFound = findChessboardCorners(*trg, boardSize, trgCorners, CV_CALIB_CB_ADAPTIVE_THRESH|CV_CALIB_CB_FILTER_QUADS);
+    imwrite("/Users/Gaston/dev/RDC/tests/picture.jpg", *trg);
 
-    cout<<"[Homo] srcfound: "<<srcFound<<" targFound :"<<trgFound<<endl;
     if(srcFound && trgFound)
     {
         /*FIXME: because type is not mathching expected type
@@ -61,7 +60,7 @@ bool Homo::addImages(Mat* src, Mat* trg)
             
             cout << "[Homo] correspondence points added: ";
             // Add src and trg points to our total of points, point by point
-            for(int i = 0; i < srcCorners.size(); i++)
+            for(int i = 0; i < trgCorners.size(); i++)
             {
                 cout << i+1 << " " ;
                 srcPoints.push_back(srcCorners[i]);
@@ -71,11 +70,12 @@ bool Homo::addImages(Mat* src, Mat* trg)
             cout << ";" << endl;
             successes++;
         }
+
         return true;
     }
     else
     {
-        cout << "[Homo] No chessboard points found in image" << endl;
+        cout << "[Homo] Chessboard found " << (srcFound ? "in pattern " : "") << (trgFound ? "and " : "but not ") << "in picture" << endl;
         return false;
     }
     
@@ -83,7 +83,7 @@ bool Homo::addImages(Mat* src, Mat* trg)
 
 void Homo::computeHomo(){
     if(srcPoints.size() <= 0)
-    {
+    {   //7 is totally magical
         std::cerr << "[Homo] Not enough corresponding points found(" << srcPoints.size() << "found, 7 needed)" << endl;
     }
     homoInv = findHomography(trgPoints, srcPoints);

@@ -25,25 +25,25 @@ int main(int argc, const char * argv[])
 
     string resources="/Users/Gaston/dev/RDC/resources/";
     cout << "init" << endl;
-    pattern = imread(resources + "chessboard65.jpg");
-    captor = imread(resources + "chesspic2.jpg");
+    pattern = imread(resources + "test.jpg");
+    captor = imread(resources + "captor.jpg");
     int width = pattern.cols;
     
     
     Size boardSize(5, 4);
     
     vector<Point2f> patternCorners;
-    bool patternFound = findChessboardCorners(pattern, boardSize, patternCorners);
+    bool patternFound = findChessboardCorners(pattern, boardSize, patternCorners,  CV_CALIB_CB_ADAPTIVE_THRESH);
     
     vector<Point2f> picCorners;
-    bool picFound = findChessboardCorners(captor, boardSize, picCorners);
+    bool picFound = findChessboardCorners(captor, boardSize, picCorners, CV_CALIB_CB_ADAPTIVE_THRESH|CV_CALIB_CB_FILTER_QUADS);
     
     drawChessboardCorners(pattern, boardSize, patternCorners, patternFound);
     drawChessboardCorners(captor, boardSize, picCorners, picFound);
     Mat result;
     
 
-    
+    cout << "pattern: " << patternFound << ", picture: " << picFound << endl;
     if(patternFound && picFound)
     {
         homo = findHomography(picCorners, patternCorners);

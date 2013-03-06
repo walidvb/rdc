@@ -13,7 +13,6 @@ using namespace std;
 class RDCApp : public cinder::app::AppBasic {
 public:
 	void setup();
-	void mouseDown( cinder::app::MouseEvent event );
     void keyDown( cinder::app::KeyEvent event );
 	void update();
 	void draw();
@@ -23,13 +22,17 @@ public:
 private:
     Controller* controller;
     int width, height;
-    Image img;
+    Image imgProcessed;
+    Image imgSource;
     bool isCalibrated;
     bool isGrabOk;
-    ci::gl::Texture myImg;
+    ci::gl::Texture textProcessed;
+    ci::gl::Texture textSource;
+
     //give surface to texture
     bool isImgProcessed;
     bool isFullScreen;
+    bool compensate;
 };
 
 void RDCApp::prepareSettings( Settings *settings ){
@@ -42,30 +45,58 @@ void RDCApp::setup()
 {
     width = getWindowWidth();
     height = getWindowHeight();
-    
+    compensate = false;
     controller = new Controller();
     controller->init(width, height);
     
     isCalibrated = false;
     isGrabOk = false;
     isImgProcessed = false;
-    img.load("/Users/Gaston/dev/RDC/resources/goccia.jpg");
     isFullScreen = false;
-}
-
-void RDCApp::mouseDown( cinder::app::MouseEvent event )
-{
+    
+    //Get source image in a format Cinder can draw
+    imgSource.load("/Users/Gaston/dev/RDC/resources/lena.jpg");
+    int w = imgSource.getWidth();
+    int h = imgSource.getHeight();
+    
+    //conversion from Image (cv::Mat) to ci::surface
+    ci::Surface8u surface(w, h, false);
+    for(int i = 0; i < w; i+=1)
+    {
+        for (int j = 0; j<h; j+=1)
+        {
+            cv::Vec3b pixel = imgSource.pixelAt(i,j);
+            unsigned char b = pixel[0];
+            unsigned char g = pixel[1];
+            unsigned char r = pixel[2];
+            cinder::Vec2i pos(i,j);
+            ci::ColorT<unsigned char> color(r,g,b);
+            surface.setPixel(pos, color);
+        }
+    }
+    textSource = ci::gl::Texture(surface);
+    
 }
 
 void RDCApp::keyDown( cinder::app::KeyEvent event )
 {
     char command = event.getChar();
-    controller->sendCommand(command);
-    if(command == 'f')
+    switch(command)
     {
-        isFullScreen = !isFullScreen;
-        setFullScreen(isFullScreen);
+        case 'f':
+            isFullScreen = !isFullScreen;
+            setFullScreen(isFullScreen);
+            break;
+        case 'c':
+            compensate = !compensate;
+            break;
+        default:
+            controller->sendCommand(command);
+            break;
     }
+    
+   
+    
 }
 void RDCApp::update()
 {
@@ -73,9 +104,9 @@ void RDCApp::update()
     {
         if(controller->isRDCCalibrated && !isImgProcessed)
         {
-            controller->process(img);
-            int w = img.getWidth();
-            int h = img.getHeight();
+            controller->process(imgSource);
+            int w = imgSource.getWidth();
+            int h = imgSource.getHeight();
             
             //conversion from Image (cv::Mat) to ci::surface
             ci::Surface8u surface(w, h, false);
@@ -83,7 +114,7 @@ void RDCApp::update()
             {
                 for (int j = 0; j<h; j+=1)
                 {
-                    cv::Vec3b pixel = img.pixelAt(i,j);
+                    cv::Vec3b pixel = imgSource.pixelAt(i,j);
                     unsigned char b = pixel[0];
                     unsigned char g = pixel[1];
                     unsigned char r = pixel[2];
@@ -92,18 +123,16 @@ void RDCApp::update()
                     surface.setPixel(pos, color);
                 }
             }
-            myImg = ci::gl::Texture(surface);
+            textProcessed = ci::gl::Texture(surface);
             isImgProcessed = true;
         }
     }
-
+    
 }
 
 void RDCApp::draw()
 {
-    if(isFullScreen)
-    {
-        if(!controller->isRDCCalibrated)
+        if(!controller->isRDCCalibrated && isFullScreen)
         {
             ci::gl::clear( ci::Color( 0, 0, 0 ) );
             controller->calibrate();
@@ -112,13 +141,16 @@ void RDCApp::draw()
         {
             ci::gl::clear( ci::Color( 0, 0, 0 ) );
             //drawing code here
-            ci::gl::draw(myImg);
+            if(compensate && isImgProcessed)
+            {
+                ci::gl::draw(textProcessed);
+            }
+            else
+            {
+                ci::gl::draw(textSource);
+            }
         }
-    }
-    else
-    {
-        ci::gl::clear( ci::Color( 15, 0, 0 ) );
-    }
+
 }
 
 void RDCApp::quit()

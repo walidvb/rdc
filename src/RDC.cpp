@@ -43,11 +43,16 @@ void RDC::compensate(Image* srcImg, Image* dstImg)
     
     Mat* R = srcImg->getMat();
     Mat* result = dstImg->getMat();
-    *result /= 255;
+    R->convertTo(*R, CV_64F);
+    result->convertTo(*result, CV_64F);
+    EM.convertTo(EM, CV_64F);
+    FM.convertTo(FM, CV_64F);
+    
+    *R /= 255;
     Mat croppedEM = EM(Rect(Point(0,0), R->size()))/255;
     Mat croppedFM = FM/255;
     
-    if(srcImg != dstImg)
+    if(&srcImg != &dstImg)
     {
         //resize(*result, *result, out);    //resize the matrix to the size of the output
     }
@@ -55,7 +60,8 @@ void RDC::compensate(Image* srcImg, Image* dstImg)
     cv::divide(*result, croppedFM, *result);  //commented to see smth.
     *result *= 255;
     imwrite("/Users/Gaston/dev/RDC/tests/result.jpg", *result);
-
+    result->convertTo(*result, CV_8U);
+    
     cout << "[RDC] image was compensated!" << endl;
 }
 
@@ -135,7 +141,7 @@ void RDC::computeHomography(Sensor* cam, Renderer_A* gfx)
     chessboardPattern.resize(outWidth, outHeight);
     gfx->drawImg(&chessboardPattern);
     picture = cam->grabFrame();
-    
+   
     if(homo->addImages(chessboardPattern.getMat(), picture.getMat()))
     {
         homo->computeHomo();

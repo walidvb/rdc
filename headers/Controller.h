@@ -23,7 +23,9 @@ public:
     void init(int width, int height);
     void calibrate();                   //!< calibrates the camera/projector system
     void homography();                  //!< generates the homography matrix needed by the algorithm
-    void process(Image& img);           //!< processes the frame that will be projected, and return it
+    void process(Image& source, Image& dest);           //!< processes the frame that will be projected, and return it
+    void process(Image& source);           //!< processes the frame that will be projected, and return it
+
     void sendCommand(char command);     //<! get a command from an upper layer
                                         //<! by pressing space, the app will stop waiting, and take a picture
     Renderer_A* getRenderer();

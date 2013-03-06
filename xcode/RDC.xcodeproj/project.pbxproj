@@ -469,7 +469,7 @@
 					"-lcurl",
 				);
 				PRODUCT_NAME = RDC;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.8;
 				SYMROOT = ./build;
 				WRAPPER_EXTENSION = app;
 			};
@@ -501,7 +501,7 @@
 					"-lcurl",
 				);
 				PRODUCT_NAME = RDC;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.8;
 				STRIP_INSTALLED_PRODUCT = YES;
 				SYMROOT = ./build;
 				WRAPPER_EXTENSION = app;

@@ -15,7 +15,7 @@
 
 Controller::Controller()
 {
-    deviceID = 1;
+    deviceID = 2;
 }
 
 
@@ -92,12 +92,16 @@ void Controller::calibrate()
     }
 }
 
-void Controller::process(Image& img)
+void Controller::process(Image& source, Image& dest)
 {
     cout << "[Controller] processing image" << endl;
-    rdc->compensate(&img, &img);
+    rdc->compensate(&source, &dest);
 }
 
+void Controller::process(Image& source)
+{
+    this->process(source, source);
+}
 void Controller::sendCommand(char command)
 {
     if(command=='e')
