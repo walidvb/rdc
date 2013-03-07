@@ -55,7 +55,7 @@ void RDCApp::setup()
     isFullScreen = false;
     
     //Get source image in a format Cinder can draw
-    imgSource.load("/Users/Gaston/dev/RDC/resources/lena.jpg");
+    imgSource.load("/Users/Gaston/dev/RDC/resources/testPic.jpg");
     int w = imgSource.getWidth();
     int h = imgSource.getHeight();
     

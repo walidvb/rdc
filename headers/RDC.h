@@ -28,7 +28,7 @@ public:
     void computeHomography(Sensor* cam, Renderer_A* gfx);   //<! projects patterns, and captures them
     void grabEM(Sensor* cam, Renderer_A* gfx);
     void grabFM(Sensor* cam, Renderer_A* gfx);
-    
+    void grabAndSaveFrame(Sensor* cam);
     void wait(int ms = 2000) const;//for debugging purpose
     
     //logic

@@ -79,11 +79,11 @@ void Controller::calibrate()
         {
             rdc->grabFM(captor, renderer);
         }
-        else 
+        else
         {
             rdc->computeLighting();
             isRDCCalibrated = true;
-            captor->destroy();
+            //captor->destroy();
         }
     }
     else
@@ -102,14 +102,20 @@ void Controller::process(Image& source)
 {
     this->process(source, source);
 }
+
+
 void Controller::sendCommand(char command)
 {
-    if(command=='e')
+    switch(command)
     {
-        rdc->setIsEMRendered(true);
-    }
-    else if(command=='z')
-    {
-        rdc->setIsFMRendered(true);
+        case 'e':
+            rdc->setIsEMRendered(true);
+            break;
+        case 'z':
+            rdc->setIsFMRendered(true);
+            break;
+        case 'g':
+            rdc->grabAndSaveFrame(captor);
+            break;
     }
 }
