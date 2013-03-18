@@ -7,6 +7,7 @@
 //
 
 #include "common.h"
+#include "Timer.h"
 #include "Controller.h"
 #include "Sensor.h"
 #include "Renderer_Cinder.h"
@@ -15,7 +16,7 @@
 
 Controller::Controller()
 {
-    deviceID = 2;
+    deviceID = 1;
 }
 
 
@@ -33,24 +34,14 @@ Renderer_A* Controller::getRenderer()
 
 
 void Controller::init(int width, int height)
-{
-    int resolution;
-    /*do
-     {
-     cout << "Choose your resolution: " << endl;
-     cout << "  1: 480p" << endl;
-     cout << "  2: 576p" << endl;
-     cout << "  3: 720p" << endl;
-     cin >> resolution;
-     resolution--:
-     }while (resolution != 0 || resolution != 1 || resolution != 2 );
-     */
-    
+{    
     cout << "[Controller] initializing system" << endl;
+    timer = new Timer();
     captor = new Sensor();
     renderer = new Renderer_Cinder(width, height);
-    rdc = new RDC(width, height);
-    rdc->init(resolution);
+    rdc = new RDC(width, height, timer);
+    rdc->init();
+    captor->init(deviceID);
     //media = new Sensor();
     //media->init(sourceMedia);
     isRDCCalibrated = false;
@@ -58,9 +49,10 @@ void Controller::init(int width, int height)
 
 void Controller::calibrate()
 {
+
     if(!captor->isOpened())
     {
-        captor->init(deviceID);
+        //captor->init(deviceID);
     }
     //Compute homography, and get surface's properties
     if(!rdc->getIsCalibrated())
@@ -68,8 +60,12 @@ void Controller::calibrate()
         if(!rdc->getIsHomoComputed())
         {
             cout << "[Controller] calibrating system" << endl;
-            
             rdc->computeHomography(captor, renderer);
+        }
+        else if(!rdc->getIsColorCalibrated())
+        {
+            cout << "[Controller] calibrating colors..." << endl;
+            rdc->calibrateColors(captor, renderer);
         }
         else if(!rdc->getIsEMComputed())//if EM pas ok
         {
@@ -114,8 +110,17 @@ void Controller::sendCommand(char command)
         case 'z':
             rdc->setIsFMRendered(true);
             break;
+        case 'p':
+            
+            break;
         case 'g':
             rdc->grabAndSaveFrame(captor);
+            break;
+        case 'n':
+            rdc->setmagicE(0.1);
+            break;
+        case 'm':
+            rdc->setmagicE(-0.1);
             break;
     }
 }

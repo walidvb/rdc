@@ -13,19 +13,19 @@
 class Sensor;
 class Renderer_A;
 class Homo;
+class Timer;
 
-//enum res {r854x480, r1024x576, r1280x720};
-enum res {pfalse, p480, p576, p720};
 class RDC
 {
 public:
     RDC(){}
-    RDC(int width, int height);
-    void init(int resolution);
+    RDC(int width, int height, Timer* timer);
+    void init();
     void compensate(Image* srcImg, Image* dstImage);   //<! Called each frame, takes source image and returns compensated image
-    void simulateWall(Image* srcImg, Image* dstImg, Image* wall);   //<! writes back to dstImg, as per the formula R = EM + I*FM. named ater its function, simulating the wall
+    void adapt(Image* img);                                 //<! adapts imge prior to compensation
     void computeLighting();                                 //<! computes env light and max light images
     void computeHomography(Sensor* cam, Renderer_A* gfx);   //<! projects patterns, and captures them
+    void calibrateColors(Sensor* sensor, Renderer_A* gfx);  //<! calibrates all colors
     void grabEM(Sensor* cam, Renderer_A* gfx);
     void grabFM(Sensor* cam, Renderer_A* gfx);
     void grabAndSaveFrame(Sensor* cam);
@@ -38,34 +38,44 @@ public:
     bool getIsCalibrated();
     bool getIsEMRendered();
     bool getIsFMRendered();
-
+    bool getIsRedRendered();
+    bool getIsColorCalibrated();
+    
     void setIsEMRendered(bool isIt);
     void setIsFMRendered(bool isIt);
+        
+    void setmagicE(double factor);
+    void setmagicR(double factor);
+    
+    double magicE;
+    double magicR;
+    
 private:
     //Private methods
 
     //Setup
     int getLatency();                                   //<! get projector camera latency
     Homo* homo;                                          //<! The object handling the homography
-    
     //Preprocessing
-                                                         //<! used to fill max and min light images
     
-    Mat camera2proj;                                    //<! Camera to projector mapping
     Mat EM;                                             //<! Matrix storing the environmental light, row major
+    double EMmax;                                       //<! the maximum value found in EM
     Mat FM;                                             //<! Matrix storing the proj light, row major
-
-    int outWidth;                                           //<! the width of the output
-    int outHeight;                                          //<! the height of the output
-    int resolution;                                         //<! the resolution of the output, as defined per enum res up there, but not fucking taking it because it ain't no int
+    double FMmin;                                       //<! the minimum value found in FM
+    int outWidth;                                       //<! the width of the output
+    int outHeight;                                      //<! the height of the output
+    Size outSize;
     
     //logic
+    Timer* timer;
     bool isHomoComputed;
     bool isEMComputed;
     bool isFMComputed;
     bool isCalibrated;
     bool isEMRendered;
     bool isFMRendered;
+    bool isColorCalibrated;
+    double timeToWait;
 };
 
 #endif

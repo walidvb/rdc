@@ -28,11 +28,7 @@ void Renderer_Cinder::drawRect( float& x1, float& y1, float& x2, float& y2 ) con
     drawSolidRect(rect);
 }
 
-ci::Vec2f Renderer_Cinder::V2D2Vecf(V2D src) const
-{
-    ci::Vec2f dst( src.getX(), src.getY() );
-    return dst;
-}
+
 
 void Renderer_Cinder::drawImg(Image* img) const
 {    

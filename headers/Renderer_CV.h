@@ -24,9 +24,7 @@ public:
     void drawImg(Image* img) const;
     void destroyImg(string name);
     
-private:
-    cv::Vec2f V2D2Vecf(V2D src) const;
-    
+private:    
 };
 
 #endif

@@ -91,6 +91,14 @@ void Homo::computeHomo(){
     homo = homoInv.inv();
 }
 
+void Homo::warp(Mat& img, Size size)
+{
+    cv::warpPerspective(img,                         // input image
+                        img,                         // output image
+                        homoInv,         // homography
+                        size);
+
+}
 
 Point Homo::getPoint(int x, int y, Mat& h)
 {

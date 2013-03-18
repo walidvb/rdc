@@ -54,7 +54,7 @@ public:
     void setWidth(int width);
     void setHeight(int height);
     
-    friend ostream& operator<<(ostream& o, const Image& img);   //<! couts width, height, type
+    friend std::ostream& operator<<(std::ostream& o, const Image& img);   //<! couts width, height, type
     
 private:
     static int index(int x, int y, int w);    

@@ -9,7 +9,8 @@ void setup() {
   chessboardBW = true;
   if(chessboardBW)
   {
-   colorCount = 2;
+  colorCount = 2;
+
   colors = new color[colorCount];
   colors[0] = color(255, 255, 255);
   colors[1] = color(0, 0, 0);
@@ -26,12 +27,11 @@ void setup() {
   colors[5] = color(0, 0, 255);
   colors[6] = color(255, 0, 255);  
   colors[7] = color(255, 255, 255);
-  }
-}
+  }}
 
 void draw() 
 {
-
+/*
   for(int i = 0; i < width/sideSize; i++)
   {
     for(int j = 0; j < height/sideSize; j++)
@@ -40,7 +40,8 @@ void draw()
      fill(colors[(i+j)%colorCount]);
      rect(i*sideSize, j*sideSize, sideSize, sideSize);
     }
-  }
+  }*/
+  background(100);
 }
 
 void keyPressed()

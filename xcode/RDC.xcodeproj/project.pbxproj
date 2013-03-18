@@ -20,7 +20,6 @@
 		3D1889E41663BABE00CF9BFA /* pattern in Resources */ = {isa = PBXBuildFile; fileRef = 3D1889E31663BABE00CF9BFA /* pattern */; };
 		3D2CD149165CFEED0016C8C6 /* Renderer_Cinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD148165CFEED0016C8C6 /* Renderer_Cinder.cpp */; };
 		3D2CD14B165D01860016C8C6 /* Renderer_A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD14A165D01860016C8C6 /* Renderer_A.cpp */; };
-		3D2CD152165D29CC0016C8C6 /* V2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD151165D29CC0016C8C6 /* V2D.cpp */; };
 		3D2E3ADB16B848C200DE7582 /* Homo.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E3ADA16B848C200DE7582 /* Homo.cc */; };
 		3D3A0EE816A858D800A4C1A4 /* testChessboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3A0EE716A858D800A4C1A4 /* testChessboard.png */; };
 		3D3C9CDC168C5F4500EEBCAF /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C9CDB168C5F4500EEBCAF /* Image.cpp */; };
@@ -29,6 +28,8 @@
 		3D992F891684C91D008C380E /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F881684C91D008C380E /* Controller.cpp */; };
 		3D996EC5165BEA5A004B258F /* RDC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D996EC4165BEA5A004B258F /* RDC.cpp */; };
 		3D996ECA165BF579004B258F /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D996EC9165BF579004B258F /* Tools.cpp */; };
+		3DA18A4716F7757D004B9F0A /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DA18A4616F7757D004B9F0A /* Timer.cpp */; };
+		3DA18A4916F77835004B9F0A /* ColorCalibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DA18A4816F77835004B9F0A /* ColorCalibrator.cpp */; };
 		3DDB52AB16B024B6001D1986 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB52AA16B024B6001D1986 /* main.cpp */; };
 		3DDB52AD16B024B6001D1986 /* homography.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DDB52AC16B024B6001D1986 /* homography.1 */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
@@ -73,8 +74,6 @@
 		3D2CD147165CFDDB0016C8C6 /* Renderer_Cinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer_Cinder.h; path = ../headers/Renderer_Cinder.h; sourceTree = "<group>"; };
 		3D2CD148165CFEED0016C8C6 /* Renderer_Cinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer_Cinder.cpp; path = ../src/Renderer_Cinder.cpp; sourceTree = "<group>"; };
 		3D2CD14A165D01860016C8C6 /* Renderer_A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer_A.cpp; path = ../src/Renderer_A.cpp; sourceTree = "<group>"; };
-		3D2CD151165D29CC0016C8C6 /* V2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = V2D.cpp; path = ../src/V2D.cpp; sourceTree = "<group>"; };
-		3D2CD153165D29FB0016C8C6 /* V2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = V2D.h; path = ../headers/V2D.h; sourceTree = "<group>"; };
 		3D2E3ADA16B848C200DE7582 /* Homo.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Homo.cc; path = ../src/Homo.cc; sourceTree = "<group>"; };
 		3D2E3ADD16B848D400DE7582 /* Homo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Homo.h; path = ../headers/Homo.h; sourceTree = "<group>"; };
 		3D3A0EE716A858D800A4C1A4 /* testChessboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testChessboard.png; sourceTree = "<group>"; };
@@ -83,7 +82,6 @@
 		3D5FE94216AD77A900DB7E28 /* Renderer_CV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer_CV.h; path = ../headers/Renderer_CV.h; sourceTree = "<group>"; };
 		3D5FE94316AD77BB00DB7E28 /* Renderer_CV.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer_CV.cc; path = ../src/Renderer_CV.cc; sourceTree = "<group>"; };
 		3D5FE94F16ADA02C00DB7E28 /* Sensor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sensor.cc; path = ../src/Sensor.cc; sourceTree = "<group>"; };
-		3D5FE95216ADA03700DB7E28 /* Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sensor.h; sourceTree = "<group>"; };
 		3D992F881684C91D008C380E /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Controller.cpp; path = ../src/Controller.cpp; sourceTree = "<group>"; };
 		3D992F8B1684C929008C380E /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = ../headers/Controller.h; sourceTree = "<group>"; };
 		3D996EBC165BE0D3004B258F /* RDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDC.h; path = ../headers/RDC.h; sourceTree = "<group>"; };
@@ -91,6 +89,13 @@
 		3D996EC4165BEA5A004B258F /* RDC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RDC.cpp; path = ../src/RDC.cpp; sourceTree = "<group>"; };
 		3D996EC8165BF569004B258F /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tools.h; path = ../headers/Tools.h; sourceTree = "<group>"; };
 		3D996EC9165BF579004B258F /* Tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Tools.cpp; path = ../src/Tools.cpp; sourceTree = "<group>"; };
+		3DA18A3D16F747E4004B9F0A /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = ../headers/Timer.h; sourceTree = "<group>"; };
+		3DA18A4116F74C8A004B9F0A /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = ../src/Timer.cpp; sourceTree = "<group>"; };
+		3DA18A4316F75B86004B9F0A /* ColorCalibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorCalibrator.h; path = ../headers/ColorCalibrator.h; sourceTree = "<group>"; };
+		3DA18A4416F75B99004B9F0A /* ColorCalibrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ColorCalibrator.cpp; path = ../src/ColorCalibrator.cpp; sourceTree = "<group>"; };
+		3DA18A4616F7757D004B9F0A /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = ../src/Timer.cpp; sourceTree = "<group>"; };
+		3DA18A4816F77835004B9F0A /* ColorCalibrator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ColorCalibrator.cpp; path = ../src/ColorCalibrator.cpp; sourceTree = "<group>"; };
+		3DA21D3316EF76D40005B32D /* Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sensor.h; path = ../headers/Sensor.h; sourceTree = "<group>"; };
 		3DDB52A716B024B6001D1986 /* homography */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = homography; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDB52AA16B024B6001D1986 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3DDB52AC16B024B6001D1986 /* homography.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = homography.1; sourceTree = "<group>"; };
@@ -176,6 +181,8 @@
 		29B97314FDCFA39411CA2CEA /* RDC */ = {
 			isa = PBXGroup;
 			children = (
+				3DA18A4816F77835004B9F0A /* ColorCalibrator.cpp */,
+				3DA18A4616F7757D004B9F0A /* Timer.cpp */,
 				3D996EC1165BE72F004B258F /* headers */,
 				3D996EC2165BE74A004B258F /* src */,
 				29B97315FDCFA39411CA2CEA /* Headers */,
@@ -228,10 +235,11 @@
 				3D2CD146165CFA880016C8C6 /* Renderer_A.h */,
 				3D2CD147165CFDDB0016C8C6 /* Renderer_Cinder.h */,
 				3D5FE94216AD77A900DB7E28 /* Renderer_CV.h */,
-				3D5FE95216ADA03700DB7E28 /* Sensor.h */,
-				3D2CD153165D29FB0016C8C6 /* V2D.h */,
+				3DA21D3316EF76D40005B32D /* Sensor.h */,
 				3D996EBC165BE0D3004B258F /* RDC.h */,
 				3D2E3ADD16B848D400DE7582 /* Homo.h */,
+				3DA18A3D16F747E4004B9F0A /* Timer.h */,
+				3DA18A4316F75B86004B9F0A /* ColorCalibrator.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -248,9 +256,10 @@
 				3D2CD148165CFEED0016C8C6 /* Renderer_Cinder.cpp */,
 				3D5FE94316AD77BB00DB7E28 /* Renderer_CV.cc */,
 				3D5FE94F16ADA02C00DB7E28 /* Sensor.cc */,
-				3D2CD151165D29CC0016C8C6 /* V2D.cpp */,
 				3D996EC4165BEA5A004B258F /* RDC.cpp */,
 				3D2E3ADA16B848C200DE7582 /* Homo.cc */,
+				3DA18A4116F74C8A004B9F0A /* Timer.cpp */,
+				3DA18A4416F75B99004B9F0A /* ColorCalibrator.cpp */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -353,6 +362,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA18A4916F77835004B9F0A /* ColorCalibrator.cpp in Sources */,
+				3DA18A4716F7757D004B9F0A /* Timer.cpp in Sources */,
 				3D150C1E16AF207800F544F4 /* CalibController.cc in Sources */,
 				3D150C1F16AF207800F544F4 /* CameraCalibrator.cc in Sources */,
 				00BAE65A0E7ED9C10018A608 /* RDCApp.cpp in Sources */,
@@ -360,7 +371,6 @@
 				3D996ECA165BF579004B258F /* Tools.cpp in Sources */,
 				3D2CD149165CFEED0016C8C6 /* Renderer_Cinder.cpp in Sources */,
 				3D2CD14B165D01860016C8C6 /* Renderer_A.cpp in Sources */,
-				3D2CD152165D29CC0016C8C6 /* V2D.cpp in Sources */,
 				3D992F891684C91D008C380E /* Controller.cpp in Sources */,
 				3D3C9CDC168C5F4500EEBCAF /* Image.cpp in Sources */,
 				3D5FE94416AD77BB00DB7E28 /* Renderer_CV.cc in Sources */,
@@ -469,7 +479,7 @@
 					"-lcurl",
 				);
 				PRODUCT_NAME = RDC;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				SYMROOT = ./build;
 				WRAPPER_EXTENSION = app;
 			};
@@ -501,7 +511,7 @@
 					"-lcurl",
 				);
 				PRODUCT_NAME = RDC;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = YES;
 				SYMROOT = ./build;
 				WRAPPER_EXTENSION = app;

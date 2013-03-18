@@ -30,6 +30,7 @@ int main(int argc, const char * argv[])
     int width = pattern.cols;
     
     
+    
     Size boardSize(5, 4);
     
     vector<Point2f> patternCorners;

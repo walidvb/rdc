@@ -14,6 +14,7 @@ class Renderer_A;
 class RDC;
 class Image;
 class Homo;
+class Timer;
 
 class Controller{
     
@@ -37,6 +38,7 @@ private:
     std::string resourcePath = "/Users/Gaston/dev/RDC/resources/";  //<! the path were resources are stored. should be relative to the app, but I don't know how to do that yet.
     
     //objects
+    Timer* timer;                       //<! the object handling all the timer stuff
     Sensor* media;                      //<! the loaded media / ftm only video is supported
     Sensor* captor;                     //<! the captor
     Renderer_A* renderer;               //<! well, the renderer

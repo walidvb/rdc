@@ -10,6 +10,12 @@
 #include "cinder/gl/Texture.h"
 using namespace std;
 
+struct pair
+{
+    Image org;
+    Image comp;
+};
+
 class RDCApp : public cinder::app::AppBasic {
 public:
 	void setup();
@@ -28,11 +34,13 @@ private:
     bool isGrabOk;
     ci::gl::Texture textProcessed;
     ci::gl::Texture textSource;
-
+    
     //give surface to texture
     bool isImgProcessed;
     bool isFullScreen;
-    bool compensate;
+    bool displayCompensated;
+    bool newProcessReq;
+    string source = "black.jpg";
 };
 
 void RDCApp::prepareSettings( Settings *settings ){
@@ -45,7 +53,7 @@ void RDCApp::setup()
 {
     width = getWindowWidth();
     height = getWindowHeight();
-    compensate = false;
+    displayCompensated = true;
     controller = new Controller();
     controller->init(width, height);
     
@@ -53,9 +61,9 @@ void RDCApp::setup()
     isGrabOk = false;
     isImgProcessed = false;
     isFullScreen = false;
-    
+    newProcessReq = false;
     //Get source image in a format Cinder can draw
-    imgSource.load("/Users/Gaston/dev/RDC/resources/testPic.jpg");
+    imgSource.load("/Users/Gaston/dev/RDC/resources/" + source);
     int w = imgSource.getWidth();
     int h = imgSource.getHeight();
     
@@ -88,22 +96,26 @@ void RDCApp::keyDown( cinder::app::KeyEvent event )
             setFullScreen(isFullScreen);
             break;
         case 'c':
-            compensate = !compensate;
+            displayCompensated = !displayCompensated;
+            break;
+        case 'p':
+            newProcessReq = true;
             break;
         default:
             controller->sendCommand(command);
             break;
     }
     
-   
+    
     
 }
 void RDCApp::update()
 {
     if(isFullScreen)
     {
-        if(controller->isRDCCalibrated && !isImgProcessed)
+        if(controller->isRDCCalibrated && (!isImgProcessed || newProcessReq))
         {
+            imgSource.load("/Users/Gaston/dev/RDC/resources/" + source);
             controller->process(imgSource);
             int w = imgSource.getWidth();
             int h = imgSource.getHeight();
@@ -125,6 +137,8 @@ void RDCApp::update()
             }
             textProcessed = ci::gl::Texture(surface);
             isImgProcessed = true;
+            cout << "image processed!" << endl;
+            newProcessReq = false;
         }
     }
     
@@ -132,25 +146,25 @@ void RDCApp::update()
 
 void RDCApp::draw()
 {
-        if(!controller->isRDCCalibrated && isFullScreen)
+    if(!controller->isRDCCalibrated && isFullScreen)
+    {
+        ci::gl::clear( ci::Color( 0, 0, 0 ) );
+        controller->calibrate();
+    }
+    else
+    {
+        ci::gl::clear( ci::Color( 0, 0, 0 ) );
+        //drawing code here
+        if(displayCompensated && isImgProcessed)
         {
-            ci::gl::clear( ci::Color( 0, 0, 0 ) );
-            controller->calibrate();
+            ci::gl::draw(textProcessed);
         }
         else
         {
-            ci::gl::clear( ci::Color( 0, 0, 0 ) );
-            //drawing code here
-            if(compensate && isImgProcessed)
-            {
-                ci::gl::draw(textProcessed);
-            }
-            else
-            {
-                ci::gl::draw(textSource);
-            }
+            ci::gl::draw(textSource);
         }
-
+    }
+    
 }
 
 void RDCApp::quit()

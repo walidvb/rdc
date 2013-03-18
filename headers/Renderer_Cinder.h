@@ -26,7 +26,6 @@ public:
     void setFullscreen(bool isFullscreen);
     void clear() const;
 private:
-    ci::Vec2f V2D2Vecf(V2D src) const;
     
 };
 #endif

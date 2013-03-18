@@ -9,16 +9,16 @@
 #include "Renderer_A.h"
 #include "Homo.h"
 #include "RDC.h"
+#include "Timer.h"
 
 //Constructor
-RDC::RDC(int width, int height) : outWidth(width), outHeight(height){}
+RDC::RDC(int width, int height, Timer* timer) : outWidth(width), outHeight(height), outSize(width, height), timer(timer){}
 
 
 //Public methods
 
-void RDC::init(int resolution)
+void RDC::init()
 {
-    this->resolution = resolution;
     homo = new Homo();
     isHomoComputed = false;
     isEMComputed = false;
@@ -26,6 +26,10 @@ void RDC::init(int resolution)
     isCalibrated = false;
     isEMRendered = false;
     isFMRendered = false;
+    isColorCalibrated = false;
+    timeToWait = 2;
+    magicE = 1;
+    magicR = 1;
 }
 
 /*  The compensation algorithm goes like this:
@@ -35,6 +39,7 @@ void RDC::init(int resolution)
  */
 void RDC::compensate(Image* srcImg, Image* dstImg)
 {
+
     if (EM.empty() || FM.empty()) {
         cerr << "[RDC] Compensation matrices have not been initialized, please run calibrateSystem" << endl;
         exit(-1);
@@ -42,92 +47,43 @@ void RDC::compensate(Image* srcImg, Image* dstImg)
     Size originalSize(srcImg->getWidth(), srcImg->getHeight());
     
     Mat* R = srcImg->getMat();
-    Mat* result = dstImg->getMat();
-    cout << "[RDC]: R.channels(): " << R->channels() << endl;
+    imwrite("/Users/Gaston/dev/RDC/tests/original.jpg", *R);
+    //cout << "[RDC]: channels: [R:" << R->channels() << "], [EM:" << EM.channels() << "], [FM:" << FM.channels()<< "]" << endl;
     R->convertTo(*R, CV_64F);
-    result->convertTo(*result, CV_64F);
     EM.convertTo(EM, CV_64F);
     FM.convertTo(FM, CV_64F);
     
     *R /= 255;
+    EM /= 255;
+    FM /= 255;
     
-    if(&srcImg != &dstImg)
-    {
-        //resize(*result, *result, out);    //resize the matrix to the size of the output
-    }
-    cv::subtract(*R, EM/255, *result);
-    cv::divide(*result, FM/255, *result);  //commented to see smth.
-    imwrite("/Users/Gaston/dev/RDC/tests/compensated_b4.jpg", *result*255);
-    /*
-     //divide channels and get max(r,g,b)
-     vector<Mat> splitted;
-     split(*result, splitted);
-     Mat red = splitted[2];
-     imwrite("/Users/Gaston/dev/RDC/tests/compensated_b4_red.jpg", red*255);
-     Mat green = splitted[1];
-     imwrite("/Users/Gaston/dev/RDC/tests/compensated_b4_green.jpg", green*255);
-     Mat blue = splitted[0];
-     imwrite("/Users/Gaston/dev/RDC/tests/compensated_b4_blue.jpg", blue*255);
-     double rMax = *max_element(red.begin<double>(), red.end<double>());
-     double gMax = *max_element(blue.begin<double>(), blue.end<double>());
-     double bMax = *max_element(green.begin<double>(), green.end<double>());
-     double iMax = max(rMax, gMax, bMax);
-     
-     cout << "[RDC] iMax:" << iMax << endl;
-     *result /= iMax;
-     */
-    double iMax = 0;
-    // obtain iterator at initial position
-    cv::Mat_<cv::Vec3d>::iterator it=result->begin<cv::Vec3d>();
-    cv::Mat_<cv::Vec3d>::iterator itend=result->end<cv::Vec3d>();
-    for(; it != itend; it++)
+    double iMax;
+    //obtain iterator at initial position
+    cv::Mat_<cv::Vec3d>::iterator it=R->begin<cv::Vec3d>();
+    cv::Mat_<cv::Vec3d>::iterator itend=R->end<cv::Vec3d>();
+    for(iMax = 0; it != itend; it++)
     {
         iMax = std::max((*it)[0], iMax);
         iMax = std::max((*it)[1], iMax);
         iMax = std::max((*it)[2], iMax);
     }
-    cout << "[RDC] iMax before:" << iMax;
-    //-----------------------------------divide by iMax
-    *result /= iMax;
-    imwrite("/Users/Gaston/dev/RDC/tests/compensated_a4ter.jpg", *result);
-    it=result->begin<cv::Vec3d>();
-    iMax = 0;
-    for(; it != itend; it++)
-    {
-        iMax = std::max((*it)[0], iMax);
-        iMax = std::max((*it)[1], iMax);
-        iMax = std::max((*it)[2], iMax);
-    }
-    cout << ", after/iMax: " << iMax;
-    //-----------------------------------mult by 255
+    //cout << "[RDC] iMax beforeprocess:" << iMax;
     
-    *result *= 255;
-    it=result->begin<cv::Vec3d>();
-    iMax = 0;
-    for(; it != itend; it++)
-    {
-        iMax = std::max((*it)[0], iMax);
-        iMax = std::max((*it)[1], iMax);
-        iMax = std::max((*it)[2], iMax);
-    }
-    cout << ", after/iMax*255: " << iMax;
-
-    //-----------------------------------convert to CV_8U
-    result->convertTo(*result, CV_8U);
-    it=result->begin<cv::Vec3d>();
-    itend=result->end<cv::Vec3d>();
-
-    iMax = 0;
-    it=result->begin<cv::Vec3d>();
-    for(; it != itend; it++)
-    {
-        iMax = std::max((*it)[0], iMax);
-        iMax = std::max((*it)[1], iMax);
-        iMax = std::max((*it)[2], iMax);
-    }
-    cout << ", after/iMax*255.conv() before: " << iMax << endl;
+    cv::subtract(*R*magicR, magicE*EM, *R);
+    cv::divide(*R, FM, *R);  //commented to see smth.
+    imwrite("/Users/Gaston/dev/RDC/tests/compensated.jpg", *R*255);
+    *R *= 255;
+    R->convertTo(*R, CV_8U);
     cout << "[RDC] image was compensated!" << endl;
 }
+
+
+void RDC::calibrateColors(Sensor* sensor, Renderer_A* gfx)
+{
+    isColorCalibrated = true;
+    cout << "[RDC]: color calibration over" << endl;
+}
+
 
 void RDC::grabFM(Sensor *cam, Renderer_A *gfx)
 {
@@ -135,10 +91,12 @@ void RDC::grabFM(Sensor *cam, Renderer_A *gfx)
     Image plain(plain_);
     //draw it
     gfx->drawImg(&plain);
-    if(isFMRendered)
+    if(timer->hasElapsed(timeToWait))
     {
+        cout << "grabbed FM" << endl;
         FM = cam->grabFrame().getMat()->clone();
         isFMComputed = true;
+        timer->resetTimer();
     }
 }
 
@@ -148,31 +106,23 @@ void RDC::grabEM(Sensor *cam, Renderer_A *gfx)
     Image plain(plain_);
     //draw it
     gfx->drawImg(&plain);
-    if(isEMRendered)
+    if(timer->hasElapsed(timeToWait))
     {
+        cout << "grabbed EM" << endl;
         EM = cam->grabFrame().getMat()->clone();
         isEMComputed = true;
+        timer->resetTimer();
     }
 }
 
 void RDC::computeLighting()
 {
-    imwrite("/Users/Gaston/dev/RDC/tests/FM.jpg", FM);
-    imwrite("/Users/Gaston/dev/RDC/tests/EM.jpg", EM);
     
     //compute homographies EM and FM images
-    cv::warpPerspective(EM,                         // input image
-                        EM,                         // output image
-                        homo->getHomoInv(),         // homography
-                        Size(outWidth,
-                             outHeight));
+    homo->warp(EM, outSize);
     imwrite("/Users/Gaston/dev/RDC/tests/EM.jpg", EM);
     
-    cv::warpPerspective(FM,                         // input image
-                        FM,                         // output image
-                        homo->getHomoInv(),         // homography
-                        Size(outWidth,
-                             outHeight));
+    homo->warp(FM, outSize);
     imwrite("/Users/Gaston/dev/RDC/tests/FM.jpg", FM);
     
     isCalibrated = true;
@@ -180,7 +130,9 @@ void RDC::computeLighting()
 
 void RDC::grabAndSaveFrame(Sensor* cam)
 {
-    imwrite("/Users/Gaston/dev/RDC/tests/result.jpg", *cam->grabFrame().getMat());
+    Mat picture = *cam->grabFrame().getMat();
+    homo->warp(picture, outSize);
+    imwrite("/Users/Gaston/dev/RDC/tests/result.jpg", picture);
 }
 
 void RDC::computeHomography(Sensor* cam, Renderer_A* gfx)
@@ -213,10 +165,31 @@ void RDC::computeHomography(Sensor* cam, Renderer_A* gfx)
     {
         homo->computeHomo();
         isHomoComputed = true;
+        timer->resetTimer();
     }
     
 }
+
+
 //Getters & Setters
+
+void RDC::setmagicE(double factor)
+{
+    magicE+=factor;
+    magicE = (magicE < 0)? 0 : (magicE > 1) ? 1 : magicE;
+    cout << "magicE: " << magicE << endl;
+    
+}
+void RDC::setmagicR(double factor)
+{
+    magicR+=factor;
+    magicR = (magicR < 0)? 0 : (magicR > 1) ? 1 : magicR;
+}
+
+bool RDC::getIsColorCalibrated()
+{
+    return isColorCalibrated;
+}
 
 bool RDC::getIsHomoComputed()
 {

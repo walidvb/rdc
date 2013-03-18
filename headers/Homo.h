@@ -22,6 +22,8 @@ public:
     bool addImages(Mat* src, Mat* trg);             //<! adds a pair of images, directly translated into a set of point correspondences
     
     void computeHomo();                              //<! computes the homography matrix from all the points that were added via addImages, and its inverse
+    void warp(Mat& img, Size size);                                //<! warps the captured image to the projectors' perspective
+
     Point getTargetPoint(int x, int y);       //<! used to retrieve point*homography
     Point getTargetPoint(const Point pos);    //<! used to retrieve point*homography
     Point getSourcePoint(int x, int y);
