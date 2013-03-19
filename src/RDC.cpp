@@ -30,6 +30,11 @@ void RDC::init()
     timeToWait = 2;
     magicE = 1;
     magicR = 1;
+    if(simu)
+    {
+        EM = imread("/Users/Gaston/dev/RDC/tests/EM.jpg");
+        FM = imread("/Users/Gaston/dev/RDC/tests/FM.jpg");
+    }
 }
 
 /*  The compensation algorithm goes like this:
@@ -37,38 +42,61 @@ void RDC::init()
  *   in the following manner: R = I*FM+EM
  *   Compensated image can be found by solving I:I=(R-EM)/FM
  */
+void RDC::adapt(Mat* pix)
+{
+    /*
+     if(pix->type() != CV_64F)
+     {
+     pix->convertTo(*pix, CV_64F);
+     }
+     
+     Mat FM_thresholded = Mat_<CV_8U>;
+     double maxPix(threshold(FM, FM_thresholded, 128, 255, CV_THRESH_BINARY | CV_THRESH_OTSU));
+     imwrite("/Users/Gaston/dev/RDC/tests/threshold", FM_thresholded);
+     
+     //Find highest pix value
+     /*
+     double maxPix;
+     cv::Mat_<cv::Vec3d>::iterator itPix=FM.begin<cv::Vec3d>();
+     cv::Mat_<cv::Vec3d>::iterator itPixend=FM.end<cv::Vec3d>();
+     for(maxPix = 0; itPix != itPixend; itPix++)
+     {
+     double Y =  ((*itPix)[0]+(*itPix)[1]+(*itPix)[2])/3;
+     maxPix = std::max((*itPix)[0], maxPix);
+     maxPix = std::max((*itPix)[1], maxPix);
+     maxPix = std::max((*itPix)[2], maxPix);
+     
+     maxPix = max(Y, maxPix);
+     }
+     
+     double scaleRatio = FMmin/maxPix;
+     *pix *= scaleRatio;
+     */
+}
 void RDC::compensate(Image* srcImg, Image* dstImg)
 {
-
     if (EM.empty() || FM.empty()) {
         cerr << "[RDC] Compensation matrices have not been initialized, please run calibrateSystem" << endl;
         exit(-1);
     }
-    Size originalSize(srcImg->getWidth(), srcImg->getHeight());
     
     Mat* R = srcImg->getMat();
-    imwrite("/Users/Gaston/dev/RDC/tests/original.jpg", *R);
-    //cout << "[RDC]: channels: [R:" << R->channels() << "], [EM:" << EM.channels() << "], [FM:" << FM.channels()<< "]" << endl;
+
+        imwrite("/Users/Gaston/dev/RDC/tests/original.jpg", *R);
+    
+    cout << "[RDC]: type: [R:" << R->type() << "], [EM:" << EM.type() << "], [FM:" << FM.type()<< "]" << endl;
     R->convertTo(*R, CV_64F);
-    EM.convertTo(EM, CV_64F);
-    FM.convertTo(FM, CV_64F);
-    
-    *R /= 255;
-    EM /= 255;
-    FM /= 255;
-    
-    double iMax;
-    //obtain iterator at initial position
-    cv::Mat_<cv::Vec3d>::iterator it=R->begin<cv::Vec3d>();
-    cv::Mat_<cv::Vec3d>::iterator itend=R->end<cv::Vec3d>();
-    for(iMax = 0; it != itend; it++)
+    imwrite("/Users/Gaston/dev/RDC/tests/original_.jpg", *R);
+
+    if(simu)
     {
-        iMax = std::max((*it)[0], iMax);
-        iMax = std::max((*it)[1], iMax);
-        iMax = std::max((*it)[2], iMax);
+        EM.convertTo(EM, CV_64F);
+        FM.convertTo(FM, CV_64F);
     }
-    //cout << "[RDC] iMax beforeprocess:" << iMax;
+    *R /= 255;
+    imwrite("/Users/Gaston/dev/RDC/tests/original_.jpg", *R);
     
+    //adapt(R);
     cv::subtract(*R*magicR, magicE*EM, *R);
     cv::divide(*R, FM, *R);  //commented to see smth.
     imwrite("/Users/Gaston/dev/RDC/tests/compensated.jpg", *R*255);
@@ -125,35 +153,27 @@ void RDC::computeLighting()
     homo->warp(FM, outSize);
     imwrite("/Users/Gaston/dev/RDC/tests/FM.jpg", FM);
     
+    EM.convertTo(EM, CV_64F);
+    FM.convertTo(FM, CV_64F);
+    EM /= 255;
+    FM /= 255;
+    
     isCalibrated = true;
 }
 
 void RDC::grabAndSaveFrame(Sensor* cam)
 {
-    Mat picture = *cam->grabFrame().getMat();
-    homo->warp(picture, outSize);
-    imwrite("/Users/Gaston/dev/RDC/tests/result.jpg", picture);
+    if(!simu)
+    {
+        Mat picture = *cam->grabFrame().getMat();
+        homo->warp(picture, outSize);
+        imwrite("/Users/Gaston/dev/RDC/tests/result.jpg", picture);
+    }
 }
 
 void RDC::computeHomography(Sensor* cam, Renderer_A* gfx)
 {
-    //choose chessboard
-    string chessboard;
-    /*switch (resolution) {
-     case p480:
-     chessboard = "/Users/Gaston/dev/RDC/resources/chessboard480p.jpg";
-     break;
-     case p576:
-     chessboard = "/Users/Gaston/dev/RDC/resources/chessboard576p.jpg";
-     break;
-     case p720:
-     chessboard = "/Users/Gaston/dev/RDC/resources/chessboard720p.jpg";
-     break;
-     default:
-     break;
-     }
-     */
-    chessboard = "/Users/Gaston/dev/RDC/resources/test.jpg";
+    string chessboard("/Users/Gaston/dev/RDC/resources/test.jpg");
     bool isGrayScale = false;
     Image chessboardPattern(chessboard, isGrayScale);
     Image picture;

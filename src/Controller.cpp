@@ -34,14 +34,21 @@ Renderer_A* Controller::getRenderer()
 
 
 void Controller::init(int width, int height)
-{    
+{
+    simu = true;
     cout << "[Controller] initializing system" << endl;
     timer = new Timer();
-    captor = new Sensor();
-    renderer = new Renderer_Cinder(width, height);
     rdc = new RDC(width, height, timer);
+    rdc->simu = this->simu;
     rdc->init();
-    captor->init(deviceID);
+    if(!simu)
+    {
+        captor = new Sensor();
+        captor->init(deviceID);
+    }
+    renderer = new Renderer_Cinder(width, height);
+
+    
     //media = new Sensor();
     //media->init(sourceMedia);
     isRDCCalibrated = false;
@@ -49,38 +56,44 @@ void Controller::init(int width, int height)
 
 void Controller::calibrate()
 {
-
-    if(!captor->isOpened())
-    {
-        //captor->init(deviceID);
-    }
     //Compute homography, and get surface's properties
     if(!rdc->getIsCalibrated())
     {
-        if(!rdc->getIsHomoComputed())
+        cout << "[Controller] calibrating system" << endl;
+        if(simu)
         {
-            cout << "[Controller] calibrating system" << endl;
+            isRDCCalibrated = true;
+            return;
+        }
+        else if(!rdc->getIsHomoComputed())
+        {
             rdc->computeHomography(captor, renderer);
+            return;
         }
         else if(!rdc->getIsColorCalibrated())
         {
             cout << "[Controller] calibrating colors..." << endl;
             rdc->calibrateColors(captor, renderer);
+            return;
         }
         else if(!rdc->getIsEMComputed())//if EM pas ok
         {
             rdc->grabEM(captor, renderer);
+            return;
         }
         else if(!rdc->getIsFMComputed())//if FM pas ok
         {
             rdc->grabFM(captor, renderer);
+            return;
         }
-        else
+        else if(!simu)
         {
             rdc->computeLighting();
             isRDCCalibrated = true;
+            return;
             //captor->destroy();
         }
+
     }
     else
     {

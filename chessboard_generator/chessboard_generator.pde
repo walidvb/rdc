@@ -31,7 +31,7 @@ void setup() {
 
 void draw() 
 {
-/*
+
   for(int i = 0; i < width/sideSize; i++)
   {
     for(int j = 0; j < height/sideSize; j++)
@@ -40,8 +40,8 @@ void draw()
      fill(colors[(i+j)%colorCount]);
      rect(i*sideSize, j*sideSize, sideSize, sideSize);
     }
-  }*/
-  background(100);
+  }
+  background(0);
 }
 
 void keyPressed()

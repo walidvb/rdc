@@ -31,6 +31,8 @@ public:
     Renderer_A* getRenderer();
     bool isRDCCalibrated;
 private:
+    bool simu;                                          //<! set to true when working without connected hardware(will use like taken pictures)
+
     //logic
     bool waitingKey = true;
     std::string sourceMedia;            //<! the media from which to load (is now a default)

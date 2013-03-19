@@ -18,18 +18,19 @@ class Timer;
 class RDC
 {
 public:
+    bool simu;                                          //<! set to true when working without connected hardware(will use like taken pictures)
+    
     RDC(){}
     RDC(int width, int height, Timer* timer);
     void init();
     void compensate(Image* srcImg, Image* dstImage);   //<! Called each frame, takes source image and returns compensated image
-    void adapt(Image* img);                                 //<! adapts imge prior to compensation
+    void adapt(Mat* pix);                                 //<! adapts image prior to compensation(pix should be CV_64F)
     void computeLighting();                                 //<! computes env light and max light images
     void computeHomography(Sensor* cam, Renderer_A* gfx);   //<! projects patterns, and captures them
     void calibrateColors(Sensor* sensor, Renderer_A* gfx);  //<! calibrates all colors
     void grabEM(Sensor* cam, Renderer_A* gfx);
     void grabFM(Sensor* cam, Renderer_A* gfx);
     void grabAndSaveFrame(Sensor* cam);
-    void wait(int ms = 2000) const;//for debugging purpose
     
     //logic
     bool getIsHomoComputed();
