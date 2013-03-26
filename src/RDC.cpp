@@ -41,10 +41,19 @@ void RDC::init()
 
 void RDC::setROIavg(int x1, int y1, int x2, int y2)
 {
-    cout << "[RDC]FM: [" << FM.cols << ", " << FM.rows << "], ROI: [" << x1 << " " << x2 << ", " << y1 << " " << y2 << "] " << endl;
     
-    Mat FMROI = FM(Range(y1, y2), Range(x1, x2));
-    FMmin = mean(mean(FMROI));
+    int x1_ = min(x1, x2);
+    int x2_ = max(x1, x2);
+    int y1_ = min(y1, y2);
+    int y2_ = max(y1, y2);
+    
+    //cout << "[RDC]FM: [" << FM.cols << ", " << FM.rows << "], ROI: [" << x1_ << " " << x2_ << ", " << y1_ << " " << y2_ << "] " << endl;
+    
+    Mat FMROI = FM(Range(y1_, y2_), Range(x1_, x2_));
+    Scalar color = mean(FMROI);
+    cout << "[RDC]: Color: (" << color[0] << ", " << color[1] << ", " << color[2] << ")=" << color << endl;
+    FMmin = (color[0]+color[1]+color[2])/3;
+    cout << "[RDC]: FMmin: " << FMmin <<endl;
     isROIDone = true;
 }
 

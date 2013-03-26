@@ -48,7 +48,7 @@ private:
     bool displayCompensated;
     bool newProcessReq;
     bool isReady;   //<! set to true when ready to scan+process
-    string source = "lena.jpg";
+    string source = "FM.jpg";
 };
 
 void RDCApp::prepareSettings( Settings *settings ){
