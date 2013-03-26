@@ -14,6 +14,8 @@
 #include "Renderer_CV.h"
 #include "RDC.h"
 
+using namespace cv;
+
 Controller::Controller()
 {
     deviceID = 1;
@@ -112,7 +114,6 @@ void Controller::process(Image& source)
     this->process(source, source);
 }
 
-
 void Controller::sendCommand(char command)
 {
     switch(command)
@@ -136,4 +137,21 @@ void Controller::sendCommand(char command)
             rdc->setmagicE(-0.1);
             break;
     }
+}
+
+void Controller::mouseDown(int x, int y)
+{
+    gettingROI = true;
+    ROIStart[0] = x;
+    ROIStart[1] = y;
+}
+void Controller::mouseUp(int x, int y)
+{
+    gettingROI = false;
+    ROIEnd[0] = x;
+    ROIEnd[1] = y;
+    cout << "[Controller]: start: [" << ROIStart[0] << ", " << ROIStart[1] << "]" << endl;
+    cout << "[Controller]: end: [" << ROIEnd[0] << ", " << ROIEnd[1] << "]" << endl;
+    rdc->setROIavg(ROIStart[0], ROIStart[1], ROIEnd[0], ROIEnd[1]);
+    
 }

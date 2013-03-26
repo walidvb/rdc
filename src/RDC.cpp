@@ -27,6 +27,7 @@ void RDC::init()
     isEMRendered = false;
     isFMRendered = false;
     isColorCalibrated = false;
+    isROIDone = false;
     timeToWait = 2;
     magicE = 1;
     magicR = 1;
@@ -37,42 +38,32 @@ void RDC::init()
     }
 }
 
+
+void RDC::setROIavg(int x1, int y1, int x2, int y2)
+{
+    cout << "[RDC]FM: [" << FM.cols << ", " << FM.rows << "], ROI: [" << x1 << " " << x2 << ", " << y1 << " " << y2 << "] " << endl;
+    
+    Mat FMROI = FM(Range(y1, y2), Range(x1, x2));
+    FMmin = mean(mean(FMROI));
+    isROIDone = true;
+}
+
+void RDC::adapt(Mat* pix)
+{
+    if(isROIDone)
+    {
+        double min;
+        min = max(max(FMmin[0], FMmin[1]), FMmin[2]);
+        *pix /= min;
+    }
+}
+
 /*  The compensation algorithm goes like this:
  *   The image is altered by environment ligth(EM) and reflexivity of the surface(FM)
  *   in the following manner: R = I*FM+EM
  *   Compensated image can be found by solving I:I=(R-EM)/FM
  */
-void RDC::adapt(Mat* pix)
-{
-    /*
-     if(pix->type() != CV_64F)
-     {
-     pix->convertTo(*pix, CV_64F);
-     }
-     
-     Mat FM_thresholded = Mat_<CV_8U>;
-     double maxPix(threshold(FM, FM_thresholded, 128, 255, CV_THRESH_BINARY | CV_THRESH_OTSU));
-     imwrite("/Users/Gaston/dev/RDC/tests/threshold", FM_thresholded);
-     
-     //Find highest pix value
-     /*
-     double maxPix;
-     cv::Mat_<cv::Vec3d>::iterator itPix=FM.begin<cv::Vec3d>();
-     cv::Mat_<cv::Vec3d>::iterator itPixend=FM.end<cv::Vec3d>();
-     for(maxPix = 0; itPix != itPixend; itPix++)
-     {
-     double Y =  ((*itPix)[0]+(*itPix)[1]+(*itPix)[2])/3;
-     maxPix = std::max((*itPix)[0], maxPix);
-     maxPix = std::max((*itPix)[1], maxPix);
-     maxPix = std::max((*itPix)[2], maxPix);
-     
-     maxPix = max(Y, maxPix);
-     }
-     
-     double scaleRatio = FMmin/maxPix;
-     *pix *= scaleRatio;
-     */
-}
+
 void RDC::compensate(Image* srcImg, Image* dstImg)
 {
     if (EM.empty() || FM.empty()) {
@@ -81,22 +72,20 @@ void RDC::compensate(Image* srcImg, Image* dstImg)
     }
     
     Mat* R = srcImg->getMat();
-
-        imwrite("/Users/Gaston/dev/RDC/tests/original.jpg", *R);
+    
+    imwrite("/Users/Gaston/dev/RDC/tests/original.jpg", *R);
     
     cout << "[RDC]: type: [R:" << R->type() << "], [EM:" << EM.type() << "], [FM:" << FM.type()<< "]" << endl;
     R->convertTo(*R, CV_64F);
     imwrite("/Users/Gaston/dev/RDC/tests/original_.jpg", *R);
-
+    
     if(simu)
     {
         EM.convertTo(EM, CV_64F);
         FM.convertTo(FM, CV_64F);
     }
     *R /= 255;
-    imwrite("/Users/Gaston/dev/RDC/tests/original_.jpg", *R);
-    
-    //adapt(R);
+    adapt(R); // checks if FMmin was computed or not
     cv::subtract(*R*magicR, magicE*EM, *R);
     cv::divide(*R, FM, *R);  //commented to see smth.
     imwrite("/Users/Gaston/dev/RDC/tests/compensated.jpg", *R*255);

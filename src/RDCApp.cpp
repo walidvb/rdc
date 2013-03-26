@@ -20,6 +20,10 @@ class RDCApp : public cinder::app::AppBasic {
 public:
 	void setup();
     void keyDown( cinder::app::KeyEvent event );
+    void mouseUp( ci::app::MouseEvent event);
+    void mouseDown( ci::app::MouseEvent event);
+    void mouseDrag(ci::app::MouseEvent event);
+    void mouseMove(ci::app::MouseEvent event);
 	void update();
 	void draw();
     void quit();
@@ -34,6 +38,9 @@ private:
     bool isGrabOk;
     ci::gl::Texture textureProcessed;
     ci::gl::Texture textureSource;
+    ci::Vec2f rectStart;    //<! the rectangle to be drawn when selecting an area
+    ci::Vec2f rectEnd;
+    bool rectDraw;
     
     //give surface to texture
     bool isImgProcessed;
@@ -64,6 +71,7 @@ void RDCApp::setup()
     isFullScreen = false;
     newProcessReq = false;
     isReady = false;
+    rectDraw = false;
     //Get source image in a format Cinder can draw
     imgSource.load("/Users/Gaston/dev/RDC/resources/" + source);
     int w = imgSource.getWidth();
@@ -88,35 +96,7 @@ void RDCApp::setup()
     
 }
 
-void RDCApp::keyDown( cinder::app::KeyEvent event )
-{
-    if( event.getCode() == cinder::app::KeyEvent::KEY_RETURN )
-    {
-        isReady = !isReady;
-        return;
-    }
-    char command = event.getChar();
-    switch(command)
-    {
 
-        case 'f':
-            isFullScreen = !isFullScreen;
-            setFullScreen(isFullScreen);
-            break;
-        case 'c':
-            displayCompensated = !displayCompensated;
-            break;
-        case 'p':
-            newProcessReq = true;
-            break;
-        default:
-            controller->sendCommand(command);
-            break;
-    }
-    
-    
-    
-}
 void RDCApp::update()
 {
     if(isReady)
@@ -172,7 +152,68 @@ void RDCApp::draw()
             ci::gl::draw(textureSource);
         }
     }
-    
+    if(rectDraw)
+    {
+        ci::Rectf rect(rectStart, rectEnd);
+        cinder::gl::drawStrokedRect(rect);
+    }
+}
+
+void RDCApp::keyDown( cinder::app::KeyEvent event )
+{
+    if( event.getCode() == cinder::app::KeyEvent::KEY_RETURN )
+    {
+        isReady = !isReady;
+        return;
+    }
+    char command = event.getChar();
+    switch(command)
+    {
+            
+        case 'f':
+            isFullScreen = !isFullScreen;
+            setFullScreen(isFullScreen);
+            break;
+        case 'c':
+            displayCompensated = !displayCompensated;
+            break;
+        case 'p':
+            newProcessReq = true;
+            break;
+        default:
+            controller->sendCommand(command);
+            break;
+    }
+}
+
+void RDCApp::mouseMove( ci::app::MouseEvent event )
+{
+    event.getPos();
+}
+
+void RDCApp::mouseDrag( ci::app::MouseEvent event ) {
+    mouseMove( event );
+    int x = min(max(0,event.getX()), width);
+    int y = min(max(0,event.getY()), height);
+    rectEnd = ci::Vec2f(x, y);
+}
+
+void RDCApp::mouseDown( ci::app::MouseEvent event)
+{
+    int x = min(max(0,event.getX()), width);
+    int y = min(max(0,event.getY()), height);
+    controller->mouseDown(x, y);
+    rectDraw = true;
+    rectStart = ci::Vec2f(x, y);
+    rectEnd = rectStart;
+}
+
+void RDCApp::mouseUp( ci::app::MouseEvent event)
+{
+    int x = min(max(0,event.getX()), width);
+    int y = min(max(0,event.getY()), height);
+    controller->mouseUp(x, y);
+    rectDraw = false;
 }
 
 void RDCApp::quit()
