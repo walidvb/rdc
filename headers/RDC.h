@@ -26,7 +26,7 @@ public:
     //compensation
     void compensate(Image* srcImg, Image* dstImage);   //<! Called each frame, takes source image and returns compensated image
     void adapt(Mat* pix);                                 //<! adapts image prior to compensation(pix should be CV_64F)
-    void setROIavg(int x1, int y1, int x2, int y2);
+    void setROI(int x1, int y1, int x2, int y2);
     
     //calibration
     void computeLighting();                                 //<! computes env light and max light images
@@ -34,7 +34,7 @@ public:
     void calibrateColors(Sensor* sensor, Renderer_A* gfx);  //<! calibrates all colors
     void grabEM(Sensor* cam, Renderer_A* gfx);              //<! captures and saves to EM
     void grabFM(Sensor* cam, Renderer_A* gfx);              //<! captures and saves to FM
-    
+    void getFMMinEMMax();                    //<! lets the user manually select an area for FMmin, then for EMmax
     //millescanious
     void grabAndSaveFrame(Sensor* cam);                     //<! captures homographied view from camera and saves to disk
     
@@ -49,7 +49,8 @@ public:
     bool getIsFMRendered();
     bool getIsRedRendered();
     bool getIsColorCalibrated();
-
+    bool getIsLightComputed();
+    bool getIsFMMinEMMaxDone();
     void setIsEMRendered(bool isIt);
     void setIsFMRendered(bool isIt);
         
@@ -68,12 +69,17 @@ private:
     //Preprocessing
     
     Mat EM;                                             //<! Matrix storing the environmental light, row major
-    Scalar EMmax;                                       //<! the maximum value found in EM
+    double EMMax;                                       //<! the maximum value found in EM
     Mat FM;                                             //<! Matrix storing the proj light, row major
-    Scalar FMmin;                                       //<! the minimum value found in FM
+    double FMMin;                                       //<! the minimum value found in FM
     int outWidth;                                       //<! the width of the output
     int outHeight;                                      //<! the height of the output
     Size outSize;
+    
+    //UI
+    int ROIStart[2];                                    //<! one corner of the ROI
+    int ROIEnd[2];                                      //<! the other corner of the ROI
+    bool hasNewROI;                                        //<! used to know if a ROI is currently defined
     
     //logic
     Timer* timer;
@@ -83,8 +89,11 @@ private:
     bool isCalibrated;
     bool isEMRendered;
     bool isFMRendered;
+    bool isFMMinComputed;
+    bool isEMMaxComputed;
     bool isColorCalibrated;
-    bool isROIDone;
+    bool isLightComputed;
+    bool isFMMinEMMaxDone;
     double timeToWait;
 };
 

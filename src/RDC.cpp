@@ -26,8 +26,11 @@ void RDC::init()
     isCalibrated = false;
     isEMRendered = false;
     isFMRendered = false;
-    isColorCalibrated = false;
-    isROIDone = false;
+    isFMMinComputed = false;
+    isEMMaxComputed = false;
+    isLightComputed = false;
+    isFMMinEMMaxDone = false;
+    hasNewROI = false;
     timeToWait = 2;
     magicE = 1;
     magicR = 1;
@@ -39,31 +42,72 @@ void RDC::init()
 }
 
 
-void RDC::setROIavg(int x1, int y1, int x2, int y2)
+void RDC::setROI(int x1, int y1, int x2, int y2)
 {
     
     int x1_ = min(x1, x2);
     int x2_ = max(x1, x2);
     int y1_ = min(y1, y2);
     int y2_ = max(y1, y2);
+    ROIStart[0] = x1_;
+    ROIStart[1] = y1_;
+    ROIEnd[0] = x2_;
+    ROIEnd[1] = y2_;
+    //cout << "[RDC]: ROI[" << ROIStart[0] << " - " << ROIEnd[0] << ", " << ROIStart[1] << " - " << ROIEnd[1] << "]" << endl;
+    hasNewROI = true;
+}
+
+void RDC::getFMMinEMMax()
+{
+    Mat* img;
+    double* target;
+    bool* currentChange;
+    if(!isFMMinComputed)
+    {
+        cout << "[RDC]: getting FMMin..." << endl;
+        img = &FM;
+        target = &FMMin;
+        currentChange = &isFMMinComputed;
+    }
+    else
+    {
+        cout << "[RDC]. getting EMMax..." << endl;
+        img = &EM;
+        target = &EMMax;
+        currentChange = &isEMMaxComputed;
+        
+    }
     
-    //cout << "[RDC]FM: [" << FM.cols << ", " << FM.rows << "], ROI: [" << x1_ << " " << x2_ << ", " << y1_ << " " << y2_ << "] " << endl;
-    
-    Mat FMROI = FM(Range(y1_, y2_), Range(x1_, x2_));
-    Scalar color = mean(FMROI);
-    cout << "[RDC]: Color: (" << color[0] << ", " << color[1] << ", " << color[2] << ")=" << color << endl;
-    FMmin = (color[0]+color[1]+color[2])/3;
-    cout << "[RDC]: FMmin: " << FMmin <<endl;
-    isROIDone = true;
+    if(hasNewROI)
+    {
+        Mat ROI = (*img)(Range(ROIStart[0], ROIEnd[0]), Range(ROIStart[1], ROIEnd[1]));
+        hasNewROI = false;
+        Scalar color = mean(ROI);
+        cout << "[RDC]: Color selected: (" << color[0] << ", " << color[1] << ", " << color[2] << ")=" << color;
+        
+        double value = (color[0]+color[1]+color[2])/3;
+        *target = value;
+        *currentChange = true;
+    }
+    else
+    {
+        cout << "[RDC]: no ROI selected" << endl;
+    }
+    if(isFMMinComputed &&  isEMMaxComputed)
+    {
+        cout << "[RDC]: FMMin: " << FMMin << " EMMax: " << EMMax << endl;
+        isFMMinEMMaxDone = true;
+    }
 }
 
 void RDC::adapt(Mat* pix)
 {
-    if(isROIDone)
+    //pix € [0 1]
+    if(isFMMinEMMaxDone)
     {
         double min;
-        min = max(max(FMmin[0], FMmin[1]), FMmin[2]);
-        *pix /= min;
+        min = FMMin;
+        *pix *= min;
     }
 }
 
@@ -83,20 +127,19 @@ void RDC::compensate(Image* srcImg, Image* dstImg)
     Mat* R = srcImg->getMat();
     
     imwrite("/Users/Gaston/dev/RDC/tests/original.jpg", *R);
-    
-    cout << "[RDC]: type: [R:" << R->type() << "], [EM:" << EM.type() << "], [FM:" << FM.type()<< "]" << endl;
+    //cout << "[RDC]: type: [R:" << R->type() << "], [EM:" << EM.type() << "], [FM:" << FM.type()<< "]" << endl;
     R->convertTo(*R, CV_64F);
+    //cout << "[RDC]: type: [R:" << R->type() << "]" << endl;
     imwrite("/Users/Gaston/dev/RDC/tests/original_.jpg", *R);
     
-    if(simu)
-    {
-        EM.convertTo(EM, CV_64F);
-        FM.convertTo(FM, CV_64F);
-    }
+    //EM.convertTo(EM, CV_64F);
+    //FM.convertTo(FM, CV_64F);
+    adapt(R);
+    
     *R /= 255;
-    adapt(R); // checks if FMmin was computed or not
-    cv::subtract(*R*magicR, magicE*EM, *R);
-    cv::divide(*R, FM, *R);  //commented to see smth.
+    cv::subtract(*R*magicR, EM*magicE, *R);
+    cv::divide(*R, FM, *R);
+    
     imwrite("/Users/Gaston/dev/RDC/tests/compensated.jpg", *R*255);
     *R *= 255;
     R->convertTo(*R, CV_8U);
@@ -156,7 +199,7 @@ void RDC::computeLighting()
     EM /= 255;
     FM /= 255;
     
-    isCalibrated = true;
+    isLightComputed = true;
 }
 
 void RDC::grabAndSaveFrame(Sensor* cam)
@@ -232,6 +275,14 @@ bool RDC::getIsEMRendered()
 bool RDC::getIsFMRendered()
 {
     return isFMRendered;
+}
+bool RDC::getIsLightComputed()
+{
+    return isLightComputed;
+}
+bool RDC::getIsFMMinEMMaxDone()
+{
+    return isFMMinEMMaxDone;
 }
 
 void RDC::setIsEMRendered(bool isIt)

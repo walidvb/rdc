@@ -28,13 +28,11 @@ void Renderer_Cinder::drawRect( float& x1, float& y1, float& x2, float& y2 ) con
     drawSolidRect(rect);
 }
 
-
-
-void Renderer_Cinder::drawImg(Image* img) const
-{    
+void Renderer_Cinder::toCinder(Image* img, Texture* text) const
+{
     int w = img->getWidth();
     int h = img->getHeight();
-
+    
     //conversion from cv::mat to ci::surface
     ci::Surface8u surface(w, h, false);
     for(int i = 0; i < w; i+=1)
@@ -50,10 +48,31 @@ void Renderer_Cinder::drawImg(Image* img) const
             surface.setPixel(pos, color);
         }
     }
-    
-    ci::gl::Texture myImg;
+    text = new ci::gl::Texture(surface);
+}
+
+void Renderer_Cinder::drawImg(Image* img) const
+{
     //give surface to texture
-    myImg = ci::gl::Texture(surface);
+    int w = img->getWidth();
+    int h = img->getHeight();
+    
+    //conversion from cv::mat to ci::surface
+    ci::Surface8u surface(w, h, false);
+    for(int i = 0; i < w; i+=1)
+    {
+        for (int j = 0; j<h; j+=1)
+        {
+            cv::Vec3b pixel = img->pixelAt(i,j);
+            unsigned char b = pixel[0];
+            unsigned char g = pixel[1];
+            unsigned char r = pixel[2];
+            cinder::Vec2i pos(i,j);
+            ci::ColorT<unsigned char> color(r,g,b);
+            surface.setPixel(pos, color);
+        }
+    }
+    ci::gl::Texture myImg(surface);
     ci::gl::draw(myImg);
 }
 

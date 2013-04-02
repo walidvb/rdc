@@ -10,12 +10,6 @@
 #include "cinder/gl/Texture.h"
 using namespace std;
 
-struct pair
-{
-    Image org;
-    Image comp;
-};
-
 class RDCApp : public cinder::app::AppBasic {
 public:
 	void setup();
@@ -48,7 +42,7 @@ private:
     bool displayCompensated;
     bool newProcessReq;
     bool isReady;   //<! set to true when ready to scan+process
-    string source = "FM.jpg";
+    string source = "lena.jpg";
 };
 
 void RDCApp::prepareSettings( Settings *settings ){

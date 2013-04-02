@@ -37,7 +37,7 @@ Renderer_A* Controller::getRenderer()
 
 void Controller::init(int width, int height)
 {
-    simu = true;
+    simu = false;
     cout << "[Controller] initializing system" << endl;
     timer = new Timer();
     rdc = new RDC(width, height, timer);
@@ -61,7 +61,6 @@ void Controller::calibrate()
     //Compute homography, and get surface's properties
     if(!rdc->getIsCalibrated())
     {
-        cout << "[Controller] calibrating system" << endl;
         if(simu)
         {
             isRDCCalibrated = true;
@@ -88,14 +87,19 @@ void Controller::calibrate()
             rdc->grabFM(captor, renderer);
             return;
         }
-        else if(!simu)
+        else if(!rdc->getIsLightComputed())
         {
             rdc->computeLighting();
-            isRDCCalibrated = true;
             return;
-            //captor->destroy();
         }
-
+        else if(!rdc->getIsFMMinEMMaxDone())
+        {
+            rdc->getFMMinEMMax();
+        }
+        else
+        {
+            isRDCCalibrated = true;
+        }
     }
     else
     {
@@ -150,8 +154,6 @@ void Controller::mouseUp(int x, int y)
     gettingROI = false;
     ROIEnd[0] = x;
     ROIEnd[1] = y;
-    cout << "[Controller]: start: [" << ROIStart[0] << ", " << ROIStart[1] << "]" << endl;
-    cout << "[Controller]: end: [" << ROIEnd[0] << ", " << ROIEnd[1] << "]" << endl;
-    rdc->setROIavg(ROIStart[0], ROIStart[1], ROIEnd[0], ROIEnd[1]);
+    rdc->setROI(ROIStart[0], ROIStart[1], ROIEnd[0], ROIEnd[1]);
     
 }

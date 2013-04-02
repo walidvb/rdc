@@ -23,6 +23,7 @@ public:
     void drawRect( float& x1, float& y1, float& x2, float& y2 ) const;
     void drawImg(Image* img) const;
 
+    void toCinder(Image* img, ci::gl::Texture* text) const;
     void setFullscreen(bool isFullscreen);
     void clear() const;
 private:
