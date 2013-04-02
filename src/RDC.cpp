@@ -245,6 +245,8 @@ void RDC::setmagicR(double factor)
 {
     magicR+=factor;
     magicR = (magicR < 0)? 0 : (magicR > 1) ? 1 : magicR;
+    cout << "magicR: " << magicR << endl;
+
 }
 
 bool RDC::getIsColorCalibrated()

@@ -71,6 +71,9 @@ void RDCApp::setup()
     sources.push_back("lena.jpg");
     sources.push_back("testPic.jpg");
     sources.push_back("goccia.jpg");
+    sources.push_back("ba.jpg");
+    sources.push_back("manaus.jpg");
+    sources.push_back("rio.jpg");
     sourceID = 0;
     imgSource.load("/Users/Gaston/dev/RDC/resources/" + sources[sourceID]);
     int w = imgSource.getWidth();
@@ -92,7 +95,6 @@ void RDCApp::setup()
         }
     }
     textureSource = ci::gl::Texture(surface);
-    
 }
 
 
@@ -145,7 +147,6 @@ void RDCApp::update()
             newProcessReq = false;
         }
     }
-    
 }
 
 void RDCApp::draw()
@@ -185,7 +186,6 @@ void RDCApp::keyDown( cinder::app::KeyEvent event )
     char command = event.getChar();
     switch(command)
     {
-            
         case 'f':
             isFullScreen = !isFullScreen;
             setFullScreen(isFullScreen);
@@ -198,6 +198,10 @@ void RDCApp::keyDown( cinder::app::KeyEvent event )
             break;
         case 'o':
             sourceID = (sourceID+1)%sources.size();
+            newProcessReq = true;
+            break;
+        case 'q':
+            exit(0);
             break;
         default:
             controller->sendCommand(command);

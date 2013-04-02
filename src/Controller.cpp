@@ -122,15 +122,6 @@ void Controller::sendCommand(char command)
 {
     switch(command)
     {
-        case 'e':
-            rdc->setIsEMRendered(true);
-            break;
-        case 'z':
-            rdc->setIsFMRendered(true);
-            break;
-        case 'p':
-            
-            break;
         case 'g':
             rdc->grabAndSaveFrame(captor);
             break;
@@ -139,6 +130,12 @@ void Controller::sendCommand(char command)
             break;
         case 'm':
             rdc->setmagicE(-0.1);
+            break;
+        case 'j':
+            rdc->setmagicR(0.1);
+            break;
+        case 'k':
+            rdc->setmagicR(-0.1);
             break;
     }
 }
