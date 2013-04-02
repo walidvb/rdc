@@ -42,7 +42,8 @@ private:
     bool displayCompensated;
     bool newProcessReq;
     bool isReady;   //<! set to true when ready to scan+process
-    string source = "lena.jpg";
+    vector<string> sources;
+    int sourceID;
 };
 
 void RDCApp::prepareSettings( Settings *settings ){
@@ -67,7 +68,11 @@ void RDCApp::setup()
     isReady = false;
     rectDraw = false;
     //Get source image in a format Cinder can draw
-    imgSource.load("/Users/Gaston/dev/RDC/resources/" + source);
+    sources.push_back("lena.jpg");
+    sources.push_back("testPic.jpg");
+    sources.push_back("goccia.jpg");
+    sourceID = 0;
+    imgSource.load("/Users/Gaston/dev/RDC/resources/" + sources[sourceID]);
     int w = imgSource.getWidth();
     int h = imgSource.getHeight();
     
@@ -97,11 +102,28 @@ void RDCApp::update()
     {
         if(controller->isRDCCalibrated && (!isImgProcessed || newProcessReq))
         {
-            //imgSource.load("/Users/Gaston/dev/RDC/resources/" + source);
-            controller->process(imgSource);
+            imgSource.load("/Users/Gaston/dev/RDC/resources/" + sources[sourceID]);
             int w = imgSource.getWidth();
             int h = imgSource.getHeight();
+            //conversion from Image (cv::Mat) to ci::surface
+            ci::Surface8u surfacesrc(w, h, false);
+            for(int i = 0; i < w; i+=1)
+            {
+                for (int j = 0; j<h; j+=1)
+                {
+                    cv::Vec3b pixel = imgSource.pixelAt(i,j);
+                    unsigned char b = pixel[0];
+                    unsigned char g = pixel[1];
+                    unsigned char r = pixel[2];
+                    cinder::Vec2i pos(i,j);
+                    ci::ColorT<unsigned char> color(r,g,b);
+                    surfacesrc.setPixel(pos, color);
+                }
+            }
+            textureSource = ci::gl::Texture(surfacesrc);
             
+            
+            controller->process(imgSource);
             //conversion from Image (cv::Mat) to ci::surface
             ci::Surface8u surface(w, h, false);
             for(int i = 0; i < w; i+=1)
@@ -173,6 +195,9 @@ void RDCApp::keyDown( cinder::app::KeyEvent event )
             break;
         case 'p':
             newProcessReq = true;
+            break;
+        case 'o':
+            sourceID = (sourceID+1)%sources.size();
             break;
         default:
             controller->sendCommand(command);

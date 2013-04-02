@@ -129,7 +129,7 @@ void RDC::compensate(Image* srcImg, Image* dstImg)
     imwrite("/Users/Gaston/dev/RDC/tests/original.jpg", *R);
     //cout << "[RDC]: type: [R:" << R->type() << "], [EM:" << EM.type() << "], [FM:" << FM.type()<< "]" << endl;
     R->convertTo(*R, CV_64F);
-    //cout << "[RDC]: type: [R:" << R->type() << "]" << endl;
+    //cout << "[RDC]: type after conversion to CV_64F: [R:" << R->type() << "]" << endl;
     imwrite("/Users/Gaston/dev/RDC/tests/original_.jpg", *R);
     
     //EM.convertTo(EM, CV_64F);

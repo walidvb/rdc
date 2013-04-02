@@ -48,8 +48,6 @@ private:
     std::vector<colorMapping> redLevels;
     std::vector<colorMapping> greenLevels;
     std::vector<colorMapping> blueLevels;
-    
-    bool isRedCalibrated;
 };
 
 
