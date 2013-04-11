@@ -17,6 +17,7 @@
 #include "Renderer_CV.h"
 #include "Timer.h"
 
+#define SCALESCOUNT 10
 class Timer;
 class Homo;
 class Sensor;
@@ -25,29 +26,39 @@ class Renderer_A;
 struct colorMapping{
     double src;
     double cap;
-} ;
+};
+
+enum Colors {RED, GREEN, BLUE};
 
 class ColorCalibrator{
 public:
     ColorCalibrator();
-    ColorCalibrator(Sensor* sensor, Homo* homo, Renderer_A* renderer, Timer* timer);
+    ColorCalibrator(Homo* homo, Timer* timer);
     ~ColorCalibrator(){};
     
-    void calibrate();
+    void calibrate(Sensor* sensor, Renderer_A* gfx);
+    void calibrateColor(Colors color, Sensor* sensor, Renderer_A* gfx);
+    void computeResponse(Colors color, Image* capture);
     
+    
+    //Getters&Setters
+    bool getIsCalibrated();
 private:
-    //
+    //Private methods
+    double getCol(int index, Colors color, Image* img);
     
-    //Attributes
+    //Ext attr
     Timer* timer;
-    Renderer_A* renderer;
     Homo* homo;
-    Sensor* sensor;
-
-    std::vector<colorMapping> gammaLevels;
-    std::vector<colorMapping> redLevels;
-    std::vector<colorMapping> greenLevels;
-    std::vector<colorMapping> blueLevels;
+    bool isCalibrated;
+    
+    //Int attr
+    string resources;
+    std::vector<bool> colorDone;
+    int timeToWait;
+    int squareSize;
+    
+    int colorMap[3][SCALESCOUNT];
 };
 
 

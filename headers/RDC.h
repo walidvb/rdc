@@ -14,17 +14,18 @@ class Sensor;
 class Renderer_A;
 class Homo;
 class Timer;
+class ColorCalibrator;
 
 class RDC
 {
 public:
-    bool simu;                                          //<! set to true when working without connected hardware(will use like taken pictures)
+    bool simu;                                            //<! set to true when working without connected hardware(will use like taken pictures)
     
     RDC(){}
     RDC(int width, int height, Timer* timer);
     void init();
     //compensation
-    void compensate(Image* srcImg, Image* dstImage);   //<! Called each frame, takes source image and returns compensated image
+    void compensate(Image* srcImg, Image* dstImage);      //<! Called each frame, takes source image and returns compensated image
     void adapt(Mat* pix);                                 //<! adapts image prior to compensation(pix should be CV_64F)
     void setROI(int x1, int y1, int x2, int y2);
     
@@ -64,8 +65,8 @@ private:
     //Private methods
 
     //Setup
-    int getLatency();                                   //<! get projector camera latency
     Homo* homo;                                          //<! The object handling the homography
+    ColorCalibrator* colorCalib;
     //Preprocessing
     
     Mat EM;                                             //<! Matrix storing the environmental light, row major
@@ -91,7 +92,6 @@ private:
     bool isFMRendered;
     bool isFMMinComputed;
     bool isEMMaxComputed;
-    bool isColorCalibrated;
     bool isLightComputed;
     bool isFMMinEMMaxDone;
     double timeToWait;

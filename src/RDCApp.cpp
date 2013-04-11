@@ -7,6 +7,7 @@
 #include "cinder/Vector.h"
 #include "Image.h"
 #include "Renderer_A.h"
+#include "Sensor.h"
 #include "cinder/gl/Texture.h"
 using namespace std;
 
@@ -23,11 +24,14 @@ public:
     void quit();
     void prepareSettings(Settings *settings);
     
+    void loadFiles();
 private:
     Controller* controller;
     int width, height;
     Image imgProcessed;
     Image imgSource;
+    Sensor movie;
+    bool watchingMovie;
     bool isCalibrated;
     bool isGrabOk;
     ci::gl::Texture textureProcessed;
@@ -36,12 +40,11 @@ private:
     ci::Vec2f rectEnd;
     bool rectDraw;
     
-    //give surface to texture
     bool isImgProcessed;
     bool isFullScreen;
     bool displayCompensated;
     bool newProcessReq;
-    bool isReady;   //<! set to true when ready to scan+process
+    bool isReady;               //<! set to true when ready to scan+process
     vector<string> sources;
     int sourceID;
 };
@@ -67,18 +70,11 @@ void RDCApp::setup()
     newProcessReq = false;
     isReady = false;
     rectDraw = false;
-    //Get source image in a format Cinder can draw
-    sources.push_back("lena.jpg");
-    sources.push_back("testPic.jpg");
-    sources.push_back("goccia.jpg");
-    sources.push_back("ba.jpg");
-    sources.push_back("manaus.jpg");
-    sources.push_back("rio.jpg");
-    sourceID = 0;
-    imgSource.load("/Users/Gaston/dev/RDC/resources/" + sources[sourceID]);
+    watchingMovie = true;
+    loadFiles();
     int w = imgSource.getWidth();
     int h = imgSource.getHeight();
-    
+    cout << "[RDCApp]: Source size: " << w << " " << h << endl;
     //conversion from Image (cv::Mat) to ci::surface
     ci::Surface8u surface(w, h, false);
     for(int i = 0; i < w; i+=1)
@@ -97,6 +93,27 @@ void RDCApp::setup()
     textureSource = ci::gl::Texture(surface);
 }
 
+void RDCApp::loadFiles()
+{
+    if(!watchingMovie)
+    {
+        //Get source image in a format Cinder can draw
+        sources.push_back("lena.jpg");
+        sources.push_back("testPic.jpg");
+        sources.push_back("goccia.jpg");
+        sources.push_back("ba.jpg");
+        sources.push_back("manaus.jpg");
+        sources.push_back("rio.jpg");
+        sources.push_back("cucu.jpg");
+        sourceID = 0;
+        imgSource.load("/Users/Gaston/dev/RDC/resources/" + sources[sourceID]);
+    }
+    else
+    {
+        movie.init("/Users/Gaston/dev/RDC/resources/dbz.mpg");
+    }
+
+}
 
 void RDCApp::update()
 {
@@ -104,26 +121,40 @@ void RDCApp::update()
     {
         if(controller->isRDCCalibrated && (!isImgProcessed || newProcessReq))
         {
-            imgSource.load("/Users/Gaston/dev/RDC/resources/" + sources[sourceID]);
+            
+            if(!watchingMovie)
+            {
+                imgSource.load("/Users/Gaston/dev/RDC/resources/" + sources[sourceID]);
+                newProcessReq = false;
+            }
+            else
+            {
+                imgSource = movie.grabFrame();
+                imgSource.resize(800, 600);
+                newProcessReq = true;
+            }
             int w = imgSource.getWidth();
             int h = imgSource.getHeight();
-            //conversion from Image (cv::Mat) to ci::surface
-            ci::Surface8u surfacesrc(w, h, false);
-            for(int i = 0; i < w; i+=1)
+            if(displayCompensated || !watchingMovie)
             {
-                for (int j = 0; j<h; j+=1)
+
+                //conversion from Image (cv::Mat) to ci::surface
+                ci::Surface8u surfacesrc(w, h, false);
+                for(int i = 0; i < w; i+=1)
                 {
-                    cv::Vec3b pixel = imgSource.pixelAt(i,j);
-                    unsigned char b = pixel[0];
-                    unsigned char g = pixel[1];
-                    unsigned char r = pixel[2];
-                    cinder::Vec2i pos(i,j);
-                    ci::ColorT<unsigned char> color(r,g,b);
-                    surfacesrc.setPixel(pos, color);
+                    for (int j = 0; j<h; j+=1)
+                    {
+                        cv::Vec3b pixel = imgSource.pixelAt(i,j);
+                        unsigned char b = pixel[0];
+                        unsigned char g = pixel[1];
+                        unsigned char r = pixel[2];
+                        cinder::Vec2i pos(i,j);
+                        ci::ColorT<unsigned char> color(r,g,b);
+                        surfacesrc.setPixel(pos, color);
+                    }
                 }
+                textureSource = ci::gl::Texture(surfacesrc);
             }
-            textureSource = ci::gl::Texture(surfacesrc);
-            
             
             controller->process(imgSource);
             //conversion from Image (cv::Mat) to ci::surface
@@ -143,9 +174,9 @@ void RDCApp::update()
             }
             textureProcessed = ci::gl::Texture(surface);
             isImgProcessed = true;
-            cout << "image processed!" << endl;
-            newProcessReq = false;
+            //cout << "[RDCApp]: image processed!" << endl;
         }
+        
     }
 }
 
@@ -199,6 +230,10 @@ void RDCApp::keyDown( cinder::app::KeyEvent event )
         case 'o':
             sourceID = (sourceID+1)%sources.size();
             newProcessReq = true;
+            break;
+        case 'v':
+            watchingMovie = !watchingMovie;
+            loadFiles();
             break;
         case 'q':
             exit(0);

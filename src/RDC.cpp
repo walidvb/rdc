@@ -10,6 +10,7 @@
 #include "Homo.h"
 #include "RDC.h"
 #include "Timer.h"
+#include "ColorCalibrator.h"
 
 //Constructor
 RDC::RDC(int width, int height, Timer* timer) : outWidth(width), outHeight(height), outSize(width, height), timer(timer){}
@@ -20,6 +21,7 @@ RDC::RDC(int width, int height, Timer* timer) : outWidth(width), outHeight(heigh
 void RDC::init()
 {
     homo = new Homo();
+    colorCalib = new ColorCalibrator(homo, timer);
     isHomoComputed = false;
     isEMComputed = false;
     isFMComputed = false;
@@ -27,7 +29,7 @@ void RDC::init()
     isEMRendered = false;
     isFMRendered = false;
     isFMMinComputed = false;
-    isEMMaxComputed = false;
+    isEMMaxComputed = true;     //true because unused as of today.
     isLightComputed = false;
     isFMMinEMMaxDone = false;
     hasNewROI = false;
@@ -97,6 +99,7 @@ void RDC::getFMMinEMMax()
     {
         cout << "[RDC]: FMMin: " << FMMin << " EMMax: " << EMMax << endl;
         isFMMinEMMaxDone = true;
+        
     }
 }
 
@@ -143,14 +146,13 @@ void RDC::compensate(Image* srcImg, Image* dstImg)
     imwrite("/Users/Gaston/dev/RDC/tests/compensated.jpg", *R*255);
     *R *= 255;
     R->convertTo(*R, CV_8U);
-    cout << "[RDC] image was compensated!" << endl;
+    //cout << "[RDC] image was compensated!" << endl;
 }
 
 
 void RDC::calibrateColors(Sensor* sensor, Renderer_A* gfx)
 {
-    isColorCalibrated = true;
-    cout << "[RDC]: color calibration over" << endl;
+    colorCalib->calibrate(sensor, gfx);
 }
 
 
@@ -251,7 +253,7 @@ void RDC::setmagicR(double factor)
 
 bool RDC::getIsColorCalibrated()
 {
-    return isColorCalibrated;
+    return colorCalib->getIsCalibrated();
 }
 
 bool RDC::getIsHomoComputed()

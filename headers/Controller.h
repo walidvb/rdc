@@ -52,7 +52,7 @@ private:
     Timer* timer;                       //<! the object handling all the timer stuff
     Sensor* media;                      //<! the loaded media / ftm only video is supported
     Sensor* captor;                     //<! the captor
-    Renderer_A* renderer;               //<! well, the renderer
+    Renderer_A* gfx;               //<! well, the renderer
     RDC* rdc;                           //<! doing the magic. calibration, compensation matrix generation, and image processing
 };
 

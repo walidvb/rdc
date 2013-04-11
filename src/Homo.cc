@@ -97,7 +97,12 @@ void Homo::warp(Mat& img, Size size)
                         img,                         // output image
                         homoInv,         // homography
                         size);
+}
 
+
+void Homo::warp(Image& img, Size size)
+{
+    warp(*img.getMat(), size);
 }
 
 Point Homo::getPoint(int x, int y, Mat& h)

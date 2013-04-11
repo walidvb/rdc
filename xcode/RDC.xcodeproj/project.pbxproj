@@ -228,6 +228,7 @@
 			children = (
 				3D150C1716AF1CF600F544F4 /* CalibController.h */,
 				3D150C1816AF1CF600F544F4 /* CameraCalibrator.h */,
+				3DA18A4316F75B86004B9F0A /* ColorCalibrator.h */,
 				3D996EC8165BF569004B258F /* Tools.h */,
 				3D3C9CDA168C5F1E00EEBCAF /* Image.h */,
 				3D996EBD165BE215004B258F /* common.h */,
@@ -239,7 +240,6 @@
 				3D996EBC165BE0D3004B258F /* RDC.h */,
 				3D2E3ADD16B848D400DE7582 /* Homo.h */,
 				3DA18A3D16F747E4004B9F0A /* Timer.h */,
-				3DA18A4316F75B86004B9F0A /* ColorCalibrator.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -249,6 +249,7 @@
 			children = (
 				3D150C1A16AF1D1400F544F4 /* CalibController.cc */,
 				3D150C1B16AF1D1400F544F4 /* CameraCalibrator.cc */,
+				3DA18A4416F75B99004B9F0A /* ColorCalibrator.cpp */,
 				3D996EC9165BF579004B258F /* Tools.cpp */,
 				3D3C9CDB168C5F4500EEBCAF /* Image.cpp */,
 				3D992F881684C91D008C380E /* Controller.cpp */,
@@ -259,7 +260,6 @@
 				3D996EC4165BEA5A004B258F /* RDC.cpp */,
 				3D2E3ADA16B848C200DE7582 /* Homo.cc */,
 				3DA18A4116F74C8A004B9F0A /* Timer.cpp */,
-				3DA18A4416F75B99004B9F0A /* ColorCalibrator.cpp */,
 			);
 			name = src;
 			sourceTree = "<group>";

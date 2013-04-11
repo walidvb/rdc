@@ -25,13 +25,13 @@ Controller::Controller()
 Controller::~Controller()
 {
     delete captor;
-    delete renderer;
+    delete gfx;
     delete rdc;
     delete media;
 }
 Renderer_A* Controller::getRenderer()
 {
-    return this->renderer;
+    return this->gfx;
 }
 
 
@@ -48,7 +48,7 @@ void Controller::init(int width, int height)
         captor = new Sensor();
         captor->init(deviceID);
     }
-    renderer = new Renderer_Cinder(width, height);
+    gfx = new Renderer_Cinder(width, height);
 
     
     //media = new Sensor();
@@ -68,23 +68,22 @@ void Controller::calibrate()
         }
         else if(!rdc->getIsHomoComputed())
         {
-            rdc->computeHomography(captor, renderer);
+            rdc->computeHomography(captor, gfx);
             return;
         }
         else if(!rdc->getIsColorCalibrated())
         {
-            cout << "[Controller] calibrating colors..." << endl;
-            rdc->calibrateColors(captor, renderer);
+            rdc->calibrateColors(captor, gfx);
             return;
         }
         else if(!rdc->getIsEMComputed())//if EM pas ok
         {
-            rdc->grabEM(captor, renderer);
+            rdc->grabEM(captor, gfx);
             return;
         }
         else if(!rdc->getIsFMComputed())//if FM pas ok
         {
-            rdc->grabFM(captor, renderer);
+            rdc->grabFM(captor, gfx);
             return;
         }
         else if(!rdc->getIsLightComputed())
@@ -109,7 +108,7 @@ void Controller::calibrate()
 
 void Controller::process(Image& source, Image& dest)
 {
-    cout << "[Controller] processing image" << endl;
+    //cout << "[Controller] processing image" << endl;
     rdc->compensate(&source, &dest);
 }
 

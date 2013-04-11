@@ -96,9 +96,12 @@ void Image::resize(int maxHeight)
 
 void Image::resize(int width_, int height_)
 {
-    Size s(width_, height_);
-    cv::resize(pixels, pixels, s);
-    setup();
+    if(this->width != width_ && this->height != height_)
+    {
+        Size s(width_, height_);
+        cv::resize(pixels, pixels, s);
+        setup();
+    }
 }
 
 

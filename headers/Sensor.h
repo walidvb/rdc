@@ -27,7 +27,7 @@ public:
     //Getters and Setters
     int getWidth() const;
     int getHeight() const;
-    Size getSize() ;
+    cv::Size getSize() ;
     
 private:
     VideoCapture cap;
