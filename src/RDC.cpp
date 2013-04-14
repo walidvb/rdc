@@ -40,6 +40,8 @@ void RDC::init()
     {
         EM = imread("/Users/Gaston/dev/RDC/tests/EM.jpg");
         FM = imread("/Users/Gaston/dev/RDC/tests/FM.jpg");
+        EM.convertTo(EM, CV_64F);
+        FM.convertTo(FM, CV_64F);
     }
 }
 

@@ -25,6 +25,7 @@
 		3D3BEB8D170B180D004FA671 /* ColorCalibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BEB8B170B180D004FA671 /* ColorCalibrator.cpp */; };
 		3D3BEB8E170B180D004FA671 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BEB8C170B180D004FA671 /* Timer.cpp */; };
 		3D3C9CDC168C5F4500EEBCAF /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C9CDB168C5F4500EEBCAF /* Image.cpp */; };
+		3D51E421171B29E700114130 /* SimpleGUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D51E420171B29E700114130 /* SimpleGUI.cpp */; };
 		3D5FE94416AD77BB00DB7E28 /* Renderer_CV.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FE94316AD77BB00DB7E28 /* Renderer_CV.cc */; };
 		3D5FE95016ADA02C00DB7E28 /* Sensor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FE94F16ADA02C00DB7E28 /* Sensor.cc */; };
 		3D992F891684C91D008C380E /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F881684C91D008C380E /* Controller.cpp */; };
@@ -81,6 +82,8 @@
 		3D3BEB8C170B180D004FA671 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = ../src/Timer.cpp; sourceTree = "<group>"; };
 		3D3C9CDA168C5F1E00EEBCAF /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = ../headers/Image.h; sourceTree = "<group>"; };
 		3D3C9CDB168C5F4500EEBCAF /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Image.cpp; path = ../src/Image.cpp; sourceTree = "<group>"; };
+		3D51E41E171B29BE00114130 /* SimpleGUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleGUI.h; path = ../headers/SimpleGUI.h; sourceTree = "<group>"; };
+		3D51E420171B29E700114130 /* SimpleGUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SimpleGUI.cpp; path = ../src/SimpleGUI.cpp; sourceTree = "<group>"; };
 		3D5FE94216AD77A900DB7E28 /* Renderer_CV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer_CV.h; path = ../headers/Renderer_CV.h; sourceTree = "<group>"; };
 		3D5FE94316AD77BB00DB7E28 /* Renderer_CV.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer_CV.cc; path = ../src/Renderer_CV.cc; sourceTree = "<group>"; };
 		3D5FE94F16ADA02C00DB7E28 /* Sensor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sensor.cc; path = ../src/Sensor.cc; sourceTree = "<group>"; };
@@ -240,6 +243,7 @@
 				3D996EBC165BE0D3004B258F /* RDC.h */,
 				3D2E3ADD16B848D400DE7582 /* Homo.h */,
 				3DA18A3D16F747E4004B9F0A /* Timer.h */,
+				3D51E41E171B29BE00114130 /* SimpleGUI.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -260,6 +264,7 @@
 				3D996EC4165BEA5A004B258F /* RDC.cpp */,
 				3D2E3ADA16B848C200DE7582 /* Homo.cc */,
 				3DA18A4116F74C8A004B9F0A /* Timer.cpp */,
+				3D51E420171B29E700114130 /* SimpleGUI.cpp */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				3D5FE94416AD77BB00DB7E28 /* Renderer_CV.cc in Sources */,
 				3D5FE95016ADA02C00DB7E28 /* Sensor.cc in Sources */,
 				3D2E3ADB16B848C200DE7582 /* Homo.cc in Sources */,
+				3D51E421171B29E700114130 /* SimpleGUI.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,7 +37,7 @@ Renderer_A* Controller::getRenderer()
 
 void Controller::init(int width, int height)
 {
-    simu = false;
+    simu = true;
     cout << "[Controller] initializing system" << endl;
     timer = new Timer();
     rdc = new RDC(width, height, timer);

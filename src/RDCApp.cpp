@@ -9,7 +9,10 @@
 #include "Renderer_A.h"
 #include "Sensor.h"
 #include "cinder/gl/Texture.h"
+#include "SimpleGUI.h"
+
 using namespace std;
+using namespace mowa::sgui;
 
 class RDCApp : public cinder::app::AppBasic {
 public:
@@ -26,6 +29,7 @@ public:
     
     void loadFiles();
 private:
+    SimpleGUI* gui;
     Controller* controller;
     int width, height;
     Image imgProcessed;
@@ -45,6 +49,7 @@ private:
     bool displayCompensated;
     bool newProcessReq;
     bool isReady;               //<! set to true when ready to scan+process
+    bool drawGUI;
     vector<string> sources;
     int sourceID;
 };
@@ -60,6 +65,10 @@ void RDCApp::setup()
     width = getWindowWidth();
     height = getWindowHeight();
     displayCompensated = true;
+    gui = new SimpleGUI(this);
+    gui->addLabel("Controls");
+    gui->addParam("Compensate", &displayCompensated);
+    gui->addParam("Source", &sourceID, 0, 6, 0);
     controller = new Controller();
     controller->init(width, height);
     
@@ -70,7 +79,8 @@ void RDCApp::setup()
     newProcessReq = false;
     isReady = false;
     rectDraw = false;
-    watchingMovie = true;
+    watchingMovie = false;
+    
     loadFiles();
     int w = imgSource.getWidth();
     int h = imgSource.getHeight();
@@ -95,8 +105,6 @@ void RDCApp::setup()
 
 void RDCApp::loadFiles()
 {
-    if(!watchingMovie)
-    {
         //Get source image in a format Cinder can draw
         sources.push_back("lena.jpg");
         sources.push_back("testPic.jpg");
@@ -107,19 +115,15 @@ void RDCApp::loadFiles()
         sources.push_back("cucu.jpg");
         sourceID = 0;
         imgSource.load("/Users/Gaston/dev/RDC/resources/" + sources[sourceID]);
-    }
-    else
-    {
+
         movie.init("/Users/Gaston/dev/RDC/resources/dbz.mpg");
-    }
-    
 }
 
 void RDCApp::update()
 {
     if(isReady)
     {
-        if(controller->isRDCCalibrated && (!isImgProcessed || newProcessReq))
+        if(controller->isRDCCalibrated)// && (!isImgProcessed || newProcessReq))
         {
             
             if(!watchingMovie)
@@ -205,6 +209,10 @@ void RDCApp::draw()
         ci::Rectf rect(rectStart, rectEnd);
         cinder::gl::drawStrokedRect(rect);
     }
+    if(drawGUI)
+    {
+        gui->draw();
+    }
 }
 
 void RDCApp::keyDown( cinder::app::KeyEvent event )
@@ -217,6 +225,9 @@ void RDCApp::keyDown( cinder::app::KeyEvent event )
     char command = event.getChar();
     switch(command)
     {
+        case 'd':
+            drawGUI = !drawGUI;
+            break;
         case 'f':
             isFullScreen = !isFullScreen;
             setFullScreen(isFullScreen);
