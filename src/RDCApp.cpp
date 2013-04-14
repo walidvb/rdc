@@ -112,7 +112,7 @@ void RDCApp::loadFiles()
     {
         movie.init("/Users/Gaston/dev/RDC/resources/dbz.mpg");
     }
-
+    
 }
 
 void RDCApp::update()
@@ -137,7 +137,7 @@ void RDCApp::update()
             int h = imgSource.getHeight();
             if(displayCompensated || !watchingMovie)
             {
-
+                
                 //conversion from Image (cv::Mat) to ci::surface
                 ci::Surface8u surfacesrc(w, h, false);
                 for(int i = 0; i < w; i+=1)

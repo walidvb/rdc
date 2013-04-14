@@ -23,7 +23,7 @@ public:
     int init(int deviceID);         //<! open a device
     Image grabFrame();              //<! grab a frame
     void destroy();                 //<! destroy the device
-    bool isOpened();                  //<! returns true if a device/stream is open
+    bool isOpened();                //<! returns true if a device/stream is open
     //Getters and Setters
     int getWidth() const;
     int getHeight() const;

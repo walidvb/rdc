@@ -29,7 +29,7 @@ void RDC::init()
     isEMRendered = false;
     isFMRendered = false;
     isFMMinComputed = false;
-    isEMMaxComputed = true;     //true because unused as of today.
+    isEMMaxComputed = false;     //true because unused as of today.
     isLightComputed = false;
     isFMMinEMMaxDone = false;
     hasNewROI = false;
@@ -108,9 +108,13 @@ void RDC::adapt(Mat* pix)
     //pix € [0 1]
     if(isFMMinEMMaxDone)
     {
-        double min;
-        min = FMMin;
-        *pix *= min;
+        //min + (value) * (max - min)
+        double min, max;
+        min = EMMax;
+        max = FMMin;
+        /* *pix += min;
+         *pix *= max;*/
+        *pix = min + *pix * (max - min);
     }
 }
 
@@ -248,7 +252,7 @@ void RDC::setmagicR(double factor)
     magicR+=factor;
     magicR = (magicR < 0)? 0 : (magicR > 1) ? 1 : magicR;
     cout << "magicR: " << magicR << endl;
-
+    
 }
 
 bool RDC::getIsColorCalibrated()
