@@ -37,7 +37,7 @@ Renderer_A* Controller::getRenderer()
 
 void Controller::init(int width, int height)
 {
-    simu = true;
+    simu = false;
     cout << "[Controller] initializing system" << endl;
     timer = new Timer();
     rdc = new RDC(width, height, timer);
@@ -139,6 +139,25 @@ void Controller::sendCommand(char command)
     }
 }
 
+void Controller::setmagicR(float r)
+{
+    rdc->magicR = (double)r;
+}
+
+void Controller::setmagicE(float e)
+{
+    rdc->magicE = (double)e;
+}
+
+void Controller::setAdapt(bool adapt)
+{
+    rdc->doAdapt = adapt;
+}
+
+RDC* Controller::getRDC()
+{
+    return this->rdc;
+}
 void Controller::mouseDown(int x, int y)
 {
     gettingROI = true;

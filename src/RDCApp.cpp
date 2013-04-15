@@ -52,6 +52,13 @@ private:
     bool newProcessReq;
     bool isReady;               //<! set to true when ready to scan+process
     bool drawGUI;
+    
+    
+    //stuff that gets passed down to RDC. ugly as fuck, but can't find no other way to pass down the SimpleGUI
+    float magicR = 1;
+    float magicE = 1;
+    bool adapt = true;
+    
     vector<string> sources;
     int sourceID;
     int lastSourceID;
@@ -107,6 +114,11 @@ void RDCApp::setup()
     gui->addParam("Compensate", &displayCompensated);
     gui->addParam("Source", &sourceID, 0, 6, 0);
     gui->addParam("Compensated", &thumb);
+    gui->addLabel("Parameters");
+    gui->addParam("magic R", &magicR, 0, 1, 1);
+    gui->addParam("magic E", &magicE, 0, 1, 1);
+    gui->addParam("Adapt", &adapt, true);
+
 }
 
 void RDCApp::loadFiles()
@@ -137,8 +149,12 @@ void RDCApp::update()
         {
             thumb = textureProcessed;
         }
+        //update values in RDC
+        controller->setmagicR(magicR);
+        controller->setmagicE(magicE);
+        controller->setAdapt(adapt);
         
-        if(controller->isRDCCalibrated && (lastSourceID != sourceID || watchingMovie))
+        if(controller->isRDCCalibrated)// && (lastSourceID != sourceID || watchingMovie))
         {
             //cout << "Processing " << sourceID  << "..." << lastSourceID << endl;
             if(!watchingMovie)
@@ -225,7 +241,7 @@ void RDCApp::draw()
         ci::Rectf rect(rectStart, rectEnd);
         cinder::gl::drawStrokedRect(rect);
     }
-    if(drawGUI)
+    if(drawGUI && (!isReady || controller->isRDCCalibrated) ) 
     {
         gui->draw();
     }

@@ -60,6 +60,7 @@ public:
     
     double magicE;
     double magicR;
+    bool doAdapt;
     
 private:
     //Private methods

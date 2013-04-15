@@ -36,6 +36,7 @@ void RDC::init()
     timeToWait = 2;
     magicE = 1;
     magicR = 1;
+    doAdapt = true;
     if(simu)
     {
         EM = imread("/Users/Gaston/dev/RDC/tests/EM.jpg");
@@ -143,8 +144,10 @@ void RDC::compensate(Image* srcImg, Image* dstImg)
     
     //EM.convertTo(EM, CV_64F);
     //FM.convertTo(FM, CV_64F);
-    adapt(R);
-    
+    if(doAdapt)
+    {
+        adapt(R);
+    }
     *R /= 255;
     cv::subtract(*R*magicR, EM*magicE, *R);
     cv::divide(*R, FM, *R);

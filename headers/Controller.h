@@ -36,6 +36,12 @@ public:
     
     Renderer_A* getRenderer();
     bool isRDCCalibrated;
+    RDC* getRDC();
+    
+    void setAdapt(bool adapt);
+    void setmagicR(float r);
+    void setmagicE(float e);
+
 private:
     bool simu;                                          //<! set to true when working without connected hardware(will use like taken pictures)
 
