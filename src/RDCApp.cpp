@@ -40,6 +40,8 @@ private:
     bool isGrabOk;
     ci::gl::Texture textureProcessed;
     ci::gl::Texture textureSource;
+    ci::gl::Texture thumb;
+
     ci::Vec2f rectStart;    //<! the rectangle to be drawn when selecting an area
     ci::Vec2f rectEnd;
     bool rectDraw;
@@ -52,6 +54,7 @@ private:
     bool drawGUI;
     vector<string> sources;
     int sourceID;
+    int lastSourceID;
 };
 
 void RDCApp::prepareSettings( Settings *settings ){
@@ -65,10 +68,7 @@ void RDCApp::setup()
     width = getWindowWidth();
     height = getWindowHeight();
     displayCompensated = true;
-    gui = new SimpleGUI(this);
-    gui->addLabel("Controls");
-    gui->addParam("Compensate", &displayCompensated);
-    gui->addParam("Source", &sourceID, 0, 6, 0);
+
     controller = new Controller();
     controller->init(width, height);
     
@@ -80,7 +80,7 @@ void RDCApp::setup()
     isReady = false;
     rectDraw = false;
     watchingMovie = false;
-    
+    lastSourceID = -1;
     loadFiles();
     int w = imgSource.getWidth();
     int h = imgSource.getHeight();
@@ -101,6 +101,12 @@ void RDCApp::setup()
         }
     }
     textureSource = ci::gl::Texture(surface);
+    textureProcessed = ci::gl::Texture(surface);
+    thumb = textureSource;
+    gui = new SimpleGUI(this);
+    gui->addParam("Compensate", &displayCompensated);
+    gui->addParam("Source", &sourceID, 0, 6, 0);
+    gui->addParam("Compensated", &thumb);
 }
 
 void RDCApp::loadFiles()
@@ -123,13 +129,24 @@ void RDCApp::update()
 {
     if(isReady)
     {
-        if(controller->isRDCCalibrated)// && (!isImgProcessed || newProcessReq))
+        if(displayCompensated)
         {
-            
+            thumb = textureSource;
+        }
+        else
+        {
+            thumb = textureProcessed;
+        }
+        
+        if(controller->isRDCCalibrated && (lastSourceID != sourceID || watchingMovie))
+        {
+            //cout << "Processing " << sourceID  << "..." << lastSourceID << endl;
             if(!watchingMovie)
             {
                 imgSource.load("/Users/Gaston/dev/RDC/resources/" + sources[sourceID]);
                 newProcessReq = false;
+                lastSourceID = sourceID;
+
             }
             else
             {
@@ -180,7 +197,6 @@ void RDCApp::update()
             isImgProcessed = true;
             //cout << "[RDCApp]: image processed!" << endl;
         }
-        
     }
 }
 
