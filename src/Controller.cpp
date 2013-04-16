@@ -149,11 +149,27 @@ void Controller::setmagicE(float e)
     rdc->magicE = (double)e;
 }
 
-void Controller::setAdapt(bool adapt)
+void Controller::setAdapt(bool doAdapt)
 {
-    rdc->doAdapt = adapt;
+    rdc->doAdapt = doAdapt;
 }
 
+void Controller::setSmooth(bool doSmooth)
+{
+    rdc->doSmooth = doSmooth;
+}
+
+void Controller::setSmoothSize(int size)
+{
+    rdc->smoothSize = max(0, 2*size-1);
+}
+
+void Controller::reinit()
+{
+    rdc->reinit();
+    timer->resetTimer();
+    isRDCCalibrated = false;
+}
 RDC* Controller::getRDC()
 {
     return this->rdc;

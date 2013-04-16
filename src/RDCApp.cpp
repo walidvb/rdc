@@ -56,9 +56,10 @@ private:
     
     //stuff that gets passed down to RDC. ugly as fuck, but can't find no other way to pass down the SimpleGUI
     float magicR = 1;
-    float magicE = 1;
+    float magicE = 0;
     bool adapt = true;
-    
+    bool smooth = false;
+    int smoothSize = 0;
     vector<string> sources;
     int sourceID;
     int lastSourceID;
@@ -112,13 +113,15 @@ void RDCApp::setup()
     thumb = textureSource;
     gui = new SimpleGUI(this);
     gui->addParam("Compensate", &displayCompensated);
+    gui->addParam("Compensate", &displayCompensated);
     gui->addParam("Source", &sourceID, 0, 6, 0);
     gui->addParam("Compensated", &thumb);
     gui->addLabel("Parameters");
     gui->addParam("magic R", &magicR, 0, 1, 1);
     gui->addParam("magic E", &magicE, 0, 1, 1);
     gui->addParam("Adapt", &adapt, true);
-
+    gui->addParam("Smooth", &smooth, true);
+    gui->addParam("Smooth size", &smoothSize, 0, 5);
 }
 
 void RDCApp::loadFiles()
@@ -153,7 +156,8 @@ void RDCApp::update()
         controller->setmagicR(magicR);
         controller->setmagicE(magicE);
         controller->setAdapt(adapt);
-        
+        controller->setSmooth(smooth);
+        controller->setSmoothSize(smoothSize);
         if(controller->isRDCCalibrated)// && (lastSourceID != sourceID || watchingMovie))
         {
             //cout << "Processing " << sourceID  << "..." << lastSourceID << endl;
@@ -259,6 +263,9 @@ void RDCApp::keyDown( cinder::app::KeyEvent event )
     {
         case 'd':
             drawGUI = !drawGUI;
+            break;
+        case 'r':
+            controller->reinit();
             break;
         case 'f':
             isFullScreen = !isFullScreen;

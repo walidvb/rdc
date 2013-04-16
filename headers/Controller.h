@@ -38,9 +38,12 @@ public:
     bool isRDCCalibrated;
     RDC* getRDC();
     
-    void setAdapt(bool adapt);
+    void setAdapt(bool dAdapt);
+    void setSmooth(bool doSmooth);
+    void setSmoothSize(int size);
     void setmagicR(float r);
     void setmagicE(float e);
+    void reinit();
 
 private:
     bool simu;                                          //<! set to true when working without connected hardware(will use like taken pictures)

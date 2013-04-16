@@ -46,6 +46,25 @@ void RDC::init()
     }
 }
 
+void RDC::reinit()
+{
+    isHomoComputed = true;
+    isEMComputed = false;
+    isFMComputed = false;
+    isCalibrated = false;
+    isEMRendered = false;
+    isFMRendered = false;
+    isFMMinComputed = false;
+    isEMMaxComputed = false;     //true because unused as of today.
+    isLightComputed = false;
+    isFMMinEMMaxDone = false;
+    hasNewROI = false;
+    timeToWait = 2;
+    magicE = 1;
+    magicR = 1;
+    doAdapt = true;
+
+}
 
 void RDC::setROI(int x1, int y1, int x2, int y2)
 {
@@ -58,7 +77,7 @@ void RDC::setROI(int x1, int y1, int x2, int y2)
     ROIStart[1] = y1_;
     ROIEnd[0] = x2_;
     ROIEnd[1] = y2_;
-    //cout << "[RDC]: ROI[" << ROIStart[0] << " - " << ROIEnd[0] << ", " << ROIStart[1] << " - " << ROIEnd[1] << "]" << endl;
+    cout << "[RDC]: ROI[" << ROIStart[0] << " - " << ROIEnd[0] << ", " << ROIStart[1] << " - " << ROIEnd[1] << "]" << endl;
     hasNewROI = true;
 }
 
@@ -69,14 +88,14 @@ void RDC::getFMMinEMMax()
     bool* currentChange;
     if(!isFMMinComputed)
     {
-        cout << "[RDC]: getting FMMin..." << endl;
+        //cout << "[RDC]: getting FMMin..." << endl;
         img = &FM;
         target = &FMMin;
         currentChange = &isFMMinComputed;
     }
     else
     {
-        cout << "[RDC]. getting EMMax..." << endl;
+        //cout << "[RDC]. getting EMMax..." << endl;
         img = &EM;
         target = &EMMax;
         currentChange = &isEMMaxComputed;
@@ -85,10 +104,10 @@ void RDC::getFMMinEMMax()
     
     if(hasNewROI)
     {
-        Mat ROI = (*img)(Range(ROIStart[0], ROIEnd[0]), Range(ROIStart[1], ROIEnd[1]));
+        Mat ROI = (*img)(Range(ROIStart[1], ROIEnd[1]), Range(ROIStart[0], ROIEnd[0]));
         hasNewROI = false;
         Scalar color = mean(ROI);
-        cout << "[RDC]: Color selected: (" << color[0] << ", " << color[1] << ", " << color[2] << ")=" << color;
+        cout << "[RDC]: Color selected: (" << color[0] << ", " << color[1] << ", " << color[2] << ")=" << color << endl;
         
         double value = (color[0]+color[1]+color[2])/3;
         *target = value;
@@ -96,7 +115,7 @@ void RDC::getFMMinEMMax()
     }
     else
     {
-        cout << "[RDC]: no ROI selected" << endl;
+        //cout << "[RDC]: no ROI selected" << endl;
     }
     if(isFMMinComputed &&  isEMMaxComputed)
     {
@@ -129,13 +148,19 @@ void RDC::adapt(Mat* pix)
 
 void RDC::compensate(Image* srcImg, Image* dstImg)
 {
+    
     if (EM.empty() || FM.empty()) {
         cerr << "[RDC] Compensation matrices have not been initialized, please run calibrateSystem" << endl;
         exit(-1);
     }
     
     Mat* R = srcImg->getMat();
-    
+
+    if(doSmooth)
+    {
+        cv::medianBlur(*R, *R, smoothSize);
+    }
+
     imwrite("/Users/Gaston/dev/RDC/tests/original.jpg", *R);
     //cout << "[RDC]: type: [R:" << R->type() << "], [EM:" << EM.type() << "], [FM:" << FM.type()<< "]" << endl;
     R->convertTo(*R, CV_64F);
@@ -148,6 +173,7 @@ void RDC::compensate(Image* srcImg, Image* dstImg)
     {
         adapt(R);
     }
+
     *R /= 255;
     cv::subtract(*R*magicR, EM*magicE, *R);
     cv::divide(*R, FM, *R);
@@ -155,6 +181,8 @@ void RDC::compensate(Image* srcImg, Image* dstImg)
     imwrite("/Users/Gaston/dev/RDC/tests/compensated.jpg", *R*255);
     *R *= 255;
     R->convertTo(*R, CV_8U);
+    
+
     //cout << "[RDC] image was compensated!" << endl;
 }
 
@@ -209,6 +237,7 @@ void RDC::computeLighting()
     FM.convertTo(FM, CV_64F);
     EM /= 255;
     FM /= 255;
+    
     
     isLightComputed = true;
 }

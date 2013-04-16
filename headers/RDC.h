@@ -24,6 +24,7 @@ public:
     RDC(){}
     RDC(int width, int height, Timer* timer);
     void init();
+    void reinit();
     //compensation
     void compensate(Image* srcImg, Image* dstImage);      //<! Called each frame, takes source image and returns compensated image
     void adapt(Mat* pix);                                 //<! adapts image prior to compensation(pix should be CV_64F)
@@ -61,7 +62,8 @@ public:
     double magicE;
     double magicR;
     bool doAdapt;
-    
+    bool doSmooth;
+    int smoothSize;
 private:
     //Private methods
 
