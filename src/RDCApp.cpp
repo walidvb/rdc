@@ -63,6 +63,7 @@ private:
     vector<string> sources;
     int sourceID;
     int lastSourceID;
+    bool switchCam = false;
 };
 
 void RDCApp::prepareSettings( Settings *settings ){
@@ -112,16 +113,17 @@ void RDCApp::setup()
     textureProcessed = ci::gl::Texture(surface);
     thumb = textureSource;
     gui = new SimpleGUI(this);
-    gui->addParam("Compensate", &displayCompensated);
+    gui->addParam("Switch Camera", &switchCam, false);
     gui->addParam("Compensate", &displayCompensated);
     gui->addParam("Source", &sourceID, 0, 6, 0);
     gui->addParam("Compensated", &thumb);
     gui->addLabel("Parameters");
-    gui->addParam("magic R", &magicR, 0, 1, 1);
+    //gui->addParam("magic R", &magicR, 0, 1, 1);
     gui->addParam("magic E", &magicE, 0, 1, 1);
     gui->addParam("Adapt", &adapt, true);
     gui->addParam("Smooth", &smooth, true);
     gui->addParam("Smooth size", &smoothSize, 0, 5);
+    drawGUI = true;
 }
 
 void RDCApp::loadFiles()
@@ -142,6 +144,12 @@ void RDCApp::loadFiles()
 
 void RDCApp::update()
 {
+    //switchCam if needed
+    if(switchCam)
+    {
+        controller->switchCam();
+        switchCam = false;
+    }
     if(isReady)
     {
         if(displayCompensated)
@@ -158,6 +166,7 @@ void RDCApp::update()
         controller->setAdapt(adapt);
         controller->setSmooth(smooth);
         controller->setSmoothSize(smoothSize);
+
         if(controller->isRDCCalibrated)// && (lastSourceID != sourceID || watchingMovie))
         {
             //cout << "Processing " << sourceID  << "..." << lastSourceID << endl;
@@ -217,6 +226,34 @@ void RDCApp::update()
             isImgProcessed = true;
             //cout << "[RDCApp]: image processed!" << endl;
         }
+    }
+    else
+    {
+        Image cam = controller->getSensor()->grabFrame();
+        int w = cam.getWidth();
+        int h = cam.getHeight();
+        if(displayCompensated || !watchingMovie)
+        {
+            
+            //conversion from Image (cv::Mat) to ci::surface
+            ci::Surface8u surface(w, h, false);
+            for(int i = 0; i < w; i+=1)
+            {
+                for (int j = 0; j<h; j+=1)
+                {
+                    cv::Vec3b pixel = cam.pixelAt(i,j);
+                    unsigned char b = pixel[0];
+                    unsigned char g = pixel[1];
+                    unsigned char r = pixel[2];
+                    cinder::Vec2i pos(i,j);
+                    ci::ColorT<unsigned char> color(r,g,b);
+                    surface.setPixel(pos, color);
+                }
+            }
+            thumb = ci::gl::Texture(surface);
+        }
+
+        
     }
 }
 

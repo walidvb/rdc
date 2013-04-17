@@ -25,6 +25,7 @@ public:
     Controller();
     ~Controller();
     void init(int width, int height);
+    void switchCam();
     void calibrate();                   //!< calibrates the camera/projector system
     void homography();                  //!< generates the homography matrix needed by the algorithm
     void process(Image& source, Image& dest);           //!< processes the frame that will be projected, and return it
@@ -44,7 +45,8 @@ public:
     void setmagicR(float r);
     void setmagicE(float e);
     void reinit();
-
+    int* getDeviceID();
+    Sensor* getSensor();
 private:
     bool simu;                                          //<! set to true when working without connected hardware(will use like taken pictures)
 

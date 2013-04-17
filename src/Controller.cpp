@@ -18,7 +18,7 @@ using namespace cv;
 
 Controller::Controller()
 {
-    deviceID = 1;
+    deviceID = 0;
 }
 
 
@@ -33,7 +33,10 @@ Renderer_A* Controller::getRenderer()
 {
     return this->gfx;
 }
-
+Sensor* Controller::getSensor()
+{
+    return this->captor;
+}
 
 void Controller::init(int width, int height)
 {
@@ -54,6 +57,14 @@ void Controller::init(int width, int height)
     //media = new Sensor();
     //media->init(sourceMedia);
     isRDCCalibrated = false;
+}
+
+void Controller::switchCam()
+{
+    captor->destroy();
+    deviceID = (deviceID == 0) ? 1 : 0;
+    captor->init(deviceID);
+    cout << "[Controller]: changing Cam to deviceID" << endl;
 }
 
 void Controller::calibrate()
@@ -162,6 +173,11 @@ void Controller::setSmooth(bool doSmooth)
 void Controller::setSmoothSize(int size)
 {
     rdc->smoothSize = max(0, 2*size-1);
+}
+
+int* Controller::getDeviceID()
+{
+    return &deviceID;
 }
 
 void Controller::reinit()
