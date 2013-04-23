@@ -14,7 +14,6 @@
 		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
 		00BAE65A0E7ED9C10018A608 /* RDCApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00BAE6590E7ED9C10018A608 /* RDCApp.cpp */; };
-		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
 		3D150C1E16AF207800F544F4 /* CalibController.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D150C1A16AF1D1400F544F4 /* CalibController.cc */; };
 		3D150C1F16AF207800F544F4 /* CameraCalibrator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D150C1B16AF1D1400F544F4 /* CameraCalibrator.cc */; };
 		3D1889E41663BABE00CF9BFA /* pattern in Resources */ = {isa = PBXBuildFile; fileRef = 3D1889E31663BABE00CF9BFA /* pattern */; };
@@ -31,6 +30,7 @@
 		3D992F891684C91D008C380E /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F881684C91D008C380E /* Controller.cpp */; };
 		3D996EC5165BEA5A004B258F /* RDC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D996EC4165BEA5A004B258F /* RDC.cpp */; };
 		3D996ECA165BF579004B258F /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D996EC9165BF579004B258F /* Tools.cpp */; };
+		3DD42DDB171E8512005DBACB /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3DD42DDA171E8512005DBACB /* CinderApp.icns */; };
 		3DDB52AB16B024B6001D1986 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB52AA16B024B6001D1986 /* main.cpp */; };
 		3DDB52AD16B024B6001D1986 /* homography.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DDB52AC16B024B6001D1986 /* homography.1 */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
@@ -82,6 +82,7 @@
 		3D3BEB8C170B180D004FA671 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = ../src/Timer.cpp; sourceTree = "<group>"; };
 		3D3C9CDA168C5F1E00EEBCAF /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = ../headers/Image.h; sourceTree = "<group>"; };
 		3D3C9CDB168C5F4500EEBCAF /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Image.cpp; path = ../src/Image.cpp; sourceTree = "<group>"; };
+		3D42CE1F1725742E0048F7E2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		3D51E41E171B29BE00114130 /* SimpleGUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleGUI.h; path = ../headers/SimpleGUI.h; sourceTree = "<group>"; };
 		3D51E420171B29E700114130 /* SimpleGUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SimpleGUI.cpp; path = ../src/SimpleGUI.cpp; sourceTree = "<group>"; };
 		3D5FE94216AD77A900DB7E28 /* Renderer_CV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer_CV.h; path = ../headers/Renderer_CV.h; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 		3DA18A4316F75B86004B9F0A /* ColorCalibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorCalibrator.h; path = ../headers/ColorCalibrator.h; sourceTree = "<group>"; };
 		3DA18A4416F75B99004B9F0A /* ColorCalibrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ColorCalibrator.cpp; path = ../src/ColorCalibrator.cpp; sourceTree = "<group>"; };
 		3DA21D3316EF76D40005B32D /* Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sensor.h; path = ../headers/Sensor.h; sourceTree = "<group>"; };
+		3DD42DDA171E8512005DBACB /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CinderApp.icns; sourceTree = "<group>"; };
 		3DDB52A716B024B6001D1986 /* homography */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = homography; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDB52AA16B024B6001D1986 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3DDB52AC16B024B6001D1986 /* homography.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = homography.1; sourceTree = "<group>"; };
@@ -184,6 +186,8 @@
 		29B97314FDCFA39411CA2CEA /* RDC */ = {
 			isa = PBXGroup;
 			children = (
+				3DD42DDA171E8512005DBACB /* CinderApp.icns */,
+				3D42CE1F1725742E0048F7E2 /* README.md */,
 				3D3BEB8B170B180D004FA671 /* ColorCalibrator.cpp */,
 				3D3BEB8C170B180D004FA671 /* Timer.cpp */,
 				3D996EC1165BE72F004B258F /* headers */,
@@ -346,9 +350,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */,
 				3D1889E41663BABE00CF9BFA /* pattern in Resources */,
 				3D3A0EE816A858D800A4C1A4 /* testChessboard.png in Resources */,
+				3DD42DDB171E8512005DBACB /* CinderApp.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

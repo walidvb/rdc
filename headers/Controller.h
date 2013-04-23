@@ -24,46 +24,44 @@ class Controller{
 public:
     Controller();
     ~Controller();
+    // logic
     void init(int width, int height);
-    void switchCam();
+    void reinit();                      //<! restart the scan
+    void switchCam();                   //!< switches camera source. only sources supported are 0 and 1
     void calibrate();                   //!< calibrates the camera/projector system
-    void homography();                  //!< generates the homography matrix needed by the algorithm
-    void process(Image& source, Image& dest);           //!< processes the frame that will be projected, and return it
-    void process(Image& source);           //!< processes the frame that will be projected, and return it
-    void sendCommand(char command);     //<! get a command from an upper layer
-                                        //<! by pressing space, the app will stop waiting, and take a picture
-    void mouseDown(int x, int y);
-    void mouseUp(int x, int y);
+    void process(Image& source, Image& dest);   //!< processes the frame that will be projected and saves to dest
+    void process(Image& source);        //!< processes the frame that will be projected, and return it
     
+    //UI
+    void sendCommand(char command);     //<! send a command
+    void mouseDown(int x, int y);       //<! used to set a region
+    void mouseUp(int x, int y);         //<! used to complete region, and send the ROI to RDC
+    
+    //Getters & Setters
+    //parameters, mostly passed down to the controller
     Renderer_A* getRenderer();
     bool isRDCCalibrated;
     RDC* getRDC();
+    Sensor* getSensor();
+    int* getDeviceID();
     
     void setAdapt(bool dAdapt);
     void setSmooth(bool doSmooth);
     void setSmoothSize(int size);
     void setmagicR(float r);
     void setmagicE(float e);
-    void reinit();
-    int* getDeviceID();
-    Sensor* getSensor();
+    
 private:
-    bool simu;                                          //<! set to true when working without connected hardware(will use like taken pictures)
-
     //logic
-    bool waitingKey = true;
-    std::string sourceMedia;            //<! the media from which to load (is now a default)
+    bool simu;                          //<! set to true when working without connected hardware
     int deviceID;                       //<! the id of the capture device
     std::string resourcePath = "/Users/Gaston/dev/RDC/resources/";  //<! the path were resources are stored. should be relative to the app, but I don't know how to do that yet.
-    bool gettingROI = false;
-    int ROIStart[2];
-    int ROIEnd[2];
+    int ROI[4];                         //<! stores 4 corners for FMMin
     
     //objects
     Timer* timer;                       //<! the object handling all the timer stuff
-    Sensor* media;                      //<! the loaded media / ftm only video is supported
     Sensor* captor;                     //<! the captor
-    Renderer_A* gfx;               //<! well, the renderer
+    Renderer_A* gfx;                    //<! well, the renderer
     RDC* rdc;                           //<! doing the magic. calibration, compensation matrix generation, and image processing
 };
 

@@ -27,7 +27,7 @@ Controller::~Controller()
     delete captor;
     delete gfx;
     delete rdc;
-    delete media;
+    delete timer;
 }
 Renderer_A* Controller::getRenderer()
 {
@@ -44,7 +44,7 @@ void Controller::init(int width, int height)
     cout << "[Controller] initializing system" << endl;
     timer = new Timer();
     rdc = new RDC(width, height, timer);
-    rdc->simu = this->simu;
+    rdc->setSimu(this->simu);
     rdc->init();
     if(!simu)
     {
@@ -52,10 +52,13 @@ void Controller::init(int width, int height)
         captor->init(deviceID);
     }
     gfx = new Renderer_Cinder(width, height);
+    isRDCCalibrated = false;
+}
 
-    
-    //media = new Sensor();
-    //media->init(sourceMedia);
+void Controller::reinit()
+{
+    rdc->reinit();
+    timer->resetTimer();
     isRDCCalibrated = false;
 }
 
@@ -64,7 +67,7 @@ void Controller::switchCam()
     captor->destroy();
     deviceID = (deviceID == 0) ? 1 : 0;
     captor->init(deviceID);
-    cout << "[Controller]: changing Cam to deviceID" << endl;
+    cout << "[Controller]: changing Cam to " << deviceID << endl;
 }
 
 void Controller::calibrate()
@@ -119,7 +122,6 @@ void Controller::calibrate()
 
 void Controller::process(Image& source, Image& dest)
 {
-    //cout << "[Controller] processing image" << endl;
     rdc->compensate(&source, &dest);
 }
 
@@ -134,18 +136,6 @@ void Controller::sendCommand(char command)
     {
         case 'g':
             rdc->grabAndSaveFrame(captor);
-            break;
-        case 'n':
-            rdc->setmagicE(0.1);
-            break;
-        case 'm':
-            rdc->setmagicE(-0.1);
-            break;
-        case 'j':
-            rdc->setmagicR(0.1);
-            break;
-        case 'k':
-            rdc->setmagicR(-0.1);
             break;
     }
 }
@@ -180,27 +170,18 @@ int* Controller::getDeviceID()
     return &deviceID;
 }
 
-void Controller::reinit()
-{
-    rdc->reinit();
-    timer->resetTimer();
-    isRDCCalibrated = false;
-}
 RDC* Controller::getRDC()
 {
     return this->rdc;
 }
 void Controller::mouseDown(int x, int y)
 {
-    gettingROI = true;
-    ROIStart[0] = x;
-    ROIStart[1] = y;
+        ROI[0] = x;
+        ROI[1] = y;
 }
 void Controller::mouseUp(int x, int y)
 {
-    gettingROI = false;
-    ROIEnd[0] = x;
-    ROIEnd[1] = y;
-    rdc->setROI(ROIStart[0], ROIStart[1], ROIEnd[0], ROIEnd[1]);
-    
+        ROI[2] = x;
+        ROI[3] = y;
+        rdc->setROI(ROI[0], ROI[1], ROI[2], ROI[3]);
 }

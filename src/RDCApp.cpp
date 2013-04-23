@@ -54,7 +54,7 @@ private:
     bool drawGUI;
     
     
-    //stuff that gets passed down to RDC. ugly as fuck, but can't find no other way to pass down the SimpleGUI
+    //stuff that gets passed down to RDC. ugly as fuck, but can't find no other way to pass down the SimpleGUI. compilation errors when trying to pass the SimpleGUI object down to rdc, or controller.
     float magicR = 1;
     float magicE = 0;
     bool adapt = true;
@@ -160,22 +160,22 @@ void RDCApp::update()
         {
             thumb = textureProcessed;
         }
+        
         //update values in RDC
         controller->setmagicR(magicR);
         controller->setmagicE(magicE);
         controller->setAdapt(adapt);
         controller->setSmooth(smooth);
         controller->setSmoothSize(smoothSize);
-
+        
+        //process only on new frame
         if(controller->isRDCCalibrated)// && (lastSourceID != sourceID || watchingMovie))
         {
-            //cout << "Processing " << sourceID  << "..." << lastSourceID << endl;
             if(!watchingMovie)
             {
                 imgSource.load("/Users/Gaston/dev/RDC/resources/" + sources[sourceID]);
                 newProcessReq = false;
                 lastSourceID = sourceID;
-
             }
             else
             {
@@ -282,7 +282,7 @@ void RDCApp::draw()
         ci::Rectf rect(rectStart, rectEnd);
         cinder::gl::drawStrokedRect(rect);
     }
-    if(drawGUI && (!isReady || controller->isRDCCalibrated) ) 
+    if(drawGUI && (!isReady || controller->isRDCCalibrated))    //meaning don't draw if you're calibrating
     {
         gui->draw();
     }

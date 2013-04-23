@@ -14,7 +14,7 @@ Image::Image()
     
 }
 
-Image::Image(int width, int height, imgType type) : width(width), height(height), type(type)
+Image::Image(int width, int height) : width(width), height(height)
 {
     this->pixels.create(height, width, CV_8U);
     setup();
@@ -107,15 +107,6 @@ void Image::resize(int width_, int height_)
 
 void Image::setup()
 {
-    if(pixels.channels() == 1)
-    {
-        type = IMG_GRAY;
-    }
-    else
-    {
-        type = IMG_CLR;
-    }
-
     width = pixels.cols;
     height = pixels.rows;
 }
@@ -145,9 +136,9 @@ vector<uchar> Image::getPixels()
     return pix;
 
 }
-Image::imgType Image::getType() const
+int Image::getType() const
 {
-    return type;
+    return this->pixels.type();
 }
 int Image::getWidth() const
 {
@@ -164,16 +155,14 @@ void Image::setMat(Mat& mat)
     pixels = mat;
     setup();
 }
+
 void Image::setPixels(vector<uchar>&  pixels , int width, int height)
 {
     Mat m(height, width, CV_8UC2, &pixels);
     this->pixels = m;
     setup();
 }
-void Image::setType(Image::imgType type)
-{
-    this->type = type;
-}
+
 void Image::setWidth(int width)
 {
     this->width = width;

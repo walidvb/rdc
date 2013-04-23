@@ -62,6 +62,7 @@ void Sensor::destroy()
 {
     cap.release();
 }
+
 Image Sensor::grabFrame()
 {
     Mat tmp;

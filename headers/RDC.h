@@ -27,8 +27,7 @@ public:
     void reinit();
     //compensation
     void compensate(Image* srcImg, Image* dstImage);      //<! Called each frame, takes source image and returns compensated image
-    void adapt(Mat* pix);                                 //<! adapts image prior to compensation(pix should be CV_64F)
-    void setROI(int x1, int y1, int x2, int y2);
+    void setROI(int x1, int y1, int x2, int y2);          //<! sets an ROI, first selection is for FM, second is for EM
     
     //calibration
     void computeLighting();                                 //<! computes env light and max light images
@@ -55,7 +54,7 @@ public:
     bool getIsFMMinEMMaxDone();
     void setIsEMRendered(bool isIt);
     void setIsFMRendered(bool isIt);
-        
+    void setSimu(bool simu);
     void setmagicE(double factor);
     void setmagicR(double factor);
     
@@ -66,6 +65,8 @@ public:
     int smoothSize;
 private:
     //Private methods
+
+    void adapt(Mat* pix);
 
     //Setup
     Homo* homo;                                          //<! The object handling the homography
@@ -81,10 +82,10 @@ private:
     Size outSize;
     
     //UI
-    int ROIStart[2];                                    //<! one corner of the ROI
-    int ROIEnd[2];                                      //<! the other corner of the ROI
-    bool hasNewROI;                                        //<! used to know if a ROI is currently defined
-    
+    int ROIFM[4];                                    //<! one corner of the ROI
+    int ROIEM[4];                                      //<! the other corner of the ROI
+    bool isROIFMdone;                                        //<! used to know if a ROI is currently defined
+    bool isROIEMdone;
     //logic
     Timer* timer;
     bool isHomoComputed;

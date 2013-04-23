@@ -9,7 +9,6 @@
 #include "Homo.h"
 
 Homo::Homo(){
-    //boardSize = Size(7, 5);
     boardSize = Size(5, 4);
     cout << "[Homo] looking for a [" << boardSize.width << "," << boardSize.height << "] chessboard" << endl;
 }
@@ -26,8 +25,6 @@ bool Homo::addImages(Mat* src, Mat* trg)
         // Get the chessboard corners
     vector<Point2f> trgCorners;
     bool trgFound = findChessboardCorners(*trg, boardSize, trgCorners, CV_CALIB_CB_ADAPTIVE_THRESH|CV_CALIB_CB_FILTER_QUADS);
-    imwrite("/Users/Gaston/dev/RDC/tests/wall.jpg", *trg);
-
     if(srcFound && trgFound)
     {
         /*FIXME: because type is not mathching expected type
@@ -68,7 +65,7 @@ bool Homo::addImages(Mat* src, Mat* trg)
                 trgPoints.push_back(trgCorners[i]);
                 
             }
-            cout << ";" << endl;
+            cout << endl;
             successes++;
         }
 
@@ -93,8 +90,8 @@ void Homo::computeHomo(){
 
 void Homo::warp(Mat& img, Size size)
 {
-    cv::warpPerspective(img,                         // input image
-                        img,                         // output image
+    cv::warpPerspective(img,             // input image
+                        img,             // output image
                         homoInv,         // homography
                         size);
 }

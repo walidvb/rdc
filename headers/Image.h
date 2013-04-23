@@ -19,11 +19,9 @@ class Image{
     
     
 public:
-    enum imgType { IMG_GRAY = 1, IMG_CLR = 3};   //<! the different types of image we can have. represents the number of channels, actually
-
     //Constructors
     Image();
-    Image(int width, int height, imgType = IMG_CLR);
+    Image(int width, int height);
     Image(Mat img);
     Image(Image const& img, bool clone = true);
     Image(string path, bool grayscale = false);
@@ -41,16 +39,16 @@ public:
     void resize(int width_, int height_);
     
     //Getters
-    Mat* getMat();                   //<! isn't const because Matrix can be modified through this.
-    vector<uchar> getPixels() ;
-    imgType getType() const;
+    Mat* getMat();                  //<! returns matrix address
+    vector<uchar> getPixels() ;     //<! returns pixels as a vector, unused internally
+    int getType() const;        //<! returns type of the matrix
     int getWidth() const;
     int getHeight() const;
     
     //Setter
     void setPixels(vector<uchar>&  pixels, int width, int height);
     void setMat(Mat& mat);
-    void setType(imgType type);
+    void setType(int type);
     void setWidth(int width);
     void setHeight(int height);
     
@@ -62,7 +60,7 @@ private:
     
     //Attributes
     Mat pixels;           //!< all pixels of the image
-    imgType type;             //<! type of im   age: IMG_GRAY or IMG_CLR
+    int type;             //<! type of im   age: IMG_GRAY or IMG_CLR
     int width;            //<! the width of the image
     int height;           //<! the height of the image
 };
