@@ -16,17 +16,19 @@
 		00BAE65A0E7ED9C10018A608 /* RDCApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00BAE6590E7ED9C10018A608 /* RDCApp.cpp */; };
 		3D150C1E16AF207800F544F4 /* CalibController.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D150C1A16AF1D1400F544F4 /* CalibController.cc */; };
 		3D150C1F16AF207800F544F4 /* CameraCalibrator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D150C1B16AF1D1400F544F4 /* CameraCalibrator.cc */; };
-		3D1889E41663BABE00CF9BFA /* pattern in Resources */ = {isa = PBXBuildFile; fileRef = 3D1889E31663BABE00CF9BFA /* pattern */; };
 		3D2CD149165CFEED0016C8C6 /* Renderer_Cinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD148165CFEED0016C8C6 /* Renderer_Cinder.cpp */; };
 		3D2CD14B165D01860016C8C6 /* Renderer_A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CD14A165D01860016C8C6 /* Renderer_A.cpp */; };
 		3D2E3ADB16B848C200DE7582 /* Homo.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E3ADA16B848C200DE7582 /* Homo.cc */; };
-		3D3A0EE816A858D800A4C1A4 /* testChessboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3A0EE716A858D800A4C1A4 /* testChessboard.png */; };
-		3D3BEB8D170B180D004FA671 /* ColorCalibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BEB8B170B180D004FA671 /* ColorCalibrator.cpp */; };
-		3D3BEB8E170B180D004FA671 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BEB8C170B180D004FA671 /* Timer.cpp */; };
 		3D3C9CDC168C5F4500EEBCAF /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C9CDB168C5F4500EEBCAF /* Image.cpp */; };
 		3D51E421171B29E700114130 /* SimpleGUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D51E420171B29E700114130 /* SimpleGUI.cpp */; };
 		3D5FE94416AD77BB00DB7E28 /* Renderer_CV.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FE94316AD77BB00DB7E28 /* Renderer_CV.cc */; };
 		3D5FE95016ADA02C00DB7E28 /* Sensor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FE94F16ADA02C00DB7E28 /* Sensor.cc */; };
+		3D6EC89717352D2500938DFA /* blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D6EC89317352D2500938DFA /* blue.jpg */; };
+		3D6EC89817352D2500938DFA /* green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D6EC89417352D2500938DFA /* green.jpg */; };
+		3D6EC89917352D2500938DFA /* red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D6EC89517352D2500938DFA /* red.jpg */; };
+		3D6EC89A17352D2500938DFA /* chessboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D6EC89617352D2500938DFA /* chessboard.jpg */; };
+		3D6EC89B17352DB300938DFA /* ColorCalibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DA18A4416F75B99004B9F0A /* ColorCalibrator.cpp */; };
+		3D6EC89C17352DB300938DFA /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DA18A4116F74C8A004B9F0A /* Timer.cpp */; };
 		3D992F891684C91D008C380E /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D992F881684C91D008C380E /* Controller.cpp */; };
 		3D996EC5165BEA5A004B258F /* RDC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D996EC4165BEA5A004B258F /* RDC.cpp */; };
 		3D996ECA165BF579004B258F /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D996EC9165BF579004B258F /* Tools.cpp */; };
@@ -70,16 +72,12 @@
 		3D150C1816AF1CF600F544F4 /* CameraCalibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraCalibrator.h; path = ../headers/CameraCalibrator.h; sourceTree = "<group>"; };
 		3D150C1A16AF1D1400F544F4 /* CalibController.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CalibController.cc; path = ../src/CalibController.cc; sourceTree = "<group>"; };
 		3D150C1B16AF1D1400F544F4 /* CameraCalibrator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CameraCalibrator.cc; path = ../src/CameraCalibrator.cc; sourceTree = "<group>"; };
-		3D1889E31663BABE00CF9BFA /* pattern */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pattern; sourceTree = "<group>"; };
 		3D2CD146165CFA880016C8C6 /* Renderer_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer_A.h; path = ../headers/Renderer_A.h; sourceTree = "<group>"; };
 		3D2CD147165CFDDB0016C8C6 /* Renderer_Cinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer_Cinder.h; path = ../headers/Renderer_Cinder.h; sourceTree = "<group>"; };
 		3D2CD148165CFEED0016C8C6 /* Renderer_Cinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer_Cinder.cpp; path = ../src/Renderer_Cinder.cpp; sourceTree = "<group>"; };
 		3D2CD14A165D01860016C8C6 /* Renderer_A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer_A.cpp; path = ../src/Renderer_A.cpp; sourceTree = "<group>"; };
 		3D2E3ADA16B848C200DE7582 /* Homo.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Homo.cc; path = ../src/Homo.cc; sourceTree = "<group>"; };
 		3D2E3ADD16B848D400DE7582 /* Homo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Homo.h; path = ../headers/Homo.h; sourceTree = "<group>"; };
-		3D3A0EE716A858D800A4C1A4 /* testChessboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testChessboard.png; sourceTree = "<group>"; };
-		3D3BEB8B170B180D004FA671 /* ColorCalibrator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ColorCalibrator.cpp; path = ../src/ColorCalibrator.cpp; sourceTree = "<group>"; };
-		3D3BEB8C170B180D004FA671 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = ../src/Timer.cpp; sourceTree = "<group>"; };
 		3D3C9CDA168C5F1E00EEBCAF /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = ../headers/Image.h; sourceTree = "<group>"; };
 		3D3C9CDB168C5F4500EEBCAF /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Image.cpp; path = ../src/Image.cpp; sourceTree = "<group>"; };
 		3D42CE1F1725742E0048F7E2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -88,6 +86,10 @@
 		3D5FE94216AD77A900DB7E28 /* Renderer_CV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer_CV.h; path = ../headers/Renderer_CV.h; sourceTree = "<group>"; };
 		3D5FE94316AD77BB00DB7E28 /* Renderer_CV.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer_CV.cc; path = ../src/Renderer_CV.cc; sourceTree = "<group>"; };
 		3D5FE94F16ADA02C00DB7E28 /* Sensor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sensor.cc; path = ../src/Sensor.cc; sourceTree = "<group>"; };
+		3D6EC89317352D2500938DFA /* blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue.jpg; sourceTree = "<group>"; };
+		3D6EC89417352D2500938DFA /* green.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green.jpg; sourceTree = "<group>"; };
+		3D6EC89517352D2500938DFA /* red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red.jpg; sourceTree = "<group>"; };
+		3D6EC89617352D2500938DFA /* chessboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chessboard.jpg; sourceTree = "<group>"; };
 		3D992F881684C91D008C380E /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Controller.cpp; path = ../src/Controller.cpp; sourceTree = "<group>"; };
 		3D992F8B1684C929008C380E /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = ../headers/Controller.h; sourceTree = "<group>"; };
 		3D996EBC165BE0D3004B258F /* RDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDC.h; path = ../headers/RDC.h; sourceTree = "<group>"; };
@@ -186,10 +188,6 @@
 		29B97314FDCFA39411CA2CEA /* RDC */ = {
 			isa = PBXGroup;
 			children = (
-				3DD42DDA171E8512005DBACB /* CinderApp.icns */,
-				3D42CE1F1725742E0048F7E2 /* README.md */,
-				3D3BEB8B170B180D004FA671 /* ColorCalibrator.cpp */,
-				3D3BEB8C170B180D004FA671 /* Timer.cpp */,
 				3D996EC1165BE72F004B258F /* headers */,
 				3D996EC2165BE74A004B258F /* src */,
 				29B97315FDCFA39411CA2CEA /* Headers */,
@@ -213,8 +211,12 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3D3A0EE716A858D800A4C1A4 /* testChessboard.png */,
-				3D1889E31663BABE00CF9BFA /* pattern */,
+				3D6EC89317352D2500938DFA /* blue.jpg */,
+				3D6EC89417352D2500938DFA /* green.jpg */,
+				3D6EC89517352D2500938DFA /* red.jpg */,
+				3D6EC89617352D2500938DFA /* chessboard.jpg */,
+				3DD42DDA171E8512005DBACB /* CinderApp.icns */,
+				3D42CE1F1725742E0048F7E2 /* README.md */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				00CCAF14116A9FEE008396D5 /* CinderApp.icns */,
 			);
@@ -350,8 +352,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D1889E41663BABE00CF9BFA /* pattern in Resources */,
-				3D3A0EE816A858D800A4C1A4 /* testChessboard.png in Resources */,
+				3D6EC89717352D2500938DFA /* blue.jpg in Resources */,
+				3D6EC89817352D2500938DFA /* green.jpg in Resources */,
+				3D6EC89917352D2500938DFA /* red.jpg in Resources */,
+				3D6EC89A17352D2500938DFA /* chessboard.jpg in Resources */,
 				3DD42DDB171E8512005DBACB /* CinderApp.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,8 +375,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D3BEB8D170B180D004FA671 /* ColorCalibrator.cpp in Sources */,
-				3D3BEB8E170B180D004FA671 /* Timer.cpp in Sources */,
+				3D6EC89B17352DB300938DFA /* ColorCalibrator.cpp in Sources */,
+				3D6EC89C17352DB300938DFA /* Timer.cpp in Sources */,
 				3D150C1E16AF207800F544F4 /* CalibController.cc in Sources */,
 				3D150C1F16AF207800F544F4 /* CameraCalibrator.cc in Sources */,
 				00BAE65A0E7ED9C10018A608 /* RDCApp.cpp in Sources */,
@@ -489,7 +493,7 @@
 					"-lcurl",
 				);
 				PRODUCT_NAME = RDC;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 				SYMROOT = ./build;
 				WRAPPER_EXTENSION = app;
 			};
@@ -521,7 +525,7 @@
 					"-lcurl",
 				);
 				PRODUCT_NAME = RDC;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 				STRIP_INSTALLED_PRODUCT = YES;
 				SYMROOT = ./build;
 				WRAPPER_EXTENSION = app;
