@@ -8,6 +8,8 @@
 
 #include "CameraCalibrator.h"
 
+using namespace cv;
+
 CameraCalibrator::CameraCalibrator() : flag(0), mustInitUndistort(true) {};
 
 int CameraCalibrator::addChessboardPoints(

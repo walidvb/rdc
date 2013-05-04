@@ -18,7 +18,7 @@
 #include "Timer.h"
 
 #define SCALESCOUNT 10
-class Timer;
+namespace www {class Timer;}
 class Homo;
 class Sensor;
 class Renderer_A;
@@ -33,7 +33,7 @@ enum Colors {RED, GREEN, BLUE};
 class ColorCalibrator{
 public:
     ColorCalibrator();
-    ColorCalibrator(Homo* homo, Timer* timer);
+    ColorCalibrator(Homo* homo, www::Timer* timer);
     ~ColorCalibrator(){};
     
     void calibrate(Sensor* sensor, Renderer_A* gfx);
@@ -48,7 +48,7 @@ private:
     double getCol(int index, Colors color, Image* img);
     
     //Ext attr
-    Timer* timer;
+    www::Timer* timer;
     Homo* homo;
     bool isCalibrated;
     

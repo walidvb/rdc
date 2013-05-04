@@ -1,15 +1,16 @@
 #ifndef RDC_APP_h
 #define RDC_APP_h
 
+
 #include "cinder/app/AppBasic.h"
 #include "Controller.h"
 #include "cinder/gl/gl.h"
 #include "cinder/Vector.h"
+#include "SimpleGUI.h"
 #include "Image.h"
 #include "Renderer_A.h"
 #include "Sensor.h"
 #include "cinder/gl/Texture.h"
-#include "SimpleGUI.h"
 
 using namespace std;
 using namespace mowa::sgui;
@@ -121,7 +122,7 @@ void RDCApp::setup()
     //gui->addParam("magic R", &magicR, 0, 1, 1);
     gui->addParam("magic E", &magicE, 0, 1, 1);
     gui->addParam("Adapt", &adapt, true);
-    gui->addParam("Smooth", &smooth, true);
+    //gui->addParam("Smooth", &smooth, true);
     gui->addParam("Smooth size", &smoothSize, 0, 5);
     drawGUI = true;
 }

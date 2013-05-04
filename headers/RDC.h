@@ -13,7 +13,7 @@
 class Sensor;
 class Renderer_A;
 class Homo;
-class Timer;
+namespace www {class Timer;}
 class ColorCalibrator;
 
 class RDC
@@ -22,7 +22,7 @@ public:
     bool simu;                                            //<! set to true when working without connected hardware(will use like taken pictures)
     
     RDC(){}
-    RDC(int width, int height, Timer* timer);
+    RDC(int width, int height, www::Timer* timer);
     void init();
     void reinit();
     //compensation
@@ -79,7 +79,7 @@ private:
     double FMMin;                                       //<! the minimum value found in FM
     int outWidth;                                       //<! the width of the output
     int outHeight;                                      //<! the height of the output
-    Size outSize;
+    cv::Size outSize;
     
     //UI
     int ROIFM[4];                                    //<! one corner of the ROI
@@ -87,7 +87,7 @@ private:
     bool isROIFMdone;                                        //<! used to know if a ROI is currently defined
     bool isROIEMdone;
     //logic
-    Timer* timer;
+    www::Timer* timer;
     bool isHomoComputed;
     bool isEMComputed;
     bool isFMComputed;

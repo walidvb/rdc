@@ -8,9 +8,7 @@
 #include "ColorCalibrator.h"
 
 
-//using namespace std;
-
-ColorCalibrator::ColorCalibrator(Homo* homo, Timer* timer) :  homo(homo), timer(timer)
+ColorCalibrator::ColorCalibrator(Homo* homo, www::Timer* timer) :  homo(homo), timer(timer)
 {
     timeToWait = 2;
     resources = "/Users/Gaston/dev/RDC/resources/";

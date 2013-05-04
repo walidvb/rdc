@@ -13,7 +13,7 @@
 #include "ColorCalibrator.h"
 
 //Constructor
-RDC::RDC(int width, int height, Timer* timer) : outWidth(width), outHeight(height), outSize(width, height), timer(timer){}
+RDC::RDC(int width, int height, www::Timer* timer) : outWidth(width), outHeight(height), outSize(width, height), timer(timer){}
 
 
 //Public methods

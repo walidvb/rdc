@@ -6,6 +6,7 @@
 //
 //
 
+#include "SimpleGUI.h"
 #include "common.h"
 #include "Timer.h"
 #include "Controller.h"
@@ -42,7 +43,7 @@ void Controller::init(int width, int height)
 {
     simu = false;
     cout << "[Controller] initializing system" << endl;
-    timer = new Timer();
+    timer = new www::Timer();
     rdc = new RDC(width, height, timer);
     rdc->setSimu(this->simu);
     rdc->init();

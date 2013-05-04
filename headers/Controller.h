@@ -9,15 +9,13 @@
 #ifndef RDC_Controller_h
 #define RDC_Controller_h
 
-#include <opencv2/opencv.hpp>
-
+namespace www{ class Timer;}
+namespace mowa{namespace sgui {class SimpleGUI;}}
 class Sensor;
 class Renderer_A;
 class RDC;
 class Image;
 class Homo;
-class Timer;
-using namespace cv;
 
 class Controller{
     
@@ -59,7 +57,7 @@ private:
     int ROI[4];                         //<! stores 4 corners for FMMin
     
     //objects
-    Timer* timer;                       //<! the object handling all the timer stuff
+    www::Timer* timer;                       //<! the object handling all the timer stuff
     Sensor* captor;                     //<! the captor
     Renderer_A* gfx;                    //<! well, the renderer
     RDC* rdc;                           //<! doing the magic. calibration, compensation matrix generation, and image processing
