@@ -75,12 +75,18 @@ void RDCApp::prepareSettings( Settings *settings ){
 
 void RDCApp::setup()
 {
+    gui = new SimpleGUI(this);
+
     width = getWindowWidth();
     height = getWindowHeight();
     displayCompensated = true;
-
+    gui->addParam("Switch Camera", &switchCam, false);
+    gui->addParam("Compensate", &displayCompensated);
+    gui->addParam("Source", &sourceID, 0, 6, 0);
+    gui->addParam("Compensated", &thumb);
+    
     controller = new Controller();
-    controller->init(width, height);
+    controller->init(width, height, gui);
     
     isCalibrated = false;
     isGrabOk = false;
@@ -88,7 +94,7 @@ void RDCApp::setup()
     isFullScreen = false;
     newProcessReq = false;
     isReady = false;
-    rectDraw = false;
+    rectDraw = false;   //used to draw a rectangle on mouse down
     watchingMovie = false;
     lastSourceID = -1;
     loadFiles();
@@ -96,34 +102,10 @@ void RDCApp::setup()
     int h = imgSource.getHeight();
     cout << "[RDCApp]: Source size: " << w << " " << h << endl;
     //conversion from Image (cv::Mat) to ci::surface
-    ci::Surface8u surface(w, h, false);
-    for(int i = 0; i < w; i+=1)
-    {
-        for (int j = 0; j<h; j+=1)
-        {
-            cv::Vec3b pixel = imgSource.pixelAt(i,j);
-            unsigned char b = pixel[0];
-            unsigned char g = pixel[1];
-            unsigned char r = pixel[2];
-            cinder::Vec2i pos(i,j);
-            ci::ColorT<unsigned char> color(r,g,b);
-            surface.setPixel(pos, color);
-        }
-    }
+    ci::Surface8u surface(imgSource.getMat()->data, w, h, 1, ci::SurfaceChannelOrder(8));
     textureSource = ci::gl::Texture(surface);
     textureProcessed = ci::gl::Texture(surface);
     thumb = textureSource;
-    gui = new SimpleGUI(this);
-    gui->addParam("Switch Camera", &switchCam, false);
-    gui->addParam("Compensate", &displayCompensated);
-    gui->addParam("Source", &sourceID, 0, 6, 0);
-    gui->addParam("Compensated", &thumb);
-    gui->addLabel("Parameters");
-    //gui->addParam("magic R", &magicR, 0, 1, 1);
-    gui->addParam("magic E", &magicE, 0, 1, 1);
-    gui->addParam("Adapt", &adapt, true);
-    //gui->addParam("Smooth", &smooth, true);
-    gui->addParam("Smooth size", &smoothSize, 0, 5);
     drawGUI = true;
 }
 
@@ -162,13 +144,6 @@ void RDCApp::update()
             thumb = textureProcessed;
         }
         
-        //update values in RDC
-        controller->setmagicR(magicR);
-        controller->setmagicE(magicE);
-        controller->setAdapt(adapt);
-        controller->setSmooth(smooth);
-        controller->setSmoothSize(smoothSize);
-        
         //process only on new frame
         if(controller->isRDCCalibrated)// && (lastSourceID != sourceID || watchingMovie))
         {
@@ -188,42 +163,13 @@ void RDCApp::update()
             int h = imgSource.getHeight();
             if(displayCompensated || !watchingMovie)
             {
-                
-                //conversion from Image (cv::Mat) to ci::surface
-                ci::Surface8u surfacesrc(w, h, false);
-                for(int i = 0; i < w; i+=1)
-                {
-                    for (int j = 0; j<h; j+=1)
-                    {
-                        cv::Vec3b pixel = imgSource.pixelAt(i,j);
-                        unsigned char b = pixel[0];
-                        unsigned char g = pixel[1];
-                        unsigned char r = pixel[2];
-                        cinder::Vec2i pos(i,j);
-                        ci::ColorT<unsigned char> color(r,g,b);
-                        surfacesrc.setPixel(pos, color);
-                    }
-                }
+                ci::Surface8u surfacesrc(imgSource.getMat()->data, w, h, 1, ci::SurfaceChannelOrder(8));
                 textureSource = ci::gl::Texture(surfacesrc);
             }
             
             controller->process(imgSource);
             //conversion from Image (cv::Mat) to ci::surface
-            ci::Surface8u surface(w, h, false);
-            for(int i = 0; i < w; i+=1)
-            {
-                for (int j = 0; j<h; j+=1)
-                {
-                    cv::Vec3b pixel = imgSource.pixelAt(i,j);
-                    unsigned char b = pixel[0];
-                    unsigned char g = pixel[1];
-                    unsigned char r = pixel[2];
-                    cinder::Vec2i pos(i,j);
-                    ci::ColorT<unsigned char> color(r,g,b);
-                    surface.setPixel(pos, color);
-                }
-            }
-            textureProcessed = ci::gl::Texture(surface);
+            ci::Surface8u surface(imgSource.getMat()->data, w, h, 1, ci::SurfaceChannelOrder(8));            textureProcessed = ci::gl::Texture(surface);
             isImgProcessed = true;
             //cout << "[RDCApp]: image processed!" << endl;
         }

@@ -23,7 +23,7 @@ public:
     Controller();
     ~Controller();
     // logic
-    void init(int width, int height);
+    void init(int width, int height, mowa::sgui::SimpleGUI* gui);
     void reinit();                      //<! restart the scan
     void switchCam();                   //!< switches camera source. only sources supported are 0 and 1
     void calibrate();                   //!< calibrates the camera/projector system
@@ -42,7 +42,7 @@ public:
     RDC* getRDC();
     Sensor* getSensor();
     int* getDeviceID();
-    
+    mowa::sgui::SimpleGUI* gui;
     void setAdapt(bool dAdapt);
     void setSmooth(bool doSmooth);
     void setSmoothSize(int size);

@@ -13,6 +13,7 @@
 class Sensor;
 class Renderer_A;
 class Homo;
+namespace mowa{namespace sgui{class SimpleGUI;}}
 namespace www {class Timer;}
 class ColorCalibrator;
 
@@ -23,7 +24,7 @@ public:
     
     RDC(){}
     RDC(int width, int height, www::Timer* timer);
-    void init();
+    void init(mowa::sgui::SimpleGUI* gui);
     void reinit();
     //compensation
     void compensate(Image* srcImg, Image* dstImage);      //<! Called each frame, takes source image and returns compensated image
@@ -58,8 +59,8 @@ public:
     void setmagicE(double factor);
     void setmagicR(double factor);
     
-    double magicE;
-    double magicR;
+    float magicE;
+    float magicR;
     bool doAdapt;
     bool doSmooth;
     int smoothSize;
@@ -73,9 +74,9 @@ private:
     ColorCalibrator* colorCalib;
     //Preprocessing
     
-    Mat EM;                                             //<! Matrix storing the environmental light, row major
+    cv::Mat EM;                                             //<! Matrix storing the environmental light, row major
     double EMMax;                                       //<! the maximum value found in EM
-    Mat FM;                                             //<! Matrix storing the proj light, row major
+    cv::Mat FM;                                             //<! Matrix storing the proj light, row major
     double FMMin;                                       //<! the minimum value found in FM
     int outWidth;                                       //<! the width of the output
     int outHeight;                                      //<! the height of the output
@@ -88,6 +89,7 @@ private:
     bool isROIEMdone;
     //logic
     www::Timer* timer;
+    mowa::sgui::SimpleGUI* gui;
     bool isHomoComputed;
     bool isEMComputed;
     bool isFMComputed;

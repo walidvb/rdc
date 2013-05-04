@@ -39,14 +39,15 @@ Sensor* Controller::getSensor()
     return this->captor;
 }
 
-void Controller::init(int width, int height)
+void Controller::init(int width, int height, mowa::sgui::SimpleGUI* gui)
 {
+    this->gui = gui;
     simu = false;
     cout << "[Controller] initializing system" << endl;
     timer = new www::Timer();
     rdc = new RDC(width, height, timer);
     rdc->setSimu(this->simu);
-    rdc->init();
+    rdc->init(gui);
     if(!simu)
     {
         captor = new Sensor();

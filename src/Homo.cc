@@ -7,6 +7,7 @@
 //
 
 #include "Homo.h"
+using namespace cv;
 
 Homo::Homo(){
     boardSize = Size(5, 4);

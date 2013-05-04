@@ -27,3 +27,4 @@ Architecture:
 Further comments:
     Resource path should be changed in the following files: RDC.cpp, RDCApp.cpp
     Chessboard size can be changed in Homo.cpp
+    Some classes use SimpleGUI, which depends on cinder

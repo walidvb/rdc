@@ -5,6 +5,7 @@
 //  Created by Gaston on 11/20/12.
 //
 //
+#include "SimpleGUI.h"
 #include "Sensor.h"
 #include "Renderer_A.h"
 #include "Homo.h"
@@ -18,7 +19,7 @@ RDC::RDC(int width, int height, www::Timer* timer) : outWidth(width), outHeight(
 
 //Public methods
 
-void RDC::init()
+void RDC::init(mowa::sgui::SimpleGUI* gui)
 {
     homo = new Homo();
     colorCalib = new ColorCalibrator(homo, timer);
@@ -45,6 +46,11 @@ void RDC::init()
         EM.convertTo(EM, CV_64F);
         FM.convertTo(FM, CV_64F);
     }
+    this->gui = gui;
+    gui->addParam("magic R", &magicR, 0, 1, 1);
+    gui->addParam("magic E", &magicE, 0, 1, 1);
+    gui->addParam("Adapt", &doAdapt, true);
+    gui->addParam("Smooth size", &smoothSize, 0, 5);
 }
 
 void RDC::reinit()
@@ -56,7 +62,7 @@ void RDC::reinit()
     isEMRendered = false;
     isFMRendered = false;
     isFMMinComputed = false;
-    isEMMaxComputed = false;     //true because unused as of today.
+    isEMMaxComputed = false;
     isLightComputed = false;
     isFMMinEMMaxDone = false;
     isROIFMdone = false;
